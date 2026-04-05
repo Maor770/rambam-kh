@@ -4,7 +4,7 @@ window.RambamSettings = (function(){
   const DEFAULTS = {
     fontSize: 1.1,
     language: 'he',
-    theme: 'dark',
+    theme: 'light',
     dailyStudyMode: '1ch',
     lastStudied: null,
     bookmarks: {}
@@ -36,7 +36,7 @@ window.RambamSettings = (function(){
 
   function applyTheme(){
     const theme = get('theme');
-    document.documentElement.setAttribute('data-theme', theme === 'light' ? 'light' : '');
+    document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : '');
   }
 
   return { get, set, getAll, reset, applyTheme, DEFAULTS };
