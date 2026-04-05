@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_18.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_16.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף יז</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">31 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('יז.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">יז.</button>
+<button onclick="filterAmud('יז:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">יז:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">המשנה: כתיבת מגילת סוטה — מה כותב הכהן</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְנִי׳ בָּא לוֹ לִכְתּוֹב אֶת הַמְּגִילָּה, מֵאֵיזֶה מָקוֹם הוּא כּוֹתֵב?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">משנה: הכהן כותב את מגילת סוטה מפרשת סוטה שבתורה. מאיזה מקום הוא כותב?</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִ״וְאִם לֹא שָׁכַב אִישׁ וְגוֹ׳ וְאַתְּ כִּי שָׂטִית תַּחַת אִישֵׁךְ״,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מ&quot;ואם לא שכב איש&quot; וממשיך &quot;ואת כי שטית תחת אישך&quot; — כלומר, כותב את הברכות והקללות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֵינוֹ כּוֹתֵב ״וְהִשְׁבִּיעַ הַכֹּהֵן אֶת הָאִשָּׁה״. וְכוֹתֵב: ״יִתֵּן ה׳ אוֹתָךְ לְאָלָה וְלִשְׁבֻעָה. וּבָאוּ הַמַּיִם הַמְאָרְרִים הָאֵלֶּה בְּמֵעַיִךְ לַצְבּוֹת בֶּטֶן וְלַנְפִּל יָרֵךְ״. וְאֵינוֹ כּוֹתֵב ״וְאָמְרָה הָאִשָּׁה אָמֵן אָמֵן״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הכהן אינו כותב &quot;והשביע הכהן את האשה&quot; (= צוואות), אבל כותב את הקללות: &quot;יתן ה&#39; אותך לאלה ולשבועה... ובאו המים המאררים&quot;. ואינו כותב &quot;ואמרה האשה אמן אמן&quot; (= קבלת אמן).</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי יוֹסֵי אוֹמֵר: לֹא הָיָה מַפְסִיק.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יוסי חולק: לא היה מפסיק — כותב הכל ברצף, כולל הצוואות וקבלות האמן.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי יְהוּדָה אוֹמֵר: כׇּל עַצְמוֹ אֵינוֹ כּוֹתֵב אֶלָּא ״יִתֵּן ה׳ אוֹתָךְ לְאָלָה וְלִשְׁבֻעָה וְגוֹ׳ וּבָאוּ הַמַּיִם הַמְאָרְרִים הָאֵלֶּה בְּמֵעַיִךְ וְגוֹ׳״. וְאֵינוֹ כּוֹתֵב ״וְאָמְרָה הָאִשָּׁה אָמֵן אָמֵן״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יהודה מצמצם עוד יותר: כותב רק את הקללות עצמן — &quot;יתן ה&#39; אותך לאלה... ובאו המים המאררים&quot;. לא יותר.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מחלוקת בדרשת &quot;את האלות האלה&quot;</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גְּמָ׳ בְּמַאי קָא מִיפַּלְגִי? בְּהַאי קְרָא קָמִיפַּלְגִי: ״וְכָתַב אֶת הָאָלוֹת הָאֵלֶּה הַכֹּהֵן בַּסֵּפֶר״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הגמרא מבארת: שלושת התנאים חולקים בדרשת הפסוק &quot;וכתב את האלות האלה הכהן בספר&quot; — כל מילה נדרשת.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי מֵאִיר סָבַר: ״אָלוֹת״ — אָלוֹת מַמָּשׁ. ״הָאָלוֹת״ — לְרַבּוֹת קְלָלוֹת הַבָּאוֹת מֵחֲמַת בְּרָכוֹת. ״אֵלֶּה״ — לְמַעוֹטֵי קְלָלוֹת שֶׁבְּמִשְׁנֵה תוֹרָה. ״הָאֵלֶּה״ — לְמַעוֹטֵי צַוּוֹאוֹת וְקַבָּלוֹת אָמֵן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; מאיר (= תנא קמא): &quot;אלות&quot; = קללות ממש. &quot;האלות&quot; (+ ה&#39; הידיעה) = לרבות קללות הבאות מחמת ברכות (= ההיפך מהברכה). &quot;אלה&quot; = למעט קללות שבמשנה תורה. &quot;האלה&quot; = למעט צוואות וקבלות אמן.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יוֹסֵי: כּוּלְּהוּ כִּדְקָאָמְרַתְּ, ״אֶת״ — לְרַבּוֹת צַוּוֹאוֹת וְקַבָּלוֹת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יוסי: מסכים עם כל דרשות ר&#39; מאיר, אלא שדורש גם את המילה &quot;את&quot; — לרבות צוואות וקבלות אמן. לכן כותב הכל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי מֵאִיר — אֶתִּים לָא דָּרֵישׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; מאיר: לא דורש &quot;את&quot; כלשון ריבוי — ולכן צוואות וקבלות לא נכתבות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יְהוּדָה — כּוּלְּהוּ בְּמִיעוּטֵי דָּרֵישׁ לְהוּ. ״אָלוֹת״ — אָלוֹת מַמָּשׁ. ״הָאָלוֹת״ — לְמַעוֹטֵי קְלָלוֹת הַבָּאוֹת מֵחֲמַת בְּרָכוֹת. ״אֵלֶּה״ — לְמַעוֹטֵי קְלָלוֹת שֶׁבְּמִשְׁנֵה תוֹרָה. ״הָאֵלֶּה״ — לְמַעוֹטֵי צַוּוֹאוֹת וְקַבָּלוֹת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יהודה: דורש הכל כמיעוטים — &quot;אלות&quot; = ממש, &quot;האלות&quot; = למעט קללות מחמת ברכות, &quot;אלה&quot; = למעט קללות משנה תורה, &quot;האלה&quot; = למעט צוואות וקבלות. לכן כותב רק קללות ממש.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ה&#39; של ריבוי וה&#39; של מיעוט</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי מֵאִיר, מַאי שְׁנָא הַאי הֵי דִּמְרַבֵּי בֵּיהּ, וּמַאי שְׁנָא הַאי הֵי דְּמַעֵיט בֵּיהּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים את ר&#39; מאיר: למה ה&#39; של &quot;האלות&quot; מרבה, וה&#39; של &quot;האלה&quot; ממעטת — הרי שתיהן ה&#39; הידיעה?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הֵי דְּגַבֵּי(ה ד)רִיבּוּיָא — רִיבּוּיָא (הִיא), הֵי דְּגַבֵּי(ה ד)מִיעוּטָא — מִיעוּטָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: ה&#39; שליד ריבוי (&quot;האלות&quot; = אלות שכבר מרבות) = ריבוי. ה&#39; שליד מיעוט (&quot;האלה&quot; שכבר ממעטת) = מיעוט. הה&#39; משתנה לפי ההקשר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְהָא לֵית לֵיהּ לְרַבִּי מֵאִיר מִכְּלָל לָאו אַתָּה שׁוֹמֵעַ הֵן?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: ר&#39; מאיר סובר שאי אפשר ללמוד הן מכלל לאו (&quot;מכלל לאו אתה שומע הן&quot;) — א&quot;כ למה כותב ברכות? הרי מהברכות לא ניתן ללמוד קללות לשיטתו!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי תַּנְחוּם: ״הִנָּקִי״ כְּתִיב.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: ר&#39; תנחום מסביר — &quot;הנקי&quot; כתוב בתורה בצורה שאפשר לדרוש כ&quot;חנקי&quot; (= חנק). כלומר, הברכות עצמן מכילות רמז לקללות — אין צורך ללמוד מכלל לאו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">איש ואשה — שכינה ביניהם או אש אוכלתם</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דָּרֵישׁ רַבִּי עֲקִיבָא: אִישׁ וְאִשָּׁה זָכוּ — שְׁכִינָה בֵּינֵיהֶן. לֹא זָכוּ — אֵשׁ אוֹכַלְתָּן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דרשת ר&#39; עקיבא: איש ואשה שזכו — שכינה ביניהם. האות י&#39; ב&quot;איש&quot; והאות ה&#39; ב&quot;אשה&quot; מצטרפות לשם י-ה. לא זכו — השם מסתלק, נשארות אותיות א-ש = אש אוכלתם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רָבָא: וּדְאִשָּׁה עֲדִיפָא מִדְּאִישׁ, מַאי טַעְמָא — הַאי מְצָרֵף, וְהַאי לָא מְצָרֵף.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא מחדד: אש של האשה חזקה יותר מאש האיש. למה? ב&quot;אשה&quot; — האותיות א-ש צמודות (= מצורפות). ב&quot;איש&quot; — יש הפרדה בין א&#39; ל-ש&#39; (אות י&#39; באמצע).</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רָבָא: מִפְּנֵי מָה אָמְרָה תּוֹרָה הָבֵא עָפָר לְסוֹטָה? זָכְתָה — יוֹצֵא מִמֶּנָּה בֵּן כְּאַבְרָהָם אָבִינוּ, דִּכְתִיב בֵּיהּ ״עָפָר וָאֵפֶר״, לֹא זָכְתָה — תַּחְזוֹר לַעֲפָרָהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא דורש: למה אמרה תורה להביא עפר לסוטה? אם זכתה (= לא חטאה) — יוצא ממנה בן כאברהם שאמר &quot;ואנוכי עפר ואפר&quot;. לא זכתה — תחזור לעפרה (= תמות).</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שכר אברהם — עפר ואפר, חוט ושרוך</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דְּרֵישׁ רָבָא: בִּשְׂכַר שֶׁאָמַר אַבְרָהָם אָבִינוּ ״וְאָנֹכִי עָפָר וָאֵפֶר״, זָכוּ בָּנָיו לִשְׁתֵּי מִצְוֹת, אֵפֶר פָּרָה וַעֲפַר סוֹטָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דרשת רבא: בשכר שאמר אברהם &quot;ואנוכי עפר ואפר&quot; — זכו בניו לשתי מצוות: ① אפר פרה אדומה ② עפר סוטה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְהָאִיכָּא נָמֵי עֲפַר כִּיסּוּי הַדָּם!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: יש עוד מצווה בעפר — עפר כיסוי הדם! תשובה: כיסוי הדם הוא רק הכשר מצווה בלי הנאה ממשית (שחיטה כבר נעשתה). אבל אפר פרה ועפר סוטה מכשירים דבר חדש.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם הֶכְשֵׁר מִצְוָה אִיכָּא, הֲנָאָה לֵיכָּא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דרשה נוספת: בשכר שאמר אברהם &quot;אם מחוט ועד שרוך נעל&quot; (= סירב לקחת רכוש מלך סדום) — זכו בניו לשתי מצוות: חוט של תכלת ורצועה של תפילין.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דָּרֵשׁ רָבָא: בִּשְׂכַר שֶׁאָמַר אַבְרָהָם אָבִינוּ ״אִם מִחוּט וְעַד שְׂרוֹךְ נַעַל״, זָכוּ בָּנָיו לִשְׁתֵּי מִצְוֹת: חוּט שֶׁל תְּכֵלֶת וּרְצוּעָה שֶׁל תְּפִלִּין.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רצועת תפילין מובנת — &quot;וראו כל עמי הארץ כי שם ה&#39; נקרא עליך ויראו ממך&quot; = תפילין שבראש. אבל מה מיוחד בחוט תכלת?</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">תכלת — שרשרת מהים לכיסא הכבוד</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בִּשְׁלָמָא רְצוּעָה שֶׁל תְּפִלִּין, דִּכְתִיב: ״וְרָאוּ כׇּל עַמֵּי הָאָרֶץ כִּי שֵׁם ה׳ נִקְרָא עָלֶיךָ״, וְתַנְיָא, רַבִּי אֱלִיעֶזֶר הַגָּדוֹל אוֹמֵר: אֵלּוּ תְּפִלִּין שֶׁבָּרֹאשׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; מאיר: מה נשתנה התכלת מכל הצבעים? מפני שהתכלת דומה לים, הים דומה לרקיע, והרקיע דומה לכיסא הכבוד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא חוּט שֶׁל תְּכֵלֶת, מַאי הִיא? דְּתַנְיָא, הָיָה רַבִּי מֵאִיר אוֹמֵר: מָה נִשְׁתַּנָּה תְּכֵלֶת מִכׇּל מִינֵי צִבְעוֹנִין?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ראיה: &quot;תחת רגליו כמעשה לבנת הספיר וכעצם השמים לטוהר&quot; (= הרקיע כספיר), ו&quot;כמראה אבן ספיר דמות כסא&quot; (= כיסא הכבוד כספיר). שרשרת: תכלת → ים → רקיע → כיסא הכבוד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִפְּנֵי שֶׁהַתְּכֵלֶת דּוֹמֶה לַיָּם, וְיָם דּוֹמֶה לָרָקִיעַ, וְרָקִיעַ דּוֹמֶה לְכִסֵּא הַכָּבוֹד — שֶׁנֶּאֱמַר: ״וַיִּרְאוּ אֵת אֱלֹהֵי יִשְׂרָאֵל וְתַחַת רַגְלָיו כְּמַעֲשֵׂה לִבְנַת הַסַּפִּיר וּכְעֶצֶם הַשָּׁמַיִם לָטֹהַר״, וּכְתִיב: ״כְּמַרְאֵה אֶבֶן סַפִּיר דְּמוּת כִּסֵּא״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">משנה חדשה (ד): אין כותבים מגילת סוטה על לוח, על נייר, ולא על...</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְנִי׳ אֵינוֹ כּוֹתֵב לֹא עַל הַלּוּחַ, וְלֹא עַל הַנְּיָיר, וְלֹא עַל</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">(המשנה נמשכת לעמוד הבא — דיפתרא = עור שלא עובד כל צורכו. רק על מגילת קלף, שנאמר &quot;בספר&quot;.)</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יז:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">המשנה: חומרי הכתיבה — קלף ודיו בלבד</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הַדִּיפְתְּרָא, אֶלָּא עַל הַמְּגִילָּה, שֶׁנֶּאֱמַר: ״בַּסֵּפֶר״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">(המשך) לא על דיפתרא (= עור מעובד חלקית) — אלא על מגילת קלף, שנאמר &quot;בספר&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֵינוֹ כּוֹתֵב לֹא בְּקוֹמוֹס וְלֹא בְּקַנְקַנְתּוֹם, וְלֹא בְּכׇל דָּבָר שֶׁרוֹשֵׁם, אֶלָּא בִּדְיוֹ, שֶׁנֶּאֱמַר: ״וּמָחָה״, כְּתָב שֶׁיָּכוֹל לִמָּחוֹת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הכהן אינו כותב בקומוס (= צבע משרף), לא בקנקנתום (= גופרת נחושת), ולא בשום דבר שרושם קבוע — אלא בדיו בלבד. שנאמר &quot;ומחה&quot; = צריך כתב שניתן למחיקה במים.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יז:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">פסולי כתיבת המגילה — לילה, למפרע, ואיגרת</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גְּמָ׳ אָמַר רָבָא: מְגִילַּת סוֹטָה שֶׁכְּתָבָהּ בַּלַּיְלָה — פְּסוּלָה. מַאי טַעְמָא — אָתְיָא ״תּוֹרָה״ ״תּוֹרָה״. כְּתִיב הָכָא: ״וְעָשָׂה לָהּ הַכֹּהֵן אֵת כׇּל הַתּוֹרָה הַזֹּאת״, וּכְתִיב הָתָם: ״עַל פִּי הַתּוֹרָה אֲשֶׁר יוֹרוּךָ וְעַל הַמִּשְׁפָּט״, מָה מִשְׁפָּט בַּיּוֹם — אַף מְגִילַּת סוֹטָה בַּיּוֹם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא: מגילת סוטה שנכתבה בלילה — פסולה. מנין? גזירה שווה &quot;תורה&quot;-&quot;תורה&quot;: כמו שמשפט נעשה ביום, כך כתיבת מגילה רק ביום.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כְּתָבָהּ לְמַפְרֵעַ — פְּסוּלָה, דִּכְתִיב: ״וְכָתַב אֶת הָאָלוֹת הָאֵלֶּה״, כִּי דִּכְתִיבָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כתבה למפרע (= שלא בסדר) — פסולה. שנאמר &quot;וכתב את האלות האלה&quot; = כמו שהן כתובות בתורה, לפי הסדר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כְּתָבָהּ קוֹדֶם שֶׁתְּקַבֵּל עָלֶיהָ שְׁבוּעָה — פְּסוּלָה, שֶׁנֶּאֱמַר: ״וְהִשְׁבִּיעַ״, וְאַחַר כָּךְ ״וְכָתַב״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כתבה לפני שהאשה קיבלה שבועה — פסולה. שנאמר &quot;והשביע&quot; ואח&quot;כ &quot;וכתב&quot; = שבועה קודמת לכתיבה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כְּתָבָהּ אִיגֶּרֶת — פְּסוּלָה. ״בַּסֵּפֶר״ אָמַר רַחֲמָנָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כתבה כאיגרת (= ללא שירטוט) — פסולה. &quot;בספר&quot; אמרה תורה = צריך כתיבה כדין ספר, ובספר תורה חייב שירטוט.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_18.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_16.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["יז.","יז.","יז.","יז.","יז.","יז.","יז:","יז:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<8;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<8;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="יז."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

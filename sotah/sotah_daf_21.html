@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_22.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_20.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף כא</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">26 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('כא.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">כא.</button>
+<button onclick="filterAmud('כא:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">כא:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כא.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">הן תהוה ארכא לשלותך&quot;  (דניאל ד, כד), שלא יבואו עליך כל הפורענויות שראית...</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הֵן תֶּהֱוֵי אַרְכָא לִשְׁלֵוְתָךְ״, וּכְתִיב: ״כֹּלָּא מְטָא עַל נְבוּכַדְנֶצַּר מַלְכָּא״, וּכְתִיב: ״לִקְצָת יַרְחִין תְּרֵי עֲשַׂר״!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הן תהוה ארכא לשלותך&quot;  (דניאל ד, כד), שלא יבואו עליך כל הפורענויות שראית בחלומך, וכתיב : &quot;כלא מטא  על נבוכדנצר מלכא&quot;  (דניאל ד, כה), וכתיב  שהיה הדבר &quot;לקצת ירחין תרי עשר&quot;   (דניאל ד, כו). ומכאן למד שזכות תולה ודוחה את הפורענות במשך שנה אחת.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">לְעוֹלָם רַבִּי יִשְׁמָעֵאל, וְאַשְׁכַּח קְרָא דְּאָמַר וְתָנֵי, דִּכְתִיב: ״כֹּה אָמַר ה׳ עַל שְׁלֹשָׁה פִּשְׁעֵי אֱדוֹם״,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: לעולם תפרש שמשנתנו כשיטת ר&#39; ישמעאל, שזכות תולה לשנה, ואשכח קרא דאמר ותני  שזכות תולה כמה פעמים, דכתיב : &quot;כה אמר ה&#39; על שלשה פשעי אדום (אסלח), ועל ארבעה לא אשיבנו</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמַאי אַף עַל פִּי שֶׁאֵין רְאָיָה לַדָּבָר זֵכֶר לַדָּבָר? דִּלְמָא שָׁאנֵי גּוֹיִם, דְּלָא מִפְּקִיד דִּינָא עֲלַיְיהוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;(עמוס א, יא) משמע ששלוש פעמים יכולה פורענות להידחות, שנה אחר שנה. ושואלים: ומאי  הלשון &quot;אף על פי שאין ראיה לדבר זכר לדבר&quot;, שהרי לכאורה ראיה גדולה היא שהפורענות נדחית שלוש פעמים! ומשיבים:</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כא.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה: ויש זכות תולה לסוטה שלש שנים.</span>
+<span style="font-size:11px;color:#bbb">14</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְיֵשׁ זְכוּת תּוֹלָה שָׁלֹשׁ שָׁנִים כּוּ׳. זְכוּת דְּמַאי? אִילֵּימָא זְכוּת דְּתוֹרָה — הָא אֵינָהּ מְצֻווָה וְעוֹשָׂה הִיא! אֶלָּא זְכוּת דְּמִצְוָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה: ויש זכות תולה לסוטה שלש שנים. שואלים: זכות דמאי ? אילימא  זכות של תורה שלמדה, הא  אינה מצווה ועושה היא, שלכל הדעות אין מצוה על האשה ללמוד תורה, ואין על מעשה זה שכר מרובה כל כך! אלא תאמר זכות של מצוה שעשתה, אולם</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">זְכוּת דְּמִצְוָה מִי מַגְּנָא כּוּלֵּי הַאי? וְהָתַנְיָא: אֶת זוֹ דָּרַשׁ רַבִּי מְנַחֵם בַּר יוֹסֵי: ״כִּי נֵר מִצְוָה וְתוֹרָה אוֹר״, תָּלָה הַכָּתוּב אֶת הַמִּצְוָה בְּנֵר, וְאֶת הַתּוֹרָה בְּאוֹר. אֶת הַמִּצְוָה בְּנֵר, לוֹמַר לָךְ: מָה נֵר אֵינָהּ מְגִינָּה אֶלָּא לְפִי שָׁעָה — אַף מִצְוָה אֵינָהּ מְגִינָּה אֶלָּא לְפִי שָׁעָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">זכות של מצוה מי מגנא כולי האי  והתניא , את זו דרש ר&#39; מנחם בר יוסי: &quot;כי נר מצוה ותורה אור&quot; (משלי ו, כג), תלה הכתוב את המצוה לדמות אותה בנר, ואת התורה באור (השמש). את המצוה בנר — לומר לך:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֶת הַתּוֹרָה בְּאוֹר, לוֹמַר לָךְ: מָה אוֹר מֵגֵין לָעוֹלָם, אַף תּוֹרָה מְגִינָּה לָעוֹלָם. וְאוֹמֵר: ״בְּהִתְהַלֶּכְךָ תַּנְחֶה אֹתָךְ וְגוֹ׳״. ״בְּהִתְהַלֶּכְךָ תַּנְחֶה אֹתָךְ״ — זֶה הָעוֹלָם הַזֶּה. ״בְּשָׁכְבְּךָ תִּשְׁמוֹר עָלֶיךָ״ — זוֹ מִיתָה. ״וַהֲקִיצוֹתָ הִיא תְשִׂיחֶךָ״ — לֶעָתִיד לָבֹא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואת התורה תלה באור, לומר לך: מה אור מגין לעולם — אף תורה מגינה לעולם. ואומר על התורה: &quot;בהתהלכך תנחה אתך בשכבך תשמור עליך והקיצות היא תשיחך&quot; (משלי ו, כב). &quot;בהתהלכך תנחה אתך&quot; — זה כשאתה מתהלך חי בתוך העולם הזה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מָשָׁל לְאָדָם שֶׁהָיָה מְהַלֵּךְ בְּאִישׁוֹן לַיְלָה וַאֲפֵילָה, וּמִתְיָירֵא מִן הַקּוֹצִים וּמִן הַפְּחָתִים וּמִן הַבַּרְקָנִים, וּמֵחַיָּה רָעָה וּמִן הַלִּסְטִין, וְאֵינוֹ יוֹדֵעַ בְּאֵיזֶה דֶּרֶךְ מְהַלֵּךְ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">משל לאדם שהיה מהלך באישון (בחושך) לילה ואפילה, ומתיירא מן הקוצים ומן הפחתים (הבורות) ומן הברקנים שאינו רואה בגלל החושך, ומחיה רעה ומן הליסטין (השודדים) המצויים בלילה, ואינו יודע באיזה דרך יהא מהלך.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">נִזְדַּמְּנָה לוֹ אֲבוּקָה שֶׁל אוּר — נִיצַּל מִן הַקּוֹצִים וּמִן הַפְּחָתִים וּמִן הַבַּרְקָנִים, וַעֲדַיִין מִתְיָירֵא מֵחַיָּה רָעָה וּמִן הַלִּיסְטִין, וְאֵינוֹ יוֹדֵעַ בְּאֵיזֶה דֶּרֶךְ מְהַלֵּךְ. כֵּיוָן שֶׁעָלָה עַמּוּד הַשַּׁחַר — נִיצַּל מֵחַיָּה רָעָה וּמִן הַלִּיסְטִין, וַעֲדַיִין אֵינוֹ יוֹדֵעַ בְּאֵיזֶה דֶּרֶךְ מְהַלֵּךְ. הִגִּיעַ לְפָרָשַׁת דְּרָכִים — נִיצַּל מִכּוּלָּם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אם נזדמנה לו אבוקה של אור (אש) שהיא משל למצוה — ניצל מן הקוצים ומן הפחתים ומן הברקנים, ועדיין מתיירא מחיה רעה ומן הליסטין, ועדיין אינו יודע באיזה דרך מהלך.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דָּבָר אַחֵר: עֲבֵירָה מְכַבָּה מִצְוָה, וְאֵין עֲבֵירָה מְכַבָּה תּוֹרָה, שֶׁנֶּאֱמַר: ״מַיִם רַבִּים לֹא יוּכְלוּ לְכַבּוֹת אֶת הָאַהֲבָה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דבר אחר: עבירה מכבה מצוה, ואין עבירה מכבה תורה, שנאמר: &quot;מים רבים לא יוכלו לכבות את האהבה&quot; (שיר השירים ח, ז). ומכל מקום, משמע מכאן שאין המצוה שעשתה קודם מגינה עליה עכשיו מן הפורענות, ואם כן כיצד תגן זכות המצוה על הסוטה?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַב יוֹסֵף: מִצְוָה, בְּעִידָּנָא דְּעָסֵיק בָּהּ — מַגְּנָא וּמַצְּלָא, בְּעִידָּנָא דְּלָא עָסֵיק בָּהּ — אַגּוֹנֵי מַגְּנָא, אַצּוֹלֵי לָא מַצְּלָא. תּוֹרָה, בֵּין בְּעִידָּנָא דְּעָסֵיק בָּהּ וּבֵין בְּעִידָּנָא דְּלָא עָסֵיק בָּהּ — מַגְּנָא וּמַצְּלָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אמר רב יוסף כך צריך להבין את ההשוואה: מצוה, בעידנא דעסיק  בה — מגנא  היא מן הפורענות ומצלא  מיצר הרע, בעידנא דלא עסיק  בה — אגוני מגנא אצולי לא מצלא  מן היצר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְקֵיף לַהּ רַבָּה: אֶלָּא מֵעַתָּה, דּוֹאֵג וַאֲחִיתוֹפֶל מִי לָא עָסְקִי בְּתוֹרָה? אַמַּאי לָא הֵגֵינָּה עֲלַיְיהוּ? אֶלָּא אָמַר רָבָא: תּוֹרָה בְּעִידָּנָא דְּעָסֵיק בָּהּ — מַגְּנָא וּמַצְּלָא, בְּעִידָּנָא דְּלָא עָסֵיק בָּהּ — אַגּוֹנֵי מַגְּנָא, אַצּוֹלֵי לָא מַצְּלָא. מִצְוָה, בֵּין בְּעִידָּנָא דְּעָסֵיק בָּהּ בֵּין בְּעִידָּנָא דְּלָא עָסֵיק בָּהּ — אַגּוֹנֵי מַגְּנָא, אַצּוֹלֵי לָא מַצְּלָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מתקיף לה  רבה: אלא מעתה, דואג ואחיתופל מי  לא עסקי  בתורה? והרי ידוע במסורת שהיו חכמים גדולים, אם כן אמאי  לא הגינה עלייהו , כלומר, הצילה אותם מלחטוא? אלא אמר רבא:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רָבִינָא אָמַר: לְעוֹלָם זְכוּת תּוֹרָה, וּדְקָאָמְרַתְּ אֵינָהּ מְצֻווָה וְעוֹשָׂה נְהִי דִּפַּקּוֹדֵי לָא מִפַּקְּדָא, בְּאַגְרָא דְּמַקְרְיָן וּמַתְנְיָין בְּנַיְיהוּ וְנָטְרָן לְהוּ לְגַבְרַיְיהוּ עַד דְּאָתוּ מִבֵּי מִדְרְשָׁא, מִי לָא פָּלְגָאן בַּהֲדַיְיהוּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבינא אמר: לעולם תפרש שהזכות שמועילה לסוטה היא זכות תורה, ודקאמרת  הרי האשה אינה מצווה ועושה — נהי דפקודי לא מפקדא , מכל מקום באגרא דמקרין ומתניין בנייהו  ונטרן להו לגברייהו  עד דאתו מבי מדרשא , מי לא פלגאן בהדייהו ?  אם כן יכולה להיות</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי פָּרָשַׁת דְּרָכִים? אָמַר רַב חִסְדָּא: זֶה תַּלְמִיד חָכָם וְיוֹם מִיתָה. רַב נַחְמָן בַּר יִצְחָק אָמַר: זֶה תַּלְמִיד חָכָם וְיִרְאַת חֵטְא. מָר זוּטְרָא אָמַר: זֶה תַּלְמִיד חָכָם דְּסָלְקָא לֵיהּ שְׁמַעְתָּתָא אַלִּיבָּא דְהִלְכְתָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: מאי  הנמשל לענין מי שכבר האיר לו השחר והגיע לפרשת דרכים? אמר רב חסדא: זה תלמיד חכם שמאירה לו התורה, וכשמגיע יום מיתה היא פרשת הדרכים, אז ברור לו לאן הוא הולך. רב נחמן בר יצחק אמר: זה תלמיד חכם, ויש בו יראת חטא המכוונת את תורתו לכיוון הנכון.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דָּבָר אַחֵר: עֲבֵירָה מְכַבָּה מִצְוָה, וְאֵין עֲבֵירָה מְכַבָּה תּוֹרָה. אָמַר רַב יוֹסֵף: דַּרְשֵׁיהּ רַבִּי מְנַחֵם בַּר יוֹסֵי לְהַאי קְרָא כִּי סִינַי, וְאִילְמָלֵא דַּרְשׁוּהּ דּוֹאֵג וַאֲחִיתוֹפֶל הָכִי לָא רְדַפוּ בָּתַר דָּוִד, דִּכְתִיב: ״לֵאמֹר אֱלֹהִים עֲזָבוֹ וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ועוד שנינו באותה ברייתא דבר אחר: עבירה מכבה מצוה, שמבטלת את זכות עושה המצוה, ואין עבירה מכבה תורה. אמר רב יוסף: דרשיה  ר&#39; מנחם בר יוסי להאי קרא כי סיני , ואילמלא דרשוה  דואג ואחיתופל הכי  לא רדפו בתר  דוד, דכתיב : &quot;כי אמרו אויבי לי...</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי דְּרוּשׁ — ״וְלֹא יִרְאֶה בְךָ עֶרְוַת דָּבָר וְגוֹ׳״, וְהֵן אֵינָן יוֹדְעִין שֶׁעֲבֵירָה מְכַבָּה מִצְוָה, וְאֵין עֲבֵירָה מְכַבָּה תּוֹרָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: מאי דרוש  שהביא אותם לטעות? — פסוק זה: &quot;ולא יראה בך ערות דבר ושב מאחריך&quot; (דברים כג, טו), והן ראו שעבר דוד עבירה של גילוי עריות (בבת שבע), ואינן יודעין שעבירה מכבה מצוה ואין עבירה מכבה תורה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי ״בּוֹז יָבוּזוּ לוֹ״? אָמַר עוּלָּא: לָא כְּשִׁמְעוֹן אֲחִי עֲזַרְיָה, וְלָא כְּרַבִּי יוֹחָנָן דְּבֵי נְשִׂיאָה,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אגב שדרשו בברייתא את המלה &quot;אהבה&quot; על התורה, שואלים: מאי  הפסוק &quot;אם יתן איש את כל הון ביתו באהבה בוז יבוזו לו&quot; (שיר השירים ח, ז), שמשמע מכאן שאין לקנות את שכר התורה בכסף? אמר עולא:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא כְּהִלֵּל וְשֶׁבְנָא. דְּכִי אֲתָא רַב דִּימִי, אָמַר: הִלֵּל וְשֶׁבְנָא אַחֵי הֲווֹ. הִלֵּל עֲסַק בַּתּוֹרָה, שֶׁבְנָא עֲבַד עִיסְקָא. לְסוֹף, אֲמַר לֵיהּ: תָּא נַעֲרוֹב וְלִיפְלוֹג! יָצְתָה בַּת קוֹל וְאָמְרָה: ״אִם יִתֵּן אִישׁ אֶת כׇּל הוֹן בֵּיתוֹ וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלא כהלל ושבנא. דכי אתא  רב דימי אמר: הלל ושבנא אחי הוו , הלל עסק בתורה מתוך עוני, שבנא עבד עיסקא  והתעשר. לסוף, לאחר זמן אמר ליה  &quot;שבנא: תא נערוב וליפלוג ;</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כא:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה, אומר בן עזאי: חייב אדם ללמד את בתו תורה שתדע שהזכות תולה...</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אוֹמֵר בֶּן עַזַּאי: חַיָּיב אָדָם לְלַמֵּד אֶת וְכוּ׳. רַבִּי אֱלִיעֶזֶר אוֹמֵר: כׇּל הַמְלַמֵּד אֶת בִּתּוֹ תּוֹרָה — מְלַמְּדָהּ תִּיפְלוּת. תִּיפְלוּת סָלְקָא דַּעְתָּךְ? אֶלָּא אֵימָא: כְּאִילּוּ לִמְּדָהּ תִּיפְלוּת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה, אומר בן עזאי: חייב אדם ללמד את בתו תורה שתדע שהזכות תולה לה. ר&#39; אליעזר אומר: כל המלמד את בתו תורה — מלמדה תיפלות. ותוהים: תיפלות סלקא דעתך  לומר, וכי תיפלות הוא מלמדה? והלא תורה מלמד אותה! אלא אימא : כאילו למדה תיפלות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי אֲבָהוּ: מַאי טַעְמָא דְּרַבִּי אֱלִיעֶזֶר, דִּכְתִיב: ״אֲנִי חׇכְמָה שָׁכַנְתִּי עׇרְמָה״, כֵּיוָן שֶׁנִּכְנְסָה חׇכְמָה בְּאָדָם — נִכְנְסָה עִמּוֹ עַרְמוּמִית.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אמר ר&#39; אבהו: מאי טעמיה  של ר&#39; אליעזר — דכתיב : &quot;אני חכמה שכנתי ערמה&quot; (משלי ח, יב), ומפרש: כיון שנכנסה חכמה באדם — נכנסה עמו ערמומית,  וחושש ר&#39; אליעזר שתשתמש האשה בערמומיות זו שבאה לה על ידי לימוד התורה לשם תיפלות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבָּנַן, הַאי ״אֲנִי חׇכְמָה״ מַאי עָבְדִי לֵיהּ? מִיבְּעֵי לֵיהּ לְכִדְרַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא. דְּאָמַר רַבִּי יוֹסֵי בְּרַבִּי חֲנִינָא: אֵין דִּבְרֵי תוֹרָה מִתְקַיְּימִין אֶלָּא בְּמִי שֶׁמַּעֲמִיד עַצְמוֹ עָרוֹם עֲלֵיהֶן, שֶׁנֶּאֱמַר: ״אֲנִי חׇכְמָה שָׁכַנְתִּי עׇרְמָה״. אָמַר רַבִּי יוֹחָנָן: אֵין דִּבְרֵי תוֹרָה מִתְקַיְּימִין אֶלָּא בְּמִי שֶׁמֵּשִׂים עַצְמוֹ כְּמִי שֶׁאֵינוֹ, שֶׁנֶּאֱמַר: ״וְהַחׇכְמָה מֵאַיִן תִּמָּצֵא״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: ורבנן  החולקים עליו, האי  &quot;אני חכמה&quot; מאי עבדי ליה  כיצד מפרשים הם אותו? ומשיבים: מיבעי ליה  לכפי שאמר ר&#39; יוסי בר&#39; חנינא. שאמר ר&#39; יוסי בר&#39; חנינא: אין דברי תורה מתקיימין אלא במי שמעמיד עצמו ערום עליהן, שנאמר:</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כא:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה, ר&#39; יהושע אומר: רוצה אשה בקב ותיפלות יותר מתשעה קבין...</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי יְהוֹשֻׁעַ אוֹמֵר: רוֹצָה אִשָּׁה וְכוּ׳. מַאי קָאָמַר? הָכִי קָאָמַר: רוֹצָה אִשָּׁה בְּקַב וְתִיפְלוּת עִמּוֹ, מִתִּשְׁעַת קַבִּין וּפְרִישׁוּת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה, ר&#39; יהושע אומר: רוצה אשה בקב ותיפלות יותר מתשעה קבין ופרישות. שואלים: מאי קאמר , מה פירוש דבריו? ומשיבים: הכי קאמר :</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הוּא הָיָה אוֹמֵר: חָסִיד שׁוֹטֶה כּוּ׳. הֵיכִי דָּמֵי חָסִיד שׁוֹטֶה? כְּגוֹן דְּקָא טָבְעָה אִיתְּתָא בְּנַהֲרָא, וְאָמַר: לָאו אוֹרַח אַרְעָא לְאִיסְתַּכּוֹלֵי בַּהּ וְאַצּוֹלַהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה, הוא, ר&#39; יהושע, היה אומר: חסיד שוטה ורשע ערום, ואשה פרושה, ומכות פרושין — הרי אלו מבלי עולם. ושואלים: היכי דמי  חסיד שוטה? ומסבירים: כגון דקא טבעה איתתא בנהרא  ואמר: לאו אורח ארעא לאיסתכולי  בה כאשר אינה לבושה ואצולה .</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הֵיכִי דָּמֵי רָשָׁע עָרוּם? אָמַר רַבִּי יוֹחָנָן: זֶה הַמַּטְעִים דְּבָרָיו לַדַּיָּין קוֹדֶם שֶׁיָּבֹא בַּעַל דִּין חֲבֵרוֹ. רַבִּי אֲבָהוּ אוֹמֵר: זֶה הַנּוֹתֵן דִּינָר לְעָנִי לְהַשְׁלִים לוֹ מָאתַיִם זוּז. דִּתְנַן: מִי שֶׁיֵּשׁ לוֹ מָאתַיִם זוּז — לֹא יִטּוֹל לֶקֶט שִׁכְחָה וּפֵאָה וּמַעְשַׂר עָנִי. הָיָה לוֹ מָאתַיִם חָסֵר דִּינָר, אֲפִילּוּ אֶלֶף נוֹתְנִין לוֹ כְּאַחַת — הֲרֵי זֶה יִטּוֹל.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ועוד שואלים: היכי דמי  רשע ערום? אמר ר&#39; יוחנן: זה המטעים (מסביר) דבריו לדיין קודם שיבא בעל דין חברו, וכיון שהדיין שומע את דבריו בשלימותם שלא בנוכחותו של בעל הדין השני, דעתו נוטה אליו, ומטה על ידי כך את הדין. ר&#39; אבהו אומר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי אַסִּי אָמַר רַבִּי יוֹחָנָן: זֶה הַמַּשִּׂיא עֵצָה לִמְכּוֹר בִּנְכָסִים מוּעָטִין. דְּאָמַר רַבִּי אַסִּי אָמַר רַבִּי יוֹחָנָן: יְתוֹמִים שֶׁקָּדְמוּ וּמָכְרוּ בִּנְכָסִים מוּעָטִין — מַה שֶּׁמָּכְרוּ מָכְרוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אסי אמר ר&#39; יוחנן: רשע ערום זה המשיא עצה למכור בנכסים מועטין. שהלכה היא שאם מת אדם והניח נכסים מועטים שאינם מספיקים לפרנסת הבנות וגם להוריש לבנים, כל הנכסים עומדים לפרנסת הבנות בלבד, ואילו הבנים ניזונים מן הצדקה, אם זקוקים לכך.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אַבָּיֵי אָמַר: זֶה הַמַּשִּׂיא עֵצָה לִמְכּוֹר בִּנְכָסִים כְּרַבָּן שִׁמְעוֹן בֶּן גַּמְלִיאֵל. דְּתַנְיָא: ״נְכָסַי לְךָ, וְאַחֲרֶיךָ לִפְלוֹנִי״, וְיָרַד הָרִאשׁוֹן וּמָכַר וְאָכַל — הַשֵּׁנִי מוֹצִיא מִיַּד הַלָּקוֹחוֹת, דִּבְרֵי רַבִּי. רַבָּן שִׁמְעוֹן בֶּן גַּמְלִיאֵל אוֹמֵר: אֵין לַשֵּׁנִי אֶלָּא מַה שֶּׁשִּׁיֵּיר רִאשׁוֹן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אביי אמר: רשע ערום זה המשיא עצה למכור בנכסים כרבן שמעון בן גמליאל. ומה עניינו — דתניא : האומר בצוואה &quot;נכסי לך, ואחריך, לאחר מיתתך, יהיו הנכסים לפלוני&quot;, וירד הראשון ומכר או אכל — השני מוציא מיד הלקוחות את הנכסים שמכר, שהרי שלו הם, אלו דברי רבי.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַב יוֹסֵף בַּר חָמָא אָמַר רַב שֵׁשֶׁת: זֶה הַמַּכְרִיעַ אֲחֵרִים בְּאוֹרְחוֹתָיו. רַבִּי זְרִיקָא אָמַר רַב הוּנָא: זֶה הַמֵּיקֵל לְעַצְמוֹ וּמַחְמִיר לַאֲחֵרִים. עוּלָּא אָמַר: זֶה</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב יוסף בר חמא אמר בשם רב ששת: רשע ערום זה המכריע אחרים באורחותיו. כלומר, שמייעץ לאחרים לעשות כמוהו, ובעצם אינו אלא מתכוון להראות את צדקתו לאחרים. ר&#39; זריקא אמר רב הונא: רשע ערום זה המיקל בהלכה לעצמו ומחמיר לאחרים. עולא אמר: זה</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_22.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_20.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["כא.","כא.","כא:","כא:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<4;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<4;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="כא."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_29.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_27.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף כח</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">28 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('כח.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">כח.</button>
+<button onclick="filterAmud('כח:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">כח:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">המים בודקים גם את הבועל</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דְּאִי אִית בֵּיהּ עָוֹן בָּדְקִי לֵיהּ מַיָּא, כִּי אִית בֵּיהּ עָוֹן בְּדִידֵיהּ מִי בָּדְקִי לַהּ מַיָּא לְדִידַהּ? וְהָא תַּנְיָא: ״וְנִקָּה הָאִישׁ מֵעָוֹן וְהָאִשָּׁה הַהִיא תִּשָּׂא אֶת עֲוֹנָהּ״. בִּזְמַן שֶׁהָאִישׁ מְנוּקֶּה מֵעָוֹן — הַמַּיִם בּוֹדְקִין אֶת אִשְׁתּוֹ, אֵין הָאִישׁ מְנוּקֶּה מֵעָוֹן — אֵין הַמַּיִם בּוֹדְקִין אֶת אִשְׁתּוֹ!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הגמרא מקשה על דרשת ר&#39; עקיבא שהמים בודקים את הבועל: הרי הפסוק אומר שרק כשהבעל &quot;מנוקה מעוון&quot; — המים בודקים את אשתו. אם יש לבעל עוון, המים לא פועלים כלל — אז איך יבדקו את הבועל?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֶלָּא לְבוֹעֵל, לִיתְנֵי כִּדְקָתָנֵי סֵיפָא: כְּשֵׁם שֶׁאֲסוּרָה לַבַּעַל כָּךְ אֲסוּרָה לַבּוֹעֵל!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מציעים: אולי הכוונה לבועל ולא לבעל. אבל אם כן — למה לא כתב במפורש &quot;כשם שאסורה לבעל כך אסורה לבועל&quot;, כמו שכתוב בהמשך המשנה?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">לְעוֹלָם לַבּוֹעֵל, וְרֵישָׁא — אַיְּידֵי דִּתְנָא ״אוֹתָהּ״, תָּנֵי ״אוֹתוֹ״. סֵיפָא — אַיְּידֵי דִּתְנָא ״בַּעַל״, תְּנָא ״בּוֹעֵל״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: אכן הכוונה לבועל. ההבדל בניסוח הוא רק עניין סגנוני — בתחילה המשנה מדברת על &quot;בדיקה&quot; ולכן כתבה &quot;בודקין אותו&quot;, ובסוף מדברת על &quot;איסור&quot; ולכן כתבה &quot;אסורה לבועל&quot;.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">&quot;ובאו&quot; — האם הלימוד מהכפילות או מהוא&quot;ו?</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">שֶׁנֶּאֱמַר: ״וּבָאוּ״ ״וּבָאוּ״. אִיבַּעְיָא לְהוּ: ״בָּאוּ״ ״וּבָאוּ״ קָאָמַר, אוֹ ״וּבָאוּ״ ״וּבָאוּ״ קָאָמַר?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלה: ר&#39; עקיבא לומד שהמים בודקים גם את הבועל מהמילה &quot;ובאו&quot;. האם הוא דורש את הוא&quot;ו היתירה (&quot;באו&quot; → &quot;ובאו&quot;), או את הכפילות (שהמילה חוזרת כמה פעמים)?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּא שְׁמַע: כְּשֵׁם שֶׁאֲסוּרָה לַבַּעַל כָּךְ אֲסוּרָה לַבּוֹעֵל, שֶׁנֶּאֱמַר: ״נִטְמָאָה״ ״וְנִטְמָאָה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ראיה: גם לגבי &quot;אסורה לבועל&quot; — ר&#39; עקיבא למד מ&quot;נטמאה&quot; ו&quot;ונטמאה&quot;, כלומר מריבוי הוא&quot;ו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וַעֲדַיִין תִּיבְּעֵי: ״נִטְמָאָה״ ״נִטְמָאָה״ קָאָמַר, אוֹ ״נִטְמָאָה״ ״וְנִטְמָאָה״ קָאָמַר?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דוחים: גם שם אפשר לשאול אותה שאלה — האם מהכפילות או מהוא&quot;ו?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּא שְׁמַע מִדְּקָתָנֵי סֵיפָא, רַבִּי אוֹמֵר: שְׁנֵי פְּעָמִים הָאֲמוּרִין בַּפָּרָשָׁה ״וְנִטְמָאָה״ ״וְנִטְמָאָה״ — אֶחָד לַבַּעַל וְאֶחָד לַבּוֹעֵל. מִכְּלָל דְּרַבִּי עֲקִיבָא וָוֵי קָדָרֵישׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ראיה מוכרעת: רבי אומר &quot;שני פעמים... ונטמאה ונטמאה — אחד לבעל ואחד לבועל&quot;. רבי לומד מהכפילות, → מכלל שר&#39; עקיבא דורש דווקא את הוא&quot;ו היתירה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שש דרשות לר&#39; עקיבא, שלוש לרבי</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הִלְכָּךְ לְרַבִּי עֲקִיבָא שִׁיתָּא קְרָאֵי כְּתִיבִי:</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">לר&#39; עקיבא: &quot;ובאו&quot; מופיע 3 פעמים עם וא&quot;ו = 6 דרשות: ① צווי לאשה, ② צווי לבועל, ③ עשייה לאשה, ④ עשייה לבועל, ⑤ ידיעה לאשה, ⑥ ידיעה לבועל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">חַד לְצַוָּאָה דִּידַהּ, וְחַד לְצַוָּאָה דִּידֵיהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">לרבי שאינו דורש את הוא&quot;ו — רק 3 דרשות, כולן לאשה: צווי, עשייה, ידיעה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">חַד לַעֲשִׂיָּיה דִּידַהּ, וְחַד לַעֲשִׂיָּיה דִּידֵיהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: ורבי — מניין לו שהמים בודקים גם את הבועל?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">חַד לִידִיעָה דִּידַהּ, וְחַד לִידִיעָה דִּידֵיהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה מברייתא: הפסוק &quot;לצבות בטן ולנפיל ירך&quot; — ללא כינוי שייכות (לא &quot;בטנה&quot; ו&quot;ירכה&quot;). כיוון שבפסוק אחר כתוב &quot;וצבתה בטנה ונפלה ירכה&quot; — הרי בטן וירך של האשה כבר אמורים, ו&quot;לצבות בטן&quot; בא על הבועל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי, תְּלָתָא קְרָאֵי כְּתִיבִי: חַד — לְצַוָּאָה, וְחַד — לַעֲשִׂיָּיה, וְחַד — לִידִיעָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; עקיבא חולק: הפסוק הזה לא מדבר על הבועל, אלא מודיע לאשה שהבטן נפגעת ראשונה (ולא הירך) — שלא להוציא לעז על המים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי, כְּשֵׁם שֶׁהַמַּיִם בּוֹדְקִין אוֹתָהּ כָּךְ בּוֹדְקִין אוֹתוֹ, מְנָא לֵיהּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבי משיב: אם רק על האשה מדובר — שיכתוב &quot;בטנה ויריכה&quot;. הלשון הכללית &quot;בטן&quot; ו&quot;ירך&quot; מלמדת — גם על הבועל.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">&quot;אינו אלא כולו לבועל?&quot;</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">נָפְקָא לֵיהּ מִדְּתַנְיָא: ״לַצְבּוֹת בֶּטֶן וְלַנְפִּל יָרֵךְ״, בִּטְנוֹ וִירֵיכוֹ שֶׁל בּוֹעֵל. אַתָּה אוֹמֵר בִּטְנוֹ וִירֵיכוֹ שֶׁל בּוֹעֵל, אוֹ אֵינוֹ אֶלָּא בִּטְנָהּ וִירֵיכָהּ שֶׁל נִבְעֶלֶת? כְּשֶׁהוּא אוֹמֵר ״וְצָבְתָה בִטְנָהּ וְנָפְלָה יְרֵכָהּ״, הֲרֵי בִּטְנָהּ וִירֵיכָהּ שֶׁל נִבְעֶלֶת אָמוּר, וּמָה אֲנִי מְקַיֵּים ״לַצְבּוֹת בֶּטֶן וְלַנְפִּל יָרֵךְ״ — בִּטְנוֹ וִירֵיכוֹ שֶׁל בּוֹעֵל.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: אולי כל הפסוק &quot;לצבות בטן ולנפיל ירך&quot; מדבר רק על הבועל, ואינו מלמד כלל על האשה?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִידַּךְ, הַהוּא דְּמוֹדַע לַהּ כֹּהֵן דְּבֶטֶן בְּרֵישָׁא וַהֲדַר יָרֵךְ, שֶׁלֹּא לְהוֹצִיא לַעַז עַל הַמַּיִם הַמָּרִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: אם כך — שיכתוב &quot;בטנו&quot; ו&quot;ירכו&quot;. הלשון הכללית &quot;בטן&quot; ו&quot;ירך&quot; (בלי כינוי) מלמדת שני דברים — גם על האשה וגם על הבועל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִידַּךְ: אִם כֵּן, לִכְתּוֹב קְרָא ״בִּטְנָהּ וִירֵכָהּ״, מַאי ״בֶּטֶן״ וְ״יָרֵךְ״? שְׁמַע מִינַּהּ לְבוֹעֵל.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבי אומר: &quot;שני פעמים — ונטמאה ונטמאה — אחד לבעל ואחד לבועל&quot;. ברייתא נוספת: שלוש פעמים &quot;נטמאה&quot; בפרשה — אחד לבעל, אחד לבועל, ואחד לתרומה (דברי ר&#39; עקיבא).</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ר&#39; ישמעאל — קל וחומר לכהונה</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֵימָא (כולי) [כּוּלֵּיהּ] לְהָכִי הוּא דַּאֲתָא? אִם כֵּן, לִכְתּוֹב ״בִּטְנוֹ״ וִ״ירֵכוֹ״. מַאי ״בֶּטֶן״ וְ״יָרֵךְ״? שְׁמַע מִינַּהּ תַּרְתֵּי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל אומר בקל וחומר: גרושה — מותרת בתרומה אבל אסורה לכהן. סוטה — שאסורה בתרומה — קל וחומר שאסורה לכהן! לא צריך פסוק מיוחד לזה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יְהוֹשֻׁעַ: כָּךְ הָיָה דּוֹרֵשׁ זְכַרְיָה כּוּ׳.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דרשה נוספת: &quot;והיא נטמאה&quot; / &quot;והיא לא נטמאה&quot; — אם נטמאה, למה שותה? אם לא נטמאה, למה משקים? → מלמד שהספק אוסר אותה על בעלה עד שתיבדק.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מסוטה לומדים דיני ספק טומאה</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנוּ רַבָּנַן: שָׁלֹשׁ פְּעָמִים הָאֲמוּרִין בַּפָּרָשָׁה ״אִם נִטְמְאָה״, ״נִטְמָאָה״, ״וְנִטְמָאָה״, לָמָּה? אֶחָד לַבַּעַל, וְאֶחָד לַבּוֹעֵל, וְאֶחָד לִתְרוּמָה, דִּבְרֵי רַבִּי עֲקִיבָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קל וחומר מסוטה לשרץ: סוטה — שלא עשו בה שוגג כמזיד ואונס כרצון (שאם נאנסה אינה נבדקת) — בכל זאת ספק = ודאי. שרץ — שעשו בו שוגג כמזיד ואונס כרצון (נטמא בכל מקרה) — קל וחומר שספק = ודאי!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יִשְׁמָעֵאל, קַל וָחוֹמֶר: וּמָה גְּרוּשָׁה שֶׁמּוּתֶּרֶת לִתְרוּמָה — אֲסוּרָה לִכְהוּנָּה, זוֹ שֶׁאֲסוּרָה בִּתְרוּמָה — אֵינוֹ דִּין שֶׁאֲסוּרָה לִכְהוּנָּה?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">פרטים שנלמדים מסוטה: ① כמו סוטה שנאסרת רק ברשות היחיד (סתירה = מקום סתר) — כך ספק טומאה מטמא רק ברשות היחיד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מָה תַּלְמוּד לוֹמַר ״וְהִיא נִטְמָאָה״, ״וְהִיא לֹא נִטְמָאָה״ — אִם נִטְמְאָה לָמָּה שׁוֹתָה? אִם לֹא נִטְמְאָה לָמָּה מַשְׁקָהּ? מַגִּיד לְךָ הַכָּתוּב שֶׁהַסָּפֵק אֲסוּרָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">② כמו סוטה ש&quot;יש בה דעת להישאל&quot; (אפשר לשאול אותה) — כך ספק טומאה מטמא רק ב&quot;דבר שיש בו דעת להישאל&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִכָּאן אַתָּה דָּן לְשֶׁרֶץ: וּמָה סוֹטָה, שֶׁלֹּא עָשָׂה בָּהּ שׁוֹגֵג כְּמֵזִיד וְאוֹנֶס כְּרָצוֹן — עָשָׂה בָּהּ סָפֵק כְּוַדַּאי, שֶׁרֶץ, שֶׁעָשָׂה בּוֹ שׁוֹגֵג כְּמֵזִיד וְאוֹנֶס כְּרָצוֹן — אֵינוֹ דִּין שֶׁיַּעֲשֶׂה בּוֹ סָפֵק</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מסקנה (ברייתא): דבר שיש בו דעת להישאל, ברשות היחיד — ספיקו טמא. ברשות הרבים — ספיקו טהור. דבר שאין בו דעת להישאל — ספיקו טהור בכל מקום.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כח:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ר&#39; ישמעאל ור&#39; עקיבא — איסור תרומה וכהונה</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כְּוַדַּאי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: ר&#39; עקיבא אמר שצריך פסוק לאסור בתרומה, ור&#39; ישמעאל מגיב בקל וחומר לכהונה — אבל ר&#39; עקיבא לא הזכיר כהונה כלל! ועוד: מניין לר&#39; עקיבא שאסורה לכהונה?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמִמָּקוֹם שֶׁבָּאתָ: מָה סוֹטָה רְשׁוּת הַיָּחִיד — אַף שֶׁרֶץ רְשׁוּת הַיָּחִיד.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אם תאמר שכהונה לא צריכה פסוק — כי עשו בה ספק זונה כזונה (וזונה אסורה לכהן) — אם כך, גם תרומה לא צריכה פסוק, שהרי זונה אסורה גם בתרומה!</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כח:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ארבע דרשות לר&#39; עקיבא, שלוש לר&#39; ישמעאל</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמָה סוֹטָה דָּבָר שֶׁיֵּשׁ בּוֹ דַּעַת לִישָּׁאֵל — אַף שֶׁרֶץ דָּבָר שֶׁיֵּשׁ בּוֹ דַּעַת לִישָּׁאֵל.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מסקנה: ר&#39; עקיבא דורש גם כפילות וגם וא&quot;ו → ארבע דרשות: ① לבעל, ② לבועל, ③ לכהונה, ④ לתרומה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמִכָּאן אָמְרוּ: דָּבָר שֶׁיֵּשׁ בּוֹ דַּעַת לִישָּׁאֵל, בִּרְשׁוּת הַיָּחִיד — סְפֵיקוֹ טָמֵא, בִּרְשׁוּת הָרַבִּים — סְפֵיקוֹ טָהוֹר. וְשֶׁאֵין בּוֹ דַּעַת לִישָּׁאֵל, בֵּין בִּרְשׁוּת הַיָּחִיד בֵּין בִּרְשׁוּת הָרַבִּים — סְפֵיקוֹ טָהוֹר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל (שלא דורש וא&quot;ו) — שלוש דרשות: ① לבעל, ② לבועל, ③ לתרומה. כהונה — נלמדת בקל וחומר מתרומה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יִשְׁמָעֵאל: אָמַר רַבִּי עֲקִיבָא תְּרוּמָה, וּמַהְדַּר לֵיהּ אִיהוּ כְּהוּנָּה?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: מניין לר&#39; ישמעאל שהפסוק נצרך דווקא לתרומה ולא לכהונה? אולי הפסוק בא לכהונה, ותרומה מותרת!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְתוּ: לְרַבִּי עֲקִיבָא, כְּהוּנָּה מְנָא לֵיהּ? וְכִי תֵּימָא כְּהוּנָּה לָא צְרִיכָא קְרָא,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: מסתבר שהפסוק מלמד איסור דומה לבעל ובועל — מה בעל ובועל = איסור &quot;מחיים&quot; (בחיי הבעל), אף תרומה = איסור מחיים. לאפוקי כהונה — שחל רק לאחר מיתה (כי בחייו אם יגרשנה ממילא אסורה ככל גרושה).</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_29.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_27.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["כח.","כח.","כח.","כח.","כח.","כח.","כח:","כח:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<8;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<8;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="כח."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

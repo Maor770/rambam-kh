@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_16.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_14.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף טו</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">30 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('טו.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">טו.</button>
+<button onclick="filterAmud('טו:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">טו:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">העלאת הקומץ, מליחה והקטרה</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמַקְטִירוֹ בִּכְלִי שָׁרֵת. בִּכְלִי שָׁרֵת מַקְטֵיר לֵיהּ? אֶלָּא אֵימָא: מַעֲלֵהוּ בִּכְלִי שָׁרֵת לְהַקְטִירוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;מעלהו ומקטירו בכלי שרת&quot; — וכי מקטירים בתוך כלי? אלא: מעלהו בכלי שרת למזבח כדי להקטירו שם על גבי האש.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמוֹלְחוֹ וְנוֹתְנוֹ עַל גַּבֵּי הָאִישִּׁים, דִּכְתִיב: ״וְכׇל קׇרְבַּן מִנְחָתְךָ בַּמֶּלַח תִּמְלָח וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;ומולחו ונותנו על גבי האישים&quot; — מקור: &quot;וכל קרבן מנחתך במלח תמלח&quot;. חובה למלוח כל קרבן לפני ההקטרה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קָרַב הַקּוֹמֶץ שְׁיָרֶיהָ נֶאֱכָלִין. מְנָלַן — דִּכְתִיב: ״וְהִקְטִיר הַכֹּהֵן אֶת אַזְכָּרָתָהּ וְגוֹ׳״, וּכְתִיב: ״וְהַנּוֹתֶרֶת מִן הַמִּנְחָה לְאַהֲרֹן וּלְבָנָיו״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;קרב הקומץ — שיריה נאכלין&quot; — מקור: &quot;והקטיר הכהן את אזכרתה&quot; (= הקומץ), ואחר כך &quot;והנותרת מן המנחה לאהרן ולבניו&quot; = מותרת באכילת כהנים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קָרַב הַקּוֹמֶץ. לְמָר כִּדְאִית לֵיהּ וּלְמָר כִּדְאִית לֵיהּ. דְּאִיתְּמַר: הַקּוֹמֶץ, מֵאֵימָתַי מַתִּיר שִׁירַיִים בַּאֲכִילָה? רַבִּי חֲנִינָא אָמַר: מִשֶּׁתִּשְׁלוֹט בּוֹ הָאוּר, רַבִּי יוֹחָנָן אָמַר: מִשֶּׁתִּיצַּת הָאוּר בְּרוּבּוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מאימתי מותר לאכול שיריים? מחלוקת: ר&#39; חנינא — משתשלוט בו האור (= משהתחיל לבעור). ר&#39; יוחנן — משתיצת האור ברובו של הקומץ. לכל שיטה — ברגע המתאים הכהנים רשאים לאכול.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">הוספת יין ודבש, ואיסור חימוץ</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַשָּׁאִין הַכֹּהֲנִים לִיתֵּן לְתוֹכוֹ יַיִן וְשֶׁמֶן וּדְבַשׁ. מַאי טַעְמָא? אָמַר קְרָא: ״לְמׇשְׁחָה״ — לִגְדוּלָּה, כְּדֶרֶךְ שֶׁהַמְּלָכִים אוֹכְלִין.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הכהנים רשאים להוסיף יין, שמן ודבש לשיריים — מקור: &quot;לך נתתים למשחה&quot; = לגדולה, כדרך שהמלכים אוכלים. אף שדבש אסור להקריב, בשיריים שנאכלים מותר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֵין אֲסוּרִין אֶלָּא מִלְּחַמֵּץ, דִּכְתִיב: ״לֹא תֵאָפֶה חָמֵץ חֶלְקָם״, אָמַר רַבִּי שִׁמְעוֹן בֶּן לָקִישׁ: אֲפִילּוּ חֶלְקָם לֹא תֵאָפֶה חָמֵץ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">האיסור היחיד — חימוץ. מקור: &quot;לא תאפה חמץ חלקם&quot; — ר&#39; שמעון בן לקיש דורש: אפילו &quot;חלקם&quot; של הכהנים (= השיריים) לא תאפה חמץ.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">כל המנחות טעונות שמן — ומנחת חוטא?</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כׇּל הַמְּנָחוֹת כּוּ׳. וְכׇל הַמְּנָחוֹת טְעוּנוֹת שֶׁמֶן וּלְבוֹנָה? וְהָאִיכָּא מִנְחַת חוֹטֵא, דְּרַחֲמָנָא אָמַר: ״לֹא יָשִׂים עָלֶיהָ שֶׁמֶן וְלֹא יִתֵּן עָלֶיהָ לְבֹנָה״!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה על המשנה: &quot;כל המנחות טעונות שמן ולבונה&quot; — הרי מנחת חוטא אינה טעונה, שנאמר &quot;לא ישים עליה שמן ולא יתן עליה לבנה&quot;!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָכִי קָאָמַר: כׇּל הַמְּנָחוֹת טְעוּנוֹת שֶׁמֶן וּלְבוֹנָה, וּבָאוֹת מִן הַחִיטִּין, וּבָאוֹת סֹלֶת. מִנְחַת חוֹטֵא, אַף עַל פִּי שֶׁאֵינָהּ טְעוּנָה שֶׁמֶן וּלְבוֹנָה — בָּאָה מִן הַחִטִּין וּבָאָה סֹלֶת. מִנְחַת הָעוֹמֶר, אַף עַל פִּי שֶׁהִיא בָּאָה מִן הַשְּׂעוֹרִין — טְעוּנָה שֶׁמֶן וּלְבוֹנָה וּבָאָה גֶּרֶשׂ. וְזוֹ, אֵינָהּ טְעוּנָה לֹא שֶׁמֶן וְלֹא לְבוֹנָה, וּבָאָה מִן הַשְּׂעוֹרִין, וּבָאָה קֶמַח.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: המשנה מסבירה את ההבדלים: ① שאר מנחות — שמן, לבונה, חיטים, סולת. ② מנחת חוטא — בלי שמן ולבונה, אך מחיטים וסולת. ③ מנחת העומר — שעורים, אך עם שמן ולבונה וגרש. ④ מנחת סוטה — הגרועה: בלי שמן, בלי לבונה, שעורים, וקמח פשוט.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שלא יהא חוטא נשכר — קרבן ללא הידור</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּנְיָא, אָמַר רַבִּי שִׁמְעוֹן: בְּדִין הוּא שֶׁתְּהֵא מִנְחַת חוֹטֵא טְעוּנָה שֶׁמֶן וּלְבוֹנָה, שֶׁלֹּא יְהֵא חוֹטֵא נִשְׂכָּר. וּמִפְּנֵי מָה אֵינָהּ טְעוּנָה — שֶׁלֹּא יְהֵא קׇרְבָּנוֹ מְהוּדָּר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; שמעון: מן הדין מנחת חוטא צריכה שמן ולבונה — שלא יהא חוטא נשכר (חוסך כסף). אך לא ניתנו לה — שלא יהא קרבנו מהודר. שני שיקולים נוגדים, ומכריעים שקרבן חוטא לא יהיה נאה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּבְדִין הוּא שֶׁתְּהֵא חַטַּאת חֵלֶב טְעוּנָה נְסָכִים, שֶׁלֹּא יְהֵא חוֹטֵא נִשְׂכָּר. וּמִפְּנֵי מָה אֵינָהּ טְעוּנָה — שֶׁלֹּא יְהֵא קׇרְבָּנוֹ מְהוּדָּר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כך גם חטאת חלב (על אכילת חלב בשגגה) צריכה נסכים מן הדין, אך לא ניתנו לה — שלא יהא קרבנו מהודר. אותו עיקרון: חוטא לא נהנה ולא מתייפה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲבָל חַטָּאתוֹ שֶׁל מְצוֹרָע וַאֲשָׁמוֹ טְעוּנִין נְסָכִים, לְפִי שֶׁאֵין בָּאִין עַל חֵטְא. אִינִי? וְהָאָמַר רַבִּי שְׁמוּאֵל בַּר נַחְמָנִי אָמַר רַבִּי יוֹנָתָן: עַל שִׁבְעָה דְּבָרִים נְגָעִים בָּאִין וְכוּ׳! הָתָם מִנִּגְעֵיהּ הוּא דְּאִיכַּפַּר לֵיהּ, כִּי מַיְיתֵי קׇרְבָּן — לְאִשְׁתְּרוֹיֵי בְּקָדָשִׁים הוּא דְּקָא מַיְיתֵי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חריג: חטאת מצורע ואשמו כן טעונים נסכים, כי אינם באים על חטא. שואלים: הרי צרעת באה על שבעה חטאים! תשובה: הנגע עצמו כיפר — הקרבן רק מתיר אכילת קדשים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא מֵעַתָּה, חַטַּאת נָזִיר תְּהֵא טְעוּנָה נְסָכִים, לְפִי שֶׁאֵינָהּ בָּאָה עַל חֵטְא! סָבַר לַהּ כְּרַבִּי אֶלְעָזָר הַקַּפָּר, דְּאָמַר: נָזִיר נָמֵי חוֹטֵא הוּא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: אם כך, חטאת נזיר (שנטמא) תהא טעונה נסכים, שאינה על חטא! תשובה: ר&#39; שמעון סובר כר&#39; אלעזר הקפר — נזיר גם חוטא הוא, שציער עצמו מן היין.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">רבן גמליאל — מעשיה כבהמה, קרבנה כבהמה</span>
+<span style="font-size:11px;color:#bbb">1</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבָּן גַּמְלִיאֵל אוֹמֵר: כְּשֵׁם כּוּ׳. תַּנְיָא, אָמַר לָהֶן רַבָּן גַּמְלִיאֵל לַחֲכָמִים: סוֹפְרִים, הַנִּיחוּ לִי וְאֶדְרְשֶׁנָּה כְּמִין חוֹמֶר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבן גמליאל אמר לחכמים: הניחו לי ואדרוש ברמז — כשם שמעשיה (של הסוטה) מעשה בהמה, כך קרבנה מאכל בהמה (שעורים).</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">טו:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">משנה: כלי חרס, מים מהכיור ועפר מההיכל</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דְּשַׁמְעֵיהּ לְרַבִּי מֵאִיר דְּקָאָמַר: הִיא הֶאֱכִילַתּוּ מַעֲדַנֵּי עוֹלָם — לְפִיכָךְ קׇרְבָּנָהּ מַאֲכַל בְּהֵמָה. אָמַר לוֹ: הָתִינַח עֲשִׁירָה, עֲנִיָּה מַאי אִיכָּא לְמֵימַר! אֶלָּא: כְּשֵׁם שֶׁמַּעֲשֶׂיהָ מַעֲשֵׂה בְהֵמָה — כָּךְ קׇרְבָּנָהּ מַאֲכַל בְּהֵמָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; מאיר נימק: הסוטה האכילה את הבועל מעדנים — לכן קרבנה מאכל בהמה. רבן גמליאל דחה: לעניה שלא האכילה מעדנים — הטעם הוא מעשיה כבהמה, לא המאכל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְנִי׳ הָיָה מֵבִיא פְּיָלִי שֶׁל חֶרֶס וְנוֹתֵן לְתוֹכָהּ חֲצִי לוֹג מַיִם מִן הַכִּיּוֹר. רַבִּי יְהוּדָה אוֹמֵר: רְבִיעִית. כְּשֵׁם שֶׁמְּמַעֵט בַּכְּתָב, כָּךְ מְמַעֵט בַּמַּיִם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">משנה: הכהן מביא כלי חרס (&quot;פיאלי&quot;) ונותן בו חצי לוג מים מן הכיור. ר&#39; יהודה אומר: רק רביעית — כשם שממעט בכתב (כותב פחות במגילה), כך ממעט במים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">נִכְנַס לַהֵיכָל וּפָנָה לִימִינוֹ, וּמָקוֹם הָיָה שָׁם אַמָּה עַל אַמָּה, וְטַבְלָא שֶׁל שַׁיִשׁ, וְטַבַּעַת הָיְתָה קְבוּעָה בָּהּ כְּשֶׁהוּא מַגְבִּיהַּ, וְנוֹטֵל עָפָר מִתַּחְתֶּיהָ, וְנוֹתֵן כְּדֵי שֶׁיֵּרָאֶה עַל הַמַּיִם, שֶׁנֶּאֱמַר: ״וּמִן הֶעָפָר אֲשֶׁר יִהְיֶה בְּקַרְקַע הַמִּשְׁכָּן יִקַּח הַכֹּהֵן וְנָתַן אֶל הַמָּיִם״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הכהן נכנס להיכל ופנה לימין. שם היה מקום אמה על אמה, עם טבלת שיש וטבעת קבועה. מגביה את הטבלה, נוטל עפר מתחתיה, ונותנו למים — &quot;ומן העפר אשר יהיה בקרקע המשכן&quot;.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טו:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">כלי חרס חדש — גזירה שווה ממצורע</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גְּמָ׳ תָּנָא: פְּיָלִי שֶׁל חֶרֶס חֲדָשָׁה, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. מַאי טַעְמָא דְּרַבִּי יִשְׁמָעֵאל? גָּמַר ״כְּלִי״ ״כְּלִי״ מִמְּצוֹרָע: מָה לְהַלָּן חֶרֶס חֲדָשָׁה — אַף כָּאן חֶרֶס חֲדָשָׁה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל: כלי החרס של הסוטה חייב להיות חדש. מנין? גזירה שווה &quot;כלי&quot; ממצורע — מה שם חרס חדש, אף כאן חדש.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְהָתָם מְנָלַן? דִּכְתִיב: ״וְשָׁחַט אֶת הַצִּפּוֹר הָאֶחָת אֶל כְּלִי חֶרֶשׂ עַל מַיִם חַיִּים״, מָה ״מַיִם חַיִּים״ — שֶׁלֹּא נֶעֶשְׂתָה בָּהֶן מְלָאכָה, אַף ״כְּלִי״ — שֶׁלֹּא נֶעֶשְׂתָה בּוֹ מְלָאכָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומנין שאצל מצורע צריך חדש? &quot;ושחט את הציפור... אל כלי חרש על מים חיים&quot; — מה מים חיים = שלא נעשתה בהם מלאכה, אף כלי = שלא נעשתה בו מלאכה (= חדש).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אִי: מָה לְהַלָּן מַיִם חַיִּים, אַף כָּאן מַיִם חַיִּים?!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: אם לומדים ממצורע, נלמד גם שצריך מים חיים (מעיין)! תשובה: לר&#39; ישמעאל אכן כך — מי הכיור הם מי מעיין. חכמים חולקים: גם מים רגילים כשרים לכיור.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">לְרַבִּי יִשְׁמָעֵאל הָכִי נָמֵי. דְּאָמַר רַבִּי יוֹחָנָן: מֵי כִיּוֹר, רַבִּי יִשְׁמָעֵאל אוֹמֵר: מֵי מַעְיָין הֵן, וַחֲכָמִים אוֹמְרִים: מִשְּׁאָר מֵימוֹת הֵן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה על הגזירה השווה: מצורע שונה — טעון גם עץ ארז, אזוב ושני תולעת! אם כן, למה ללמוד ממנו?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אִיכָּא לְמִיפְרַךְ: מָה לִמְצוֹרָע, שֶׁכֵּן טָעוּן עֵץ אֶרֶז וְאֵזוֹב וּשְׁנִי תוֹלָעַת!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבה מתרץ: &quot;בכלי חרש&quot; כתוב בסוטה עם ה&#39; הידיעה — כאילו אומר: הכלי שכבר אמרתי לך (אצל מצורע). זו הפנייה לדין המצורע.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבָּה, אָמַר קְרָא: ״בִּכְלִי חֶרֶס״, כְּלִי שֶׁאָמַרְתִּי לְךָ כְּבָר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא: אפילו אם אין צורך בחדש ממש — כלי ששחורו פניו באש (&quot;נתאכמו&quot;) פסול. כמו מים שלא נשתנו — אף כלי שלא נשתנה במראהו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טו:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">כלי שהושחר וחזר — וכניסה להיכל</span>
+<span style="font-size:11px;color:#bbb">8</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רָבָא: לֹא שָׁנוּ אֶלָּא שֶׁלֹּא נִתְאַכְּמוּ פָּנָיו, אֲבָל נִתְאַכְּמוּ פָּנָיו — פְּסוּלִין. מַאי טַעְמָא, דּוּמְיָא דְּמַיִם: מָה ״מַיִם״ — שֶׁלֹּא נִשְׁתַּנּוּ, אַף ״כְּלִי״ — שֶׁלֹּא נִשְׁתַּנָּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא שאל: כלי חרס שהושחר (נתאכמו פניו) והוחזר לכבשן ונתלבן (חזר למראהו) — כשר או פסול? האם &quot;כיון שנדחה נדחה&quot;, או &quot;כיון שחזר חזר&quot;?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בָּעֵי רָבָא: נִתְאַכְּמוּ וְהֶחְזִירָן לְתוֹךְ כִּבְשַׁן הָאֵשׁ וְנִתְלַבְּנוּ, מַהוּ? מִי אָמְרִינַן: כֵּיוָן דְּאִידְּחוֹ אִידְּחוֹ, אוֹ דִילְמָא כֵּיוָן דַּהֲדוּר הֲדוּר?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ניסיון הוכחה: ר&#39; אלעזר פסל עץ ארז ואזוב ששימשו כרצועת סל — אף שחזרו ונפשטו. משמע: נדחה = נדחה לעולם!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּא שְׁמַע, רַבִּי אֶלְעָזָר אוֹמֵר: עֵץ אֶרֶז וְאֵזוֹב וּשְׁנִי תוֹלַעַת שֶׁהִפְשִׁיל בָּהֶן קוּפָּתוֹ לַאֲחוֹרָיו — פְּסוּלִין. וְהָא הָתָם הָדְרִי וּמִפַּשְׁטִי!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דוחים: שם מדובר שהחומרים נתקלפו ונפגמו בשימוש, ולא חזרו למצבם המקורי. אין ראיה לכלי חרס שנתלבן בכבשן וחזר לגמרי.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם דְּאִיקְּלוּף אִיקְּלוֹפֵי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;נכנס להיכל ופנה לימינו&quot; — מאי טעמא? כלל: כל פניות שאתה פונה לא יהיו אלא דרך ימין.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">נִכְנַס לַהֵיכָל וּפָנָה לִימִינוֹ וְכוּ׳. מַאי טַעְמָא? דְּאָמַר מָר: כׇּל פִּינּוֹת שֶׁאַתָּה פּוֹנֶה לֹא יְהוּ אֶלָּא דֶּרֶךְ יָמִין.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;מקום היה שם אמה על אמה&quot; — ברייתא: &quot;ומן העפר אשר יהיה&quot; — אולי יכין עפר מבחוץ ויכניס? תלמוד לומר &quot;בקרקע המשכן&quot; — חייב להיות מקרקע המשכן.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מָקוֹם הָיָה שָׁם אַמָּה כּוּ׳. תָּנוּ רַבָּנַן: ״וּמִן הֶעָפָר אֲשֶׁר יִהְיֶה״, יָכוֹל יְתַקֵּן מִבַּחוּץ וְיַכְנִיס.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אם &quot;בקרקע המשכן&quot; — אולי יחפור בקרדומות? תלמוד לומר &quot;אשר יהיה&quot; — עפר מוכן שכבר נמצא שם. הא כיצד? יש שם עפר — הבא משם, אין שם — תן עפר ממקום אחר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּלְמוּד לוֹמַר: ״בְּקַרְקַע הַמִּשְׁכָּן״. אִי ״בְּקַרְקַע הַמִּשְׁכָּן״, יָכוֹל יַחְפּוֹר בְּקַרְדּוּמּוֹת — תַּלְמוּד לוֹמַר: ״אֲשֶׁר יִהְיֶה״. הָא כֵּיצַד? יֵשׁ שָׁם — הָבֵא, אֵין שָׁם — תֵּן שָׁם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ברייתא אחרת: &quot;אשר יהיה&quot; — מלמד שהיה מתקן (מכין) עפר מבחוץ ומכניס פנימה. &quot;בקרקע המשכן&quot; — לפי איסי בן יהודה: בא ללמד דבר נוסף על קרקע המשכן.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּנְיָא אִידַּךְ: ״וּמִן הֶעָפָר אֲשֶׁר יִהְיֶה וְגוֹ׳״ — מְלַמֵּד שֶׁהָיָה מְתַקֵּן מִבַּחוּץ וּמַכְנִיס. ״בְּקַרְקַע הַמִּשְׁכָּן״, אִיסִי בֶּן יְהוּדָה אוֹמֵר: לְהָבִיא קַרְקַע</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הבעיה נפתרה: מותר להכין עפר מבחוץ ולהניחו על קרקע המשכן, ומשם נוטלים לסוטה. העפר חייב להיות על קרקע המשכן ברגע הנטילה.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_16.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_14.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["טו.","טו.","טו.","טו.","טו.","טו:","טו:","טו:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<8;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<8;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="טו."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

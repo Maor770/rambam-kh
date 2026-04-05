@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_27.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_25.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף כו</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">33 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('כו.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">כו.</button>
+<button onclick="filterAmud('כו:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">כו:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מעוברת חבירו ומינקת חבירו — לא שותות ולא נוטלות כתובה, אלו דברי ר&#39;...</span>
+<span style="font-size:11px;color:#bbb">8</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מְעוּבֶּרֶת חֲבֵירוֹ וּמֵינֶקֶת חֲבֵירוֹ — לֹא שׁוֹתוֹת וְלֹא נוֹטְלוֹת כְּתוּבָה, דִּבְרֵי רַבִּי מֵאִיר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מעוברת חבירו ומינקת חבירו — לא שותות ולא נוטלות כתובה, אלו דברי ר&#39; מאיר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">שֶׁהָיָה רַבִּי מֵאִיר אוֹמֵר: לֹא יִשָּׂא אָדָם מְעוּבֶּרֶת חֲבֵירוֹ וּמֵינֶקֶת חֲבֵירוֹ, וְאִם נָשָׂא — יוֹצִיא וְלֹא יַחְזִיר עוֹלָמִית. וַחֲכָמִים אוֹמְרִים: יוֹצִיא, וּכְשֶׁיַּגִּיעַ זְמַנּוֹ לִכְנוֹס — יִכְנוֹס.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שהיה ר&#39; מאיר אומר: לא ישא אדם מעוברת חבירו ומינקת חבירו לפני שמלאו עשרים וארבעה חודשים ללידת הולד, כשייגמל הילד מיניקתו, ואם נשא — יוציא (יגרש) ולא יחזיר אותה עולמית, שקנסוהו על שעבר על דברי חכמים. וחכמים אומרים:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְהָרוֹבֶא שֶׁנָּשָׂא עֲקָרָה וּזְקֵינָה, וְאֵין לוֹ אִשָּׁה וּבָנִים מֵעִיקָּרָא — לֹא שׁוֹתָה וְלֹא נוֹטֶלֶת כְּתוּבָּה. רַבִּי אֶלְעָזָר אוֹמֵר: יָכוֹל הוּא לִישָּׂא אַחֶרֶת וְלִפְרוֹת וְלִרְבּוֹת הֵימֶנָּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ועוד אמרו: והרובא (בחור, איש צעיר) שנשא אשה עקרה וזקינה ואין לו אשה ובנים מעיקרא  — לא שותה ולא נוטלת כתובה, שהרי נשא אשה האסורה עליו, שהרי אינו יכול לקיים על ידה מצות פריה ורביה שטרם קיימה. ר&#39; אלעזר אומר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲבָל הַמְקַנֵּא לַאֲרוּסָתוֹ וּלְשׁוֹמֶרֶת יָבָם שֶׁלּוֹ, וּמִשֶּׁכְּנָסָהּ נִסְתְּרָה — אוֹ שׁוֹתָה, אוֹ לֹא נוֹטֶלֶת כְּתוּבָּה. מְעוּבֶּרֶת וּמֵינֶקֶת עַצְמוֹ — אוֹ שׁוֹתָה, אוֹ לֹא נוֹטֶלֶת כְּתוּבָּתָהּ. הָרוֹבֶא שֶׁנָּשָׂא עֲקָרָה וּזְקֵינָה, וְיֵשׁ לוֹ אִשָּׁה וּבָנִים — אוֹ שׁוֹתָה, אוֹ לֹא נוֹטֶלֶת כְּתוּבָּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשום כך הריהי שותה אבל המקנא לארוסתו או לשומרת יבם שלו, ומשכנסה נסתרה — או שותה או לא נוטלת כתובה. מעוברת ומינקת עצמו שקינא לה, שיש לחשוש שמא יזיקו המים המרים לוולד, מכל מקום קינויו קינוי ולכן או שותה או לא נוטלת כתובתה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֵשֶׁת מַמְזֵר לְמַמְזֵר, וְאֵשֶׁת נָתִין לְנָתִין, וְאֵשֶׁת גֵּר וְעֶבֶד מְשׁוּחְרָר, וְאַיְילוֹנִית — אוֹ שׁוֹתָה, אוֹ לֹא נוֹטֶלֶת כְּתוּבָּה. קָתָנֵי מִיהָא אַיְילוֹנִית, תְּיוּבְתֵּיהּ דְּרַב נַחְמָן!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אשת ממזר שהיתה נשואה לממזר, בנישואין כשרים, או אשת נתין לנתין, או אשת גר או עבד משוחרר, או איילונית שקינא לה בעלה — או שותה, או לא נוטלת כתובה. קתני מיהא  שם שאיילונית שותה, והרי זו תיובתיה  רב נחמן!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר לְךָ רַב נַחְמָן: תַּנָּאֵי הִיא, וַאֲנָא דַּאֲמַרִי כִּי הַאי תַּנָּא, דְּתַנְיָא, רַבִּי שִׁמְעוֹן בֶּן אֶלְעָזָר אוֹמֵר: אַיְילוֹנִית — לֹא שׁוֹתָה וְלֹא נוֹטֶלֶת כְּתוּבָּה, שֶׁנֶּאֱמַר: ״וְנִקְּתָה וְנִזְרְעָה זָרַע״ — מִי שֶׁדַּרְכָּהּ לְהַזְרִיעַ. יָצָאתָה זוֹ — שֶׁאֵין דַּרְכָּהּ לְהַזְרִיעַ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: אמר  לך רב נחמן: תנאי  היא בענין זה, ואנא דאמרי כי האי תנא . דתניא , ר&#39; שמעון בן אלעזר אומר: איילונית לא שותה ולא נוטלת כתובה, שנאמר: &quot;ונקתה ונזרעה זרע&quot; (במדבר ה, כח) — מי שדרכה להזריע, יצאתה זו שאין דרכה להזריע.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבָּנַן, הַאי ״וְנִקְּתָה וְנִזְרְעָה זָרַע״ מַאי עָבְדִי לֵיהּ? מִיבְּעֵי לְהוּ לְכִדְתַנְיָא: ״וְנִקְּתָה וְנִזְרְעָה [זָרַע]״, שֶׁאִם הָיְתָה עֲקָרָה נִפְקֶדֶת, דִּבְרֵי רַבִּי עֲקִיבָא. אָמַר לוֹ רַבִּי יִשְׁמָעֵאל: אִם כֵּן, יִסָּתְרוּ כׇּל הָעֲקָרוֹת וְיִפָּקְדוּ, וְזוֹ, הוֹאִיל וְלֹא נִסְתְּרָה הִפְסִידָה?!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: ורבנן  הסבורים באותה ברייתא שאיילונית שותה, האי  הכתוב &quot;ונקתה ונזרעה זרע&quot; מאי עבדי ליה ? הלא אינה בכלל &quot;ונזרעה זרע&quot;! ומשיבים: מיבעי להו לכדתניא : מה שנאמר &quot;ונקתה ונזרעה &quot;, לומר שאם היתה עקרה — נפקדת בבנים, אלו דברי ר&#39; עקיבא.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אִם כֵּן, מָה תַּלְמוּד לוֹמַר: ״וְנִקְּתָה וְנִזְרְעָה זָרַע״, שֶׁאִם הָיְתָה יוֹלֶדֶת בְּצַעַר — יוֹלֶדֶת בְּרֶיוַח, נְקֵבוֹת — יוֹלֶדֶת זְכָרִים, קְצָרִים — יוֹלֶדֶת אֲרוּכִּים, שְׁחוֹרִים — יוֹלֶדֶת לְבָנִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלא יש לומר: אם כן מה תלמוד לומר: &quot;ונקתה ונזרעה זרע&quot;, שאם היתה יולדת עד עכשיו בצער — יולדת מעתה בריוח (ברווחה בלא צער), היתה יולדת נקבות — יולדת עכשיו זכרים, היתה יולדת ילדים קצרים (נמוכים) — יולדת ארוכים (גבוהים), היתה יולדת ילדים שחורים</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה שאשת ממזר הנשואה לממזר שותה.</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֵשֶׁת מַמְזֵר לְמַמְזֵר. פְּשִׁיטָא! מַהוּ דְּתֵימָא: אַפּוֹשֵׁי פְּסוּלִין לָא לַיפֵּשׁ, קָא מַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה שאשת ממזר הנשואה לממזר שותה. ותוהים: פשיטא  שכן הוא, שהרי נישואיהם נישואין כשרים! ומשיבים, מהו דתימא :</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֵשֶׁת גֵּר וְעֶבֶד מְשׁוּחְרָר וְאַיְילוֹנִית. פְּשִׁיטָא?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוד שנינו שם: אשת גר ועבד משוחרר, ואיילונית או שותה או לא נוטלת כתובה. ותוהים לגבי אשת גר ועבד כנעני משוחרר (שגם הוא גר): פשיטא   שכן הוא, שהרי אשתו היא לכל דבר?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַהוּ דְּתֵימָא: ״דַּבֵּר אֶל בְּנֵי יִשְׂרָאֵל״, וְלֹא גֵּרִים, קָא מַשְׁמַע לַן. וְאֵימָא הָכִי נָמֵי! ״וְאָמַרְתָּ״ — רִבּוּיָא הוּא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: מהו דתימא : הלא נאמר בראש פרשת סוטה &quot;דבר אל בני ישראל&quot; (במדבר ה, יב), ויש מקום לומר שבא הכתוב למעט: בנים של ישראל דווקא, ולא גרים, על כן קא משמע לן  הברייתא שאף גרים בכלל. ושואלים: ואימא הכי נמי  שהכתוב בא באמת למעט גרים! ומשיבים:</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה: אשת כהן שותה ומותרת לבעלה.</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֵשֶׁת כֹּהֵן שׁוֹתָה כּוּ׳. אֵשֶׁת כֹּהֵן שׁוֹתָה — פְּשִׁיטָא! מַהוּ דְּתֵימָא: ״וְהִיא לֹא נִתְפָּשָׂה״ — אֲסוּרָה, הָא נִתְפָּשָׂה — מוּתֶּרֶת. וְזוֹ, הוֹאִיל וְנִתְפָּשָׂה אֲסוּרָה — אֵימָא לָא תִּשְׁתֵּה, קָא מַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה: אשת כהן שותה ומותרת לבעלה. ותוהים: אשת כהן שותה פשיטא  ששותה! ומשיבים: מהו דתימא , הלא אמר הכתוב בסוטה: &quot;והיא לא נתפשה (נאנסה)&quot; (במדבר ה, יג) ולכן היא אסורה, הא  אם נתפשה — מותרת לבעלה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמוּתֶּרֶת לְבַעְלָהּ. פְּשִׁיטָא! אָמַר רַב הוּנָא: בְּמִתְנַוְּונָה. מִתְנַוְּונָה — הָא בַּדְקוּהָ מַיָּא!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה שאשת כהן שותה ומותרת לבעלה. ושואלים: פשיטא , הלא נבדקה ונמצאה טהורה! אמר רב הונא: מדובר שם במתנוונה שהולך גופה ומתנוון. ותוהים: מתנוונה — הא  כבר בדקוה מיא   והוכיחו שהיא טמאה, אלא שהזכות תולה לה אבל אסורה לבעלה!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בְּמִתְנַוְּונָה דֶּרֶךְ אֵבָרִים. מַהוּ דְּתֵימָא: הָא זַנּוֹיֵי זַנַּאי, וְהָא דְּלָא בַּדְקוּהָ מַיָּא כִּי אוֹרְחַיְה[וּ] — מִשּׁוּם דִּבְאוֹנֶס זַנַּאי, וּלְגַבֵּי כֹּהֵן אֲסִירָא, קָא מַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: במתנוונה דרך אברים אחרים. כלומר, מחלות באות עליה, אבל לא באיברים האמורים בתורה. מהו דתימא : הא זנויי זנאי , והא  שלא בדקוה מיא כי אורחיה  הוא משום שבאונס זנאי  ולגבי כהן בכל אופן היא אסירא , על כן קא משמע לן  שאין חוששים לכך.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה שאשת סריס שותה.</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֵשֶׁת סָרִיס שׁוֹתָה. פְּשִׁיטָא! מַהוּ דְּתֵימָא: ״מִבַּלְעֲדֵי אִישֵׁךְ״ אָמַר רַחֲמָנָא, וְהַאי לָאו בַּר הָכִי הוּא, קָא מַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה שאשת סריס שותה. ותוהים: פשיטא , הלא נשואה היא לו! ומשיבים, מהו דתימא : הלא &quot;ויתן איש בך את שכבתו מבלעדי אישך&quot; (במדבר ה, כ) אמר רחמנא , והאי לאו בר הכי  הוא, על כן קא משמע לן  שאין אומרים כן.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עַל יְדֵי כׇּל עֲרָיוֹת מְקַנִּין. פְּשִׁיטָא!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה שעל ידי (לשם) כל עריות מקנין (מקנאים) ותוהים: פשיטא  שכן הוא!</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כו:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מהו דתימא  הלא נאמר בפרשת סוטה &quot;נטמאה&quot; &quot;נטמאה&quot; (במדבר ה, יג-יד) שני פעמים,...</span>
+<span style="font-size:11px;color:#bbb">17</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַהוּ דְּתֵימָא: ״נִטְמָאָה״ ״נִטְמָאָה״ שְׁנֵי פְּעָמִים: אֶחָד לַבַּעַל וְאֶחָד לַבּוֹעֵל. הֵיכָא דְּקָא מִיתַּסְרָא בְּהָא זְנוּת, אֲבָל הָא הוֹאִיל וַאֲסוּרָה וְקָיְימָא, אֵימָא לָא, קָא מַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מהו דתימא  הלא נאמר בפרשת סוטה &quot;נטמאה&quot; &quot;נטמאה&quot; (במדבר ה, יג-יד) שני פעמים, וללמדנו: איסור אחד לבעל ואיסור אחד לבועל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">חוּץ מִן הַקָּטָן וְכוּ׳. ״אִישׁ״ אָמַר רַחֲמָנָא, וְלֹא קָטָן וְשֶׁאֵינוֹ אִישׁ. לְמַעוֹטֵי מַאי? אִילֵּימָא לְמַעוֹטֵי שָׁחוּף, וְהָאָמַר שְׁמוּאֵל: שָׁחוּף מְקַנִּין עַל יָדוֹ, וּפוֹסֵל בִּתְרוּמָה!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אמרנו שמכל אלה שנסתרה עמהם מקנאים את האשה חוץ מן הקטן. וטעמו של דבר: &quot;ושכב איש אותה&quot; (במדבר ה, יג) אמר רחמנא  — ולא קטן. ושנינו שאינו מקנא לה ממי שאינו איש. ושואלים:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מְקַנִּין עַל יָדוֹ, פְּשִׁיטָא! מַהוּ דְּתֵימָא: ״וְשָׁכַב אִישׁ אֹתָהּ שִׁכְבַת זֶרַע״ אָמַר רַחֲמָנָא, וְהָא לָאו בַּר הָכִי הוּא, קָא מַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושאלו על דבריו: מקנין  על ידו, פשיטא  שכן הוא! והסבירו: מהו דתימא  הלא &quot;ושכב איש אתה שכבת זרע&quot; (במדבר ה, יג) אמר רחמנא , והא לאו בר הכי  הוא, שהרי אינו יכול לבוא עליה, על כן קא משמע לן  שמואל שאף על ידו מקנאים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּפוֹסֵל בִּתְרוּמָה. פְּשִׁיטָא! מַהוּ דְּתֵימָא: ״לֹא יְחַלֵּל זַרְעוֹ״ אָמַר רַחֲמָנָא: דְּאִית לֵיהּ זֶרַע — לִיחַלֵּל, דְּלֵית לֵיהּ זֶרַע — לָא לִיחַלֵּל, קָא מַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ועוד שאלו על דברי שמואל: &quot;ופוסל בתרומה&quot; פשיטא  שכן הוא! והשיבו: מהו דתימא : &quot;ולא יחלל זרעו&quot; (ויקרא כא, טו) אמר רחמנא , זה דאית ליה  זרע — ליחלל , ואילו זה דלית ליה  זרע — לא ליחלל , על כן קא משמע לן  שאין הדין תלוי בזרע.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֶלָּא לְמַעוֹטֵי נׇכְרִי? וְהָאָמַר רַב הַמְנוּנָא: נׇכְרִי מְקַנִּין עַל יָדוֹ וּפוֹסֵל בִּתְרוּמָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואלא נאמר כי מה ששנינו &quot;שאינו איש&quot; בא למעוטי  גוי שאין מקנאים על ידו? ושאלו: והאמר  רב המנונא: גוי מקנין על ידו ופוסל בתרומה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מְקַנִּין עַל יָדוֹ — פְּשִׁיטָא! מַהוּ דְּתֵימָא ״נִטְמָאָה״ ״נִטְמָאָה״ שְׁתֵּי פְּעָמִים: אֶחָד לַבַּעַל וְאֶחָד לַבּוֹעֵל, הֵיכָא דְּקָמִיתַּסְרָא בְּהָא זְנוּת, אֲבָל הָא הוֹאִיל וַאֲסִירָא וְקָיְימָא, אֵימָא לָא, קָמַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומבררים: מקנין על ידו פשיטא ? והסבירו: מהו דתימא  כיון שנאמר בסוטה &quot;נטמאה&quot; &quot;נטמאה&quot; שתי פעמים, ללמד:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּפוֹסֵל בִּתְרוּמָה — פְּשִׁיטָא! מַהוּ דְּתֵימָא: ״וּבַת כֹּהֵן כִּי תִהְיֶה לְאִישׁ זָר״ אָמַר רַחֲמָנָא: דְּבַר הֲוָיָה — אִין, דְּלָאו בַּר הֲוָיָה — לָא, קָמַשְׁמַע לַן דְּפָסֵיל מִדְּרַבִּי יוֹחָנָן,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ועוד שאלו על דברי רב המנונא: ופוסל בתרומה פשיטא  שכן הוא! והסבירו: מהו דתימא : &quot;ובת כהן כי תהיה לאיש זר&quot; (ויקרא כב, יב) אמר רחמנא , לומר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דְּאָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי יִשְׁמָעֵאל: מִנַּיִן לְנׇכְרִי וְעֶבֶד שֶׁבָּאוּ עַל הַכֹּהֶנֶת וְעַל הַלְּוִיָּיה וְעַל בַּת יִשְׂרָאֵל, שֶׁפְּסָלוּהָ — שֶׁנֶּאֱמַר: ״וּבַת כֹּהֵן כִּי תִהְיֶה אַלְמָנָה וּגְרוּשָׁה״. מִי שֶׁיֵּשׁ לוֹ אַלְמְנוּת וְגֵירוּשִׁין בָּהּ, יָצְאוּ נׇכְרִי וְעֶבֶד, שֶׁאֵין לוֹ אַלְמְנוּת וְגֵירוּשִׁין בָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אמר ר&#39; יוחנן משום (בשם) ר&#39; ישמעאל: מנין לגוי, או עבד שבאו על הכהנת, או על הלוייה, או על בת ישראל שפסלוה לכהונה ולאכול בתרומה על ידי ביאה זו, שנאמר: &quot;ובת כהן כי תהיה אלמנה וגרושה וזרע אין לה ושבה אל בית אביה... מלחם אביה תאכל&quot; (ויקרא כב, יג), לומר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֶלָּא לְמַעוֹטֵי מַאי? אָמַר רַב פָּפָּא: לְמַעוֹטֵי בְּהֵמָה, דְּאֵין זְנוּת בִּבְהֵמָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואלא אם כן למעוטי מאי  באה המשנה שאמרה &quot;אינו איש&quot;? אמר רב פפא: למעוטי  בהמה, שאין זנות בבהמה, והנבעלת לבהמה איננה נקראת זונה ואין בה דין סוטה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לֵיהּ רָבָא מִפַּרְזִקְיָא לְרַב אָשֵׁי: מְנַָא הָא מִילְּתָא דַּאֲמוּר רַבָּנַן אֵין זְנוּת בִּבְהֵמָה, דִּכְתִיב: ״לֹא תָבִיא אֶתְנַן זוֹנָה וּמְחִיר כֶּלֶב וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ובאותו ענין מביאים: אמר ליה  רבא מפרזקיא לרב אשי: מנא הא מילתא דאמור רבנן  אין זנות בבהמה — דכתיב : &quot;לא תביא אתנן זונה ומחיר כלב בית ה&#39; אלהיך לכל נדר&quot;(דברים כג, יט),</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְתַנְיָא: אֶתְנַן כֶּלֶב וּמְחִיר זוֹנָה — מוּתָּרִין, שֶׁנֶּאֱמַר: ״גַּם שְׁנֵיהֶם״, שְׁנַיִם וְלֹא אַרְבָּעָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ותניא : &quot;אתנן כלב&quot;, כגון שנתנה אשה טלה לבעל הכלב כדי להיבעל לכלב, או מחיר זונה טלה שקנה בו את הסכמת הזונה להיבעל לו — מותרין, שנאמר: &quot;גם שניהם&quot; (דברים כג, יט) להדגיש: שנים אלה (אתנן זונה ומחיר כלב) דווקא אסורים ולא ארבעה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֶלָּא ״שִׁכְבַת זֶרַע״, לְמָה לִי? מִיבְּעֵי לֵיהּ לְכִדְתַנְיָא: ״שִׁכְבַת זֶרַע״ — פְּרָט לְדָבָר אַחֵר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: הואיל ולמדנו שמקנאים גם על ידי שחוף שאין לו זרע  ואלא מה שנאמר &quot;ושכב איש אותה שכבת זרע&quot; (במדבר ה, יג) למה לי, מה בא כתוב זה למעט? ומשיבים: מיבעי ליה לכדתניא : מה שנאמר &quot;שכבת זרע&quot; — הרי זה בא למעט ולומר פרט לדבר אחר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי ״דָּבָר אַחֵר״? אָמַר רַב שֵׁשֶׁת: פְּרָט לְשֶׁקִּינֵּא לָהּ שֶׁלֹּא כְּדַרְכָּהּ. אֲמַר לֵיהּ רָבָא: שֶׁלֹּא כְּדַרְכָּהּ, ״מִשְׁכְּבֵי אִשָּׁה״ כְּתִיב!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: מאי  &quot;פרט לדבר אחר&quot;? אמר רב ששת: פרט לשקינא לה בעלה שלא יבוא עליה הבועל שלא כדרכה. אמר ליה  רבא: שלא כדרכה הלא ביאה גמורה היא, שכן &quot;משכבי אשה&quot; (ויקרא יח, כב) כתיב  בלשון רבים, ללמדנו: בין כדרכה בין שלא כדרכה משכב גמור הוא!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא אָמַר רָבָא: פְּרָט לְשֶׁקִּינֵּא לָהּ דֶּרֶךְ אֵבָרִים. אֲמַר לֵיהּ אַבָּיֵי: פְּרִיצוּתָא בְּעָלְמָא הִיא, וּפְרִיצוּתָא מִי אָסַר רַחֲמָנָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלא אמר רבא: פרט לשקינא לה בביאה דרך אברים אחרים, שאינה קרויה ביאה. אמר ליה  אביי: ביאה דרך איברים פריצותא בעלמא  היא, ופריצותא מי אסר רחמנא  אשה על בעלה בכך, ופשוט הוא ואין צורך למיעוט מיוחד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא אָמַר אַבָּיֵי: פְּרָט לְשֶׁקִּינֵּא לָהּ בִּנְשִׁיקָה. הָנִיחָא לְמַאן דְּאָמַר הַעֲרָאָה זוֹ הַכְנָסַת עֲטָרָה, אֲבָל נְשִׁיקָה — וְלֹא כְּלוּם הִיא, הַיְינוּ דְּאָתֵי קְרָא לְמַעוֹטֵי נְשִׁיקָה. אֶלָּא לְמַאן דְּאָמַר הַעֲרָאָה זוֹ נְשִׁיקָה, מַאי אִיכָּא לְמֵימַר?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלא אמר אביי: פרט לשקינא לה בנשיקה, כלומר, לא בביאה גמורה אלא רק במגע איברי המין זה בזה. ושואלים:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">לְעוֹלָם — לְשֶׁקִּינֵּא לָהּ דֶּרֶךְ אֵבָרִים. וּמַהוּ דְּתֵימָא בִּקְפִידָא דְבַעַל תַּלְיָא רַחֲמָנָא, וּבַעַל הָא קָא קָפֵיד, קָמַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: לשיטה זו  לעולם נפרש &quot;פרט לדבר אחר&quot; — לשקינא לה בביאה דרך אברים אחרים. וכך נסביר את החידוש שבדבר: מהו דתימא  בקפידא דבעל תליא רחמנא  ובעל הא קא קפיד  גם על מגע כזה, על כן קמשמע לן  שאין הדבר תלוי רק בהקפדת בעל, אלא צריך שתהא זו ביאה גמורה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר שְׁמוּאֵל: יִשָּׂא אָדָם</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אמר שמואל: ישא אדם</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_27.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_25.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["כו.","כו.","כו.","כו.","כו:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<5;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<5;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="כו."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

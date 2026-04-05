@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_19.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_17.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף יח</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">32 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('יח.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">יח.</button>
+<button onclick="filterAmud('יח:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">יח:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">פסולי כתיבת המגילה — שני דפים וכתב-ומחק</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כְּתָבָהּ עַל שְׁנֵי דַּפִּין — פְּסוּלָה. ״סֵפֶר״ אֶחָד אָמַר רַחֲמָנָא, וְלֹא שְׁנַיִם וּשְׁלֹשָׁה סְפָרִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כתבה על שני דפים נפרדים — פסולה. &quot;ספר&quot; אחד אמרה תורה — לא שניים ושלושה ספרים. המגילה חייבת להיות שלמה ורציפה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כָּתַב אוֹת אַחַת וּמָחַק אוֹת אַחַת, וְכָתַב אוֹת אַחַת וּמָחַק אוֹת אַחַת — פְּסוּלָה, דִּכְתִיב: ״וְעָשָׂה לָהּ הַכֹּהֵן אֵת כׇּל הַתּוֹרָה הַזֹּאת״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כתב אות אחת ומחק אותה, וכתב עוד אחת ומחק — פסולה. שנאמר &quot;ועשה לה הכהן את כל התורה הזאת&quot; = כל הפרשה צריכה להיות כתובה שלמה ולהימחק בבת אחת.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שאלות רבא — שתי מגילות לשתי סוטות</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בָּעֵי רָבָא: כָּתַב שְׁתֵּי מְגִילּוֹת לִשְׁתֵּי סוֹטוֹת, וּמְחָקָן לְתוֹךְ כּוֹס אֶחָד, מַהוּ? כְּתִיבָה לִשְׁמָהּ בָּעֵינַן, וְהָאִיכָּא, אוֹ דִילְמָא בָּעֵינַן נָמֵי מְחִיקָה לִשְׁמָהּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלת רבא: כתב שתי מגילות נפרדות לשתי סוטות ומחקן לתוך כוס אחד — כשר? האם מספיק שהכתיבה היתה לשמה, או שגם המחיקה צריכה להיות לשם כל אחת בנפרד?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִם תִּמְצָא לוֹמַר בָּעֵינַן נָמֵי מְחִיקָה לִשְׁמָהּ, מְחָקָן בִּשְׁתֵּי כוֹסוֹת וְחָזַר וְעֵירְבָן, מַהוּ? מְחִיקָה לִשְׁמָהּ בָּעֵינַן, וְהָאִיכָּא, אוֹ דִילְמָא הָא לָאו דִּידַהּ קָא שָׁתְיָא וְהָא לָאו דִּידַהּ קָא שָׁתְיָא?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואם צריך מחיקה לשמה — אם מחק כל מגילה בכוס נפרד וערבם אח&quot;כ? האם מחיקה לשמה מספיקה, או שכל אחת שותה מים שאינם שלה (= תערובת)?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִם תִּמְצָא לוֹמַר הָא לָאו דִּידַהּ קָא שָׁתְיָא וְהָא לָאו דִּידַהּ קָא שָׁתְיָא, חָזַר וְחִלְּקָן, מַהוּ? יֵשׁ בְּרֵירָה, אוֹ אֵין בְּרֵירָה? תֵּיקוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואם יש בעיה בתערובת — חזר וחלקם לשני כוסות, האם יש ברירה (= מתברר למפרע שכל אחת שותה את שלה)? שאלות אלו לא נפתרו — תיקו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שתייה בסיב או בשפופרת — ושפיכת מים</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בָּעֵי רָבָא: הִשְׁקָהּ בְּסִיב, מַהוּ? בִּשְׁפוֹפֶרֶת, מַהוּ? דֶּרֶךְ שְׁתִיָּה בְּכָךְ, אוֹ אֵין דֶּרֶךְ שְׁתִיָּה בְּכָךְ? תֵּיקוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלות נוספות של רבא: ① השקה אותה דרך סיב (= סיב דקל) — האם זו דרך שתייה? ② דרך שפופרת (= קש) — האם זו דרך שתייה? גם שאלות אלו לא נפתרו — תיקו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בָּעֵי רַב אָשֵׁי: נִשְׁפְּכוּ מֵהֶן וְנִשְׁתַּיְּירוּ מֵהֶן, מַהוּ? תֵּיקוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלת רב אשי: נשפכו חלק מהמים ונשתיירו חלק — האם צריכה לשתות את כל המים, או מספיק מה שנשאר? גם שאלה זו — תיקו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שתי שבועות בסוטה — לפני ואחרי מחיקה</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי זֵירָא אָמַר רַב: שְׁתֵּי שְׁבוּעוֹת הָאֲמוּרוֹת בַּסּוֹטָה. לָמָּה? אַחַת קוֹדֶם שֶׁנִּמְחֲקָה מְגִילָּה, וְאַחַת לְאַחַר שֶׁנִּמְחֲקָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; זירא בשם רב: שתי שבועות נזכרות בפרשת סוטה — למה? אחת לפני מחיקת המגילה ואחת לאחריה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְקֵיף לַהּ רָבָא: תַּרְוַיְיהוּ קוֹדֶם שֶׁנִּמְחֲקָה מְגִילָּה כְּתִיבָן? אֶלָּא אָמַר רָבָא: אַחַת שְׁבוּעָה שֶׁיֵּשׁ עִמָּהּ אָלָה, וְאַחַת שְׁבוּעָה שֶׁאֵין עִמָּהּ אָלָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא מקשה: שתי השבועות כתובות בתורה לפני המחיקה! אלא מסביר רבא: ההבדל אינו בזמן אלא בסוג — ① שבועה שיש עמה אלה (= קללה) ② שבועה שאין עמה אלה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">נוסח שבועה שיש עמה אלה</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הֵיכִי דָּמֵי שְׁבוּעָה שֶׁיֵּשׁ עִמָּהּ אָלָה? אָמַר רַב עַמְרָם אָמַר רַב: ״מַשְׁבִּיעַנִי עָלַיִךְ שֶׁלֹּא נִטְמֵאת, שֶׁאִם נִטְמֵאת יָבוֹאוּ בִּיךְ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מהי שבועה עם אלה? רב עמרם בשם רב: &quot;משביעני עליך שלא נטמאת, שאם נטמאת — יבואו בך כל הקללות&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רָבָא: אָלָה לְחוֹדַהּ קָיְימָא וּשְׁבוּעָה לְחוֹדַהּ קָיְימָא! אֶלָּא אָמַר רָבָא: ״מַשְׁבִּיעַנִי עָלַיִךְ שֶׁאִם נִטְמֵאת יָבוֹאוּ בִּיךְ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא מקשה: בנוסח זה האלה והשבועה עומדות כל אחת לחוד (שני משפטים נפרדים) — זו אינה &quot;שבועה שיש עמה אלה&quot;! אלא: &quot;משביעני עליך שאם נטמאת יבואו בך&quot; — כך האלה חלק מהשבועה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַב אָשֵׁי: אָלָה — אִיכָּא, שְׁבוּעָה — לֵיכָּא! אֶלָּא אָמַר רַב אָשֵׁי: ״מַשְׁבִּיעַנִי עָלַיִךְ שֶׁלֹּא נִטְמֵאת, וְאִם נִטְמֵאת יָבוֹאוּ בִּיךְ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב אשי מקשה: בנוסח של רבא יש אלה אבל אין שבועה שלא נטמאת (= רק תנאי)! אלא הנוסח הנכון: &quot;משביעני עליך שלא נטמאת, ואם נטמאת יבואו בך&quot; — כמשפט אחד שמכיל גם שבועה וגם אלה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְנִי׳ עַל מָה הִיא אוֹמֶרֶת ״אָמֵן״ ״אָמֵן״ — אָמֵן עַל הָאָלָה, אָמֵן עַל הַשְּׁבוּעָה. אָמֵן מֵאִישׁ זֶה, אָמֵן מֵאִישׁ אַחֵר. אָמֵן שֶׁלֹּא שָׂטִיתִי אֲרוּסָה וּנְשׂוּאָה</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב אשי מדייק: השבועה חייבת לכלול שני רכיבים — ① עצם השבועה (&quot;שלא נטמאת&quot;) ② קללה מותנית (&quot;ואם נטמאת — יבואו בך&quot;). רק כשהכל במשפט אחד = שבועה שיש עמה אלה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">המשנה: משמעות &quot;אמן אמן&quot; — שלבים שונים</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְשׁוֹמֶרֶת יָבָם, וּכְנוּסָה. אָמֵן שֶׁלֹּא נִטְמֵאתִי, וְאִם נִטְמֵאתִי — יָבוֹאוּ בִּי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">(המשך) ...ושומרת יבם וכנוסה (= אחרי ייבום). אמן שלא נטמאתי — ואם נטמאתי, יבואו בי כל הקללות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי מֵאִיר אוֹמֵר: אָמֵן שֶׁלֹּא נִטְמֵאתִי, אָמֵן שֶׁלֹּא אֶטָּמֵא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; מאיר מוסיף: &quot;אמן&quot; אחד = שלא נטמאתי בעבר. &quot;אמן&quot; שני = שלא אטמא בעתיד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הַכֹּל שָׁוִין שֶׁאֵין מַתְנֶה עִמָּהּ, לֹא עַל קוֹדֶם שֶׁתִּתְאָרֵס וְלֹא עַל אַחַר שֶׁתִּתְגָּרֵשׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הכל מסכימים: אין מתנה עמה (= אין כולל בשבועה) לא על מה שעשתה לפני האירוסין, ולא על מה שתעשה אחרי גירושין — כי בתקופות אלו אינה אסורה עליו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">הכלל: אין מתנה על בעילה שאינה אוסרת</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">נִסְתְּרָה לְאֶחָד וְנִטְמֵאת, וְאַחַר כָּךְ הֶחְזִירָה — לֹא הָיָה מַתְנֶה עִמָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">גרושה שנסתרה ונטמאת, ואח&quot;כ החזירה בעלה — אינו מתנה עמה על מה שעשתה בזמן הגירושין, כי כשהיתה גרושה לא היתה אסורה עליו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">זֶה הַכְּלָל: כׇּל שֶׁתִּבָּעֵל וְלֹא הָיְתָה אֲסוּרָה לוֹ — לֹא הָיָה מַתְנֶה עִמָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">זה הכלל: כל שאילו תיבעל ולא היתה נאסרת עליו — לא היה מתנה עמה. השבועה חלה רק על תקופות שבהן הזנות אוסרת אותה על בעלה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">רב המנונא — שומרת יבם שזינתה אסורה ליבם</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גְּמָ׳ אָמַר רַב הַמְנוּנָא: שׁוֹמֶרֶת יָבָם שֶׁזִּינְּתָה — אֲסוּרָה לִיבָמָהּ. מִמַּאי — מִדְּקָתָנֵי שׁוֹמֶרֶת יָבָם וּכְנוּסָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב המנונא: שומרת יבם שזינתה — אסורה ליבמה. מנין? מהמשנה ששנתה &quot;שומרת יבם וכנוסה&quot; = גם על תקופת שמירת היבום נשבעת, סימן שזנות בתקופה זו אוסרת.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אִי אָמְרַתְּ בִּשְׁלָמָא אֲסִירָה — מִשּׁוּם הָכִי מַתְנֵה בַּהֲדַהּ, אֶלָּא אִי אָמְרַתְּ לָא אֲסִירָה — הֵיכִי מַתְנֵה בַּהֲדַהּ? וְהָתְנַן, זֶה הַכְּלָל: כֹּל שֶׁאִילּוּ תִּיבָּעֵל וְלֹא תְּהֵא אֲסוּרָה לוֹ — לֹא הָיָה מַתְנֶה עִמָּהּ!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הוכחה: אם שומרת יבם שזינתה מותרת ליבם — איך מתנה עמה? הרי הכלל: &quot;כל שתיבעל ולא תהא אסורה — לא היה מתנה&quot;! אלא בהכרח — אסורה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמְרִי בְּמַעְרְבָא: לֵית הִילְכְתָא כְּרַב הַמְנוּנָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">בארץ ישראל אמרו: אין הלכה כרב המנונא — שומרת יבם שזינתה אינה נאסרת על היבם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא הָא דְּקָתָנֵי ״שׁוֹמֶרֶת יָבָם וּכְנוּסָה״ — הָא מַנִּי רַבִּי עֲקִיבָא הִיא, דְּאָמַר: אֵין קִידּוּשִׁין תּוֹפְסִין בְּחַיָּיבֵי לָאוִין, וּמְשַׁוֵּי לַהּ כִּי עֶרְוָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומה עם המשנה? &quot;שומרת יבם וכנוסה&quot; = כשיטת ר&#39; עקיבא, שאין קידושין תופסים בחייבי לאווין. שומרת יבם הנבעלת לאחר עוברת על לאו — ולדעת ר&#39; עקיבא היא כערווה ונאסרת.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec8">
+<button onclick="toggle(8)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">התנאה על נישואין ראשונים ונישואי אחיו</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow8" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content8" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בָּעֵי רַבִּי יִרְמְיָה: מַהוּ שֶׁיַּתְנֶה אָדָם עַל נִישּׂוּאִין הָרִאשׁוֹנִים, עַל נִישּׂוּאֵי אָחִיו, מַהוּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלת ר&#39; ירמיה: האם יכול אדם להתנות עם אשתו על נישואין ראשונים (= גירשה והחזירה) ועל נישואי אחיו (= ייבם אשת אחיו) — שלא זינתה בתקופות אלו?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּא שְׁמַע, זֶה הַכְּלָל: כֹּל שֶׁתִּיבָּעֵל וְלֹא תְּהֵא אֲסוּרָה לוֹ — לֹא הָיָה מַתְנֶה עִמָּהּ. הָא אֲסִירָה — הָכִי נָמֵי דְּמַתְנֶה. שְׁמַע מִינַּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה מהכלל במשנה: &quot;כל שתיבעל ולא תהא אסורה — לא היה מתנה.&quot; מכלל הן: אם היתה נאסרת — כן מתנה. ובשני המקרים הללו, זנות היתה אוסרת — לכן רשאי להתנות.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec9">
+<button onclick="toggle(9)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ר&#39; מאיר — שלא אטמא בעתיד</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow9" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content9" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי מֵאִיר אוֹמֵר: אָמֵן שֶׁלֹּא נִטְמֵאתִי וְכוּ׳. תַּנְיָא: לֹא כְּשֶׁאָמַר רַבִּי מֵאִיר אָמֵן שֶׁלֹּא אֶטָּמֵא שֶׁאִם תִּטָּמֵא מַיִם בּוֹדְקִין אוֹתָהּ מֵעַכְשָׁיו, אֶלָּא: לִכְשֶׁתִּטָּמֵא — מַיִם מְעַרְעֲרִין אוֹתָהּ וּבוֹדְקִין אוֹתָהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ברייתא מבארת את ר&#39; מאיר (&quot;אמן שלא אטמא&quot;): לא שהמים בודקים אותה כבר עכשיו על העתיד, אלא — אם תיטמא בעתיד, המים ששתתה עכשיו יערערו אותה ויבדקו אותה אז.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בָּעֵי רַב אָשֵׁי: מַהוּ שֶׁיַּתְנֶה אָדָם עַל נִישּׂוּאִין הָאַחֲרוֹנִים? הַשְׁתָּא מִיהָא לָא אֲסִירָה לֵיהּ, אוֹ דִילְמָא זִימְנִין דִּמְגָרֵשׁ לַהּ וַהֲדַר מַהְדַּר לַהּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלת רב אשי: האם מתנה על נישואין אחרונים (= אם יגרשנה ויחזירנה)? עכשיו אינה אסורה — אבל אולי יגרשנה ויחזירנה ואז תיאסר? תשובה: מהמשנה — &quot;נסתרה ונטמאת ואח&quot;כ יחזירנה — לא מתנה&quot;, הא יחזירנה ותיטמא = כן מתנה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec10">
+<button onclick="toggle(10)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">יח:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">&quot;זאת תורת הקנאות&quot; — האם האשה שותה ושונה?</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow10" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content10" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּא שְׁמַע: הַכֹּל שָׁוִין שֶׁלֹּא הָיָה מַתְנֶה עִמָּהּ לֹא עַל קוֹדֶם שֶׁתִּתְאָרֵס, וְלֹא עַל אַחַר שֶׁתִּתְגָּרֵשׁ. נִסְתְּרָה לְאֶחָד וְנִטְמֵאת, וְאַחַר כָּךְ יַחְזִירֶנָּה — לֹא הָיָה מַתְנֶה. הָא יַחְזִירֶנָּה וְתִיטָּמֵא, הָכִי נָמֵי דְּמַתְנֵי. שְׁמַע מִינַּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ברייתא: &quot;זאת תורת הקנאות&quot; — &quot;תורת הקנאות&quot; (לשון רבים) מלמד שהאשה שותה ושונה = שותה פעם נוספת אם נחשדה שוב.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנוּ רַבָּנַן: ״זֹאת תּוֹרַת הַקְּנָאֹת״, מְלַמֵּד שֶׁהָאִשָּׁה שׁוֹתָה וְשׁוֹנָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יהודה: &quot;זאת&quot; (= לשון מיעוט) מלמד שאין האשה שותה ושונה. ר&#39; יהודה מעיד: נחוניא חופר שיחין העיד שהאשה שותה ושונה — וקיבלנו עדותו רק בשני אנשים (= בעלים שונים), אבל לא באיש אחד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי יְהוּדָה אוֹמֵר: ״זֹאת״, שֶׁאֵין הָאִשָּׁה שׁוֹתָה וְשׁוֹנָה. אָמַר רַבִּי יְהוּדָה: מַעֲשֶׂה וְהֵעִיד לְפָנֵינוּ נְחוּנְיָא חוֹפֵר שִׁיחִין שֶׁהָאִשָּׁה שׁוֹתָה וְשׁוֹנָה, וְקִיבַּלְנוּ עֵדוּתוֹ בִּשְׁנֵי אֲנָשִׁים, אֲבָל לֹא בְּאִישׁ אֶחָד.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חכמים: אין האשה שותה ושונה כלל — לא באיש אחד ולא בשני אנשים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וַחֲכָמִים אוֹמְרִים: אֵין הָאִשָּׁה שׁוֹתָה וְשׁוֹנָה, בֵּין בְּאִישׁ אֶחָד בֵּין בִּשְׁנֵי אֲנָשִׁים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: גם לתנא קמא — הרי כתוב &quot;זאת&quot; שממעט! וגם לחכמים — הרי כתוב &quot;תורת&quot; שמרבה!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְתַנָּא קַמָּא נָמֵי, הָכְתִיב ״זֹאת״! וְרַבָּנַן בָּתְרָאֵי נָמֵי, הָא כְתִיב ״תּוֹרַת״!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא מסביר: באיש אחד ובועל אחד (= אותו חשד חוזר) — כולם מסכימים שאינה שותה ושונה (&quot;זאת&quot; ממעט).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רָבָא: בְּאִישׁ אֶחָד וּבוֹעֵל אֶחָד — דְּכוּלֵּי עָלְמָא לָא פְּלִיגִי דְּאֵין הָאִשָּׁה שׁוֹתָה וְשׁוֹנָה,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">בשני אנשים (בעלים) ושני בועלים — כולם מסכימים ששותה ושונה (&quot;תורת הקנאות&quot; מרבה). המחלוקת היא במקרי ביניים: איש אחד ושני בועלים, או שני אנשים ובועל אחד.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_19.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_17.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["יח.","יח.","יח.","יח.","יח.","יח:","יח:","יח:","יח:","יח:","יח:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<11;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<11;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="יח."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

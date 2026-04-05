@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_04.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_02.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף ג</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">47 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('ג.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">ג.</button>
+<button onclick="filterAmud('ג:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">ג:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">האם מותר לקנאות — דיון בלשון הקינוי</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אַלְמָא קָסָבְרִי דְּאָסוּר לְקַנּאוֹת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">המשך מדף ב: — ריש לקיש ואביי שניהם הגדירו &quot;קינוי&quot; כדבר שמטיל קנאה, משמע שקינוי הוא דבר שלילי — ומכאן שאסור לקנאות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמַאן דְּאָמַר מוּתָּר לְקַנּאוֹת, מַהוּ לְשׁוֹן ״קִינּוּי״? אָמַר רַב נַחְמָן בַּר יִצְחָק: אֵין ״קִינּוּי״ אֶלָּא לְשׁוֹן הַתְרָאָה, וְכֵן הוּא אוֹמֵר: ״וַיְקַנֵּא ה׳ לְאַרְצוֹ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: ולמי שאומר שמותר לקנאות — מה פירוש &quot;קינוי&quot;? ר&#39; נחמן בר יצחק: קינוי = התראה (דבר חיובי), כמו &quot;ויקנא ה&#39; לארצו&quot; — ה&#39; התרה באויב.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּנְיָא, הָיָה רַבִּי מֵאִיר אוֹמֵר: אָדָם עוֹבֵר עֲבֵירָה בַּסֵּתֶר וְהַקָּדוֹשׁ בָּרוּךְ הוּא מַכְרִיז עָלָיו בְּגָלוּי, שֶׁנֶּאֱמַר: ״וְעָבַר עָלָיו רוּחַ קִנְאָה״, וְאֵין עֲבֵירָה אֶלָּא לְשׁוֹן הַכְרָזָה, שֶׁנֶּאֱמַר: ״וַיְצַו מֹשֶׁה וַיַּעֲבִירוּ קוֹל בַּמַּחֲנֶה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; מאיר: &quot;אדם עובר עבירה בסתר — והקב&quot;ה מכריז עליו בגלוי.&quot; הראיה: &quot;ועבר עליו&quot; — לשון הכרזה, כמו &quot;ויעבירו קול במחנה.&quot; האשה חטאה בסתר, אבל ה&#39; גורם לבעל לחשוד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רֵישׁ לָקִישׁ אָמַר: אֵין אָדָם עוֹבֵר עֲבֵירָה אֶלָּא אִם כֵּן נִכְנַס בּוֹ רוּחַ שְׁטוּת, שֶׁנֶּאֱמַר: ״אִישׁ אִישׁ כִּי תִשְׂטֶה אִשְׁתּוֹ״, ״תִּשְׁטֶה״ כְּתִיב.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ריש לקיש: &quot;אין אדם עובר עבירה אלא אם נכנס בו רוח שטות.&quot; &quot;כי תשטה אשתו&quot; — &quot;תשטה&quot; = לשון שטות. כל חטא הוא סוג של אובדן שפיות.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">&quot;רגליים לדבר&quot; — סדר הפסוקים בתורה</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנָא דְּבֵי רַבִּי יִשְׁמָעֵאל: מִפְּנֵי מָה הֶאֱמִינָה תּוֹרָה עֵד אֶחָד בְּסוֹטָה — שֶׁרַגְלַיִם לַדָּבָר, שֶׁהֲרֵי קִינֵּא לָהּ, וְנִסְתְּרָה, וְעֵד אֶחָד מְעִידָהּ שֶׁהִיא טְמֵאָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תנא דבי ר&#39; ישמעאל: למה התורה האמינה עד אחד בסוטה? כי &quot;רגליים לדבר&quot; — יש בסיס לחשד: הבעל קינא, היא נסתרה, ועד אחד מעיד שנטמאה. שלושת הדברים ביחד = מספיק.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לֵיהּ רַב פָּפָּא לְאַבָּיֵי: וְהָא כִּי כְּתִיבָה קִינּוּי, בָּתַר סְתִירָה וְטוּמְאָה הוּא דִּכְתִיבָה!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב פפא מקשה: הרי בתורה הקינוי כתוב אחרי הסתירה והטומאה! אז &quot;רגליים לדבר&quot; לא עובד — כי הקינוי בא אחרי הטומאה!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לֵיהּ: ״וְעָבַר״ — וּכְבָר עָבַר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אביי עונה בקצרה: &quot;ועבר&quot; = &quot;וכבר עבר&quot; — הקינוי קרה לפני הסתירה. הפסוק לא כתוב בסדר כרונולוגי.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא מֵעַתָּה: ״וְעָבַר לָכֶם כׇּל חָלוּץ״, הָכִי נָמֵי?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: אם &quot;ועבר&quot; = &quot;כבר עבר&quot;, אז גם &quot;ועבר לכם כל חלוץ&quot; שאמר משה לגד וראובן — הכוונה &quot;כבר עברו&quot;? הרי שם ברור שמדובר על העתיד!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם, מִדִּכְתִיב ״וְנִכְבְּשָׁה הָאָרֶץ לִפְנֵי ה׳ וְאַחַר תָּשֻׁבוּ״ — מַשְׁמַע דִּלְהַבָּא. אֶלָּא הָכָא, אִי סָלְקָא דַעְתָּךְ כְּדִכְתִיבִי, ״וְעָבַר״ בָּתַר טוּמְאָה וּסְתִירָה — קִינּוּי לְמָה לִי?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: שם כתוב &quot;ונכבשה הארץ... ואחר תשובו&quot; — ברור שלהבא. אבל כאן, אם הקינוי אחרי הטומאה — למה בכלל צריך קינוי? הרי כבר נטמאה! חייבים לומר שהקינוי קדם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">רוח טומאה או רוח טהרה</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנָא דְּבֵי רַבִּי יִשְׁמָעֵאל: אֵין אָדָם מְקַנֵּא לְאִשְׁתּוֹ אֶלָּא אִם כֵּן נִכְנְסָה בּוֹ רוּחַ, שֶׁנֶּאֱמַר: ״וְעָבַר עָלָיו רוּחַ קִנְאָה וְקִנֵּא אֶת אִשְׁתּוֹ״. מַאי רוּחַ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תנא דבי ר&#39; ישמעאל: &quot;אין אדם מקנא לאשתו אלא אם נכנסה בו רוח&quot; — &quot;ועבר עליו רוח קנאה.&quot; שואלים: מה סוג הרוח?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבָּנַן אָמְרִי: רוּחַ טוּמְאָה. רַב אָשֵׁי אָמַר: רוּחַ טׇהֳרָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שתי דעות: חכמים — רוח טומאה (= דחף שלילי, לא היה צריך לקנא). רב אשי — רוח טהרה (= דחף חיובי, שמירה על כבוד הבית).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמִסְתַּבְּרָא כְּמַאן דְּאָמַר רוּחַ טׇהֳרָה. דְּתַנְיָא: ״וְקִנֵּא אֶת אִשְׁתּוֹ״ — רְשׁוּת, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. רַבִּי עֲקִיבָא אוֹמֵר: חוֹבָה. אִי אָמְרַתְּ בִּשְׁלָמָא רוּחַ טׇהֳרָה — שַׁפִּיר, אֶלָּא אִי אָמְרַתְּ רוּחַ טוּמְאָה, רְשׁוּת וְחוֹבָה לְעַיּוֹלֵי לְאִינִישׁ רוּחַ טוּמְאָה בְּנַפְשֵׁיהּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מסקנה: מסתבר שרוח טהרה. ראיה: &quot;וקנא את אשתו&quot; — ר&#39; ישמעאל אומר רשות, ר&#39; עקיבא אומר חובה. אם זו רוח טומאה — אי אפשר לומר &quot;רשות&quot; או &quot;חובה&quot; להכניס רוח טומאה! בהכרח — רוח טהרה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שלוש מחלוקות: רשות או חובה</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גּוּפָא: ״וְקִנֵּא אֶת אִשְׁתּוֹ״ — רְשׁוּת, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. וְרַבִּי עֲקִיבָא אוֹמֵר: חוֹבָה. ״לָהּ יִטַּמָּא״ — רְשׁוּת, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. וְרַבִּי עֲקִיבָא אוֹמֵר: חוֹבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חוזרים לברייתא: שלוש מחלוקות מקבילות בין ר&#39; ישמעאל (רשות) לר&#39; עקיבא (חובה): ① &quot;וקנא את אשתו&quot; — קינוי. ② &quot;לה יטמא&quot; — טומאת כהן לקרובתו. בשניהם: רשות או חובה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״לְעֹלָם בָּהֶם תַּעֲבֹדוּ״ — רְשׁוּת, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. רַבִּי עֲקִיבָא אוֹמֵר: חוֹבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">המחלוקת השלישית: &quot;לעולם בהם תעבודו&quot; — עבד כנעני. ר&#39; ישמעאל: רשות לשעבדו לעולם. ר&#39; עקיבא: חובה — אסור לשחררו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לֵיהּ רַב פָּפָּא לְאַבָּיֵי, וְאָמְרִי לַהּ רַב מְשַׁרְשְׁיָא לְרָבָא: לֵימָא רַבִּי יִשְׁמָעֵאל וְרַבִּי עֲקִיבָא בְּכׇל הַתּוֹרָה כּוּלָּהּ הָכִי פְּלִיגִי, דְּמָר אָמַר רְשׁוּת וּמָר אָמַר חוֹבָה? אֲמַר לֵיהּ: הָכָא בִּקְרָאֵי פְּלִיגִי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב פפא שואל: האם זו מחלוקת כללית בכל התורה — ר&#39; ישמעאל תמיד &quot;רשות&quot; ור&#39; עקיבא תמיד &quot;חובה&quot;? תשובה: לא, בכל מקרה יש דרשה מיוחדת מהפסוקים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וְקִנֵּא אֶת אִשְׁתּוֹ״ — רְשׁוּת, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. רַבִּי עֲקִיבָא אוֹמֵר: חוֹבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מפרטים: &quot;וקנא את אשתו&quot; — רשות (ר&#39; ישמעאל), חובה (ר&#39; עקיבא).</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">קינוי — טעמי ר&#39; ישמעאל ור&#39; עקיבא</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי טַעְמָא דְּרַבִּי יִשְׁמָעֵאל — סָבַר לַהּ כִּי הַאי תַּנָּא, דְּתַנְיָא, רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב אוֹמֵר: כְּלַפֵּי שֶׁאָמְרָה תּוֹרָה ״לֹא תִשְׂנָא אֶת אָחִיךָ בִּלְבָבֶךָ״, יָכוֹל כְּגוֹן זוֹ? תַּלְמוּד לוֹמַר: ״וְעָבַר עָלָיו רוּחַ קִנְאָה וְקִנֵּא אֶת אִשְׁתּוֹ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">טעם ר&#39; ישמעאל: ר&#39; אליעזר בן יעקב — התורה אמרה &quot;לא תשנא את אחיך בלבבך&quot;, ואולי גם קנאה לאשתו בכלל &quot;שנאה&quot;? לכן הפסוק &quot;ועבר עליו רוח קנאה&quot; בא לתת רשות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי עֲקִיבָא: קִינּוּי אַחֲרִינָא כְּתִיב.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">טעם ר&#39; עקיבא: בתורה יש שני פסוקי קינוי. מאחד לומדים רשות, מהשני — חובה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יִשְׁמָעֵאל? אַיְּידֵי דְּבָעֵי לְמִיכְתַּב ״וְהִיא נִטְמָאָה״ ״וְהִיא לֹא נִטְמָאָה״ — כְּתִיב נָמֵי ״וְקִנֵּא אֶת אִשְׁתּוֹ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל עונה: הפסוק השני לא בא ללמד חובה — הוא נכתב רק כי התורה צריכה לכתוב &quot;והיא נטמאה&quot; ו&quot;והיא לא נטמאה&quot;, ואגב חזרה על &quot;וקנא&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">לְכִדְתָנָא דְּבֵי רַבִּי יִשְׁמָעֵאל. דְּתָנָא דְּבֵי רַבִּי יִשְׁמָעֵאל: כָּל פָּרָשָׁה שֶׁנֶּאֶמְרָה וְנִישְׁנֵית — לֹא נִישְׁנֵית אֶלָּא בִּשְׁבִיל דָּבָר שֶׁנִּתְחַדֵּשׁ בָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כלל של תנא דבי ר&#39; ישמעאל: &quot;כל פרשה שנאמרה ונישנית — לא נישנית אלא בשביל דבר שנתחדש בה.&quot; מה שחזר — לא מלמד הלכה חדשה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">טומאת כהן לקרובתו — רשות או חובה</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״לָהּ יִטַּמָּא״ — רְשׁוּת, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. רַבִּי עֲקִיבָא אוֹמֵר: חוֹבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוברים למחלוקת השנייה: &quot;לה יטמא&quot; — טומאת כהן לקרובתו: רשות (ר&#39; ישמעאל), חובה (ר&#39; עקיבא).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי טַעְמָא דְּרַבִּי יִשְׁמָעֵאל — אַיְּידֵי דִּכְתִיב: ״אֱמֹר אֶל הַכֹּהֲנִים בְּנֵי אַהֲרֹן וְאָמַרְתָּ אֲלֵיהֶם לְנֶפֶשׁ לֹא יִטַּמָּא בְּעַמָּיו״, אִיצְטְרִיכָא לְמִיכְתַּב ״לָהּ יִטַּמָּא״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">טעם ר&#39; ישמעאל: כתוב &quot;לנפש לא יטמא&quot; (= אסור להיטמא), לכן צריך &quot;לה יטמא&quot; לתת רשות — שמותר להיטמא לקרובתו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי עֲקִיבָא מִ״כִּי אִם לִשְׁאֵרוֹ״ נָפְקָא, ״לָהּ יִטַּמָּא״ לְמָה לִי — לְחוֹבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; עקיבא: הרשות כבר נלמדת מ&quot;כי אם לשארו&quot;. אם כן, &quot;לה יטמא&quot; מיותר — ובא ללמד חובה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יִשְׁמָעֵאל: לָהּ מִיטַּמֵּא, וְאֵין מִיטַּמֵּא לְאֵיבָרֶיהָ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל: &quot;לה&quot; בא לדייק — &quot;לה&quot; = לגופה השלם, אבל לאיבריה (אבר שנחתך) — אינו מיטמא.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">המשך: ר&#39; עקיבא — &quot;יטמא&quot; = חובה</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי עֲקִיבָא — אִם כֵּן, לִיכְתּוֹב רַחֲמָנָא ״לָהּ״ וְלִישְׁתּוֹק, ״יִטַּמָּא״ לְמָה לִי? שְׁמַע מִינַּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; עקיבא משיב: אם רק בא למעט (&quot;לה&quot; ולא לאיבריה), שיכתוב &quot;לה&quot; וישתוק! למה הוסיף &quot;יטמא&quot;? אלא — &quot;יטמא&quot; = חובה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יִשְׁמָעֵאל, אַיְּידֵי דִּכְתַב ״לָהּ״, כְּתַב נָמֵי ״יִטַּמָּא״. לְכִדְתָנֵי דְּבֵי רַבִּי יִשְׁמָעֵאל. דְּתָנָא דְּבֵי רַבִּי יִשְׁמָעֵאל: כָּל פָּרָשָׁה שֶׁנֶּאֶמְרָה וְנִישְׁנֵית, לֹא נִישְׁנֵית אֶלָּא בִּשְׁבִיל דָּבָר שֶׁנִּתְחַדֵּשׁ בָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל: &quot;מתוך שכתב &#39;לה&#39; — כתב גם &#39;יטמא&#39;&quot; — לא כל מילה מלמדת הלכה נפרדת. זה הכלל שלו: פרשה שנישנית — רק החידוש מלמד.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">עבד כנעני — רשות או חובה</span>
+<span style="font-size:11px;color:#bbb">8</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״לְעֹלָם בָּהֶם תַּעֲבֹדוּ״ — רְשׁוּת, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. רַבִּי עֲקִיבָא אוֹמֵר: חוֹבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוברים למחלוקת השלישית: &quot;לעולם בהם תעבודו&quot; — עבדים כנענים. רשות (ר&#39; ישמעאל) או חובה (ר&#39; עקיבא).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי טַעְמָא דְּרַבִּי יִשְׁמָעֵאל — אַיְּידֵי דִּכְתִיב ״לֹא תְחַיֶּה כׇּל נְשָׁמָה״, אִיצְטְרִיךְ נָמֵי לְמִיכְתַּב ״לְעֹלָם בָּהֶם תַּעֲבֹדוּ״, לְמִישְׁרֵי אֶחָד מִכׇּל הָאוּמּוֹת שֶׁבָּא עַל הַכְּנַעֲנִית וְהוֹלִיד מִמֶּנָּה בֵּן, שֶׁאַתָּה רַשַּׁאי לִקְנוֹתוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">טעם ר&#39; ישמעאל: כתוב &quot;לא תחיה כל נשמה&quot; (= חובה להרוג כנענים). &quot;לעולם בהם תעבודו&quot; בא לתת רשות — מותר לקנות כעבד בן של נכרי מכנענית (שאינו כנעני גמור).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דְּתַנְיָא: מִנַּיִן לְאֶחָד מִן הָאוּמּוֹת שֶׁבָּא עַל הַכְּנַעֲנִית וְהוֹלִיד מִמֶּנָּה בֵּן, שֶׁאַתָּה רַשַּׁאי לִקְנוֹתוֹ בְּעֶבֶד, תַּלְמוּד לוֹמַר: ״וְגַם מִבְּנֵי הַתּוֹשָׁבִים הַגָּרִים עִמָּכֶם מֵהֶם תִּקְנוּ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ברייתא: מאיפה שמותר? &quot;וגם מבני התושבים הגרים עמכם מהם תקנו&quot; — אלה שבאו מבחוץ.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">יָכוֹל אַף הַכְּנַעֲנִי שֶׁבָּא עַל אַחַת מִן הָאוּמּוֹת וְהוֹלִיד מִמֶּנָּה בֵּן, שֶׁאַתָּה רַשַּׁאי לִקְנוֹתוֹ בְּעֶבֶד, תַּלְמוּד לוֹמַר: ״אֲשֶׁר הוֹלִידוּ בְּאַרְצְכֶם״, מִן הַנּוֹלָדִים בְּאַרְצְכֶם, וְלֹא מִן הַגָּרִים בְּאַרְצְכֶם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אבל בן כנעני מנכרית? &quot;אשר הולידו בארצכם&quot; — רק מי שנולד בארץ מותר, לא מי שגר כבר. בן הכנעני — אסור לקיימו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי עֲקִיבָא מִ״מֵּהֶם תִּקְנוּ״ נָפְקָא, ״לְעֹלָם בָּהֶם תַּעֲבֹדוּ״ לְמָה לִי — לְחוֹבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; עקיבא: מ&quot;מהם תקנו&quot; כבר לומדים מה מותר. &quot;לעולם בהם תעבודו&quot; מיותר — ובא ללמד חובה (= אסור לשחרר).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יִשְׁמָעֵאל: ״בָּהֶם״ — וְלֹא בְּאַחֵיכֶם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל: &quot;בהם&quot; בא למעט — &quot;בהם תעבודו&quot; ולא &quot;באחיכם&quot; (= אסור לשעבד ישראל לעולם).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי עֲקִיבָא: בְּאַחֵיכֶם — מִסֵּיפָא דִּקְרָא נָפְקָא: ״וּבְאַחֵיכֶם בְּנֵי יִשְׂרָאֵל אִישׁ בְּאָחִיו לֹא תִרְדֶּה בוֹ בְּפָרֶךְ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; עקיבא: האיסור לשעבד ישראל כבר נלמד מסוף הפסוק: &quot;ובאחיכם בני ישראל... לא תרדה בו בפרך.&quot; &quot;בהם&quot; מיותר = חובה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יִשְׁמָעֵאל: אַיְּידֵי דִּכְתִיב ״וּבְאַחֵיכֶם״, כְּתִיב נָמֵי ״בָּהֶם״. לְכִדְתָנֵי דְּבֵי רַבִּי יִשְׁמָעֵאל. דְּתָנָא דְּבֵי רַבִּי יִשְׁמָעֵאל: כָּל פָּרָשָׁה שֶׁנֶּאֶמְרָה וְנִישְׁנֵית, לֹא נִישְׁנֵית אֶלָּא בִּשְׁבִיל דָּבָר שֶׁנִּתְחַדֵּשׁ בָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל: &quot;מתוך שכתוב &#39;ובאחיכם&#39;, כתוב גם &#39;בהם&#39;&quot; — כלל הנישנית. לא בא ללמד חובה חדשה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec8">
+<button onclick="toggle(8)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">אגדה: זנות בבית, שכינה, מצוות ועבירות</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow8" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content8" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַב חִסְדָּא: זְנוּתָא בְּבֵיתָא כִּי קַרְיָא לְשׁוּמְשְׁמָא. וְאָמַר רַב חִסְדָּא: תּוּקְפָּא בְּבֵיתָא כִּי קַרְיָא לְשׁוּמְשְׁמָא. אִידֵּי וְאִידֵּי בְּאִיתְּתָא, אֲבָל בְּגַבְרָא לֵית לַן בַּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוברים לאגדה: רב חסדא — &quot;זנות בבית כתולעת בשומשומים&quot; (הורסת מבפנים). גם &quot;כעס בבית כתולעת.&quot; הערה: שניהם נאמרו על האשה; באיש — אינו משפיע כך.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאָמַר רַב חִסְדָּא: בַּתְּחִילָּה, קוֹדֶם שֶׁחָטְאוּ יִשְׂרָאֵל, הָיְתָה שְׁכִינָה שׁוֹרָה עִם כׇּל אֶחָד וְאֶחָד, שֶׁנֶּאֱמַר: ״כִּי ה׳ אֱלֹהֶיךָ מִתְהַלֵּךְ בְּקֶרֶב מַחֲנֶךָ״. כֵּיוָן שֶׁחָטְאוּ נִסְתַּלְּקָה שְׁכִינָה מֵהֶם, שֶׁנֶּאֱמַר: ״וְלֹא יִרְאֶה בְךָ עֶרְוַת דָּבָר וְשָׁב מֵאַחֲרֶיךָ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב חסדא: &quot;לפני שחטאו ישראל — השכינה שרתה עם כל אחד. כשחטאו — נסתלקה.&quot; &quot;ולא יראה בך ערוות דבר — ושב מאחריך&quot; — חטא מגרש את השכינה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי שְׁמוּאֵל בַּר נַחְמָנִי אָמַר רַבִּי יוֹנָתָן: כׇּל הָעוֹשֶׂה מִצְוָה אַחַת בָּעוֹלָם הַזֶּה — מְקַדַּמְתּוֹ וְהוֹלֶכֶת לְפָנָיו לָעוֹלָם הַבָּא, שֶׁנֶּאֱמַר: ״וְהָלַךְ לְפָנֶיךָ צִדְקֶךָ״. וְכׇל הָעוֹבֵר עֲבֵירָה אַחַת בָּעוֹלָם הַזֶּה — מְלַפַּפְתּוֹ וְהוֹלֶכֶת לְפָנָיו לְיוֹם הַדִּין, שֶׁנֶּאֱמַר: ״יִלָּפְתוּ אׇרְחוֹת דַּרְכָּם יַעֲלוּ בַתֹּהוּ וְיֹאבֵדוּ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; שמואל בר נחמני: &quot;העושה מצווה — מקדמתו לעולם הבא. העובר עבירה — מלפפתו עד יום הדין.&quot; המצוות והעבירות לא נעלמות — הן מלוות את האדם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי אֶלְעָזָר אוֹמֵר: קְשׁוּרָה בּוֹ כְּכֶלֶב, שֶׁנֶּאֱמַר: ״וְלֹא שָׁמַע אֵלֶיהָ לִשְׁכַּב אֶצְלָהּ לִהְיוֹת עִמָּהּ״. ״לִשְׁכַּב אֶצְלָהּ״ — בָּעוֹלָם הַזֶּה, ״לִהְיוֹת עִמָּהּ״ — לָעוֹלָם הַבָּא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אלעזר: &quot;העבירה קשורה בו ככלב.&quot; הפסוק על יוסף: &quot;לשכב אצלה&quot; = בעולם הזה, &quot;להיות עמה&quot; = לעולם הבא.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec9">
+<button onclick="toggle(9)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">קל וחומר כפול — עדות סתירה וטומאה</span>
+<span style="font-size:11px;color:#bbb">9</span>
+<span id="arrow9" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content9" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תְּנַן הָתָם, שֶׁהָיָה בַּדִּין:</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חוזרים להלכה: היה אפשר ללמוד בקל וחומר לגבי עדות סוטה —</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמָה עֵדוּת הָרִאשׁוֹנָה, שֶׁאֵין אוֹסַרְתָּהּ אִיסּוּר עוֹלָם — אֵינָהּ מִתְקַיֶּימֶת בְּפָחוֹת מִשְּׁנַיִם, עֵדוּת הָאַחֲרוֹנָה, שֶׁאוֹסַרְתָּהּ אִיסּוּר עוֹלָם — אֵינוֹ דִּין שֶׁלֹּא תִּתְקַיֵּים בְּפָחוֹת מִשְּׁנַיִם?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קל וחומר ראשון: עדות סתירה (= לא אוסרת לעולם) צריכה שני עדים. עדות טומאה (= אוסרת לעולם) — כל שכן שתצטרך שניים!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּלְמוּד לוֹמַר: ״וְעֵד אֵין בָּהּ״, כֹּל שֶׁיֵּשׁ בָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">לכן התורה אמרה &quot;ועד אין בה&quot; — ללמד שכל עדות שיש בה (= אפילו עד אחד) אוסרת. עד אחד נאמן בטומאה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְקַל וָחוֹמֶר לְעֵדוּת הָרִאשׁוֹנָה מֵעַתָּה: וּמָה עֵדוּת הָאַחֲרוֹנָה, שֶׁאוֹסַרְתָּהּ אִיסּוּר עוֹלָם — מִתְקַיֶּימֶת בְּעֵד אֶחָד, עֵדוּת הָרִאשׁוֹנָה, שֶׁאֵין אוֹסַרְתָּהּ אִיסּוּר עוֹלָם — אֵינוֹ דִּין שֶׁתִּתְקַיֵּים בְּעֵד אֶחָד?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קל וחומר הפוך: עדות טומאה (חמורה — אוסרת לעולם) מתקיימת בעד אחד. עדות סתירה (קלה — לא אוסרת לעולם) — כל שכן שתתקיים בעד אחד!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּלְמוּד לוֹמַר: ״כִּי מָצָא בָהּ עֶרְוַת דָּבָר״, וּלְהַלָּן הוּא אוֹמֵר ״עַל פִּי שְׁנֵי עֵדִים אוֹ עַל פִּי שְׁלֹשָׁה עֵדִים יָקוּם דָּבָר״. מָה ״דָּבָר״ הָאָמוּר לְהַלָּן — עַל פִּי שְׁנַיִם עֵדִים, אַף כָּאן — עַל פִּי שְׁנַיִם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">לכן התורה אמרה &quot;כי מצא בה ערוות דבר&quot; — ו&quot;דבר&quot; = שני עדים (גזירה שווה &quot;דבר&quot; &quot;דבר&quot; מממון). בסתירה צריך שניים, למרות הקל וחומר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הַאי מִ״כִּי מָצָא בָהּ עֶרְוַת דָּבָר״ נָפְקָא? מִ״בָּהּ״ נָפְקָא: בָּהּ — וְלֹא בְּקִינּוּי, בָּהּ — וְלֹא בִּסְתִירָה מִיבְּעֵי לֵיהּ!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: למה צריך &quot;ערוות דבר&quot;? הרי כבר למדנו מ&quot;בה&quot; — &quot;בה ולא בקינוי, בה ולא בסתירה&quot;!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָכִי נָמֵי קָאָמַר: תַּלְמוּד לוֹמַר ״בָּהּ״: בָּהּ — וְלֹא בְּקִינּוּי, בָּהּ — וְלֹא בִּסְתִירָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: אכן, הראיה היא מ&quot;בה&quot;. &quot;בה&quot; = ולא בקינוי, &quot;בה&quot; = ולא בסתירה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְטוּמְאָה בְּעָלְמָא בְּלֹא קִינּוּי וּבְלֹא סְתִירָה, דְּלָא מְהֵימַן עֵד אֶחָד, מְנָלַן? נֶאֱמַר כָּאן: ״כִּי מָצָא בָהּ עֶרְוַת דָּבָר״, וְנֶאֱמַר לְהַלָּן: ״עַל פִּי שְׁנֵי עֵדִים אוֹ עַל פִּי שְׁלֹשָׁה עֵדִים יָקוּם דָּבָר״. מָה ״דָּבָר״ הָאָמוּר לְהַלָּן — עֵדִים שְׁנַיִם, אַף כָּאן — עֵדִים שְׁנַיִם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלה נוספת: טומאה בכלל (בלי קינוי וסתירה) — מאיפה שעד אחד לא נאמן? מגזירה שווה &quot;דבר&quot; &quot;דבר&quot; — כמו בממון צריך שניים, כך בעריות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנוּ רַבָּנַן: אֵי זוֹ הִיא עֵדוּת הָרִאשׁוֹנָה — זוֹ עֵדוּת סְתִירָה, עֵדוּת אַחֲרוֹנָה — זוֹ עֵדוּת טוּמְאָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ברייתא מסכמת: &quot;עדות ראשונה&quot; = עדות סתירה. &quot;עדות אחרונה&quot; = עדות טומאה.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_04.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_02.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["ג.","ג.","ג.","ג.","ג.","ג.","ג:","ג:","ג:","ג:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<10;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<10;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="ג."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

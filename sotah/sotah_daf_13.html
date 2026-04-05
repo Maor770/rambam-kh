@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_14.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_12.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף יג</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">44 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('יג.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">יג.</button>
+<button onclick="filterAmud('יג:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">יג:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">נבואת מרים ולידת משה</span>
+<span style="font-size:11px;color:#bbb">1</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאוֹמֶרֶת: עֲתִידָה אִמִּי שֶׁתֵּלֵד בֵּן שֶׁמּוֹשִׁיעַ אֶת יִשְׂרָאֵל. וְכֵיוָן שֶׁנּוֹלַד מֹשֶׁה נִתְמַלֵּא כָּל הַבַּיִת כּוּלּוֹ אוֹר. עָמַד אָבִיהָ וּנְשָׁקָהּ עַל רֹאשָׁהּ, אָמַר לָהּ: בִּתִּי, נִתְקַיְּימָה נְבוּאָתִיךְ. וְכֵיוָן שֶׁהִטִּילוּהוּ לַיְאוֹר, עָמַד אָבִיהָ וּטְפָחָהּ עַל רֹאשָׁהּ, אָמַר לָהּ: בִּתִּי הֵיכָן נְבוּאָתִיךְ? וְהַיְינוּ דִּכְתִיב: ״וַתֵּתַצַּב אֲחוֹתוֹ מֵרָחוֹק לְדֵעָה מַה יֵּעָשֶׂה לוֹ״ — לֵידַע מָה יְהֵא בְּסוֹף נְבוּאָתָהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מרים ניבאה שאמה עתידה ללדת בן שיושיע את ישראל. כשנולד משה — נתמלא הבית אורה, ואביה נשקה על ראשה. אך כשהטילוהו ליאור — טפח על ראשה ואמר: היכן נבואתך? לכן נאמר: ותתצב אחותו מרחוק — לדעת מה יהיה בסוף נבואתה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">קבורת יעקב — סדר ההלוויה</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">יוֹסֵף זָכָה וְכוּ׳. מַאי שְׁנָא מֵעִיקָּרָא דִּכְתִיב: ״וַיַּעַל יוֹסֵף לִקְבּוֹר אֶת אָבִיו וַיַּעֲלוּ אִתּוֹ כׇּל עַבְדֵי פַּרְעֹה וְגוֹ׳״, וַהֲדַר: ״וְכֹל בֵּית יוֹסֵף וְאֶחָיו וּבֵית אָבִיו״, וּמַאי שְׁנָא לְבַסּוֹף דִּכְתִיב: ״וַיָּשׇׁב יוֹסֵף מִצְרַיְמָה הוּא וְאֶחָיו״, וַהֲדַר: ״וְכׇל הָעוֹלִים אִתּוֹ לִקְבּוֹר אֶת אָבִיו״?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הגמרא שואלת: מדוע בפסוקים על הלוויית יעקב, בדרך למצרים הוזכרו עבדי פרעה לפני אחי יוסף, אך בחזרה — אחי יוסף קודם?</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יוֹחָנָן: בַּתְּחִילָּה עַד שֶׁלֹּא רָאוּ בִּכְבוֹדָן שֶׁל יִשְׂרָאֵל — לֹא נָהֲגוּ בָּהֶן כָּבוֹד, וּלְבַסּוֹף שֶׁרָאוּ בִּכְבוֹדָן — נָהֲגוּ בָּהֶן כָּבוֹד.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: בתחילה המצרים לא הכירו בכבוד ישראל ולא נהגו בהם כבוד, ולכן הלכו לפניהם. בסוף, כשראו כבודם — נתנו להם להוביל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דִּכְתִיב: ״וַיָּבֹאוּ עַד גּוֹרֶן הָאָטָד״, וְכִי גוֹרֶן יֵשׁ לוֹ לָאָטָד? אָמַר רַבִּי אֲבָהוּ: מְלַמֵּד שֶׁהִקִּיפוּהוּ כְּתָרִים לַאֲרוֹנוֹ שֶׁל יַעֲקֹב כְּגוֹרֶן זֶה שֶׁמַּקִּיפִים לוֹ אָטָד, שֶׁבָּאוּ בְּנֵי עֵשָׂו וּבְנֵי יִשְׁמָעֵאל וּבְנֵי קְטוּרָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כשהגיעו ל&quot;גורן האטד&quot; — הקיפו את ארון יעקב בכתרים כגורן שמקיפים אותו בקוצים לשמירה. באו בני עשו, ישמעאל וקטורה לחלוק כבוד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנָא: כּוּלָּם לַמִּלְחָמָה בָּאוּ, כֵּיוָן שֶׁרָאוּ כִּתְרוֹ שֶׁל יוֹסֵף תָּלוּי בַּאֲרוֹנוֹ שֶׁל יַעֲקֹב, נָטְלוּ כּוּלָּן כִּתְרֵיהֶן וּתְלָאוּם בַּאֲרוֹנוֹ שֶׁל יַעֲקֹב. תָּנָא: שְׁלֹשִׁים וְשִׁשָּׁה כְּתָרִים נִתְלוּ בַּאֲרוֹנוֹ שֶׁל יַעֲקֹב.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">בתחילה באו בני עשו למלחמה, אך כשראו את כתר יוסף (משנה למלך) תלוי על הארון — הורידו כתריהם ותלו אותם על ארון יעקב. 36 כתרים נתלו בו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וַיִּסְפְּדוּ שָׁם מִסְפֵּד גָּדוֹל וְכָבֵד מְאֹד״. תָּנָא: אֲפִילּוּ סוּסִים וַאֲפִילּוּ חֲמוֹרִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ההספד היה גדול כל כך, שאפילו סוסים וחמורים הצטערו — ביטוי להשפעת יעקב על כל הבריות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">(מֵאֵילּוּ מֵאֵילּוּ) כֵּיוָן שֶׁהִגִּיעוּ לִמְעָרַת הַמַּכְפֵּלָה, אֲתָא עֵשָׂו קָא מְעַכֵּב, אָמַר לָהֶן: ״מַמְרֵא קִרְיַת הָאַרְבַּע הִיא חֶבְרוֹן״, וְאָמַר רַבִּי יִצְחָק: קִרְיַת אַרְבַּע — אַרְבַּע זוּגוֹת הָיוּ: אָדָם וְחַוָּה, אַבְרָהָם וְשָׂרָה, יִצְחָק וְרִבְקָה, יַעֲקֹב וְלֵאָה. אִיהוּ קַבְרַהּ לְלֵאָה בְּדִידֵיהּ, וְהַאי דְּפָיֵישׁ — דִּידִי הוּא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כשהגיעו למערת המכפלה — עשו עיכב: טען שיעקב קבר את לאה בחלקו, והמקום הנותר שייך לו. הרי 4 זוגות נקברו שם: אדם וחוה, אברהם ושרה, יצחק ורבקה, יעקב ולאה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">חושים בן דן מכה את עשו</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַרוּ לֵיהּ: זַבֵּינְתֵּהּ. אֲמַר לְהוּ: נְהִי דְּזַבֵּינִי בְּכֵירוּתָא, פְּשִׁיטוּתָא מִי זַבֵּינִי? אֲמַרוּ לֵיהּ: אִין, דִּכְתִיב: ״בְּקִבְרִי אֲשֶׁר כָּרִיתִי לִי״, וְאָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי שִׁמְעוֹן בֶּן יְהוֹצָדָק: אֵין ״כִּירָה״ אֶלָּא לְשׁוֹן מְכִירָה, שֶׁכֵּן בִּכְרַכֵּי הַיָּם קוֹרִין לִמְכִירָה ״כִּירָה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">בני יעקב השיבו: מכרת את חלקך! עשו הודה שמכר בכורה, אך טען: את חלק הפשוט (כאח רגיל) לא מכרתי.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לְהוּ: הַבוּ לִי אִיגַּרְתָּא! אֲמַרוּ לֵיהּ: אִיגַּרְתָּא בְּאַרְעָא דְמִצְרַיִם הִיא. וּמַאן נֵיזִיל — נֵיזִיל נַפְתָּלִי דְּקַלִּיל כִּי אַיָּילְתָּא, דִּכְתִיב: ״נַפְתָּלִי אַיָּלָה שְׁלוּחָה הַנּוֹתֵן אִמְרֵי שָׁפֶר״, אָמַר רַבִּי אֲבָהוּ: אַל תִּקְרֵי ״אִמְרֵי שָׁפֶר״, אֶלָּא ״אִמְרֵי סֵפֶר״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ענו לו: גם חלק הפשוט מכרת — שנאמר &quot;בקברי אשר כריתי לי&quot;, ו&quot;כירה&quot; = מכירה בלשון כרכי הים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">חוּשִׁים בְּרֵיהּ דְּדָן תַּמָּן הֲוָה, וְיַקִּירָן לֵיהּ אוּדְנֵיהּ. אֲמַר לְהוּ: מַאי הַאי? וְאָמְרוּ לֵיהּ: קָא מְעַכֵּב הַאי עַד דְּאָתֵי נַפְתָּלִי מֵאַרְעָא דְּמִצְרַיִם. אֲמַר לְהוּ: וְעַד דְּאָתֵי נַפְתָּלִי מֵאַרְעָא דְּמִצְרַיִם, יְהֵא אֲבִי אַבָּא מוּטָל בְּבִזָּיוֹן? שְׁקַל קוּלְפָא מַחְיֵיהּ אַרֵישֵׁיהּ, נָתְרָן עֵינֵיהּ וּנְפַלוּ אַכַּרְעָא דְיַעֲקֹב, פַּתְחִינְהוּ יַעֲקֹב לְעֵינֵיהּ וְאַחֵיךְ. וְהַיְינוּ דִּכְתִיב ״יִשְׂמַח צַדִּיק כִּי חָזָה נָקָם פְּעָמָיו יִרְחַץ בְּדַם הָרָשָׁע״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עשו דרש שטר מכירה, אך השטר היה במצרים. שלחו את נפתלי שהוא קל כאיילה — &quot;נפתלי אילה שלוחה הנותן אמרי ספר&quot; = שהביא את הספר (השטר).</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בְּאוֹתָהּ שָׁעָה נִתְקַיְּימָה נְבוּאָתָהּ שֶׁל רִבְקָה, דִּכְתִיב: ״לָמָּה אֶשְׁכַּל גַּם שְׁנֵיכֶם יוֹם אֶחָד״. וְאַף עַל גַּב דְּמִיתָתָן לֹא בְּיוֹם אֶחָד הֲוַאי — קְבוּרָתָן מִיהָא בְּיוֹם אֶחָד הֲוַאי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חושים בן דן, שהיה כבד שמיעה, לא הבין מדוע מעכבים. כששמע שעשו מעכב עד שיחזור נפתלי ממצרים — הכה את עשו בקולפא (אלה) על ראשו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִי לָא [אִי]עֲסַק בֵּיהּ יוֹסֵף, אֶחָיו לָא הֲווֹ מִעַסְּקִי בֵּיהּ? וְהָכְתִיב: ״וַיִּשְׂאוּ אוֹתוֹ בָנָיו אַרְצָה כְּנַעַן״? אָמְרוּ: הַנִּיחוּ לוֹ, כְּבוֹדוֹ בִּמְלָכִים יוֹתֵר מִבְּהֶדְיוֹטוֹת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עיניו של עשו נפלו על רגלי יעקב, ויעקב פתח עיניו וחייך — &quot;ישמח צדיק כי חזה נקם&quot;. באותה שעה נתקיימה נבואת רבקה: &quot;למה אשכל גם שניכם יום אחד&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִי לָנוּ גָּדוֹל מִיּוֹסֵף כּוּ׳. תָּנוּ רַבָּנַן: בֹּא וּרְאֵה כַּמָּה חֲבִיבוֹת מִצְוֹת עַל מֹשֶׁה רַבֵּינוּ, שֶׁכׇּל יִשְׂרָאֵל כּוּלָּן נִתְעַסְּקוּ בַּבִּיזָּה, וְהוּא נִתְעַסֵּק בְּמִצְוֹת, שֶׁנֶּאֱמַר: ״חֲכַם לֵב יִקַּח מִצְוֹת וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אף שלא מתו באותו יום — קבורתם היתה ביום אחד, שעשו נהרג ונקבר ביום שנקבר יעקב. ושואלת הגמרא: אם יוסף לא עסק בקבורה — אחיו לא היו עוסקים? אלא: כבוד במלכים עדיף על כבוד בהדיוטות.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">משה מעלה את עצמות יוסף</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמִנַּיִן הָיָה יוֹדֵעַ מֹשֶׁה רַבֵּינוּ הֵיכָן יוֹסֵף קָבוּר? אָמְרוּ: סֶרַח בַּת אָשֵׁר נִשְׁתַּיְּירָה מֵאוֹתוֹ הַדּוֹר. הָלַךְ מֹשֶׁה אֶצְלָהּ, אָמַר לָהּ: כְּלוּם אַתְּ יוֹדַעַת הֵיכָן יוֹסֵף קָבוּר? אָמְרָה לוֹ: אָרוֹן שֶׁל מַתֶּכֶת עָשׂוּ לוֹ מִצְרִים וּקְבָעוּהוּ בְּנִילוּס הַנָּהָר, כְּדֵי שֶׁיִּתְבָּרְכוּ מֵימָיו. הָלַךְ מֹשֶׁה וְעָמַד עַל שְׂפַת נִילוּס, אָמַר לוֹ: יוֹסֵף יוֹסֵף! הִגִּיעַ הָעֵת שֶׁנִּשְׁבַּע הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁאֲנִי גּוֹאֵל אֶתְכֶם, וְהִגִּיעָה הַשְּׁבוּעָה שֶׁהִשְׁבַּעְתָּ אֶת יִשְׂרָאֵל. אִם אַתָּה מַרְאֶה עַצְמְךָ מוּטָב, אִם לָאו — הֲרֵי אָנוּ מְנוּקִּין מִשְּׁבוּעָתֶךָ. מִיָּד צָף אֲרוֹנוֹ שֶׁל יוֹסֵף.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כל ישראל עסקו בביזת מצרים, ומשה עסק במצוות — העלאת עצמות יוסף. &quot;חכם לב יקח מצוות&quot; — משה בחר במצווה במקום ברכוש.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאַל תִּתְמַהּ הֵיאַךְ בַּרְזֶל צָף, שֶׁהֲרֵי כְּתִיב: ״וַיְהִי הָאֶחָד מַפִּיל הַקּוֹרָה וְאֶת הַבַּרְזֶל נָפַל אֶל הַמָּיִם וְגוֹ׳ אֲהָהּ אֲדוֹנִי וְהוּא שָׁאוּל. וַיֹּאמֶר אִישׁ הָאֱלֹהִים אָנָה נָפָל וַיַּרְאֵהוּ אֶת הַמָּקוֹם וַיִּקְצׇב עֵץ וַיַּשְׁלֶךְ שָׁמָּה וַיָּצֶף הַבַּרְזֶל״. וַהֲלֹא דְּבָרִים קַל וָחוֹמֶר: וּמָה אֱלִישָׁע תַּלְמִידוֹ שֶׁל אֵלִיָּהוּ, וְאֵלִיָּהוּ תַּלְמִידוֹ שֶׁל מֹשֶׁה — צָף בַּרְזֶל מִפָּנָיו, מִפְּנֵי מֹשֶׁה רַבֵּינוּ — עַל אַחַת כַּמָּה וְכַמָּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כיצד ידע משה היכן יוסף קבור? סרח בת אשר, שנשתיירה מאותו דור, סיפרה: המצרים עשו לו ארון מתכת וטבעו אותו בנילוס כדי שיתברכו מימיו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי נָתָן אוֹמֵר: בְּקַבַּרְנִיט שֶׁל מְלָכִים הָיָה קָבוּר. הָלַךְ מֹשֶׁה וְעָמַד עַל קַבַּרְנִיט שֶׁל מְלָכִים, אָמַר: יוֹסֵף, הִגִּיעַ עֵת שֶׁנִּשְׁבַּע הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁאֲנִי גּוֹאֵל אֶתְכֶם, וְהִגִּיעָה שְׁבוּעָה שֶׁהִשְׁבַּעְתָּ אֶת יִשְׂרָאֵל. אִם אַתָּה מַרְאֶה עַצְמְךָ — מוּטָב, וְאִם לָאו — הֲרֵי אָנוּ מְנוּקִּין מִשְּׁבוּעָתֶךָ. בְּאוֹתָהּ שָׁעָה נִזְדַּעְזַע אֲרוֹנוֹ שֶׁל יוֹסֵף, נְטָלוֹ מֹשֶׁה, וֶהֱבִיאוֹ אֶצְלוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">משה עמד על שפת הנילוס וקרא: יוסף! הגיע זמן הגאולה והשבועה שהשבעת את ישראל. הראה עצמך — ואם לא, אנו פטורים משבועתך. מיד צף הארון.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְכׇל אוֹתָן שָׁנִים שֶׁהָיוּ יִשְׂרָאֵל בַּמִּדְבָּר, הָיוּ שְׁנֵי אֲרוֹנוֹת הַלָּלוּ, אֶחָד שֶׁל מֵת וְאֶחָד שֶׁל שְׁכִינָה, מְהַלְּכִין זֶה עִם זֶה, וְהָיוּ עוֹבְרִין וְשָׁבִין אוֹמְרִים: מָה טִיבָן שֶׁל שְׁנֵי אֲרוֹנוֹת הַלָּלוּ? אָמְרוּ: אֶחָד שֶׁל מֵת וְאֶחָד שֶׁל שְׁכִינָה. וְכִי מָה דַּרְכּוֹ שֶׁל מֵת לְהַלֵּךְ עִם שְׁכִינָה? אָמְרוּ:</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; נתן אומר: יוסף נקבר בבית קברות של מלכים. כשמשה קרא לו — נזדעזע ארונו בין הארונות, ומשה נטלו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">קבורת יוסף בשכם — מי מקבל זכות</span>
+<span style="font-size:11px;color:#bbb">7</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קִיֵּים זֶה כׇּל מַה שֶּׁכָּתוּב בָּזֶה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">יוסף קיים את כל מה שכתוב בארון הברית — ולכן ראוי שארונו ילך עם ארון השכינה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִי לָא עֲסִיק בֵּיהּ מֹשֶׁה — יִשְׂרָאֵל לָא הֲווֹ מִיעַסְקִי בֵּיהּ? וְהָכְתִיב: ״וְאֶת עַצְמוֹת יוֹסֵף אֲשֶׁר הֶעֱלוּ בְנֵי יִשְׂרָאֵל מִמִּצְרַיִם קָבְרוּ בִשְׁכֶם״! וְתוּ: אִי לָא אִיעֲסַקוּ בֵּיהּ יִשְׂרָאֵל — בָּנָיו לָא הֲווֹ מִיעַסְקִי בֵּיהּ? וְהָכְתִיב: ״וַיִּהְיוּ לִבְנֵי יוֹסֵף לְנַחֲלָה״?!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: אם משה לא טיפל בעצמות יוסף — ישראל לא היו מטפלים? הרי כתוב &quot;ואת עצמות יוסף אשר העלו בני ישראל&quot;! ועוד: אם ישראל לא — בניו לא היו מטפלים?</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמְרוּ: הַנִּיחוּ לוֹ, כְּבוֹדוֹ בִּמְרוּבִּים יוֹתֵר מִבְּמוּעָטִין. וְתוּ אָמְרוּ: הַנִּיחוּ לוֹ, כְּבוֹדוֹ בִּגְדוֹלִים יוֹתֵר מִבִּקְטַנִּים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: ① כבוד ברבים עדיף על כבוד במועטים ② כבוד בגדולים (כמשה) עדיף על כבוד בקטנים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״קָבְרוּ בִּשְׁכֶם״. מַאי שְׁנָא בִּשְׁכֶם? אָמַר רַבִּי חָמָא בְּרַבִּי חֲנִינָא: מִשְּׁכֶם גְּנָבוּהוּ, וְלִשְׁכֶם נַחְזִיר אֲבֵידָתוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מדוע קברוהו דווקא בשכם? משכם גנבוהו (אחיו מכרוהו שם) → לשכם נחזיר אבידתו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קָשׁוּ קְרָאֵי אַהֲדָדֵי, כְּתִיב: ״וַיִּקַּח מֹשֶׁה אֶת עַצְמוֹת יוֹסֵף עִמּוֹ״, וּכְתִיב: ״וְאֶת עַצְמוֹת יוֹסֵף אֲשֶׁר הֶעֱלוּ בְנֵי יִשְׂרָאֵל וְגוֹ׳״!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">סתירה בפסוקים: &quot;ויקח משה&quot; (משה העלה) מול &quot;אשר העלו בני ישראל&quot; (ישראל העלו). מי באמת?</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי חָמָא בְּרַבִּי חֲנִינָא: כָּל הָעוֹשֶׂה דָּבָר וְלֹא גְּמָרוֹ, וּבָא אַחֵר וּגְמָרוֹ — מַעֲלֶה עָלָיו הַכָּתוּב עַל שֶׁגְּמָרוֹ כְּאִילּוּ עֲשָׂאוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; חמא: כל העושה דבר ולא גמרו, ובא אחר וגמרו — מעלה הכתוב על המגמר כאילו עשאו כולו. לכן נזקף הדבר גם לישראל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי אֶלְעָזָר אוֹמֵר: אַף מוֹרִידִין אוֹתוֹ מִגְּדוּלָּתוֹ, דִּכְתִיב: ״וַיְהִי בָּעֵת הַהִיא וַיֵּרֶד יְהוּדָה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אלעזר: מי שהתחיל מצווה ולא גמרה — מורידין אותו מגדולתו. ראיה מיהודה: יכול היה להציל את יוסף לגמרי ולא הציל → &quot;וירד יהודה&quot; = ירד מגדולתו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">עונש יהודה, ומדוע נקרא יוסף &quot;עצמות&quot;</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי שְׁמוּאֵל בַּר נַחְמָנִי אָמַר: אַף קוֹבֵר אִשְׁתּוֹ וּבָנָיו, דִּכְתִיב: ״וַתָּמׇת בַּת שׁוּעַ אֵשֶׁת יְהוּדָה וְגוֹ׳״, וּכְתִיב: ״וַיָּמׇת עֵר וְאוֹנָן״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; שמואל בר נחמני: מי שלא גמר מצווה — אף קובר אשתו ובניו. ראיה מיהודה: מתה אשתו (בת שוע), ומתו בניו (ער ואונן).</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַב יְהוּדָה אָמַר רַב: מִפְּנֵי מָה נִקְרָא יוֹסֵף עֲצָמוֹת בְּחַיָּיו — מִפְּנֵי שֶׁלֹּא מִיחָה בִּכְבוֹד אָבִיו, דְּקָאָמְרִי לֵיהּ ״עַבְדְּךָ אָבִינוּ״, וְלָא אֲמַר לְהוּ וְלָא מִידֵּי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מדוע נקרא יוסף &quot;עצמות&quot; בחייו (&quot;והעליתם את עצמותי&quot;)? מפני שלא מיחה כשאחיו אמרו &quot;עבדך אבינו&quot; — לא הגן על כבוד אביו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאָמַר רַב יְהוּדָה אָמַר רַב, וְאִיתֵּימָא רַבִּי חָמָא בְּרַבִּי חֲנִינָא: מִפְּנֵי מָה מֵת יוֹסֵף קוֹדֶם לְאֶחָיו — מִפְּנֵי שֶׁהִנְהִיג עַצְמוֹ בְּרַבָּנוּת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מדוע מת יוסף לפני אחיו? מפני שהנהיג עצמו ברבנות (שררה) — המתנהג בגדולה מתקצרים ימיו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וְיוֹסֵף הוּרַד מִצְרָיְמָה״. אָמַר רַבִּי אֶלְעָזָר: אַל תִּיקְרֵי ״הוּרַד״ אֶלָּא ״הוֹרִיד״, שֶׁהוֹרִיד אִיצְטַגְנִינֵי פַּרְעֹה מִגְּדוּלָּתָן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;ויוסף הורד מצרימה&quot; — אל תקרי &quot;הוּרד&quot; אלא &quot;הוֹריד&quot;: הוריד את אצטגניני (חוזי כוכבות) פרעה מגדולתם, כי הוא פתר חלומות והם לא הצליחו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">פוטיפר — סירוסו בידי גבריאל</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וַיִּקְנֵהוּ פּוֹטִיפַר סְרִיס פַּרְעֹה״, אָמַר רַב: שֶׁקְּנָאוֹ לְעַצְמוֹ. בָּא (גַּבְרִיאֵל) [מִיכָאֵל] וְסֵירְסוֹ, בָּא גַּבְרִיאֵל וּפֵירְעוֹ. מֵעִיקָּרָא כְּתִיב ״פּוֹטִיפַר״, וּלְבַסּוֹף ״פּוֹטִיפֶרַע״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;ויקנהו פוטיפר סריס פרעה&quot; — רב: קנאו לעצמו למשכב זכור. בא גבריאל וסירסו ופירעו (הוסיף בנזק). רמז: בתחילה נקרא &quot;פוטיפר&quot;, ובסוף &quot;פוטיפרע&quot; — לשון קריעה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִי לָנוּ גָּדוֹל מִמֹּשֶׁה וְכוּ׳. ״וַיֹּאמֶר ה׳ אֵלַי רַב לָךְ״, אָמַר רַבִּי לֵוִי: בְּ״רַב״ בִּישֵּׂר, בְּ״רַב״ בִּישְּׂרוּהוּ. בְּ״רַב״ בִּישֵּׂר — ״רַב לָכֶם״. בְּ״רַב״ בִּישְּׂרוּהוּ — ״רַב לָךְ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">המשנה אמרה: &quot;מי גדול ממשה — לא נתעסק בו אלא הקב&quot;ה&quot;. ה&#39; אמר למשה &quot;רב לך&quot; — ר&#39; לוי: ב&quot;רב&quot; בישר (&quot;רב לכם בני לוי&quot;) וב&quot;רב&quot; בישרוהו (&quot;רב לך&quot;). מידה כנגד מידה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">&quot;רב לך&quot; — שלוש דרשות על מיתת משה</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דָּבָר אַחֵר: ״רַב לָךְ״ — רַב יֵשׁ לְךָ, וּמַנּוּ — יְהוֹשֻׁעַ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">① &quot;רב לך&quot; = רב (מנהיג) יש לך, ומנו — יהושע. הגיע הזמן שיהושע יוביל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דָּבָר אַחֵר: ״רַב לָךְ״, שֶׁלֹּא יֹאמְרוּ: הָרַב כַּמָּה קָשֶׁה, וְתַלְמִיד כַּמָּה סָרְבָן. וְכׇל כָּךְ לָמָּה? תָּנָא דְּבֵי רַבִּי יִשְׁמָעֵאל: לְפוּם גַּמְלָא שִׁיחְנָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">② &quot;רב לך&quot; = יש לך רב (= הקב&quot;ה), אל תפציר יותר — שלא יאמרו: הרב קשה והתלמיד סרבן. ולמה מדקדקים כל כך? &quot;לפום גמלא שיחנא&quot; — לפי גדולתו של אדם מדקדקים במעשיו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וַיֹּאמֶר אֲלֵיהֶם בֶּן מֵאָה וְעֶשְׂרִים שָׁנָה אָנֹכִי הַיּוֹם״, שֶׁאֵין תַּלְמוּד לוֹמַר ״הַיּוֹם״: הַיּוֹם מָלְאוּ יָמַי וּשְׁנוֹתַי. לְלַמֶּדְךָ שֶׁהַקָּדוֹשׁ בָּרוּךְ הוּא מַשְׁלִים שְׁנוֹתֵיהֶם שֶׁל צַדִּיקִים מִיּוֹם לְיוֹם וּמֵחֹדֶשׁ לְחֹדֶשׁ, דִּכְתִיב: ״אֶת מִסְפַּר יָמֶיךָ אֲמַלֵּא״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;בן מאה ועשרים שנה אנכי היום&quot; — למה נאמר &quot;היום&quot;? שהיום בדיוק מלאו ימיו ושנותיו. הקב&quot;ה משלים שנות צדיקים מיום ליום — &quot;את מספר ימיך אמלא&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״לֹא אוּכַל עוֹד לָצֵאת וְלָבוֹא״. מַאי ״לָצֵאת וְלָבוֹא״? אִילֵימָא לָצֵאת וְלָבֹא מַמָּשׁ, וְהָכְתִיב: ״וּמֹשֶׁה בֶּן מֵאָה וְעֶשְׂרִים שָׁנָה בְּמוֹתוֹ לֹא נָס לֵחֹה״, וּכְתִיב: ״וַיַּעַל מֹשֶׁה מֵעַרְבֹת מוֹאָב אֶל הַר נְבוֹ״, וְתַנְיָא: שְׁתֵּים עֶשְׂרֵה מַעֲלוֹת הָיוּ שָׁם, וּפְסָעָן מֹשֶׁה בִּפְסִיעָה אַחַת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;לא אוכל עוד לצאת ולבוא&quot; — לא תשות כוח, שהרי בגיל 120 &quot;לא כהתה עינו ולא נס ליחה&quot;, ופסע 12 מעלות בפסיעה אחת.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec8">
+<button onclick="toggle(8)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">נסתתמו שערי חכמה — העברת סמכות ליהושע</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow8" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content8" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי שְׁמוּאֵל בַּר נַחְמָנִי אָמַר רַבִּי יוֹנָתָן: לָצֵאת וְלָבוֹא בְּדִבְרֵי תוֹרָה. מְלַמֵּד שֶׁנִּסְתַּתְּמוּ מִמֶּנּוּ שַׁעֲרֵי חׇכְמָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; שמואל בר נחמני: &quot;לצאת ולבוא&quot; = בדברי תורה, לא בכוח גופני. נסתתמו ממנו שערי חכמה — לא יכל עוד ללמד כבראשונה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וַיֵּלֶךְ מֹשֶׁה וִיהוֹשֻׁעַ וַיִּתְיַצְּבוּ בְּאֹהֶל מוֹעֵד״. תָּנָא: אוֹתָהּ שַׁבָּת שֶׁל דְּיוֹ זוּגֵי הָיְתָה, נִיטְּלָה רְשׁוּת מִזֶּה, וְנִיתְּנָה לָזֶה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;וילך משה ויהושע ויתיצבו באהל מועד&quot; — אותה שבת היתה &quot;של דיו זוגי&quot;: שני מנהיגים משמשים יחד. ניטלה רשות ממשה וניתנה ליהושע.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְתַנְיָא, אָמַר רַבִּי יְהוּדָה: אִילְמָלֵא מִקְרָא כָּתוּב, אִי אֶפְשָׁר לְאוֹמְרוֹ. הֵיכָן מֹשֶׁה מֵת — בְּחֶלְקוֹ שֶׁל רְאוּבֵן, דִּכְתִיב: ״וַיַּעַל מֹשֶׁה מֵעַרְבֹת מוֹאָב אֶל הַר נְבוֹ״, וּנְבוֹ בְּחֶלְקוֹ שֶׁל רְאוּבֵן קָיְימָא, דִּכְתִיב: ״וּבְנֵי רְאוּבֵן בָּנוּ וְגוֹ׳ וְאֶת נְבוֹ וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יהודה: משה מת בחלקו של ראובן (הר נבו), שהרי בני ראובן בנו את נבו. דרשה: &quot;נבו&quot; = ששם מתו שלושה נביאים: משה, אהרן ומרים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״נְבוֹ״ — שֶׁשָּׁם מֵתוּ שְׁלֹשָׁה נְבִיאִים: מֹשֶׁה וְאַהֲרֹן וּמִרְיָם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דרשת &quot;נבו&quot; — רמז לשלושת הנביאים הגדולים שמתו באזור זה: משה, אהרן ומרים, שהובילו את ישראל במדבר.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec9">
+<button onclick="toggle(9)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">משה מוטל בכנפי שכינה — ההספד</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow9" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content9" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְהֵיכָן מֹשֶׁה קָבוּר — בְּחֶלְקוֹ שֶׁל גָּד, דִּכְתִיב: ״וַיַּרְא רֵאשִׁית לוֹ וְגוֹ׳״. וּמֵחֶלְקוֹ שֶׁל רְאוּבֵן עַד חֶלְקוֹ שֶׁל גָּד כַּמָּה הָוֵי — אַרְבָּעָה מִילִין. אוֹתָן אַרְבָּעָה מִילִין מִי הוֹלִיכוֹ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">משה קבור בחלקו של גד — &quot;וירא ראשית לו כי שם חלקת מחוקק ספון&quot; = המחוקק (משה) טמון שם. המרחק מנבו (ראובן) לחלק גד — 4 מילין. מי הוליכו?</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מְלַמֵּד שֶׁהָיָה מֹשֶׁה מוּטָּל בְּכַנְפֵי שְׁכִינָה, וּמַלְאֲכֵי הַשָּׁרֵת אוֹמְרִים: ״צִדְקַת ה׳ עָשָׂה וּמִשְׁפָּטָיו עִם יִשְׂרָאֵל״, וְהַקָּדוֹשׁ בָּרוּךְ הוּא אוֹמֵר: ״מִי יָקוּם לִי עִם מְרֵעִים מִי יִתְיַצֵּב לִי עִם פּוֹעֲלֵי אָוֶן״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הקב&quot;ה עצמו נשא את משה בכנפי שכינה. מלאכי השרת אמרו: &quot;צדקת ה&#39; עשה ומשפטיו עם ישראל&quot;, והקב&quot;ה אמר: &quot;מי יקום לי עם מרעים&quot; — מי ילמד זכות על ישראל מעתה?</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּשְׁמוּאֵל אָמַר: ״מִי כְּהֶחָכָם וּמִי יוֹדֵעַ פֵּשֶׁר דָּבָר״, וְרַבִּי יוֹחָנָן אָמַר: ״הַחׇכְמָה מֵאַיִן תִּמָּצֵא״, וְרַב נַחְמָן אָמַר: ״וַיָּמׇת שָׁם מֹשֶׁה וְגוֹ׳״, סְמַלְיוֹן אָמַר: ״וַיָּמׇת שָׁם מֹשֶׁה סָפְרָא רַבָּה דְּיִשְׂרָאֵל״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חכמים שונים הספידוהו: שמואל אמר — &quot;מי כהחכם&quot;, ר&#39; יוחנן — &quot;החכמה מאין תמצא&quot;, רב נחמן — &quot;וימת שם משה עבד ה&#39;&quot;, סמליון — &quot;וימת משה ספרא רבה דישראל&quot; (הסופר הגדול).</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּנְיָא, רַבִּי אֱלִיעֶזֶר הַגָּדוֹל אוֹמֵר: שְׁנֵים עָשָׂר מִיל עַל שְׁנֵים עָשָׂר מִיל, כְּנֶגֶד מַחֲנֵה יִשְׂרָאֵל, בַּת קוֹל מַשְׁמִיעַ וְאוֹמֵר: ״וַיָּמׇת מֹשֶׁה סָפְרָא רַבָּה דְּיִשְׂרָאֵל״. וְיֵשׁ אוֹמְרִים: לֹא מֵת מֹשֶׁה, כְּתִיב הָכָא: ״וַיָּמׇת שָׁם״, וּכְתִיב הָתָם: ״וַיְהִי שָׁם עִם ה׳״, מָה לְהַלָּן עוֹמֵד וּמְשַׁמֵּשׁ, אַף כָּאן עוֹמֵד וּמְשַׁמֵּשׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אליעזר הגדול: בשטח של 12 על 12 מיל (כמחנה ישראל) הושמעה בת קול: &quot;וימת משה ספרא רבה דישראל&quot;. ויש אומרים: משה לא מת ממש — כמו &quot;ויהי שם עם ה&#39;&quot; = עומד ומשמש.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וַיִּקְבֹּר אוֹתוֹ בַגַּיְ בְּאֶרֶץ מוֹאָב מוּל בֵּית פְּעוֹר״. אָמַר רַבִּי בֶּרֶכְיָה: סִימָן בְּתוֹךְ סִימָן, וַאֲפִילּוּ הָכִי: ״וְלֹא יָדַע אִישׁ אֶת קְבֻרָתוֹ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;ויקבור אותו בגי... מול בית פעור&quot; — ר&#39; ברכיה: סימן בתוך סימן (מיקום מדויק), ובכל זאת &quot;ולא ידע איש את קבורתו&quot;. אף מלכות רומי שלחה לחפש את קברו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec10">
+<button onclick="toggle(10)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">יג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">קבר משה נסתר — חיפוש הרומאים</span>
+<span style="font-size:11px;color:#bbb">1</span>
+<span id="arrow10" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content10" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּכְבָר שָׁלְחָה מַלְכוּת הָרְשָׁעָה אֵצֶל</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הרומאים שלחו חיילים לבית פעור לחפש את קבר משה. עמדו למעלה — נדמה להם למטה, עמדו למטה — נדמה למעלה. נחלקו לשתי כיתות — ולכל כיתה נדמה שהקבר במקום ההפוך.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_14.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_12.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["יג.","יג.","יג.","יג.","יג:","יג:","יג:","יג:","יג:","יג:","יג:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<11;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<11;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="יג."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

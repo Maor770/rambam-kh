@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_05.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_03.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף ד</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">39 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('ד.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">ד.</button>
+<button onclick="filterAmud('ד:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">ד:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שיעור זמן הסתירה — שבע דעות</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְכַמָּה שִׁיעוּר סְתִירָה? כְּדֵי טוּמְאָה, כְּדֵי בִיאָה, כְּדֵי הַעֲרָאָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הגמרא מגדירה כמה זמן צריכה להיות ההתייחדות כדי שתיחשב &quot;סתירה&quot;: לפחות &quot;כדי טומאה&quot; = כדי ביאה = כדי העראה (מגע ראשוני בלבד, לא ביאה שלמה).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כְּדֵי הַקָּפַת דֶּקֶל, דִּבְרֵי רַבִּי יִשְׁמָעֵאל. רַבִּי אֱלִיעֶזֶר אוֹמֵר: כְּדֵי מְזִיגַת הַכּוֹס. רַבִּי יְהוֹשֻׁעַ אוֹמֵר: כְּדֵי לִשְׁתּוֹתוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מחלוקת בשיעור הזמן: ר&#39; ישמעאל — כדי הקפת דקל (= ללכת סביב עץ דקל). ר&#39; אליעזר — כדי מזיגת כוס. ר&#39; יהושע — כדי לשתות כוס.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בֶּן עַזַּאי אוֹמֵר: כְּדֵי לִצְלוֹת בֵּיצָה. רַבִּי עֲקִיבָא אוֹמֵר: כְּדֵי לְגוֹמְעָהּ. רַבִּי יְהוּדָה בֶּן בְּתֵירָא אוֹמֵר: כְּדֵי לִגְמוֹעַ שָׁלֹשׁ בֵּיצִים זוֹ אַחַר זוֹ. רַבִּי אֶלְעָזָר בֶּן יִרְמְיָה אוֹמֵר: כְּדֵי לִקְשׁוֹר גַּרְדִּי נִימָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוד דעות: בן עזאי — כדי לצלות ביצה. ר&#39; עקיבא — כדי לצלות ולגמוע ביצה. ר&#39; יהודה בן בתירא — כדי לגמוע שלוש ביצים. ר&#39; אלעזר בן ירמיה — כדי שאורג יקשור חוט.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">חָנִין בֶּן פִּנְחָס אוֹמֵר: כְּדֵי שֶׁתּוֹשִׁיט יָדָהּ לְתוֹךְ פִּיהָ לִיטּוֹל קֵיסָם. פְּלֵימוֹ אוֹמֵר: כְּדֵי שֶׁתּוֹשִׁיט יָדָהּ לַסַּל לִיטּוֹל כִּכָּר. אַף עַל פִּי שֶׁאֵין רְאָיָה לַדָּבָר, זֵכֶר לַדָּבָר: ״כִּי בְעַד אִשָּׁה זוֹנָה עַד כִּכַּר לָחֶם״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוד: חנין בן פנחס — כדי שתושיט יד לפיה וּתוציא קיסם. פלימו — כדי שתושיט יד לסל ותיטול ככר לחם. הפסוק &quot;כי בעד אשה זונה עד ככר לחם&quot; הוא זכר (רמז) לדבר.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">למה צריך שלושה ביטויים לשיעור?</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְכׇל הָנֵי לְמָה לִי?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: למה צריך לומר גם &quot;כדי טומאה&quot;, גם &quot;כדי ביאה&quot;, גם &quot;כדי העראה&quot;? הרי הכל אותו שיעור!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">צְרִיכִי, דְּאִי תְּנָא כְּדֵי טוּמְאָה, הֲוָה אָמֵינָא: כְּדֵי טוּמְאָתָהּ וְאַרְצוּתָהּ, קָא מַשְׁמַע לַן כְּדֵי בִיאָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: אם רק &quot;כדי טומאה&quot; — הייתי חושב שכולל גם פיתוי לפני הביאה. לכן צריך &quot;כדי ביאה&quot; — ביאה בלבד, בלי פיתוי.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִי תְּנָא כְּדֵי בִיאָה, הֲוָה אָמֵינָא: כְּדֵי גְּמַר בִּיאָה, קָא מַשְׁמַע לַן כְּדֵי הַעֲרָאָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואם רק &quot;כדי ביאה&quot; — הייתי חושב ביאה שלמה. לכן &quot;כדי העראה&quot; — מגע ראשוני בלבד, לא גמר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִי אַשְׁמְעִינַן כְּדֵי הַעֲרָאָה, הֲוָה אָמֵינָא: כְּדֵי הַעֲרָאָה וְאַרְצוּתָהּ, קָא מַשְׁמַע לַן כְּדֵי טוּמְאָה. וְכַמָּה כְּדֵי [הַעֲרָאָה] — כְּדֵי הַקָּפַת דֶּקֶל.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואם רק &quot;כדי העראה&quot; — הייתי חושב כולל פיתוי. לכן &quot;כדי טומאה&quot; — ללא פיתוי. ושיעור &quot;כדי העראה&quot; = כדי הקפת דקל.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">התאמת הברייתות — סתירות בשמות החכמים</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּרְמִינְהִי ״וְנִסְתְּרָה״, וְכַמָּה שִׁיעוּר סְתִירָה לֹא שָׁמַעְנוּ. כְּשֶׁהוּא אוֹמֵר ״וְהִיא נִטְמָאָה״, הֱוֵי אוֹמֵר — כְּדֵי טוּמְאָה, כְּדֵי בִיאָה, כְּדֵי הַעֲרָאָה, כְּדֵי חֲזָרַת דֶּקֶל, דִּבְרֵי רַבִּי אֱלִיעֶזֶר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מקשים מברייתא אחרת: שם ר&#39; אליעזר אומר &quot;כדי חזרת דקל&quot; (= חזרת הדקל ברוח), ואילו במשנה ר&#39; ישמעאל אומר &quot;כדי הקפת דקל&quot; (= הליכה סביבו). אם שני השיעורים זהים — סתירה!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי יְהוֹשֻׁעַ אוֹמֵר: כְּדֵי מְזִיגַת הַכּוֹס. בֶּן עַזַּאי אוֹמֵר: כְּדֵי לִשְׁתּוֹתוֹ. רַבִּי עֲקִיבָא אוֹמֵר: כְּדֵי לִצְלוֹת בֵּיצָה. רַבִּי יְהוּדָה בֶּן בְּתֵירָא אוֹמֵר: כְּדֵי לְגוֹמְעָהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">גם בברייתא ר&#39; יהושע אומר &quot;כדי מזיגת הכוס&quot; (לא &quot;כדי לשתותו&quot; כבמשנה), ובן עזאי אומר &quot;כדי לשתותו&quot; (לא &quot;כדי לצלות ביצה&quot; כבמשנה).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קָא סָלְקָא דַּעְתִּין: הַיְינוּ הַקָּפַת דֶּקֶל, הַיְינוּ חֲזָרַת דֶּקֶל. הָתָם אָמַר רַבִּי יִשְׁמָעֵאל: כְּדֵי הַקָּפַת דֶּקֶל, וּפְלִיג רַבִּי אֱלִיעֶזֶר עֲלֵיהּ. הָכָא אָמַר רַבִּי אֱלִיעֶזֶר כְּדֵי חֲזָרַת דֶּקֶל!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אביי מתרץ: &quot;הקפת דקל&quot; = הליכה סביב דקל ברגל. &quot;חזרת דקל&quot; = חזרת הדקל למקומו אחרי שנדחה ברוח. שני שיעורים שונים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר אַבָּיֵי: הַקָּפָה בָּרֶגֶל, חֲזָרָה בָּרוּחַ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב אשי שואל: &quot;חזרת דקל&quot; ברוח — עד שהדקל הולך וחוזר? או עד שנח לגמרי במקומו? תיקו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בָּעֵי רַב אָשֵׁי: חֲזָרָה בָּרוּחַ כִּי הֵיכִי דְּאָזֵיל וַהֲדַר אָתֵי, אוֹ דִילְמָא כִּי הֵיכִי דְּאָזֵיל וְאָתֵי וַהֲדַר קָאֵי בְּדוּכְתֵּיהּ. תֵּיקוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוד סתירה: ר&#39; אליעזר במשנה אומר &quot;כדי מזיגת הכוס&quot;, בברייתא &quot;כדי חזרת דקל&quot;. תשובה: שני הביטויים הם אותו שיעור זמן.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">פתרון סתירות נוספות בין הברייתות</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם אָמַר רַבִּי אֱלִיעֶזֶר: כְּדֵי מְזִיגַת הַכּוֹס, הָכָא: כְּדֵי חֲזָרַת דֶּקֶל! אִידֵּי וְאִידֵּי חַד שִׁיעוּרָא הוּא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יהושע: במשנה &quot;כדי לשתותו&quot;, בברייתא &quot;כדי מזיגת הכוס&quot;. פתרון: כוונתו למזוג ולשתות ביחד. ולמה לא שיעור אחד? כי אז ר&#39; יהושע = ר&#39; אליעזר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם אָמַר רַבִּי יְהוֹשֻׁעַ: כְּדֵי לִשְׁתּוֹתוֹ, הָכָא אָמַר: כְּדֵי מְזִיגַת הַכּוֹס! אֵימָא כְּדֵי לִמְזוֹג וְלִשְׁתּוֹת. וְלֵימָא: אִידֵּי וְאִידֵּי חַד שִׁיעוּרָא הוּא! אִם כֵּן, הַיְינוּ רַבִּי אֱלִיעֶזֶר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">בן עזאי: במשנה &quot;כדי לצלות ביצה&quot;, בברייתא &quot;כדי לשתותו&quot;. פתרון: שניהם אותו שיעור — צליית ביצה = שתיית כוס.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם אָמַר בֶּן עַזַּאי: כְּדֵי לִצְלוֹת בֵּיצָה, הָכָא אָמַר: כְּדֵי לִשְׁתּוֹתוֹ. אִידֵּי וְאִידֵּי חַד שִׁיעוּרָא הוּא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; עקיבא: במשנה &quot;כדי לגומעה&quot;, בברייתא &quot;כדי לצלות ביצה&quot;. פתרון: כוונתו לצלות ולגמוע. ולמה לא שיעור אחד? כי אז ר&#39; עקיבא = בן עזאי.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם אָמַר רַבִּי עֲקִיבָא: כְּדֵי לְגוֹמְעָהּ, הָכָא אָמַר: כְּדֵי לִצְלוֹת בֵּיצָה! אֵימָא כְּדֵי לִצְלוֹת בֵּיצָה וּלְגוֹמְעָהּ. וְלֵימָא: אִידֵּי וְאִידֵּי חַד שִׁיעוּרָא הוּא! אִם כֵּן, הַיְינוּ בֶּן עַזַּאי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יהודה בן בתירא: במשנה &quot;כדי לגמוע שלוש ביצים&quot;, בברייתא &quot;כדי לגומעה&quot; אחת. פתרון: בברייתא מגיב לר&#39; עקיבא — גמיעת שלוש ביצים = צלייה + גמיעה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שאלות רב אשי — קשירה, קיסם, ככר</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם אָמַר רַבִּי יְהוּדָה בֶּן בְּתֵירָא: כְּדֵי לִגְמוֹעַ שָׁלֹשׁ בֵּיצִים זוֹ אַחַר זוֹ, הָכָא אָמַר: כְּדֵי לְגוֹמְעָהּ! לִדְבָרָיו דְּרַבִּי עֲקִיבָא קָאָמַר, דְּקָאָמַר מְשַׁעֲרִין בִּצְלִיאָה וּבִגְמִיעָה: אֵימָא שִׁיעוּר גְּמִיעָה לְחוֹדַהּ כְּדֵי לִגְמֹעַ שָׁלֹשׁ בֵּיצִים זוֹ אַחַר זוֹ, דְּהַיְינוּ צְלִיאָה וּגְמִיעָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אלעזר בן ירמיה: כדי שאורג יקשור חוט. רב אשי שואל: חוט רחוק (לוקח יותר זמן) או קרוב? תיקו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי אֶלְעָזָר בֶּן יִרְמְיָה אוֹמֵר: כְּדֵי שֶׁיִּקְשׁוֹר גַּרְדִּי נִימָא. בָּעֵי רַב אָשֵׁי: דִּמְרַחַק, אוֹ דִּמְקָרַב? תֵּיקוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חנין בן פנחס: כדי שתוציא קיסם מפיה. רב אשי שואל: קיסם תקוע חזק או לא? תיקו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">חָנִין בֶּן פִּנְחָס אוֹמֵר: כְּדֵי שֶׁתּוֹשִׁיט יָדָהּ לְתוֹךְ פִּיהָ לִיטּוֹל קֵיסָם. בָּעֵי רַב אָשֵׁי: דִּמְהַדַּק אוֹ דְּלָא מְהַדַּק? תֵּיקוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">פלימו: כדי שתיטול ככר לחם מסל. רב אשי שואל שורת שאלות: הככר מהודק בסל או רופף? סל חדש או ישן? לחם חם או קר?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">פְּלֵימוֹ אוֹמֵר: כְּדֵי שֶׁתּוֹשִׁיט יָדָהּ לַסַּל לִיטּוֹל כִּכָּר. בָּעֵי רַב אָשֵׁי: דִּמְהַדַּק אוֹ דְּלָא מְהַדַּק? בְּחַדְתָּא אוֹ בְּעַתִּיקָא? בְּחַמִּימָא אוֹ בְּקָרִירָא?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ועוד שאלות: ככר חיטים או שעורים? רכה או קשה? כל השאלות נשארו ללא תשובה — תיקו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">כל חכם שיער מניסיונו</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בִּדְחִטֵּי אוֹ בְּדִשְׂעָרֵי? בְּרַכִּיכָא אוֹ בַּאֲקוֹשָׁא? תֵּיקוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">המשך שאלות רב אשי: ככר חיטים או שעורים? רכה או קשה? תיקו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַב יִצְחָק בַּר רַב יוֹסֵף אָמַר רַבִּי יוֹחָנָן: כׇּל אֶחָד וְאֶחָד — בְּעַצְמוֹ שִׁיעֵר. וְהָאִיכָּא בֶּן עַזַּאי דְּלָא נְסֵיב?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יוחנן: כל חכם שיער את זמן ההעראה מניסיונו האישי. קושיה: בן עזאי לא נשא אשה — איך שיער מעצמו?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אִיבָּעֵית אֵימָא: נְסֵיב וּפֵירַשׁ הֲוָה. וְאִיבָּעֵית אֵימָא: מֵרַבֵּיהּ שְׁמִיעַ לֵיהּ. וְאִיבָּעֵית אֵימָא: ״סוֹד ה׳ לִירֵאָיו״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שלוש תשובות: ① נשא אשה ופירש ממנה. ② שמע מרבו. ③ &quot;סוד ה&#39; ליראיו&quot; — ידע ברוח הקודש דברים שלא התנסה בהם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">נטילת ידיים — כאילו בא על זונה</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דָּרֵשׁ רַב עַוִּירָא, זִמְנִין אָמַר לַהּ מִשְּׁמֵיהּ דְּרַבִּי אַמֵּי, וְזִמְנִין אָמַר לַהּ מִשְּׁמֵיהּ דְּרַבִּי אַסִּי: כׇּל הָאוֹכֵל לֶחֶם בְּלֹא נְטִילַת יָדַיִם — כְּאִילּוּ בָּא עַל אִשָּׁה זוֹנָה. שֶׁנֶּאֱמַר: ״כִּי בְעַד אִשָּׁה זוֹנָה עַד כִּכַּר לָחֶם״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דרשה מהפסוק &quot;כי בעד אשה זונה עד ככר לחם&quot;: האוכל לחם בלי נטילת ידיים — כאילו בא על זונה. הקשר: &quot;ככר לחם&quot; = אכילה בלי נקיות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רָבָא: הַאי ״בְּעַד אִשָּׁה זוֹנָה עַד כִּכַּר לָחֶם״ — ״בְּעַד כִּכַּר לֶחֶם עַד אִשָּׁה זוֹנָה״ מִיבְּעֵי לֵיהּ! אֶלָּא אָמַר רָבָא: כׇּל הַבָּא עַל אִשָּׁה זוֹנָה, לְסוֹף מְבַקֵּשׁ כִּכַּר לֶחֶם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא דוחה: הפסוק מדבר הפוך! לא שככר גורמת לזנות, אלא שזנות גורמת לעוני. כלומר: הבא על זונה — בסוף מחפש ככר לחם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי זְרִיקָא אָמַר רַבִּי אֶלְעָזָר: כׇּל הַמְּזַלְזֵל בִּנְטִילַת יָדַיִם נֶעֱקָר מִן הָעוֹלָם. אָמַר רַב חִיָּיא בַּר אָשֵׁי אָמַר רַב: מַיִם רִאשׁוֹנִים — צָרִיךְ שֶׁיַּגְבִּיהַּ יָדָיו לְמַעְלָה, מַיִם אַחֲרוֹנִים — צָרִיךְ שֶׁיַּשְׁפִּיל יָדָיו לְמַטָּה. תַּנְיָא נָמֵי הָכִי: הַנּוֹטֵל יָדָיו — צָרִיךְ שֶׁיַּגְבִּיהַּ יָדָיו לְמַעְלָה, שֶׁמָּא יֵצְאוּ הַמַּיִם חוּץ לַפֶּרֶק, וְיַחְזְרוּ וִיטַמְּאוּ אֶת הַיָּדַיִם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אלעזר: המזלזל בנטילת ידיים — נעקר מהעולם. רב: מים ראשונים (לפני אכילה) — מגביה ידיו שלא יחזרו המים ויטמאו. מים אחרונים — משפיל למטה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי אֲבָהוּ: כׇּל הָאוֹכֵל פַּת בְּלֹא נִיגּוּב יָדַיִם — כְּאִילּוּ אוֹכֵל לֶחֶם טָמֵא, שֶׁנֶּאֱמַר: ״וַיֹּאמֶר ה׳ כָּכָה יֹאכְלוּ בְנֵי יִשְׂרָאֵל אֶת לַחְמָם טָמֵא וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אבהו: האוכל פת בלי ניגוב ידיים — כאילו אוכל לחם טמא. דרשה מהפסוק &quot;ככה יאכלו בני ישראל את לחמם טמא&quot;.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">גסות הרוח — פתיחת הסדרה</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמַאי ״וְאֵשֶׁת אִישׁ נֶפֶשׁ יְקָרָה תָצוּד״? אָמַר רַבִּי חִיָּיא בַּר אַבָּא אָמַר רַבִּי יוֹחָנָן: כׇּל אָדָם שֶׁיֵּשׁ בּוֹ גַּסּוּת הָרוּחַ — לְבַסּוֹף נִכְשָׁל בְּאֵשֶׁת אִישׁ, שֶׁנֶּאֱמַר: ״וְאֵשֶׁת אִישׁ נֶפֶשׁ יְקָרָה תָצוּד״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">המשך הפסוק &quot;ואשת איש נפש יקרה תצוד&quot; — ר&#39; יוחנן: מי שיש בו גסות הרוח נכשל באשת איש. &quot;נפש יקרה&quot; = נפש מתנשאת.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רָבָא: הַאי ״נֶפֶשׁ יְקָרָה״ — ״נֶפֶשׁ גְּבוֹהָה״ מִיבְּעֵי לֵיהּ. וְעוֹד: ״הִיא תָּצוּד״ מִיבְּעֵי לֵיהּ! אֶלָּא אָמַר רָבָא: כׇּל הַבָּא עַל אֵשֶׁת אִישׁ, אֲפִילּוּ לָמַד תּוֹרָה דִּכְתִיב בַּהּ ״יְקָרָה הִיא מִפְּנִינִים״, מִכֹּהֵן גָּדוֹל שֶׁנִּכְנָס לִפְנַי וְלִפְנִים, ״הִיא תְּצוּדֶנּוּ״ — לְדִינָהּ שֶׁל גֵּיהִנָּם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא דוחה: &quot;יקרה&quot; לא מתאים לגאווה, צריך &quot;גבוהה&quot;! אלא: הבא על אשת איש — אפילו למד תורה (&quot;יקרה מפנינים&quot;) ונחשב ככהן גדול — &quot;היא תצודנו&quot; לדינה של גיהנם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec8">
+<button onclick="toggle(8)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">גסות הרוח — כעבודה זרה, ככפירה בעיקר</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow8" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content8" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי שִׁמְעוֹן בֶּן יוֹחַי: כׇּל אָדָם שֶׁיֵּשׁ בּוֹ גַּסּוּת הָרוּחַ — כְּאִילּוּ עוֹבֵד עֲבוֹדָה זָרָה. כְּתִיב הָכָא: ״תּוֹעֲבַת ה׳ כׇּל גְּבַהּ לֵב״, וּכְתִיב הָתָם: ״וְלָא תָבִיא תוֹעֵבָה אֶל בֵּיתֶךָ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יוחנן בשם רשב&quot;י: גסות הרוח = כאילו עובד עבודה זרה. גזירה שווה: &quot;תועבת ה&#39;&quot; נאמר גם על גאווה וגם על עבודה זרה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יוֹחָנָן דִּידֵיהּ אָמַר: כְּאִילּוּ כָּפַר בָּעִיקָּר, שֶׁנֶּאֱמַר: ״וְרָם לְבָבֶךָ וְשָׁכַחְתָּ אֶת ה׳ אֱלֹהֶיךָ וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יוחנן עצמו: גסות הרוח = כאילו כפר בה&#39;. &quot;ורם לבבך ושכחת את ה&#39; אלוהיך&quot; — התנשאות מובילה לשכחת ה&#39;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי חָמָא בַּר חֲנִינָא אָמַר: כְּאִילּוּ בָּא עַל כׇּל הָעֲרָיוֹת. כְּתִיב הָכָא: ״תּוֹעֲבַת ה׳ כׇּל גְּבַהּ לֵב״, וּכְתִיב הָתָם: ״כִּי אֶת כׇּל הַתּוֹעֵבוֹת הָאֵל וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; חמא בר חנינא: גסות הרוח = כאילו בא על כל העריות. גזירה שווה: &quot;תועבת ה&#39;&quot; (גאווה) = &quot;כי את כל התועבות האל&quot; (עריות).</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עוּלָּא אָמַר: כְּאִילּוּ בָּנָה בָּמָה, שֶׁנֶּאֱמַר: ״חִדְלוּ לָכֶם מִן הָאָדָם אֲשֶׁר נְשָׁמָה בְּאַפּוֹ כִּי בַּמֶּה נֶחְשָׁב הוּא״ — אַל תִּיקְרֵי ״בַּמֶּה״, אֶלָּא ״בָּמָה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עולא: גסות הרוח = כאילו בנה במה. דרשה: &quot;כי במה נחשב הוא&quot; — אל תקרי &quot;בַּמֶּה&quot; אלא &quot;בָּמָה&quot; (= במת עבודה זרה).</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec9">
+<button onclick="toggle(9)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">ד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">&quot;יד ליד לא יינקה&quot; — שלוש דרשות</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow9" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content9" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי ״יָד לְיָד לֹא יִנָּקֶה״? אָמַר רַב: כׇּל הַבָּא עַל אֵשֶׁת אִישׁ, אֲפִילּוּ הִקְנָהוּ לְהַקָּדוֹשׁ בָּרוּךְ הוּא שָׁמַיִם וָאָרֶץ כְּאַבְרָהָם אָבִינוּ, דִּכְתִיב בֵּיהּ: ״הֲרִימֹתִי יָדִי אֶל ה׳ אֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ״ — לֹא יִנָּקֶה מִדִּינָהּ שֶׁל גֵּיהִנָּם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;יד ליד לא יינקה&quot; (משלי יא) — רב: הבא על אשת איש, אפילו הקנה לה&#39; שמים וארץ כאברהם (&quot;הרימותי ידי&quot;) — לא יינקה מגיהנם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קַשְׁיָא לְהוּ לִדְבֵי רַבִּי שֵׁילָא: הַאי ״יָד לְיָד לֹא יִנָּקֶה״, ״יָדִי״ מִיבְּעֵי לֵיהּ!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה מבית ר&#39; שילא: אם מדובר באברהם, צריך &quot;ידי&quot; ולא &quot;יד ליד&quot;!</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא אָמְרִי דְּבֵי רַבִּי שֵׁילָא: אֲפִילּוּ קִיבֵּל תּוֹרָה כְּמֹשֶׁה רַבֵּינוּ, דִּכְתִיב בֵּיהּ ״מִימִינוֹ אֵשׁ דָּת לָמוֹ״ — לֹא יִנָּקֶה מִדִּינָהּ שֶׁל גֵּיהִנָּם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דרשה חלופית (בית ר&#39; שילא): אפילו קיבל תורה כמשה (&quot;מימינו אש דת למו&quot; = יד ליד) — לא יינקה מגיהנם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קַשְׁיָא לֵיהּ לְרַבִּי יוֹחָנָן: הַאי ״יָד לְיָד״, ״יָד מִיָּד״ מִיבַּעְיָא לֵיהּ!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יוחנן מקשה: &quot;יד ליד&quot; = מיד ליד? צריך &quot;יד מיד&quot; (= קבלה מיד)!</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא אָמַר רַבִּי יוֹחָנָן:</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יוחנן דורש: אפילו עושה צדקה בסתר (יד ליד = מידו ליד העני) — מי שיש בו גסות הרוח לא יינקה מגיהנם.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_05.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_03.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["ד.","ד.","ד.","ד.","ד.","ד:","ד:","ד:","ד:","ד:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<10;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<10;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="ד."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

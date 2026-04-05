@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_32.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_30.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף לא</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">40 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('לא.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">לא.</button>
+<button onclick="filterAmud('לא:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">לא:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לא.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">&quot;במקהלות ברכו אלהים ה&#39; ממקור ישראל&quot;  (תהלים סח, כז) שגם מן הרחם (&quot;מקור&quot;) ברכו...</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״בְּמַקְהֵלוֹת בָּרְכוּ אֱלֹהִים ה׳ מִמְּקוֹר יִשְׂרָאֵל״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;במקהלות ברכו אלהים ה&#39; ממקור ישראל&quot;  (תהלים סח, כז) שגם מן הרחם (&quot;מקור&quot;) ברכו את ה&#39; כשנקהלו (&quot;במקהלות&quot;) על הים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְהָא לָא חֲזוֹ? אָמַר רַבִּי תַּנְחוּם: כָּרֵס נַעֲשָׂה לָהֶן כְּאַסְפַּקְלַרְיָא הַמְּאִירָה וְרָאוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: והא  העוברים במעי אמם לא חזו , ואיך אמרו &quot;זה אלי ואנווהו&quot;? אמר ר&#39; תנחום: כרס של אמם נעשה להן כאספקלריא המאירה (כזכוכית שקופה) וראו דרכה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לא.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה: בו ביום דרש ר&#39; יהושע בן הורקנוס שלא עבד איוב את הקדוש ברוך הוא...</span>
+<span style="font-size:11px;color:#bbb">10</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בּוֹ בַּיּוֹם דָּרַשׁ רַבִּי יְהוֹשֻׁעַ בֶּן הוּרְקָנוֹס שֶׁלֹּא עָבַד אִיּוֹב כּוּ׳. וְלִיחְזֵי הַאי ״לֹא״, אִי בְּלָמֶד אָלֶף כְּתִיב — ״לֹא״ הוּא, אִי בְּלָמֶד וָיו כְּתִיב — ״לוֹ״ הוּא?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה: בו ביום דרש ר&#39; יהושע בן הורקנוס שלא עבד איוב את הקדוש ברוך הוא אלא מאהבה, והביא ראיה מן הכתוב &quot;הן יקטלני לו איחל&quot; (איוב יג, טו), ועדיין נשאר בספק בגלל אי הבהירות במשמעות &quot;לו&quot;. ושואלים:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְכׇל הֵיכָא דִּכְתִיב בְּלָמֶד אָלֶף, ״לֹא״ הוּא? אֶלָּא מֵעַתָּה ״בְּכׇל צָרָתָם לֹא צָר״, דִּכְתִיב בְּלָמֶד אָלֶף, הָכִי נָמֵי דְּ״לֹא״ הוּא?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">על כך מקשים: וכל היכא דכתיב  בלמ&quot;ד אל&quot;ף, תמיד לא, בלשון שלילה הוא? אלא מעתה &quot;בכל צרתם לא צר&quot; (ישעיה סג, ט) דכתיב  בלמ&quot;ד אל&quot;ף, הכי נמי  ש&quot;לא&quot; בלשון שלילה הוא?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְכִי תֵּימָא הָכִי נָמֵי, וְהָכְתִיב ״וּמַלְאַךְ פָּנָיו הוֹשִׁיעָם״! אֶלָּא לָאו, מַשְׁמַע הָכִי וּמַשְׁמַע הָכִי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">וכי תימא הכי נמי , והכתיב  מיד אחר כך &quot;ומלאך פניו הושיעם&quot;, משמע שהכוונה היא &quot;לו&quot; בוי&quot;ו! אלא לאו  הצירוף &quot;לא&quot; משמע הכי ומשמע הכי  בין לחיוב בין לשלילה, ואין להוכיח מן הכתוב. ולכן הוצרך ר&#39; יהושע בן הורקנוס לראיה אחרת.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּנְיָא, רַבִּי מֵאִיר אוֹמֵר: נֶאֱמַר ״יְרֵא אֱלֹהִים״ בְּאִיּוֹב, וְנֶאֱמַר ״יְרֵא אֱלֹהִים״ בְּאַבְרָהָם, מָה ״יְרֵא אֱלֹהִים״ הָאָמוּר בְּאַבְרָהָם — מֵאַהֲבָה, אַף ״יְרֵא אֱלֹהִים״ הָאָמוּר בְּאִיּוֹב — מֵאַהֲבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תניא  ר&#39; מאיר אומר: נאמר &quot;ירא אלהים&quot; (איוב א, א) באיוב, ונאמר &quot;ירא אלהים&quot; (בראשית כב, יב) באברהם, מה &quot;ירא אלהים&quot; האמור באברהם — מאהבה עשה, אף &quot;ירא אלהים&quot; האמור באיוב — מאהבה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאַבְרָהָם גּוּפֵיהּ מְנָלַן — דִּכְתִיב ״זֶרַע אַבְרָהָם אֹהֲבִי״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: ואברהם גופיה מנלן  שעשה מאהבה — דכתיב  &quot;זרע אברהם אהבי&quot;  (ישעיה מא, ח).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי אִיכָּא בֵּין עוֹשֶׂה מֵאַהֲבָה לְעוֹשֶׂה מִיִּרְאָה? אִיכָּא הָא דְּתַנְיָא, רַבִּי שִׁמְעוֹן בֶּן אֶלְעָזָר אוֹמֵר: גָּדוֹל הָעוֹשֶׂה מֵאַהֲבָה יוֹתֵר מִן הָעוֹשֶׂה מִיִּרְאָה, שֶׁזֶּה תָּלוּי לְאֶלֶף דּוֹר. וְזֶה תָּלוּי לְאַלְפַּיִם דּוֹר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: מאי איכא  בין עושה מאהבה לעושה מיראה? ומשיבים: איכא הא דתניא , ר&#39; שמעון בן אלעזר אומר: גדול העושה מאהבה יותר מן העושה מיראה, שזה העושה מיראה תלוי ונשמר לו הדבר לזכות לאלף דור. וזה העושה מאהבה תלוי לאלפים דור.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָכָא כְּתִיב: ״לַאֲלָפִים לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֹתָי״, וְהָתָם כְּתִיב: ״וּלְשֹׁמְרֵי מִצְוֹתָיו לְאֶלֶף דּוֹר״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">וראיה לכך: הכא כתיב : &quot;ועושה חסד לאלפים לאהבי ולשמרי מצותי&quot; (שמות כ, ו) הרי שהחסד נשמר אלפי דורות לעושה מאהבה (&quot;אוהבי&quot;), והתם כתיב : &quot;ולשמרי מצותו לאלף דור&quot;  (דברים ז, ט).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם נָמֵי כְּתִיב ״לְאֹהֲבָיו וּלְשֹׁמְרֵי מִצְוֹתָיו לְאֶלֶף דּוֹר״!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומקשים: התם נמי כתיב  &quot;לאהביו ולשמרי מצותו לאלף דור&quot;  (דברים ז, ט)!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הַאי לְדִסְמִיךְ לֵיהּ וְהַאי לְדִסְמִיךְ לֵיהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: האי לדסמיך ליה והאי לדסמיך ליה .</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָנְהוּ תְּרֵי תַּלְמִידֵי דַּהֲווֹ יָתְבִי קַמֵּיהּ דְּרָבָא, חַד אָמַר לֵיהּ אַקְרְיוּן בְּחֶלְמַאי: ״מָה רַב טוּבְךָ אֲשֶׁר צָפַנְתָּ לִּירֵאֶיךָ״, וְחַד אָמַר לֵיהּ: אַקְרְיוּן בְּחֶלְמַאי ״וְיִשְׂמְחוּ כׇל חוֹסֵי בָךְ לְעוֹלָם יְרַנֵּנוּ וְיַעְלְצוּ בְךָ אֹהֲבֵי שְׁמֶךָ״. אֲמַר לְהוּ: תַּרְוַיְיכוּ רַבָּנַן צַדִּיקֵי גְּמוּרֵי אַתּוּן. מָר מֵאַהֲבָה, וּמָר מִיִּרְאָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מסופר: הנהו תרי תלמידי דהוו יתבי קמיה  רבא, חד  אמר ליה  אקריון בחלמאי  פסוק זה: &quot;מה רב טובך אשר צפנת ליראיך&quot; (תהלים לא, כ), וחד  אמר ליה : אקריון בחלמאי  &quot;וישמחו כל חוסי בך לעולם ירננו ותסך עלימו ויעלצו בך אהבי שמך&quot; (תהלים ה, יב). אמר להו :</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">לא.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מי שקינא לאשתו ונסתרה, אפילו שמע מעוף הפורח, כלומר, מכל מקור שהוא, שנסתרה —...</span>
+<span style="font-size:11px;color:#bbb">8</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הֲדַרַן עֲלָךְ כְּשֵׁם שֶׁהַמַּיִם</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מי שקינא לאשתו ונסתרה, אפילו שמע מעוף הפורח, כלומר, מכל מקור שהוא, שנסתרה — יוציא (יגרש אותה), ויתן כתובה, אלו דברי ר&#39; אליעזר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִי שֶׁקִּינֵּא לְאִשְׁתּוֹ וְנִסְתְּרָה, אֲפִילּוּ שָׁמַע מֵעוֹף הַפּוֹרֵחַ — יוֹצִיא וְיִתֵּן כְּתוּבָּה, דִּבְרֵי רַבִּי אֱלִיעֶזֶר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יהושע אומר: אין מגרש אותה עד שישאו ויתנו בה ויספרו עליה מוזרות בלבנה (נשים היושבות וטוות לאור הירח) ובדרך אגב מדברות ברכילות של העיר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי יְהוֹשֻׁעַ אוֹמֵר: עַד שֶׁיִּשְׂאוּ וְיִתְּנוּ בָּהּ מוֹזְרוֹת בַּלְּבָנָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אם אמר עד אחד &quot;אני ראיתיה שנטמאת&quot; — לא היתה שותה אלא מגרשה. ולא עוד אלא אפילו עבד אפילו שפחה שאינם נאמנים לעדות — הרי אלו נאמנין לענין עדות טומאה אף לפוסלה מכתובתה שנחשבת כזונה ומאבדת כתובתה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר עֵד אֶחָד ״אֲנִי רְאִיתִיהָ שֶׁנִּטְמֵאת״ — לֹא הָיְתָה שׁוֹתָה. וְלֹא עוֹד, אֶלָּא אֲפִילּוּ עֶבֶד אֲפִילּוּ שִׁפְחָה — הֲרֵי אֵלּוּ נֶאֱמָנִין אַף לְפוֹסְלָהּ מִכְּתוּבָּתָהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חמותה ובת חמותה וצרתה ויבמתה (גיסתה, אשת אחיה) ובת בעלה, אף שהן חשודות ואינן נאמנות להעיד על האשה בדרך כלל — הרי אלו נאמנות להעיד עליה בענין זה. ולא שהאמינו להן לפוסלה מכתובתה, שאין עדותן מועילה לכך, אלא שלא תשתה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">חֲמוֹתָהּ וּבַת חֲמוֹתָהּ וְצָרָתָהּ וִיבִמְתָּהּ וּבַת בַּעְלָהּ — הֲרֵי אֵלּוּ נֶאֱמָנוֹת. וְלֹא לְפוֹסְלָהּ מִכְּתוּבָּתָהּ, אֶלָּא שֶׁלֹּא תִּשְׁתֶּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שלכאורה שהיה בדין לומר אחרת: ומה אם עדות ראשונה שנסתרה שאין אוסרתה איסור עולם אלא נבדקת במי סוטה — אינה מתקיימת בפחות משנים שצריכים שני עדים שיעידו שנסתרה, עדות אחרונה שנטמאה שאוסרתה איסור עולם — אינו דין שלא תתקיים בפחות משנים?</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">שֶׁהָיָה בַּדִּין: וּמָה אִם עֵדוּת רִאשׁוֹנָה, שֶׁאֵין אוֹסַרְתָּהּ אִיסּוּר עוֹלָם — אֵינָהּ מִתְקַיֶּימֶת בְּפָחוֹת מִשְּׁנַיִם, עֵדוּת אַחֲרוֹנָה, שֶׁאוֹסַרְתָּהּ אִיסּוּר עוֹלָם — אֵינוֹ דִּין שֶׁלֹּא תִּתְקַיֵּים בְּפָחוֹת מִשְּׁנַיִם?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">— תלמוד לומר: &quot;ועד אין בה&quot; (במדבר ה, יג) כל עדות שיש בה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּלְמוּד לוֹמַר: ״וְעֵד אֵין בָּהּ״, כׇּל עֵדוּת שֶׁיֵּשׁ בָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואפשר להקשות: אם כן נעשה קל וחומר לעדות הראשונה מתוך הלכה זו מעתה: ומה אם</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְקַל וָחוֹמֶר לְעֵדוּת הָרִאשׁוֹנָה מֵעַתָּה: וּמָה אִם</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">המשך: וְקַל וָחוֹמֶר לְעֵדוּת הָרִאשׁוֹנָה מֵעַתָּה: וּמָה אִם</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לא:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">עדות אחרונה על הטומאה שאוסרתה איסור עולם — הרי היא מתקיימת בעד אחד בלבד, עדות...</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עֵדוּת אַחֲרוֹנָה שֶׁאוֹסַרְתָּהּ אִיסּוּר עוֹלָם — הֲרֵי הִיא מִתְקַיֶּימֶת בְּעֵד אֶחָד, עֵדוּת הָרִאשׁוֹנָה שֶׁאֵין אוֹסַרְתָּהּ אִיסּוּר עוֹלָם — אֵינוֹ דִּין שֶׁתִּתְקַיֵּים בְּעֵד אֶחָד?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עדות אחרונה על הטומאה שאוסרתה איסור עולם — הרי היא מתקיימת בעד אחד בלבד, עדות הראשונה על הסתירה שאין אוסרתה איסור עולם אלא עד שתשתה — אינו דין שתתקיים בעד אחד?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּלְמוּד לוֹמַר: ״כִּי מָצָא בָהּ עֶרְוַת דָּבָר״, וּלְהַלָּן הוּא אוֹמֵר: ״עַל פִּי שְׁנֵי עֵדִים ... יָקוּם דָּבָר״, מָה לְהַלָּן עַל פִּי שְׁנַיִם — אַף כָּאן פִּי שְׁנַיִם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תלמוד לומר: &quot;כי מצא בה ערות דבר&quot; (דברים כד, א) ולהלן הוא אומר &quot;על פי שני עדים... יקום דבר&quot; (דברים יט, טו), ולמדים מגזירה שווה &quot;דבר&quot; &quot;דבר&quot; מה להלן אין הדבר מתקיים אלא על פי שנים — אף כאן אין עדות על הסתירה אלא על פי שנים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עֵד אוֹמֵר ״נִטְמֵאת״ וְעֵד אוֹמֵר ״לֹא נִטְמֵאת״, אִשָּׁה אוֹמֶרֶת ״נִטְמֵאת״ וְאִשָּׁה אוֹמֶרֶת ״לֹא נִטְמֵאת״ — הָיְתָה שׁוֹתָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">היה עד אחד אומר &quot;נטמאת&quot; ועד אחר אומר &quot;לא נטמאת&quot;, אשה אחת אומרת &quot;נטמאת&quot; ואשה אחרת אומרת &quot;לא נטמאת&quot; — היתה שותה, שמאחר שיש עדויות הסותרות זו את זו — הרי זה ספק אם נטמאת ושותה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶחָד אוֹמֵר ״נִטְמֵאת״ וּשְׁנַיִם אוֹמְרִים ״לֹא נִטְמֵאת״ — הָיְתָה שׁוֹתָה. שְׁנַיִם אוֹמְרִים ״נִטְמֵאת״ וְאֶחָד אוֹמֵר ״לֹא נִטְמֵאת״ — לֹא הָיְתָה שׁוֹתָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אחד אומר &quot;נטמאת&quot; ושנים אומרים &quot;לא נטמאת&quot; — היתה שותה. שנים אומרים &quot;נטמאת&quot; ואחד אומר &quot;לא נטמאת&quot; — סומכים על עדות השנים, ולא היתה שותה אלא יוצאת מבעלה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לא:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">על הלימוד מהגזירה שווה הנמצא במדרש ההלכה במשנה זו, שאין עדות על קינוי וסתירה...</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גְּמָ׳ הַאי תַּלְמוּד לוֹמַר ״כִּי מָצָא בָהּ עֶרְוַת דָּבָר״,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">על הלימוד מהגזירה שווה הנמצא במדרש ההלכה במשנה זו, שאין עדות על קינוי וסתירה בפחות משני עדים, שואלים: האי  תלמוד לומר &quot;כי מצא בה ערות דבר&quot;, הלא לכאורה</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּלְמוּד לוֹמַר ״בָּהּ״ — בָּהּ וְלֹא בְּקִינּוּי, בָּהּ וְלֹא בִּסְתִירָה מִיבְּעֵי לֵיהּ!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תלמוד לומר בפרשת סוטה &quot;בה&quot; (&quot;והיא נטמאה ועד אין בה&quot; — במדבר ה, יג) ומהדיוק בה ולא בקינוי, בה ולא בסתירה מיבעי ליה   לומר, שהרי מכאן למדנו דין עד אחד בטומאה!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָכִי נָמֵי קָאָמַר: תַּלְמוּד לוֹמַר ״בָּהּ״ — בָּהּ וְלֹא בְּקִינּוּי, בָּהּ וְלֹא בִּסְתִירָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: הכי נמי קאמר , כך צריך להבין את הדברים: תלמוד לומר &quot;בה&quot; — בה ולא בקינוי, בה ולא בסתירה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְטוּמְאָה בְּעָלְמָא בְּלֹא קִינּוּי וּבְלֹא סְתִירָה, דְּלָא מְהֵימַן עֵד אֶחָד מְנָלַן? נֶאֱמַר כָּאן ״דָּבָר״, וְנֶאֱמַר לְהַלָּן ״דָּבָר״. מָה לְהַלָּן בִּשְׁנֵי עֵדִים — אַף כָּאן בִּשְׁנֵי עֵדִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואולם טומאה בעלמא  שמעיד אדם על אשת איש שנטמאה בלא קינוי ובלא סתירה, שלא מהימן  עד אחד מנלן ? — דין זה נלמד באופן אחר, נאמר כאן בענין עדות &quot;דבר&quot;, ונאמר להלן &quot;דבר&quot; בענין ערוה, מה להלן מדובר בעדות שני עדים — אף כאן בשני עדים, ואין עד אחד מספיק לכך.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לא:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה: עד אומר נטמאת ועד אומר לא נטמאת — היתה...</span>
+<span style="font-size:11px;color:#bbb">12</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עֵד אוֹמֵר נִטְמֵאת. טַעְמָא דְּקָא מַכְחֵישׁ לֵיהּ, הָא לָא קָא מַכְחֵישׁ לֵיהּ — עֵד אֶחָד מְהֵימַן,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה: עד אומר נטמאת ועד אומר לא נטמאת — היתה שותה. ומעירים: יש לדייק, טעמא  דקא מכחיש ליה  העד השני, הא  אם לא קא מכחיש ליה  היה עד אחד מהימן  ואסורה על בעלה לעולם,</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מְנָהָנֵי מִילֵּי? דְּתָנוּ רַבָּנַן: ״וְעֵד אֵין בָּהּ״ — בִּשְׁנַיִם הַכָּתוּב מְדַבֵּר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מנהני מילי ? ומביאים, דתנו רבנן : מה שנאמר &quot;ועד אין בה&quot; (במדבר ה, יג) — בשנים הכתוב מדבר, שאם אין בה שני עדים, אלא עד אחד בלבד, הרי היא אסורה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אַתָּה אוֹמֵר בִּשְׁנַיִם, אוֹ אֵינוֹ אֶלָּא בְּאֶחָד — תַּלְמוּד לוֹמַר: ״לֹא יָקוּם עֵד אֶחָד בְּאִישׁ וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אתה אומר בשנים, או אינו אלא באחד? — תלמוד לומר: &quot;לא יקום עד אחד באיש לכל עוון ולכל חטאת&quot; (דברים יט, טו</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִמַּשְׁמַע שֶׁנֶּאֱמַר ״לֹא יָקוּם עֵד״, אֵינִי יוֹדֵעַ שֶׁהוּא אֶחָד, מָה תַּלְמוּד לוֹמַר ״אֶחָד״ — זֶה בָּנָה אָב: כׇּל מָקוֹם שֶׁנֶּאֱמַר ״עֵד״ — הֲרֵי כָּאן שְׁנַיִם, עַד שֶׁיִּפְרוֹט לְךָ הַכָּתוּב ״אֶחָד״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">), ועל כך דרשו: ממשמע שנאמר &quot;לא יקום עד&quot; איני יודע שהוא אחד, שהרי לשון יחיד הוא, מה תלמוד לומר &quot;אחד&quot; — זה בנה אב וקבע תקדים ויסוד להלכה: כל מקום שנאמר &quot;עד&quot; — הרי כאן שנים, עד שיפרוט לך הכתוב ויאמר במפורש &quot;אחד&quot;. ואם כן גם כאן בענין סוטה</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאָמַר רַחֲמָנָא: תְּרֵי לֵית בַּהּ אֶלָּא חַד, ״וְהִיא לֹא נִתְפָּשָׂה״ — אֲסוּרָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אמר רחמנא  אם תרי לית  בה אלא חד  &quot;והיא לא נתפשה&quot; (נאנסה) (במדבר ה, יג) — הריהי אסורה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְכֵיוָן דְּמִדְּאוֹרָיְיתָא עֵד אֶחָד מְהֵימַן, אִידַּךְ הֵיכִי מָצֵי מַכְחֵישׁ לֵיהּ? וְהָא אָמַר עוּלָּא: כׇּל מָקוֹם שֶׁהֶאֱמִינָה תּוֹרָה עֵד אֶחָד, הֲרֵי כָּאן שְׁנַיִם, וְאֵין דְּבָרָיו שֶׁל אֶחָד בִּמְקוֹם שְׁנַיִם!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: וכיון דמדאורייתא  עד אחד מהימן , אם כן אידך היכי מצי מכחיש ליה  ולגרום לה שתשתה ולא תיאסר עולמית בעדות הראשון? והא  אמר עולא: כל מקום שהאמינה תורה עד אחד לעדות הרי כאן עדות כעדות שנים, ואין דבריו של עד אחד קיימים במקום שהוא סותר שנים!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא אָמַר עוּלָּא, תְּנִי: לֹא הָיְתָה שׁוֹתָה. וְכֵן אָמַר רַבִּי יִצְחָק: לֹא הָיְתָה שׁוֹתָה. וְרַבִּי חִיָּיא אָמַר: הָיְתָה שׁוֹתָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלא אמר עולא: תני : עד אומר נטמאת ועד אומר לא נטמאת — לא היתה שותה. וכן אמר ר&#39; יצחק, יש לשנות: לא היתה שותה. ור&#39; חייא אמר שהנוסח הוא: היתה שותה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">לְרַבִּי חִיָּיא קַשְׁיָא דְּעוּלָּא. לָא קַשְׁיָא: כָּאן בְּבַת אַחַת. כָּאן בְּזֶה אַחַר זֶה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: לר&#39; חייא קשיא  מה שהיה קשה לעולא: והרי דינו של העד הראשון כשניים! ומשיבים: לא קשיא ; כאן במשנתנו מדובר שבאו שני העדים בבת אחת, וכיון שהם סותרים זה את זה — הרי זה כאילו לא היתה כאן עדות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תְּנַן: עֵד אוֹמֵר ״נִטְמֵאת״ וּשְׁנַיִם אוֹמְרִים ״לֹא נִטְמֵאת״ — הָיְתָה שׁוֹתָה. הָא חַד וְחַד — לֹא הָיְתָה שׁוֹתָה, תְּיוּבְתָּא דְּרַבִּי חִיָּיא!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תנן : עד אחד אומר &quot;נטמאת&quot; ושנים אומרים &quot;לא נטמאת&quot; — היתה שותה, ונדייק מכאן: הא חד וחד  — לא היתה שותה, אם כן תיובתא  היא על ר&#39; חייא!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר לָךְ רַבִּי חִיָּיא: וְלִיטַעְמָיךְ, אֵימָא סֵיפָא: שְׁנַיִם אוֹמְרִים ״נִטְמֵאת״ וְאֶחָד אוֹמֵר ״לֹא נִטְמֵאת״ — לֹא הָיְתָה שׁוֹתָה. הָא חַד וְחַד — הָיְתָה שׁוֹתָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: אמר  לך ר&#39; חייא: וליטעמיך  שכך אתה מדייק, אימא סיפא  של המשנה: שנים אומרים &quot;נטמאת&quot; ואחד אומר &quot;לא נטמאת&quot; — לא היתה שותה. ותדייק מכאן: הא חד וחד  — היתה שותה. ונמצא כי הדיוק הראשון והאחרון סותרים זה את זה!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא, כּוּלַּהּ בִּפְסוּלֵי עֵדוּת, וְרַבִּי נְחֶמְיָה הִיא. דְּתַנְיָא, רַבִּי נְחֶמְיָה אוֹמֵר: כׇּל מָקוֹם שֶׁהֶאֱמִינָה תּוֹרָה עֵד אֶחָד — הַלֵּךְ אַחַר רוֹב דֵּעוֹת, וְעָשׂוּ שְׁתֵּי נָשִׁים בְּאִישׁ אֶחָד כִּשְׁנֵי אֲנָשִׁים בְּאִישׁ אֶחָד.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלא גם לשם תירוץ המשנה צריכים לומר שאין לדייק כך, אלא כולה בפסולי עדות היא מדברת, שהשניים שבאו להעיד הם פסולי עדות שמקבלים את עדותם בסוטה, ושיטת ר&#39; נחמיה היא. דתניא , ר&#39; נחמיה אומר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִיכָּא דְאָמְרִי: כׇּל הֵיכָא דַּאֲתָא עֵד אֶחָד כָּשֵׁר מֵעִיקָּרָא — אֲפִילּוּ מֵאָה נָשִׁים נָמֵי כְּעֵד אֶחָד דָּמְיָין.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואיכא דאמרי  שיטה אחרת כדעת ר&#39; נחמיה: כל היכא דאתא  עד אחד כשר מעיקרא  — אפילו מאה נשים המעידות כנגדו נמי  כעד אחד בלבד דמיין  ואינן יכולות לבטל את עדותו.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_32.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_30.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["לא.","לא.","לא.","לא:","לא:","לא:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<6;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<6;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="לא."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

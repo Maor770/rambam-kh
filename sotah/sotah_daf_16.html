@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_17.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_15.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף טז</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">33 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('טז.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">טז.</button>
+<button onclick="filterAmud('טז:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">טז:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">עפר מקרקע המשכן — שילה, נוב וגבעון</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">שִׁילֹה נוֹב וְגִבְעוֹן וּבֵית עוֹלָמִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הגמרא קובעת: דין &quot;קרקע המשכן&quot; חל גם בשילה, נוב, גבעון ובבית המקדש — לא רק במשכן שבמדבר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אִיסִי בֶּן מְנַחֵם אוֹמֵר, אֵינוֹ צָרִיךְ: וּמָה בְּטוּמְאָה קַלָּה לֹא חָלַק הַכָּתוּב — בְּטוּמְאַת אֵשֶׁת אִישׁ חֲמוּרָה, לֹא כׇּל שֶׁכֵּן? אִם כֵּן מָה תַּלְמוּד לוֹמַר ״בְּקַרְקַע הַמִּשְׁכָּן״ — שֶׁלֹּא יָבִיא מִתּוֹךְ קוּפָּתוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">איסי בן מנחם: אין צורך בלימוד מיוחד — קל וחומר: אם בטומאה קלה (כניסה טמא למקדש) לא חילקו בין משכן למקדש, בטומאת אשת איש חמורה (עונשה חנק) — לא כל שכן! א&quot;כ &quot;בקרקע המשכן&quot; בא ללמד: אין מביאים עפר מקופה, אלא מניחים על הקרקע ומרימים משם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">אפר במקום עפר — לשיטת בית הלל</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אִיבַּעְיָא לְהוּ: אֵין שָׁם עָפָר, מַהוּ שֶׁיִּתֵּן אֵפֶר? אַלִּיבָּא דְּבֵית שַׁמַּאי לָא תִּיבְּעֵי לָךְ, דְּאָמְרִי: לֹא מָצִינוּ אֵפֶר שֶׁקָּרוּי ״עָפָר״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלה: אם אין עפר בקרקע המקדש — אפשר להשתמש באפר? לשיטת בית שמאי אין שאלה — אפר אינו קרוי &quot;עפר&quot;. השאלה היא לבית הלל שמצינו אפר הקרוי &quot;עפר&quot; (כיסוי הדם).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כִּי תִּיבְּעֵי לָךְ, אַלִּיבָּא דְּבֵית הִלֵּל דְּאָמְרִי: מָצִינוּ אֵפֶר שֶׁקָּרוּי ״עָפָר״, מַאי? אַף עַל גַּב דְּאִיקְּרִי ״עָפָר״, הָכָא ״בְּקַרְקַע הַמִּשְׁכָּן״ כְּתִיב, אוֹ דִילְמָא הַאי ״בְּקַרְקַע הַמִּשְׁכָּן״ לְכִדְאִיסִי בֶּן יְהוּדָה וּלְכִדְאִיסִי בֶּן מְנַחֵם הוּא דְּאָתֵי?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">צדדי השאלה: אולי &quot;בקרקע המשכן&quot; = דווקא עפר ממש מגוף הקרקע. או שמא הפסוק בא רק ללימודים של איסי בן יהודה ואיסי בן מנחם, ואפר כשר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּא שְׁמַע, דְּאָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי יִשְׁמָעֵאל: בִּשְׁלֹשָׁה מְקוֹמוֹת הֲלָכָה עוֹקֶבֶת מִקְרָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">פתרון מדברי ר&#39; יוחנן בשם ר&#39; ישמעאל: בשלושה מקומות הלכה עוקרת מקרא — כלומר, ההלכה משנה מפשט הכתוב.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שלוש הלכות עוקרות מקרא</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הַתּוֹרָה אָמְרָה בְּ״עָפָר״, וַהֲלָכָה בְּכׇל דָּבָר. הַתּוֹרָה אָמְרָה בְּ״תַעַר״, וַהֲלָכָה בְּכׇל דָּבָר. הַתּוֹרָה אָמְרָה ״סֵפֶר״, וַהֲלָכָה בְּכׇל דָּבָר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שלוש דוגמאות: ① כיסוי הדם — התורה אמרה &quot;בעפר&quot; וההלכה מתירה בכל דבר. ② נזיר — התורה אמרה &quot;תער&quot; וההלכה אוסרת הסרת שיער בכל דרך. ③ גט — התורה אמרה &quot;ספר&quot; וההלכה מכשירה כתיבה על כל דבר תלוש.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִם אִיתָא — לִיחְשׁוֹב נָמֵי הַאי!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: אם אפר כשר לסוטה במקום עפר — למה לא נמנה גם דין זה ברשימה? כלומר, חסר פריט רביעי!</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שיור — גילוח מצורע בדרך כלל ופרט</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תְּנָא וְשַׁיַּיר. וּמַאי שַׁיַּיר דְּהַאי שַׁיַּיר? שַׁיַּיר מְצוֹרָע, דְּתַנְיָא: ״וְהָיָה בַּיּוֹם הַשְּׁבִיעִי יְגַלַּח אֶת כׇּל שְׂעָרוֹ״ — כְּלָל, ״אֶת רֹאשׁוֹ וְאֶת זְקָנוֹ וְאֵת גַּבֹּת עֵינָיו״ — פְּרָט, ״וְאֶת כָּל שְׂעָרוֹ יְגַלֵּחַ״ — חָזַר וְכָלַל. כְּלָל וּפְרָט וּכְלָל — אִי אַתָּה דָן אֶלָּא כְעֵין הַפְּרָט. מָה פְּרָט מְפוֹרָשׁ: מְקוֹם כִּינּוּס שֵׂעָר וְנִרְאֶה — אַף כׇּל מָקוֹם כִּינּוּס שֵׂעָר וְנִרְאֶה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דוחים: &quot;תנא ושייר&quot; — התנא לא מנה הכל. מה עוד שייר? גילוח מצורע — הפסוק מפרט &quot;ראשו, זקנו, גבות עיניו&quot; (= כלל ופרט וכלל). לפי ר&#39; ישמעאל, הדין כעין הפרט: רק מקום כינוס שיער הנראה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מָה רַבִּי — רַבִּי שְׂעַר הָרַגְלַיִם. מַאי מִיעֵט — מִיעֵט דְּבֵית הַשֶּׁחִי וּדְכוּלֵּיהּ גּוּפֵיהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מה ריבה הכלל? שיער הרגליים (= שיער ערווה). מה מיעט הפרט? בית השחי (שאינו נראה) ושיער כל הגוף (שאינו מכונס).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְהִלְכְתָא: מְגַלֵּחַ כְּדַלַּעַת. דִּתְנַן: בָּא לוֹ לְהַקִּיף אֶת הַמְצוֹרָע — מַעֲבִיר תַּעַר עַל כׇּל בְּשָׂרוֹ, וְקָתָנֵי סֵיפָא: וּבַיּוֹם הַשְּׁבִיעִי מְגַלְּחוֹ תִּגְלַחַת שְׁנִיָּה כְּתִגְלַחַת רִאשׁוֹנָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אבל ההלכה קובעת: מגלח כדלעת = כל הגוף! ראיה: במשנה — &quot;מעביר תער על כל בשרו&quot;, ותגלחת שנייה כראשונה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">למה לא מנו מצורע כשיור</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַב נַחְמָן בַּר יִצְחָק: כִּי קָא חָשֵׁיב, הֲלָכָה עוֹקֶבֶת מִקְרָא, הָא עוֹקֶבֶת מִדְּרַבָּנַן הִיא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב נחמן בר יצחק: הרשימה מונה רק מקרים שהלכה עוקרת מקרא — אבל גילוח מצורע, ההלכה עוקרת מדרש חכמים (כלל ופרט) ולא את הכתוב עצמו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַב פָּפָּא אָמַר: כִּי קָא חָשֵׁיב הֲלָכָה עוֹקֶבֶת וְעוֹקֶרֶת, הָא עוֹקֶבֶת וּמוֹסֶפֶת הִיא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב פפא: הרשימה מונה הלכה שעוקרת ומבטלת — אבל גילוח מצורע רק עוקרת ומוסיפה (מרחיבה את החובה, לא מבטלת).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַב אָשֵׁי אָמַר: הָא מַתְנִיתָא מַנִּי — רַבִּי יִשְׁמָעֵאל הִיא, דְּדָרֵישׁ כְּלָלֵי וּפְרָטֵי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב אשי: הברייתא על כלל ופרט היא כשיטת ר&#39; ישמעאל הדורש כללות ופרטות. הגילוח &quot;כדלעת&quot; הוא דווקא לשיטת ר&#39; עקיבא.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ריבוי ומיעוט — שיטת ר&#39; עקיבא במצורע</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כְּדַלַּעַת, מַנִּי — רַבִּי עֲקִיבָא הִיא, דְּדָרֵישׁ רִיבּוּיֵי וּמִיעוּטֵי. דְּתַנְיָא: ״וְהָיָה בַּיּוֹם הַשְּׁבִיעִי יְגַלַּח אֶת כׇּל שְׂעָרוֹ״ — רִיבָּה, ״אֶת רֹאשׁוֹ וְאֶת זְקָנוֹ וְאֵת גַּבֹּת עֵינָיו״ — מִיעֵט, ״וְאֶת כָּל שְׂעָרוֹ יְגַלֵּחַ״ — חָזַר וְרִיבָּה. רִיבָּה וּמִיעֵט וְרִיבָּה — רִיבָּה הַכֹּל.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">לפי ר&#39; עקיבא הדורש ריבויים ומיעוטים: &quot;כל שערו&quot; = ריבה, &quot;ראשו זקנו גבות עיניו&quot; = מיעט, &quot;כל שערו יגלח&quot; = חזר וריבה. ריבה ומיעט וריבה = ריבה הכל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי רִיבָּה — רִיבָּה דְּכוּלֵּיהּ גּוּפֵיהּ, וּמַאי מִיעֵט — מִיעֵט שֵׂיעָר שֶׁבְּתוֹךְ הַחוֹטֶם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מה ריבה? שיער כל הגוף. מה מיעט? רק שיער שבתוך החוטם — שאותו אינו מגלח. ולכן לשיטת ר&#39; עקיבא מגלח כדלעת.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">חזרה לשאלת אפר — רקבובית ירק</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי הָוֵי עֲלַהּ? תָּא שְׁמַע, דְּאָמַר רַב הוּנָא בַּר אָשֵׁי אָמַר רַב: אֵין שָׁם עָפָר — מֵבִיא רַקְבּוּבִית יָרָק, וּמְקַדֵּשׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חזרה לשאלה: אפר במקום עפר? פתרון: רב הונא בר אשי אמר רב — אין עפר, מביא רקבובית ירק (ירק שנרקב) ומקדש בה את המים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְלָא הִיא: רַקְבּוּבִית יָרָק הוּא דַּהֲוַאי עָפָר, אֵפֶר לָא הֲוַאי עָפָר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דוחים: אין ראיה — רקבובית ירק כשרה כי היא נהפכת לעפר בסופו של דבר. אבל אפר לא נהפך לעפר — ולכן אין להוכיח ממנה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שלושה צריכים שייראו — עפר, אפר ורוק</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כְּדֵי שֶׁיֵּרָאֶה עַל הַמַּיִם. תָּנוּ רַבָּנַן, שְׁלֹשָׁה צְרִיכִין שֶׁיֵּרָאוּ: עֲפַר סוֹטָה, וְאֵפֶר פָּרָה, וְרוֹק יְבָמָה. מִשּׁוּם רַבִּי יִשְׁמָעֵאל אָמְרוּ: אַף דַּם צִפּוֹר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">משנה: כמות העפר — כדי שייראה על פני המים. ברייתא: שלושה דברים צריכים להיראות: ① עפר סוטה על המים ② אפר פרה אדומה על המים ③ רוק היבמה בחליצה. ר&#39; ישמעאל מוסיף: גם דם ציפור המצורע.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַאי טַעְמָא דְּרַבִּי יִשְׁמָעֵאל, דִּכְתִיב: ״וְטָבַל אוֹתָם בְּדַם הַצִּפֹּר וְגוֹ׳״, וְתַנְיָא: ״בְּדַם״, יָכוֹל בַּדָּם וְלֹא בַּמַּיִם — תַּלְמוּד לוֹמַר: ״בַּמַּיִם״. אִי מַיִם, יָכוֹל בַּמַּיִם וְלֹא בַּדָּם — תַּלְמוּד לוֹמַר: ״בַּדָּם״. הָא כֵּיצַד? מֵבִיא מַיִם שֶׁדַּם צִיפּוֹר נִיכָּר בָּהֶן, וְכַמָּה — רְבִיעִית.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">טעם ר&#39; ישמעאל: הפסוק אומר &quot;וטבל אותם בדם הציפור&quot; וגם &quot;במים&quot; — צריך שדם הציפור ייכר במים. כמה מים? רביעית הלוג — שבה הדם עדיין ניכר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבָּנַן: הַהוּא לְגוּפֵיהּ, דְּהָכִי קָאָמַר רַחֲמָנָא: אַטְבֵּיל בְּדָם וּבְמַיִם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חכמים חולקים: הפסוק בא ללמד שצריך לטבול גם בדם וגם במים — לא שהדם צריך להיראות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יִשְׁמָעֵאל: אִם כֵּן, לִכְתּוֹב רַחֲמָנָא: ״וְטָבַל בָּהֶם״, ״בְּדַם וּבַמַּיִם״ לְמָה לִי — לְנִיכָּר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; ישמעאל משיב: אם רק לטבול ביחד — שיכתוב &quot;וטבל בהם&quot;. למה פירט &quot;בדם ובמים&quot;? — כדי שהדם ייכר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבָּנַן: אִי כְּתַב רַחֲמָנָא ״וְטָבַל בָּהֶם״, הֲוָה אָמֵינָא: הַאי לְחוֹדֵיהּ וְהַאי לְחוֹדֵיהּ, כְּתַב רַחֲמָנָא: ״בְּדַם וּבַמַּיִם״ — לְעָרְבָן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חכמים: אם היה כתוב &quot;וטבל בהם&quot; הייתי חושב שטובל בכל אחד לחוד — לכן פירט הכתוב &quot;בדם ובמים&quot; = לערבם יחד.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec8">
+<button onclick="toggle(8)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ציפור גדולה או קטנה מדי — ר&#39; ירמיה</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow8" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content8" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יִשְׁמָעֵאל, לְעָרְבָן קְרָא אַחֲרִינָא כְּתִיב: ״וְשָׁחַט אֶת הַצִּפֹּר הָאֶחָת וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ויכוח: ר&#39; ישמעאל לומד לערבם מפסוק אחר (&quot;ושחט את הציפור... על מים חיים&quot;). חכמים: מפסוק זה לבד הייתי חושב שישחוט ליד הכלי ויאחוז הוורידים — ויקבל דם בכלי נפרד. לכן צריך פסוק לערבם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבָּנַן: אִי מֵהָהוּא הֲוָה אָמֵינָא: לִישְׁחֲטֵיהּ סָמוּךְ לְמָנָא וְנִינְקְטִינְהוּ לִוְורִידִין, וּלְקַבְּלֵיהּ לְדָם בְּמָנָא אַחֲרִינָא, קָא מַשְׁמַע לַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלת ר&#39; ירמיה לר&#39; זירא: ציפור גדולה מדי שדמה מדחה את המים, או קטנה מדי שדמה נדחה מפני המים — מה הדין?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בְּעָא מִינֵּיהּ רַבִּי יִרְמְיָה מֵרַבִּי זֵירָא: גְּדוֹלָה וּמַדְחֵת אֶת הַמַּיִם, קְטַנָּה וְנִדְחֵית מִפְּנֵי הַמַּיִם, מַהוּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; זירא דחה אותו: &quot;אל תוציא עצמך מחוץ להלכה!&quot; — חכמים שיערו בציפור דרור: אין גדולה כ&quot;כ שמדחת המים, ואין קטנה כ&quot;כ שנדחית. השאלה מיותרת.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec9">
+<button onclick="toggle(9)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">הקדים עפר למים — מחלוקת ר&#39; שמעון וחכמים</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow9" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content9" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לֵיהּ: לָאו אָמֵינָא לָךְ לָא תַּפֵּיק נַפְשָׁךְ לְבַר מֵהִילְכְתָא, בְּצִפּוֹר דְּרוֹר שִׁיעֲרוּ רַבָּנַן. אֵין לְךָ גְּדוֹלָה שֶׁמַּדְחֵת אֶת הַמַּיִם, וְאֵין לְךָ קְטַנָּה שֶׁנִּדְחֵית מִפְּנֵי הַמַּיִם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ברייתא: הקדים עפר למים (נתן עפר לפני המים) — פסול. ר&#39; שמעון מכשיר. מה טעמו?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנוּ רַבָּנַן: הִקְדִּים עָפָר לַמַּיִם — פָּסוּל, וְרַבִּי שִׁמְעוֹן מַכְשִׁיר. מַאי טַעְמָא דְּרַבִּי שִׁמְעוֹן —</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; שמעון לומד מגזירה שווה: בפרה אדומה כתוב &quot;עפר&quot; (שהוא בעצם אפר) — התורה שינתה כדי ללמד גזירה שווה עם סוטה. מה בסוטה — עפר על גבי מים, אף בפרה — אפר על גבי מים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דִּכְתִיב: ״וְלָקְחוּ לַטָּמֵא מֵעֲפַר שְׂרֵיפַת הַחַטָּאת״, וְתַנְיָא, אָמַר רַבִּי שִׁמְעוֹן: וְכִי עָפָר הוּא? וַהֲלֹא אֵפֶר הוּא! שִׁינָּה הַכָּתוּב בְּמַשְׁמָעוֹ לָדוּן הֵימֶנּוּ גְּזֵירָה שָׁוָה. נֶאֱמַר כָּאן ״עָפָר״, וְנֶאֱמַר לְהַלָּן ״עָפָר״. מָה לְהַלָּן עָפָר עַל גַּבֵּי מַיִם — אַף כָּאן עָפָר עַל גַּבֵּי מַיִם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ולהיפך: מה בפרה הקדים עפר (אפר) למים — כשר, אף בסוטה הקדים עפר למים — כשר.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec10">
+<button onclick="toggle(10)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">טז:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">פרה אדומה — שני כתובים סותרים בסדר</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow10" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content10" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמָה כָּאן הִקְדִּים עָפָר לַמַּיִם — כָּשֵׁר, אַף לְהַלָּן הִקְדִּים עָפָר לַמַּיִם — כָּשֵׁר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מניין שבפרה הקדים עפר למים כשר? שני פסוקים סותרים: &quot;עליו&quot; = אפר תחילה, &quot;מים חיים אל כלי&quot; = מים תחילה. פתרון: רצה — זה תחילה, רצה — זה תחילה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְהָתָם מְנָלַן? תְּרֵי קְרָאֵי כְּתִיבִי. כְּתִיב ״עָלָיו״, אַלְמָא אֵפֶר בְּרֵישָׁא, וּכְתִיב ״מַיִם חַיִּים אֶל כֶּלִי״, אַלְמָא מַיִם בְּרֵישָׁא. הָא כֵּיצַד? רָצָה — זֶה נוֹתֵן, רָצָה — זֶה נוֹתֵן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חכמים חולקים: &quot;אל כלי&quot; = דווקא מים תחילה לתוך הכלי. &quot;עליו&quot; = רק ללמד שמערבם (לא שמקדים אפר).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבָּנַן: ״אֶל כֶּלִי״ — דַּוְקָא, ״עָלָיו״ — לְעָרְבָן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: אולי להיפך — &quot;עליו&quot; = דווקא אפר תחילה, ו&quot;אל כלי&quot; = שתהא חיותן (= מן המעיין ישירות) בכלי!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֵימָא: ״עָלָיו״ — דַּוְקָא, ״אֶל כֶּלִי״ — שֶׁתְּהֵא חִיּוּתָן בִּכְלִי!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תשובה: מה מצינו בכל מקום — המכשיר (= העפר/אפר שמכשיר את המים) נמצא למעלה. אף כאן — אפר למעלה, מים למטה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מָה מָצִינוּ בְּכׇל מָקוֹם מַכְשִׁיר לְמַעְלָה, אַף כָּאן מַכְשִׁיר לְמַעְלָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חכמים סוברים: &quot;אל כלי&quot; = דווקא מים ראשונים. וכן בסוטה — הכהן נותן מים ואח&quot;כ עפר, ומי שהקדים עפר למים פסל.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_17.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_15.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["טז.","טז.","טז.","טז.","טז.","טז:","טז:","טז:","טז:","טז:","טז:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<11;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<11;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="טז."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

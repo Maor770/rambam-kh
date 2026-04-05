@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_44.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_42.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף מג</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">32 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('מג.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">מג.</button>
+<button onclick="filterAmud('מג:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">מג:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">מג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מונחין בארון.</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מוּנָּחִין בָּאָרוֹן. וְכֵן הוּא אוֹמֵר: ״וַיִּשְׁלַח אֹתָם מֹשֶׁה אֶלֶף לַמַּטֶּה לַצָּבָא אֹתָם וְאֶת פִּינְחָס״. ״אֹתָם״ — אֵלּוּ סַנְהֶדְרִין, ״פִּינְחָס״ — זֶה מְשׁוּחַ מִלְחָמָה, ״וּכְלֵי הַקֹּדֶשׁ״ — זֶה אָרוֹן וְלוּחוֹת שֶׁבּוֹ, ״וַחֲצֹצְרוֹת הַתְּרוּעָה״ — אֵלּוּ הַשּׁוֹפָרוֹת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מונחין בארון. וכן הוא אומר במלחמת מדין: &quot;וישלח אתם משה אלף למטה לצבא אתם ואת פינחס בן אלעזר הכהן לצבא וכלי הקודש וחצוצרות התרועה בידו&quot; (במדבר לא, ו).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנָא: לֹא לְחִנָּם הָלַךְ פִּינְחָס לַמִּלְחָמָה, אֶלָּא לִיפָּרַע דִּין אֲבִי אִמּוֹ, שֶׁנֶּאֱמַר: ״וְהַמְּדָנִים מָכְרוּ אֹתוֹ אֶל מִצְרַיִם וְגוֹ׳״. לְמֵימְרָא דְּפִינְחָס מִיּוֹסֵף אָתֵי? וְהָא כְּתִיב: ״וְאֶלְעָזָר בֶּן אַהֲרֹן לָקַח לוֹ מִבְּנוֹת פּוּטִיאֵל לוֹ לְאִשָּׁה״. מַאי לָאו, דְּאָתֵי מִיִּתְרוֹ שֶׁפִּיטֵּם עֲגָלִים לַעֲבוֹדָה זָרָה? לָא, מִיּוֹסֵף שֶׁפִּיטְפֵּט בְּיִצְרוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תנא : לא לחנם הלך פינחס למלחמה במדין, אלא כדי ליפרע דין אבי אמו יוסף, שנאמר: &quot;והמדנים מכרו אתו אל מצרים&quot; וגו&#39; (בראשית לז, לו). ושואלים: למימרא  שפינחס מזרעו של יוסף אתי  מצד אמו? והא כתיב :</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וַהֲלֹא שְׁבָטִים מְבַזִּין אוֹתוֹ: רְאִיתֶם בֶּן פּוּטִי זֶה, בֵּן שֶׁפִּיטֵּם אֲבִי אִמּוֹ עֲגָלִים לַעֲבוֹדָה זָרָה, יַהֲרוֹג נָשִׂיא מִיִּשְׂרָאֵל! אֶלָּא: אִי אֲבוּהּ דְּאִימֵּיהּ מִיּוֹסֵף — אִימֵּיהּ דְּאִימֵּיהּ מִיִּתְרוֹ, וְאִי אִימֵּיהּ דְּאִימֵּיהּ מִיּוֹסֵף — אֲבוּהּ דְּאִימֵּיהּ מִיִּתְרוֹ. דַּיְקָא נָמֵי, דִּכְתִיב: ״מִבְּנוֹת פּוּטִיאֵל״, תְּרֵי מַשְׁמַע. שְׁמַע מִינַּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: והלא ידוע המדרש ששבטים היו מבזין אותו את פינחס לאחר שהרג את זימרי, והיו אומרים: ראיתם בן פוטי זה, בן שפיטם אבי אמו עגלים לעבודה זרה, יהרוג נשיא מישראל, ואם כן ודאי הריהו מזרע יתרו! ומתרצים: אלא פינחס הוא גם מזרעו של יוסף וגם מזרעו של יתרו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">מג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">&quot;ודברו השטרים אל העם לאמר מי האיש אשר בנה בית חדש ולא חנכו ילך וישב לביתו&quot;...</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְנִי׳ ״וְדִבְּרוּ הַשֹּׁטְרִים אֶל הָעָם לֵאמֹר מִי הָאִישׁ אֲשֶׁר בָּנָה בַיִת חָדָשׁ וְלֹא חֲנָכוֹ יֵלֵךְ וְיָשֹׁב לְבֵיתוֹ וְגוֹ׳״. אֶחָד הַבּוֹנֶה בֵּית הַתֶּבֶן, בֵּית הַבָּקָר, בֵּית הָעֵצִים, בֵּית הָאוֹצָרוֹת. אֶחָד הַבּוֹנֶה, וְאֶחָד הַלּוֹקֵחַ, וְאֶחָד הַיּוֹרֵשׁ, וְאֶחָד שֶׁנִּתַּן לוֹ מַתָּנָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;ודברו השטרים אל העם לאמר מי האיש אשר בנה בית חדש ולא חנכו ילך וישב לביתו&quot; וגו&#39; (דברים כ, ה). אחד הבונה בית התבן (מחסן לתבן), או בית הבקר (אורווה), או בית העצים, או בית האוצרות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וּמִי הָאִישׁ אֲשֶׁר נָטַע כֶּרֶם וְלֹא חִלְּלוֹ וְגוֹ׳״ — אֶחָד הַנּוֹטֵעַ כֶּרֶם, וְאֶחָד הַנּוֹטֵעַ חֲמִשָּׁה אִילָנֵי מַאֲכָל, וַאֲפִילּוּ מֵחֲמֵשֶׁת הַמִּינִין. אֶחָד הַנּוֹטֵעַ, וְאֶחָד הַמַּבְרִיךְ וְאֶחָד הַמַּרְכִּיב, וְאֶחָד הַלּוֹקֵחַ, וְאֶחָד הַיּוֹרֵשׁ, וְאֶחָד שֶׁנִּתַּן לוֹ מַתָּנָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;ומי האיש אשר נטע כרם ולא חללו&quot; וגו&#39; (דברים כ, ו) — אחד הנוטע כרם, ואחד הנוטע לפחות חמשה אילני מאכל אחרים, ואפילו מחמשת המינין שאינם כולם ממין אחד — הרי נחשב הדבר לכרם לענין זה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וּמִי הָאִישׁ אֲשֶׁר אֵרַשׂ אִשָּׁה וְגוֹ׳״, אֶחָד הַמְאָרֵס אֶת הַבְּתוּלָה, וְאֶחָד הַמְאָרֵס אֶת הָאַלְמָנָה. אֲפִילּוּ שׁוֹמֶרֶת יָבָם, וַאֲפִילּוּ שָׁמַע שֶׁמֵּת אָחִיו בַּמִּלְחָמָה — חוֹזֵר וּבָא לוֹ. כׇּל אֵלּוּ וָאֵלּוּ שׁוֹמְעִין דִּבְרֵי כֹּהֵן מַעַרְכֵי מִלְחָמָה, וְחוֹזְרִין. וּמְסַפְּקִין מַיִם וּמָזוֹן, וּמְתַקְּנִין אֶת הַדְּרָכִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;ומי האיש אשר ארש אשה ולא לקחה&quot; (דברים כ, ז) — אחד המארס את הבתולה, ואחד המארס את האלמנה. אפילו שומרת יבם שמת אחיו בלא ילדים וצריך הוא לייבמה, ואפילו שמע שמת אחיו במלחמה וצריך לייבם את אשתו — חוזר ובא לו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֵלּוּ שֶׁאֵינָן חוֹזְרִין: הַבּוֹנֶה בֵּית שַׁעַר, אַכְסַדְרָה וּמִרְפֶּסֶת, הַנּוֹטֵעַ אַרְבָּעָ[ה] אִילָנֵי מַאֲכָל וַחֲמִשָּׁה אִילָנֵי סְרָק, הַמַּחֲזִיר אֶת גְּרוּשָׁתוֹ, אַלְמָנָה לְכֹהֵן גָּדוֹל, גְּרוּשָׁה וַחֲלוּצָה לְכֹהֵן הֶדְיוֹט, מַמְזֶרֶת וּנְתִינָה לְיִשְׂרָאֵל, בַּת יִשְׂרָאֵל לְמַמְזֵר וּלְנָתִין — לֹא הָיָה חוֹזֵר. רַבִּי יְהוּדָה אוֹמֵר: אַף הַבּוֹנֶה בַּיִת עַל מְכוֹנוֹ — לֹא הָיָה חוֹזֵר. רַבִּי אֱלִיעֶזֶר אוֹמֵר: אַף הַבּוֹנֶה בֵּית לְבֵינִים בַּשָּׁרוֹן — לֹא הָיָה חוֹזֵר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואלו שאינן חוזרין ממערכי המלחמה: הבונה בית שער (כניסה לבית), או אכסדרה (אולם כניסה פתוח) או מרפסת (מקום שעוברים בו), או הנוטע רק ארבע אילני מאכל או חמשה אילני סרק, המחזיר את גרושתו, או שאירס אשה האסורה לו, כגון אלמנה לכהן גדול, גרושה או</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֵלּוּ שֶׁאֵין זָזִין מִמְּקוֹמָן: בָּנָה בַּיִת וַחֲנָכוֹ, נָטַע כֶּרֶם וְחִלְּלוֹ, הַנּוֹשֵׂא אֶת אֲרוּסָתוֹ, הַכּוֹנֵס אֶת יְבִמְתּוֹ, שֶׁנֶּאֱמַר: ״נָקִי יִהְיֶה לְבֵיתוֹ שָׁנָה אֶחָת״. ״לְבֵיתוֹ״ — זֶה בֵּיתוֹ, ״יִהְיֶה״ — זֶה כַּרְמוֹ, ״וְשִׂמַּח אֶת אִשְׁתּוֹ״ — זוֹ אִשְׁתּוֹ, ״אֲשֶׁר לָקָח״ — לְהָבִיא אֶת יְבִמְתּוֹ. אֵין מַסְפִּיקִין לָהֶם מַיִם וּמָזוֹן, וְאֵין מְתַקְּנִין אֶת הַדְּרָכִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלו שאין זזין ממקומן, שאינם צריכים אפילו ללכת למערכי המלחמה והם פטורים לגמרי: מי שבנה בית וחנכו באותה שנה, נטע כרם וחללו בשנה הרביעית, הנושא את ארוסתו, או הכונס את יבמתו. שנאמר:</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">מג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">תנו רבנן : מה שנאמר &quot;ודברו השטרים.</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גְּמָ׳ תָּנוּ רַבָּנַן: ״וְדִבְּרוּ הַשֹּׁטְרִים״, יָכוֹל דְּבָרִים שֶׁל עַצְמָן? כְּשֶׁהוּא אוֹמֵר ״וְיָסְפוּ הַשֹּׁטְרִים״ — הֲרֵי דְּבָרִים שֶׁל עַצְמָן אָמוּר, הָא מָה אֲנִי מְקַיֵּים ״וְדִבְּרוּ הַשֹּׁטְרִים״ — בְּדִבְרֵי מְשׁוּחַ מִלְחָמָה הַכָּתוּב מְדַבֵּר. הָא כֵּיצַד? — כֹּהֵן מְדַבֵּר וְשׁוֹטֵר מַשְׁמִיעַ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תנו רבנן : מה שנאמר &quot;ודברו השטרים... מי האיש אשר בנה &quot;וכו&#39; (דברים כ, ה), יכול שאומרים דברים של עצמן ולא של כהן המשוח? — כשהוא אומר &quot;ויספו השטרים&quot; (דברים כ, ח) — הרי דברים של עצמן אמור, שעד עכשיו לא הם דיברו ועכשיו מוסיפים משל עצמם, הא  מה</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תָּנֵי חֲדָא: כֹּהֵן מְדַבֵּר וְשׁוֹטֵר מַשְׁמִיעַ, וְתַנְיָא אִידַּךְ: כֹּהֵן מְדַבֵּר וְכֹהֵן מַשְׁמִיעַ, וְתַנְיָא אִידַּךְ: שׁוֹטֵר מְדַבֵּר וְשׁוֹטֵר מַשְׁמִיעַ. אָמַר אַבָּיֵי: הָא כֵּיצַד? מִ״וְּנִגַּשׁ״ וְעַד ״וְדִבְּרוּ״ — כֹּהֵן מְדַבֵּר וְכֹהֵן מַשְׁמִיעַ, מִ״וְּדִבְּרוּ״ עַד ״וְיָסְפוּ״ — כֹּהֵן מְדַבֵּר וְשׁוֹטֵר מַשְׁמִיעַ, מִ״וְּיָסְפוּ״ וְאֵילָךְ — שׁוֹטֵר מְדַבֵּר וְשׁוֹטֵר מַשְׁמִיעַ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תני חדא : כהן מדבר ושוטר משמיע, ותניא אידך : כהן מדבר וכהן משמיע, ותניא אידך : שוטר מדבר ושוטר משמיע. אמר אביי:</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">מג.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שנינו במשנה בין הדברים הנאמרים ליוצאים למלחמה: &quot;מי האיש אשר בנה בית חדש&quot; כו&#39;...</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״מִי הָאִישׁ אֲשֶׁר בָּנָה בַיִת חָדָשׁ כּוּ׳״. תָּנוּ רַבָּנַן: ״אֲשֶׁר בָּנָה״, אֵין לִי אֶלָּא אֲשֶׁר בָּנָה. לָקַח וְיָרַשׁ וְנִיתַּן לוֹ בְּמַתָּנָה מִנַּיִן — תַּלְמוּד לוֹמַר: ״מִי הָאִישׁ אֲשֶׁר בָּנָה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שנינו במשנה בין הדברים הנאמרים ליוצאים למלחמה: &quot;מי האיש אשר בנה בית חדש&quot; כו&#39; (דברים כ, ה). תנו רבנן : &quot;אשר בנה&quot;, אין לי אלא אשר בנה ממש, ואולם אם לקח (קנה) או ירש או שניתן לו במתנה מנין שאף הוא חוזר — תלמוד לומר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״בַּיִת״, אֵין לִי אֶלָּא בַּיִת. מִנַּיִן לְרַבּוֹת בֵּית הַתֶּבֶן, וּבֵית הַבָּקָר, וּבֵית הָעֵצִים, וּבֵית הָאוֹצָרוֹת — תַּלְמוּד לוֹמַר: ״אֲשֶׁר בָּנָה״, מִכׇּל מָקוֹם. יָכוֹל שֶׁאֲנִי מְרַבֶּה אַף הַבּוֹנֶה בֵּית שַׁעַר אַכְסַדְרָה וּמִרְפֶּסֶת, תַּלְמוּד לוֹמַר: ״בַּיִת״, מָה בַּיִת הָרָאוּי לְדִירָה — אַף כֹּל הָרָאוּי לְדִירָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;בית&quot;, אין לי אלא בית מגורים, מנין לרבות בית התבן, ובית הבקר, ובית העצים, ובית האוצרות — תלמוד לומר: &quot;אשר בנה&quot; וכוונתו לרבות כל שבנה, מכל מקום. יכול שאני מרבה אף הבונה בית שער אכסדרה ומרפסת — תלמוד לומר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב אוֹמֵר: ״בַּיִת״ כְּמַשְׁמָעוֹ. ״לֹא חָנַךְ״, ״וְלֹא חֲנָכוֹ״ — פְּרָט לְגַזְלָן. לֵימָא דְּלָא כְּרַבִּי יוֹסֵי הַגְּלִילִי, דְּאִי רַבִּי יוֹסֵי הַגְּלִילִי הָא אָמַר: ״וְרַךְ הַלֵּבָב״, זֶה הַמִּתְיָירֵא</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אליעזר בן יעקב אומר: &quot;בית&quot; הוא כמשמעו, בית למגורי אדם דווקא, וכיון שלא נאמר &quot;לא חנך&quot; אלא &quot;ולא חנכו&quot; הרי זה למעט — פרט לגזלן שהבית איננו שלו. ושואלים: לימא  שדברים אלה דלא  כדעת ר&#39; יוסי הגלילי, דאי  כשיטת ר&#39; יוסי הגלילי — הא  אמר:</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">מג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מעבירות שבידו,  שאם הוא עבריין, כגון גזלן, חוזר מן המלחמה משום שהוא...</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מֵעֲבֵירוֹת שֶׁבְּיָדוֹ!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מעבירות שבידו,  שאם הוא עבריין, כגון גזלן, חוזר מן המלחמה משום שהוא עבריין!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲפִילּוּ תֵּימָא רַבִּי יוֹסֵי הַגְּלִילִי, כְּגוֹן דַּעֲבַד תְּשׁוּבָה וִיהַב דְּמֵי. אִי הָכִי, הָוֵה לֵיהּ לוֹקֵחַ וְלֶיהְדַּר! כֵּיוָן דְּמֵעִיקָּרָא בְּתוֹרַת גְּזֵילָה אֲתָא לִידֵיהּ — לָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: אפילו תימא  כשיטת ר&#39; יוסי הגלילי, מדובר במקרה כגון דעבד  תשובה ויהב דמי  עבור הבית שגזל, ולכן צריך היה להשמיענו שאף על פי כן אינו חוזר משום הבית הגזול. ומקשים:</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">מג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">עוד שנינו במשנה בין הדברים הנאמרים ליוצאים למלחמה: &quot;ומי האיש אשר נטע כרם&quot; כו&#39;...</span>
+<span style="font-size:11px;color:#bbb">11</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וּמִי הָאִישׁ אֲשֶׁר נָטַע כֶּרֶם כּוּ׳״. תָּנוּ רַבָּנַן: ״אֲשֶׁר נָטַע״ — אֵין לִי אֶלָּא נָטַע. לָקַח וְיָרַשׁ וְנִיתַּן לוֹ בְּמַתָּנָה, מִנַּיִן — תַּלְמוּד לוֹמַר: ״וּמִי הָאִישׁ אֲשֶׁר נָטַע״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוד שנינו במשנה בין הדברים הנאמרים ליוצאים למלחמה: &quot;ומי האיש אשר נטע כרם&quot; כו&#39; (דברים כ, ו). תנו רבנן : &quot;אשר נטע&quot; — אין לי אלא נטע ממש, ואולם אם לקח (קנה) או ירש או ניתן לו במתנה, מנין שגם הוא חוזר ממערכי המלחמה — תלמוד לומר: &quot;ומי האיש אשר נטע</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״כֶּרֶם״ — אֵין לִי אֶלָּא כֶּרֶם, מִנַּיִן לְרַבּוֹת חֲמִשָּׁה אִילָנֵי מַאֲכָל וַאֲפִילּוּ מִשְּׁאָר מִינִין — תַּלְמוּד לוֹמַר: ״אֲשֶׁר נָטַע״. יָכוֹל שֶׁאֲנִי מְרַבֶּה הַנּוֹטֵעַ אַרְבָּעָה אִילָנֵי מַאֲכָל וַחֲמִשָּׁה אִילָנֵי סְרָק, תַּלְמוּד לוֹמַר: ״כֶּרֶם״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כרם&quot; שהוא לשון ריבוי. אין לי אלא כרם של עצי גפן, מנין לרבות חמשה אילני מאכל ואפילו משאר מינין שאף עליו חוזר — תלמוד לומר &quot;אשר נטע&quot; — לרבות מיני אילנות אחרים. יכול שאני מרבה אף הנוטע רק ארבעה אילני מאכל, או אפילו חמשה אילני סרק — תלמוד לומר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב אוֹמֵר: ״כֶּרֶם״ כְּמַשְׁמָעוֹ. ״לֹא חִלֵּל״, ״וְלֹא חִלְּלוֹ״ — פְּרָט לְמַבְרִיךְ וּלְמַרְכִּיב. וְהָא אֲנַן תְּנַן: אֶחָד הַנּוֹטֵעַ וְאֶחָד הַמַּבְרִיךְ וְאֶחָד הַמַּרְכִּיב! אָמַר רַבִּי זֵירָא אָמַר רַב חִסְדָּא, לָא קַשְׁיָא: כָּאן בְּהַרְכָּבַת אִיסּוּר, כָּאן בְּהַרְכָּבַת הֶיתֵּר.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אליעזר בן יעקב אומר: כרם הוא כמשמעו דווקא כרם של גפנים ולא דבר אחר. ומזה שלא נכתב &quot;לא חילל&quot;, ונכתב &quot;ולא חללו&quot; (דברים כ, ו) למדנו: דווקא זה שנטע כרם, פרט למבריך ולמרכיב שהם אינם חוזרים. ומקשים: והא אנן תנן :</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הַאי הַרְכָּבַת הֶיתֵּר הֵיכִי דָמֵי? אִילֵּימָא יַלְדָּה בְּיַלְדָּהּ — תִּיפּוֹק לֵיהּ דְּבָעֵי מֶיהְדָּר מִשּׁוּם יַלְדָּה רִאשׁוֹנָה! אֶלָּא יַלְדָּה בִּזְקֵינָה. וְהָאָמַר רַבִּי אֲבָהוּ: יַלְדָּה שֶׁסִּיבְּכָה בִּזְקֵינָה, בָּטְלָה יַלְדָּה בַּזְּקֵינָה, וְאֵין בָּהּ דִּין עׇרְלָה!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: האי  הרכבת היתר שחוזר בגללה היכי דמי ? אילימא  שמרכיב ילדה בילדה (נטיעה צעירה בנטיעה צעירה) אחרת — תיפוק ליה דבעי מיהדר  משום ילדה ראשונה שעדיין לא נתחללה ולא משום הענף שהרכיב עליה! אלא כשהרכיב ילדה בזקינה — והאמר  ר&#39; אבהו:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יִרְמְיָה: לְעוֹלָם יַלְדָּה בְּיַלְדָּה, וּכְגוֹן דִּנְטַע לְהָךְ קַמַּיְיתָא לִסְיָיג וּלְקוֹרוֹת. דִּתְנַן: הַנּוֹטֵעַ לִסְיָיג וּלְקוֹרוֹת — פָּטוּר מִן הָעׇרְלָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אמר ר&#39; ירמיה: לעולם תפרש שחוזר מערכי המלחמה כשהרכיב ילדה בילדה, ומדוע אינו חוזר משום הראשונה — כגון שנטע להך קמייתא  לסייג (לגדר) או לשם קורות, ואחר כך הרכיב עליה נטיעה אחרת לשם פירות. דתנן :</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמַאי שְׁנָא יַלְדָּה בִּזְקֵינָה דְּבָטְלָה, וּמַאי שְׁנָא יַלְדָּה בְּיַלְדָּה דְּלָא בָּטְלָה?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומאי שנא  ילדה בזקינה שהיא בטלה בה, ומאי שנא  ילדה בילדה שלא בטלה?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָתָם אִי מִימְּלִיךְ עֲלַהּ — לָאו בַּת מֶיהְדָּר הִיא, הָכָא אִי מִימְּלִיךְ עֲלַהּ — בַּת מֶיהְדָּר הִיא [דְּהָא מֵעִיקָּרָא לְפֵירֵי קָיְימָא]. מִידֵּי דְּהָוֵה אַעָלוּ מֵאֵילֵיהֶן, דִּתְנַן: עָלוּ מֵאֵילֵיהֶן — חַיָּיבִין בְּעׇרְלָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ומשיבים: התם אי מימליך עלה  ותיחשב כנטיעה ילדה החייבת בערלה — לאו  בת מיהדר  היא, הכא , בנוטע לסייג ולקורות, אי מימליך עלה  ולייעד אותה לפירות — בת מיהדר  היא ותתחייב בערלה, ], מידי דהוה  באילנות שעלו מאיליהן החייבים בערלה אף שלא ניטעו</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְלוֹקְמַהּ בְּכֶרֶם שֶׁל שְׁנֵי שׁוּתָּפִין, דְּהַאי הָדַר אַדִּידֵיהּ וְהַאי הָדַר אַדִּידֵיהּ? אָמַר רַב פָּפָּא, זֹאת אוֹמֶרֶת: כֶּרֶם שֶׁל שְׁנֵי שׁוּתָּפִין — אֵין חוֹזְרִין עָלָיו מֵעֶרְכֵי הַמִּלְחָמָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: לשם מה צריך להעמיד בנוטע לקורות, ולוקמה  את הרכבת ההיתר שבגללה חוזרים מערכי המלחמה בכרם של שני שותפין, והרכיב אחד מהם את שלו בנטיעה של חבירו דהאי הדר אדידיה והאי הדר אדידיה ? מתוך שאלה זו אמר רב פפא:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמַאי שְׁנָא מֵחֲמִשָּׁה אַחִין וּמֵת אֶחָד מֵהֶן בַּמִּלְחָמָה, דְּכוּלָּן חוֹזְרִין? הָתָם — כׇּל חַד וְחַד קָרֵינָא בֵּיהּ ״אִשְׁתּוֹ״, הָכָא — כׇּל חַד וְחַד לָא קָרֵינָא בַּיהּ ״כַּרְמוֹ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ושואלים: ומאי שנא  דין זה מחמשה אחין ומת אחד מהן במלחמה, שכולן חוזרין מפני שכל אחד מהם ראוי לייבם את אשת האח המת, ואף כאן שייכת לשניהם הילדה שהרכיב? ומשיבים:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַב נַחְמָן בַּר יִצְחָק אָמַר: בְּמַבְרִיךְ אִילָן בְּיָרָק, וְהַאי תַּנָּא הוּא דְּתַנְיָא: הַמַּבְרִיךְ אִילָן בְּיָרָק, רַבָּן שִׁמְעוֹן בֶּן גַּמְלִיאֵל מַתִּיר מִשּׁוּם רַבִּי יְהוּדָה בֶּן גַּמְדָּא אִישׁ כְּפַר עַכּוֹ, וַחֲכָמִים אוֹסְרִין.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב נחמן בר יצחק אמר, כך יש ליישב את הסתירה בין המשנה לברייתא לגבי הרכבה: כשאמרו במשנה שחוזר בהרכבה, מדובר במבריך אילן בירק, והאי תנא הוא , המתיר הרכבת אילן בירק. דתניא :</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כִּי אֲתָא רַב דִּימִי, אָמַר רַבִּי יוֹחָנָן: הָא מַנִּי — רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב הִיא. לָא אָמַר רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב הָתָם ״כֶּרֶם״ כְּמַשְׁמָעוֹ? הָכָא נָמֵי ״נָטַע״ כְּמַשְׁמָעוֹ: נוֹטֵעַ אִין, מַבְרִיךְ וּמַרְכִּיב לָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כי אתא  רב דימי מארץ ישראל לבבל, אמר בשם ר&#39; יוחנן: הא מני  — דעת ר&#39; אליעזר בן יעקב היא. וראיה לדבר: האם לא אמר ר&#39; אליעזר בן יעקב התם  &quot;כרם&quot; כמשמעו דווקא? הכא נמי  &quot;נטע&quot; כמשמעו, ולכן נוטע — אין  חוזר, מבריך ומרכיב — לא.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">מג:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">כיון שהובאו דברים שאמר ר&#39; יוחנן משמו של ר&#39; אליעזר בן יעקב, מביאים עוד דברים...</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כִּי אֲתָא רַב דִּימִי אָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב: יַלְדָּה פְּחוּתָה מִטֶּפַח — חַיֶּיבֶת בְּעׇרְלָה כׇּל שְׁנוֹתֶיהָ, דְּמִתְחַזְיָא כְּבַת שַׁתָּא. וְהָנֵי מִילֵּי שְׁתַּיִם כְּנֶגֶד שְׁתַּיִם וְאַחַת יוֹצְאָה זָנָב. אֲבָל כּוּלֵּיהּ כֶּרֶם — קָלָא אִית לֵיהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כיון שהובאו דברים שאמר ר&#39; יוחנן משמו של ר&#39; אליעזר בן יעקב, מביאים עוד דברים שמסר ר&#39; יוחנן בשמו, ובענין אחר. כי אתא  רב דימי אמר בשם ר&#39; יוחנן משום ר&#39; אליעזר בן יעקב:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כִּי אֲתָא רַב דִּימִי אָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב: מֵת תּוֹפֵס אַרְבַּע אַמּוֹת לִקְרִיאַת שְׁמַע, דִּכְתִיב: ״לֹעֵג לָרָשׁ חֵרֵף עֹשֵׂהוּ״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כי אתא  רב דימי אמר בשם ר&#39; יוחנן משום (בשם) ר&#39; אליעזר בן יעקב: מת תופס ארבע אמות לקריאת שמע, שבתוך ארבע אמות מן המת אסור לקרוא קריאת שמע, דכתיב :</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יִצְחָק אָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב: חוּרְגְּתָא הַגְּדֵילָה בֵּין הָאַחִין — אֲסוּרָה לִינָּשֵׂא לָאַחִין, דְּמִתְחַזְיָא כִּי אֲחָתַיְיהוּ. וְלָא הִיא, קָלָא אִית לַיהּ לְמִילְּתָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אמר ר&#39; יצחק אמר ר&#39; יוחנן משום (בשם) ר&#39; אליעזר בן יעקב: חורגתא (בת חורגת, כגון בת אשת האב מבעל אחר) הגדילה בין האחין, אף על פי שאינה אסורה להם מן הדין משום אחות, שהרי אינה אחותם — מכל מקום אסורה לינשא לאחין, דמתחזיא כי אחתייהו . ומעירים:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאָמַר רַבִּי יִצְחָק אָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב: לֶקֶט שִׁכְחָה וּפֵאָה שֶׁעֲשָׂאָן בְּגוֹרֶן — הוּקְבְּעוּ לְמַעֲשֵׂר. אָמַר עוּלָּא: לָא אֲמַרַן אֶלָּא בַּשָּׂדֶה, אֲבָל בָּעִיר — קָלָא אִית לֵיהּ לְמִלְּתָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואמר ר&#39; יצחק אמר ר&#39; יוחנן משום ר&#39; אליעזר בן יעקב: לקט שכחה ופאה שעשאן (אסף אותן) בגורן — הוקבעו למעשר, וצריך להפריש מהן מעשרות, למרות שכרגיל אין מפרישים מעשרות ממתנות עניים, משום שסבורים האנשים שמפירות שדהו עשה גורן זו. אמר עולא:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאָמַר רַבִּי יִצְחָק אָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב: יַלְדָּה הַפְּחוּתָה מִטֶּפַח — אֵינָהּ מְקַדֶּשֶׁת אֶת הַזְּרָעִים. וְהָנֵי מִילֵּי שְׁתַּיִם כְּנֶגֶד שְׁתַּיִם וְאַחַת יוֹצְאָה זָנָב, אֲבָל (כולי) [כּוּלֵּיהּ] כֶּרֶם — מְקַדֵּישׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואמר ר&#39; יצחק אמר ר&#39; יוחנן משום ר&#39; אליעזר בן יעקב: ילדה (גפן צעירה) הפחותה בגובהה מטפח — אינה מקדשת (אוסרת) את הזרעים שזורעים סמוך לה משום כלאי הכרם שמפני קוטנה אינה קרויה כרם. ושוב מצמצמים את הדבר:</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאָמַר רַבִּי יִצְחָק אָמַר רַבִּי יוֹחָנָן מִשּׁוּם רַבִּי אֱלִיעֶזֶר בֶּן יַעֲקֹב:</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ואמר ר&#39; יצחק אמר ר&#39; יוחנן משום ר&#39; אליעזר בן יעקב:</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_44.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_42.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["מג.","מג.","מג.","מג.","מג:","מג:","מג:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<7;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<7;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="מג."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

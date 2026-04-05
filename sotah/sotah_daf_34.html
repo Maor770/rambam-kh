@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_35.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_33.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף לד</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">25 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('לד.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">לד.</button>
+<button onclick="filterAmud('לד:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">לד:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מי הירדן נעצרים — גובה המים</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְכֵיוָן שֶׁנִּיטְבְּלוּ רַגְלֵי כֹהֲנִים בַּמַּיִם, חָזְרוּ הַמַּיִם לַאֲחוֹרֵיהֶם, שֶׁנֶּאֱמַר: ״וּכְבוֹא נוֹשְׂאֵי הָאָרוֹן עַד הַיַּרְדֵּן וְגוֹ׳ וַיַּעַמְדוּ הַמַּיִם הַיֹּרְדִים מִלְמַעְלָה קָמוּ נֵד אֶחָד״. וְכַמָּה גּוֹבְהָן שֶׁל מַיִם — שְׁנֵים עָשָׂר מִיל עַל שְׁנֵים עָשָׂר מִיל, כְּנֶגֶד מַחֲנֵה יִשְׂרָאֵל. דִּבְרֵי רַבִּי יְהוּדָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">כשרגלי הכהנים נוגעות במים — הירדן נעצר. ר&#39; יהודה: המים הצטברו לגובה 12 מיל על 12 מיל, כגודל מחנה ישראל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר לוֹ רַבִּי אֶלְעָזָר בְּרַבִּי שִׁמְעוֹן: לִדְבָרֶיךָ, אָדָם קַל, אוֹ מַיִם קַלִּים? הֱוֵי אוֹמֵר: מַיִם קַלִּים. אִם כֵּן, בָּאִין מַיִם וְשׁוֹטְפִין אוֹתָן!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אלעזר ברבי שמעון חולק: מים מהירים מאדם — אם הצטברו רק 12 מיל, היו חוזרים ושוטפים לפני שהעם מספיק לעבור!</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא מְלַמֵּד שֶׁהָיוּ מַיִם נִגְדָּשִׁין וְעוֹלִין כִּיפִּין עַל גַּבֵּי כִּיפִּין, יָתֵר מִשְּׁלֹשׁ מֵאוֹת מִיל, עַד שֶׁרָאוּ אוֹתָן כׇּל מַלְכֵי מִזְרָח וּמַעֲרָב, שֶׁנֶּאֱמַר: ״וַיְהִי כִשְׁמֹעַ כׇּל מַלְכֵי הָאֱמֹרִי אֲשֶׁר בְּעֵבֶר הַיַּרְדֵּן יָמָּה וְכׇל מַלְכֵי הַכְּנַעֲנִי אֲשֶׁר עַל הַיָּם אֵת אֲשֶׁר הוֹבִישׁ ה׳ אֶת מֵי הַיַּרְדֵּן מִפְּנֵי בְנֵי יִשְׂרָאֵל עַד עׇבְרָם וַיִּמַּס לְבָבָם וְלֹא הָיָה בָם עוֹד רוּחַ מִפְּנֵי בְּנֵי יִשְׂרָאֵל״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלא המים נערמו ככיפות זו על גבי זו, יותר מ-300 מיל, עד שכל מלכי המזרח והמערב ראו ונמס ליבם מפחד.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאַף רָחָב הַזּוֹנָה אָמְרָה לִשְׁלוּחֵי יְהוֹשֻׁעַ ״כִּי שָׁמַעְנוּ אֵת אֲשֶׁר הוֹבִישׁ ה׳ אֶת מֵי יַם סוּף וְגוֹ׳״, וּכְתִיב: ״וַנִּשְׁמַע וַיִּמַּס לְבָבֵנוּ וְלֹא קָמָה עוֹד וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">גם רחב אמרה לשלוחי יהושע: עדיין זכרנו את קריעת ים סוף — קל וחומר כשהנס קרה סמוך וקרוב אליהם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">יהושע מצווה בתוך הירדן</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עוֹדָם בַּיַּרְדֵּן אָמַר לָהֶם יְהוֹשֻׁעַ: דְּעוּ עַל מָה אַתֶּם עוֹבְרִים אֶת הַיַּרְדֵּן — עַל מְנָת שֶׁתּוֹרִישׁוּ אֶת יוֹשְׁבֵי הָאָרֶץ מִפְּנֵיכֶם, שֶׁנֶּאֱמַר: ״וְהוֹרַשְׁתֶּם אֶת כׇּל יוֹשְׁבֵי הָאָרֶץ מִפְּנֵיכֶם וְגוֹ׳״. אִם אַתֶּם עוֹשִׂין כֵּן — מוּטָב. וְאִם לָאו, בָּאִין מַיִם וְשׁוֹטְפִין אוֹתִיכֶם. מַאי ״אוֹתִיכֶם״ — אוֹתִי וְאֶתְכֶם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">בעודם בירדן, יהושע מזהיר: עוברים על מנת להוריש יושבי הארץ. אם לא — המים ישטפו &quot;אותיכם&quot; = אותי ואתכם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עוֹדָם בַּיַּרְדֵּן אָמַר לָהֶן יְהוֹשֻׁעַ: ״הָרִימוּ לָכֶם אִישׁ אֶבֶן אַחַת עַל שִׁכְמוֹ לְמִסְפַּר שִׁבְטֵי יִשְׂרָאֵל וְגוֹ׳״, וּכְתִיב: ״לְמַעַן תִּהְיֶה זֹאת אוֹת בְּקִרְבְּכֶם כִּי יִשְׁאָלוּן בְּנֵיכֶם מָחָר לֵאמֹר מָה הָאֲבָנִים הָאֵלֶּה לָכֶם וְגוֹ׳״, סִימָן לַבָּנִים שֶׁעָבְרוּ אָבוֹת אֶת הַיַּרְדֵּן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוד בירדן: כל שבט ירים אבן על כתפו — סימן לדורות הבאים שאבותיהם עברו את הירדן.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עוֹדָם בַּיַּרְדֵּן אָמַר לָהֶן יְהוֹשֻׁעַ: ״שְׂאוּ לָכֶם מִזֶּה מִתּוֹךְ הַיַּרְדֵּן מִמַּצַּב רַגְלֵי הַכֹּהֲנִים הָכִין שְׁתֵּים עֶשְׂרֵה אֲבָנִים וְהַעֲבַרְתֶּם אוֹתָם עִמָּכֶם וְהִנַּחְתֶּם אוֹתָם בַּמָּלוֹן אֲשֶׁר תָּלִינוּ בוֹ הַלַּיְלָה וְגוֹ׳״. יָכוֹל בְּכׇל מָלוֹן וּמָלוֹן — תַּלְמוּד לוֹמַר: ״אֲשֶׁר תָּלִינוּ בוֹ הַלָּיְלָה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">עוד ציווי: שאו 12 אבנים מתוך הירדן והניחו במלון. לא בכל מלון — אלא דווקא במלון של אותו לילה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">גודל האבנים ומשקל האשכול</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יְהוּדָה: אַבָּא חֲלַפְתָּא וְרַבִּי אֱלִיעֶזֶר בֶּן מַתְיָא וַחֲנַנְיָא בֶּן חֲכִינַאי עָמְדוּ עַל אוֹתָן אֲבָנִים, וְשִׁיעֲרוּם כׇּל אַחַת וְאַחַת שְׁקוּלָה כְּאַרְבָּעִים סְאָה. וּגְמִירִי דִּטְעוּנָא דְּמַדְלֵי אִינִישׁ לְכַתְפֵּיהּ — תִּילְתָּא דִּטְעוּנֵיהּ הָוֵי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יהודה: חכמים עמדו על האבנים שהוציאו מהירדן ושיערו — כל אחת 40 סאה. כלל: מה שאדם מרים על כתפו = שליש ממשאו המלא.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִכָּאן אַתָּה מְחַשֵּׁב לָאֶשְׁכּוֹל, שֶׁנֶּאֱמַר: ״וַיִּשָּׂאֻהוּ בַמּוֹט בִּשְׁנָיִם״. מִמַּשְׁמַע שֶׁנֶּאֱמַר ״בַּמּוֹט״, אֵינִי יוֹדֵעַ שֶׁבִּשְׁנַיִם? מָה תַּלְמוּד לוֹמַר ״בִּשְׁנָיִם״ — בִּשְׁנֵי מוֹטוֹת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חישוב לאשכול המרגלים: &quot;וישאהו במוט בשנים&quot; — בשני מוטות (= 4 נושאים). מכאן: משקל האשכול = 480 סאה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יִצְחָק: טוּרְטָנֵי, וְטוּרְטָנֵי דְטוּרְטָנֵי, הָא כֵּיצַד? שְׁמֹנָה נָשְׂאוּ אֶשְׁכֹּל, אֶחָד נָשָׂא רִימּוֹן, וְאֶחָד נָשָׂא תְּאֵינָה. יְהוֹשֻׁעַ וְכָלֵב לֹא נָשְׂאוּ כְּלוּם. אִי בָּעֵית אֵימָא מִשּׁוּם דַּחֲשִׁיבִי. וְאִי בָּעֵית אֵימָא שֶׁלֹּא הָיוּ בְּאוֹתָהּ עֵצָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יצחק: מאזניים כפולים (טורטני דטורטני) = 8 נושאים לאשכול. עוד אחד נשא רימון ואחד תאנה. יהושע וכלב לא נשאו — ① מחמת כבודם, או ② כי לא היו בעצה הרעה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">אופן חציית הירדן — מחלוקת</span>
+<span style="font-size:11px;color:#bbb">1</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">פְּלִיגִי בַּהּ רַבִּי אַמֵּי וְרַבִּי יִצְחָק נַפָּחָא. חַד אָמַר: לְדִבְרֵי רַבִּי יְהוּדָה —</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; אמי ור&#39; יצחק נפחא נחלקו: לר&#39; יהודה שאמר 12 מיל — כדרך חנייתם עברו, או בזה אחר זה? ולר&#39; אלעזר בר&#39; שמעון שאמר 300+ מיל — מהו?</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">סיום מחלוקת החצייה — אדם קל או מים קלים</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כַּחֲנִיָּיתָן עָבְרוּ. לְדִבְרֵי רַבִּי אֶלְעָזָר בְּרַבִּי שִׁמְעוֹן — בְּזֶה אַחַר זֶה עָבְרוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דעה ראשונה: לר&#39; יהודה — כדרך חנייתם (כולם יחד); לר&#39; אלעזר — בזה אחר זה (לכן 300+ מיל).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְחַד אָמַר: בֵּין מָר וּבֵין מָר כַּחֲנִיָּיתָן עָבְרוּ. מָר סָבַר: אָדָם קַל, וּמָר סָבַר: מַיִם קַלִּים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דעה שנייה: שניהם מסכימים שעברו כדרך חנייתם. המחלוקת: ר&#39; יהודה סובר אדם מהיר מהמים, ור&#39; אלעזר סובר מים מהירים מאדם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שליחת המרגלים — &quot;שלח לך&quot; מדעתך</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״שְׁלַח לְךָ אֲנָשִׁים״, אָמַר רֵישׁ לָקִישׁ: ״שְׁלַח לְךָ״ — מִדַּעְתֶּךָ. וְכִי אָדָם זֶה בּוֹרֵר חֵלֶק רַע לְעַצְמוֹ? וְהַיְינוּ דִּכְתִיב: ״וַיִּיטַב בְּעֵינַי הַדָּבָר״. אָמַר רֵישׁ לָקִישׁ: ״בְּעֵינַי״, וְלֹא בְּעֵינָיו שֶׁל מָקוֹם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ריש לקיש: &quot;שלח לך&quot; = מדעתך, לא מצוות ה&#39;. אדם לא בורר חלק רע לעצמו! &quot;ייטב בעיני הדבר&quot; — בעיני משה, לא בעיני ה&#39;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וְיַחְפְּרוּ לָנוּ אֶת הָאָרֶץ״, אָמַר רַבִּי חִיָּיא בַּר אַבָּא: מְרַגְּלִים לֹא נִתְכַּוְּונוּ אֶלָּא לְבוֹשְׁתָּהּ שֶׁל אֶרֶץ יִשְׂרָאֵל. כְּתִיב הָכָא: ״וְיַחְפְּרוּ לָנוּ אֶת הָאָרֶץ״, וּכְתִיב הָתָם: ״וְחָפְרָה הַלְּבָנָה וּבוֹשָׁה הַחַמָּה וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; חייא בר אבא: &quot;ויחפרו לנו את הארץ&quot; — המרגלים התכוונו לבושתה של א&quot;י. &quot;חפירה&quot; = לשון בושה, כמו &quot;וחפרה הלבנה&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וְאֵלֶּה שְׁמוֹתָם לְמַטֵּה רְאוּבֵן שַׁמּוּעַ בֶּן זַכּוּר״, אָמַר רַבִּי יִצְחָק: דָּבָר זֶה מָסוֹרֶת בְּיָדֵינוּ מֵאֲבוֹתֵינוּ: מְרַגְּלִים עַל שֵׁם מַעֲשֵׂיהֶם נִקְרְאוּ. וְאָנוּ לֹא עָלְתָה בְּיָדֵינוּ אֶלָּא אֶחָד: ״סְתוּר בֶּן מִיכָאֵל״, ״סְתוּר״ — שֶׁסָּתַר מַעֲשָׂיו שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא. ״מִיכָאֵל״ — שֶׁעָשָׂה עַצְמוֹ מָךְ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יצחק: שמות המרגלים רומזים למעשיהם. דוגמה: &quot;סתור&quot; — שסתר מעשי ה&#39;. &quot;מיכאל&quot; — שעשה את ה&#39; כביכול מך (נמוך).</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַבִּי יוֹחָנָן, אַף אָנוּ נֹאמַר: ״נַחְבִּי בֶּן וׇפְסִי״, ״נַחְבִּי״ — שֶׁהֶחְבִּיא דְּבָרָיו שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא. ״וׇפְסִי״ — שֶׁפִּיסַּע עַל מִדּוֹתָיו שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יוחנן מוסיף: &quot;נחבי&quot; — שהחביא דברי ה&#39;. &quot;ופסי&quot; — שפיסע (דרך בזלזול) על מידותיו של ה&#39;.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">כלב בחברון — השתטחות על קברי אבות</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וַיַּעֲלוּ בַנֶּגֶב וַיָּבֹא עַד חֶבְרוֹן״ — ״וַיָּבֹאוּ״ מִבְּעֵי לֵיהּ? אָמַר רָבָא: מְלַמֵּד שֶׁפֵּירַשׁ כָּלֵב מֵעֲצַת מְרַגְּלִים, וְהָלַךְ וְנִשְׁתַּטַּח עַל קִבְרֵי אָבוֹת. אָמַר לָהֶן: אֲבוֹתַי! בִּקְּשׁוּ עָלַי רַחֲמִים שֶׁאֶנָּצֵל מֵעֲצַת מְרַגְּלִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;ויבא עד חברון&quot; — בלשון יחיד! רבא: כלב פירש מעצת המרגלים, הלך והשתטח על קברי אבות בחברון. ביקש: אבותי, בקשו רחמים שאינצל מעצתם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">יְהוֹשֻׁעַ כְּבָר בִּקֵּשׁ מֹשֶׁה עָלָיו רַחֲמִים, שֶׁנֶּאֱמַר: ״וַיִּקְרָא מֹשֶׁה לְהוֹשֵׁעַ בִּן נוּן יְהוֹשֻׁעַ״, יָהּ יוֹשִׁיעֲךָ מֵעֲצַת מְרַגְּלִים. וְהַיְינוּ דִּכְתִיב: ״וְעַבְדִּי כָלֵב עֵקֶב הָיְתָה רוּחַ אַחֶרֶת עִמּוֹ וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">יהושע לא הוצרך — משה כבר התפלל עליו בשינוי שמו: &quot;הושע&quot; → &quot;יהושע&quot; = י-ה יושיעך. &quot;רוח אחרת עמו&quot; — כלב שינה דעתו תוך כדי, יהושע היה נגד מלכתחילה.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f6f0fa;color:#6a3a8a;font-weight:700;border:1px solid #6a3a8a30">אגדה</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ענקי חברון — אחימן ששי ותלמי</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f6f0fa;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וְשָׁם אֲחִימַן שֵׁשַׁי וְתַלְמַי וְגוֹ׳״, ״אֲחִימַן״ — מְיוּמָּן שֶׁבְּאֶחָיו, ״שֵׁשַׁי״ — שֶׁמֵּשִׂים אֶת הָאָרֶץ כִּשְׁחִתוֹת, ״תַּלְמַי״ — שֶׁמֵּשִׂים אֶת הָאָרֶץ תְּלָמִים תְּלָמִים.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;אחימן&quot; — הזריז באחיו. &quot;ששי&quot; — שמשים הארץ כבורות בהליכתו. &quot;תלמי&quot; — שעושה תלמים בארץ מגודלו.</div>
+</div><div style="margin-top:14px">
+<div style="background:#ecddf5;border-radius:8px;border-right:4px solid #6a3a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דָּבָר אַחֵר: אֲחִימַן בָּנָה עֲנָת, שֵׁשַׁי בָּנָה אָלֻשׁ, תַּלְמַי בָּנָה תַּלְבּוּשׁ. ״יְלִידֵי הָעֲנָק״ — שֶׁמַּעֲנִיקִין חַמָּה בְּקוֹמָתָן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דרשה נוספת: כל אחד בנה עיר — ענת, אלוש, תלבוש. &quot;ילידי הענק&quot; — כל כך גבוהים שנראה כאילו השמש ענק על צווארם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec8">
+<button onclick="toggle(8)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">לד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">חברון — פוריה פי שבע מצוען מצרים</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow8" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content8" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וְחֶבְרוֹן שֶׁבַע שָׁנִים נִבְנְתָה״. מַאי ״נִבְנְתָה״? אִילֵימָא נִבְנְתָה מַמָּשׁ, אֶפְשָׁר אָדָם בּוֹנֶה בַּיִת לִבְנוֹ קָטָן קוֹדֶם לִבְנוֹ גָּדוֹל?! דִּכְתִיב: ״וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וְגוֹ׳״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;חברון שבע שנים נבנתה לפני צוען&quot; — לא שנבנתה קודם ממש (כנען = בן קטן, מצרים = גדול). אלא: פוריה פי שבע מצוען.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא שֶׁהָיְתָה מְבוּנָּה עַל אֶחָד מִשִּׁבְעָה בְּצוֹעַן. וְאֵין לְךָ טְרָשִׁים בְּכׇל אֶרֶץ יִשְׂרָאֵל יָתֵר מֵחֶבְרוֹן, מִשּׁוּם דְּקָבְרִי בָּהּ שָׁיכְבֵי. וְאֵין לְךָ מְעוּלָּה בְּכׇל הָאֲרָצוֹת יָתֵר מֵאֶרֶץ מִצְרַיִם, שֶׁנֶּאֱמַר: ״כְּגַן ה׳ כְּאֶרֶץ מִצְרַיִם״, וְאֵין לְךָ מְעוּלָּה בְּכׇל אֶרֶץ מִצְרַיִם יָתֵר מִצּוֹעַן, דִּכְתִיב: ״כִּי הָיוּ בְצֹעַן שָׂרָיו״, וַאֲפִילּוּ הָכִי חֶבְרוֹן מְבוּנָּה אֶחָד מִשִּׁבְעָה בְּצוֹעַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">חשבון: חברון = הכי טרשי בא&quot;י (קוברים שם מתים). צוען = הכי טוב במצרים (ישבו שם שרי פרעה). ואפילו כך — חברון עדיפה פי שבע!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְחֶבְרוֹן טְרָשִׁים הֲוַי? וְהָא כְּתִיב: ״וַיְהִי מִקֵּץ אַרְבָּעִים שָׁנָה וַיֹּאמֶר אַבְשָׁלוֹם אֶל הַמֶּלֶךְ אֵלְכָה נָּא וְגוֹ׳״, וְאָמַר רַב אַוְיָא וְאִיתֵּימָא רַבָּה בַּר בַּר חָנָן: שֶׁהָלַךְ לְהָבִיא כְּבָשִׂים מֵחֶבְרוֹן. וְתַנְיָא, אֵילִים מִמּוֹאָב, כְּבָשִׂים מֵחֶבְרוֹן! מִינַּהּ, אַיְּידֵי דִּקְלִישָׁא אַרְעָא, עָבְדָה רִעְיָא וְשַׁמִּן קִנְיָינָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: אם חברון טרשית, למה מביאים ממנה כבשים למקדש? תשובה: דווקא כי האדמה קלושה — רק עשב גדל, המרעה שמן, והצאן מובחר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וַיָּשֻׁבוּ מִתּוּר הָאָרֶץ</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;וישובו מתור הארץ מקץ ארבעים יום&quot; — תחילת סיפור חזרת המרגלים.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_35.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_33.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["לד.","לד.","לד.","לד.","לד:","לד:","לד:","לד:","לד:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<9;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<9;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="לד."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

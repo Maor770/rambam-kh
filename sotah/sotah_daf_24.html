@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_25.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_23.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף כד</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">21 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('כד.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">כד.</button>
+<button onclick="filterAmud('כד:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">כד:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">כד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">המשך המשנה — מי לא שותה ולא נוטלת כתובה</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּנְתִינָה לְיִשְׂרָאֵל, וּבַת יִשְׂרָאֵל לְמַמְזֵר וּלְנָתִין — לֹא שׁוֹתוֹת וְלֹא נוֹטְלוֹת כְּתוּבָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ממזרת ונתינה לישראל, ובת ישראל לממזר ולנתין — לא שותות ולא נוטלות כתובה, כי רק המותרות להינשא לבעליהן שותות.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֵלּוּ לֹא שׁוֹתוֹת וְלֹא נוֹטְלוֹת כְּתוּבָה: הָאוֹמֶרֶת ״טְמֵאָה אֲנִי״, וְשֶׁבָּאוּ לָהּ עֵדִים שֶׁהִיא טְמֵאָה, וְהָאוֹמֶרֶת ״אֵינִי שׁוֹתָה״.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רשימת הנשים שלא שותות ולא נוטלות כתובה: ① המודה &quot;טמאה אני&quot;. ② שבאו עדים שנטמאה. ③ האומרת &quot;איני שותה&quot; — מסרבת, אך לא מודה בטומאה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר בַּעְלָהּ ״אֵינִי מַשְׁקָהּ״, וְשֶׁבַּעְלָהּ בָּא עָלֶיהָ בַּדֶּרֶךְ — נוֹטְלוֹת כְּתוּבָּה וְלֹא שׁוֹתוֹת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">לעומת זאת, נשים שלא שותות אבל כן נוטלות כתובה: ① בעלה אמר &quot;איני משקה&quot;. ② בעלה בא עליה בדרך למקדש — כאן אשמת הבעל שאינה שותה, ולכן מגיעה לה כתובה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מֵתוּ בַּעְלֵיהֶן עַד שֶׁלֹּא שָׁתוּ, בֵּית שַׁמַּאי אוֹמְרִים: נוֹטְלוֹת כְּתוּבָּה וְלֹא שׁוֹתוֹת, וּבֵית הִלֵּל אוֹמְרִים: אוֹ שׁוֹתוֹת אוֹ לֹא נוֹטְלוֹת כְּתוּבָּתָן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מחלוקת אם מת הבעל לפני השתיה: בית שמאי — נוטלות כתובה ולא שותות. בית הלל — או שותות או לא נוטלות כתובה (מאחר שלא נבדקו, אינן יכולות לגבות).</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">כד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מעוברת חבירו, איילונית וזקנה — מחלוקת</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מְעוּבֶּרֶת חֲבֵירוֹ וּמְנִיקַת חֲבֵירוֹ — לֹא שׁוֹתוֹת וְלֹא נוֹטְלוֹת כְּתוּבָּה, דִּבְרֵי רַבִּי מֵאִיר. וַחֲכָמִים אוֹמְרִים: יָכוֹל הוּא לְהַפְרִישָׁהּ וּלְהַחְזִירָהּ לְאַחַר זְמַן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; מאיר: מעוברת חבירו או מניקת חבירו — לא שותות ולא נוטלות כתובה (כי הנישואין אסורים מדרבנן). חכמים: יכול להפרישה ולהחזירה אחרי הזמן, לכן אין כאן איסור גמור.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אַיְילוֹנִית וּזְקֵינָה, וְשֶׁאֵינָהּ רְאוּיָה לֵילֵד — לֹא נוֹטְלוֹת כְּתוּבָּה וְלֹא שׁוֹתוֹת. רַבִּי אֶלְעָזָר אוֹמֵר: יָכוֹל הוּא לִישָּׂא אִשָּׁה אַחֶרֶת וְלִפְרוֹת וְלִרְבּוֹת הֵימֶנָּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">איילונית, זקנה, או מי שאינה ראויה לילד — לא שותות ולא נוטלות כתובה (כי הנישואין בטלים — מבטל פריה ורביה). ר&#39; אלעזר חולק: יכול לישא אחרת ולפרות ולרבות, לכן הנישואין כשרים והן שותות.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">כד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">אשת כהן, אשת סריס, וקינוי לעריות</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּשְׁאָר כׇּל הַנָּשִׁים — אוֹ שׁוֹתוֹת אוֹ לֹא נוֹטְלוֹת כְּתוּבָּה. אֵשֶׁת כֹּהֵן שׁוֹתָה — וּמוּתֶּרֶת לְבַעְלָהּ. אֵשֶׁת סָרִיס שׁוֹתָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הכלל: שאר כל הנשים — או שותות או לא נוטלות כתובה. אשת כהן שותה, ואם נמצאה טהורה — מותרת לבעלה. אשת סריס גם שותה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עַל יְדֵי כׇּל עֲרָיוֹת מְקַנִּין, חוּץ מִן הַקָּטָן וּמִמִּי שֶׁאֵינוֹ אִישׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הבעל יכול לקנא מכל איש, גם מעריות (אביה, אחיה) — חוץ מקטן וממי שאינו איש (בהמה).</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">כד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">בית דין מקנין — לחרש, שוטה, וחבוש</span>
+<span style="font-size:11px;color:#bbb">1</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאֵלּוּ שֶׁבֵּית דִּין מְקַנִּין לָהֶן: מִי שֶׁנִּתְחָרֵשׁ בַּעְלָהּ, אוֹ נִשְׁתַּטָּה, אוֹ שֶׁהָיָה חָבוּשׁ בְּבֵית הָאֲסוּרִין. לֹא לְהַשְׁקוֹתָהּ אָמְרוּ, אֶלָּא לְפוֹסְלָהּ מִכְּתוּבָּתָהּ. רַבִּי יוֹסֵי אוֹמֵר: אַף לְהַשְׁקוֹתָהּ. לִכְשֶׁיֵּצֵא בַּעְלָהּ מִבֵּית הָאֲסוּרִין יַשְׁקֶנָּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">בית דין מקנין עבור בעל שאינו מסוגל: ① חרש. ② שוטה. ③ חבוש בבית האסורים. לא להשקותה ממש — אלא לפוסלה מכתובתה. ר&#39; יוסי חולק: אף להשקותה, כשיצא הבעל מהכלא.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כד.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ארוסה ושומרת יבם — מקנין אך לא משקים</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גְּמָ׳ מִישְׁתָּא הוּא דְּלָא שָׁתְיָיא, הָא קַנּוֹיֵ[י] מְקַנֵּי לַהּ: מְנָא הָנֵי מִילֵּי? דְּתָנוּ רַבָּנַן: ״דַּבֵּר אֶל בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ״ — לְרַבּוֹת אֲרוּסָה וְשׁוֹמֶרֶת יָבָם לְקִינּוּי.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דיוק מהמשנה: ארוסה ושומרת יבם לא שותות, אבל כן מקנין להן. מניין? מהפסוק &quot;ואמרת אליהם&quot; — ריבוי לארוסה ושומרת יבם לקינוי.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמַתְנִיתִין מַנִּי — רַבִּי יוֹנָתָן הִיא. דְּתַנְיָא: ״תַּחַת אִישֵׁךְ״, פְּרָט לַאֲרוּסָה. יָכוֹל שֶׁאֲנִי מוֹצִיא אַף שׁוֹמֶרֶת יָבָם, תַּלְמוּד לוֹמַר: ״אִישׁ אִישׁ״, דִּבְרֵי רַבִּי יֹאשִׁיָּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">משנתנו כר&#39; יונתן: &quot;תחת אישך&quot; — פרט לשומרת יבם. &quot;אשר תשטה אשה תחת אישה&quot; — פרט לארוסה. שני מיעוטים נפרדים לשתיהן.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַבִּי יוֹנָתָן אוֹמֵר: ״תַּחַת אִישֵׁךְ״ — פְּרָט לְשׁוֹמֶרֶת יָבָם. אוֹצִיא שׁוֹמֶרֶת יָבָם וְלֹא אוֹצִיא אֶת אֲרוּסָה, תַּלְמוּד לוֹמַר: ״אֲשֶׁר תִּשְׂטֶה אִשָּׁה תַּחַת אִישָׁהּ״ — פְּרָט לַאֲרוּסָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יאשיה חולק: &quot;תחת אישך&quot; — פרט לארוסה. &quot;איש איש&quot; — ריבוי לרבות שומרת יבם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מָר אַלִּימָא לֵיהּ אֲרוּסָה, דְּקִידּוּשֵׁי דִּידֵיהּ, וְסוֹקְלִין עַל יָדוֹ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">טעם ר&#39; יונתן: קשר הארוסה חזק יותר — קידושיו שלו, וסוקלין על ידו. לכן ממעט את שומרת יבם מ&quot;תחת אישך&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וּמָר אַלִּימָא לֵיהּ שׁוֹמֶרֶת יָבָם, דְּלָא מְיחַסְּרָא מְסִירָה לְחוּפָּה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">טעם ר&#39; יאשיה: קשר שומרת יבם חזק יותר — לא מחוסרת מסירה לחופה, נעשית אשתו מיד בביאה. לכן ממעט ארוסה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי יוֹנָתָן, הַאי ״אִישׁ אִישׁ״ מַאי עָבֵיד לֵיהּ? מִיבְּעֵי לֵיהּ לְרַבּוֹת אֵשֶׁת חֵרֵשׁ, וְאֵשֶׁת שׁוֹטֶה, וְאֵשֶׁת</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">לר&#39; יונתן, &quot;איש איש&quot; בא לרבות אשת חרש, אשת שוטה, ואשת שעמום (משוגע) — שבית דין מקנאים עבורם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ר&#39; יאשיה — &quot;תחת אישה&quot; להיקש, לא למיעוט</span>
+<span style="font-size:11px;color:#bbb">1</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">שַׁעֲמוּם. וְרַבִּי יֹאשִׁיָּה, הַאי ״תַּחַת אִישָׁהּ״ מַאי עָבֵיד לֵיהּ? מִיבְּעֵי לֵיהּ לְהַקִּישׁ אִישׁ לְאִשָּׁה וְאִשָּׁה לְאִישׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ר&#39; יאשיה מפרש &quot;תחת אישה&quot; להיקש — להשוות דין האיש לאשה ודין האשה לאיש, ולא למעט שומרת יבם.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ארוסה שותה? — &quot;מבלעדי אישך&quot; ממעט</span>
+<span style="font-size:11px;color:#bbb">2</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא, טַעְמָא דִּכְתִיבִי הָנֵי קְרָאֵי, הָא לָאו הָכִי, הֲוָה אָמֵינָא אֲרוּסָה שָׁתְיָא? וְהָא כִּי אֲתָא רַבִּי אַחָא בַּר חֲנִינָא מִדָּרוֹמָא, אֲתָא וְאַיְיתִי מַתְנִיתָא בִּידֵיהּ: ״מִבַּלְעֲדֵי אִישֵׁךְ״, מִשֶּׁקָּדְמָה שְׁכִיבַת בַּעַל לַבּוֹעֵל, וְלֹא שֶׁקָּדְמָה שְׁכִיבַת בּוֹעֵל לַבַּעַל.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: בלי הפסוקים הממעטים, באמת הייתי חושב שארוסה שותה? הרי ר&#39; אחא בר חנינא הביא ברייתא: &quot;מבלעדי אישך&quot; = משקדמה שכיבת בעל לבועל — ארוסה שזינתה, הבועל קדם לבעל!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רָמֵי בַּר חָמָא: מַשְׁכַּחַתְּ לַהּ — כְּגוֹן שֶׁבָּא עָלֶיהָ אָרוּס בְּבֵית אָבִיהָ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תירוץ רמי בר חמא: יש מציאות שהארוס בא עליה בבית אביה (לפני הנישואין) — אז שכיבת &quot;הבעל&quot; קדמה, וצריך מיעוט מיוחד.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">כד:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">שומרת יבם שבא עליה — מחלוקת רב ושמואל</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דִּכְווֹתַהּ גַּבֵּי שׁוֹמֶרֶת יָבָם — כְּגוֹן שֶׁבָּא עָלֶיהָ יָבָם בְּבֵית חָמִיהָ. הָא שׁוֹמֶרֶת יָבָם קָרֵית לַהּ? אִשְׁתּוֹ מְעַלַּיְיתָא הִיא, דְּהָאָמַר רַב: קָנָה לַכֹּל!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">באותו אופן בשומרת יבם — אם בא עליה היבם בבית חמיה. אבל קושיה: אם בא עליה — הרי היא אשתו! כי רב אמר: יבם שבא על יבמתו — קנה לכל דבר.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">כִּשְׁמוּאֵל, דְּאָמַר: לֹא קָנָה אֶלָּא לִדְבָרִים הָאֲמוּרִים בַּפָּרָשָׁה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">תירוץ: ר&#39; יונתן סובר כשמואל, שאמר: לא קנה אלא לדברים האמורים בפרשה (נחלה, גט) — אבל לא לכל דבר. לכן עדיין צריך מיעוט מהשקאה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אִי הָכִי, לֵימָא רַב דְּאָמַר כְּרַבִּי יֹאשִׁיָּה וּשְׁמוּאֵל דְּאָמַר כְּרַבִּי יוֹנָתָן? אָמַר לָךְ רַב: אֲנָא דַּאֲמַרִי — אֲפִילּוּ לְרַבִּי יוֹנָתָן. מִדְּאִיצְטְרִיךְ קְרָא לְמַעוֹטַהּ — מִכְּלַל דְּאִשְׁתּוֹ מְעַלַּיְיתָא הִיא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שאלה: האם רב כר&#39; יאשיה ושמואל כר&#39; יונתן? דוחים: רב אומר — גם לר&#39; יונתן, מזה שהכתוב הוצרך למעט שומרת יבם, נלמד שהיא אשתו גמורה לכל דבר אחר.</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_25.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_23.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["כד.","כד.","כד.","כד.","כד.","כד:","כד:","כד:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<8;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<8;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="כד."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>

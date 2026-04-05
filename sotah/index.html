@@ -3,35 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>מסכת סוטה — בקרוב</title>
+<title>מסכת סוטה — דף יומי</title>
 <link rel="stylesheet" href="../shared/css/theme.css">
 <style>
-  .placeholder{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    min-height:100vh;
-    padding:2rem 1rem;
+  .sotah-header{
     text-align:center;
+    padding:1.5rem 1rem 1rem;
   }
-  .placeholder-icon{
-    font-size:4rem;
-    margin-bottom:1rem;
-    opacity:.7;
+  .sotah-header .bh{
+    font-size:.75rem;
+    color:var(--txt3);
+    margin-bottom:.25rem;
   }
-  .placeholder h1{
+  .sotah-header h1{
     font-family:var(--font-src);
     font-size:1.8rem;
     color:var(--gold);
-    margin-bottom:.5rem;
+    margin-bottom:.25rem;
   }
-  .placeholder p{
+  .sotah-header .sub{
+    font-size:.9rem;
     color:var(--txt2);
-    font-size:1rem;
-    margin-bottom:2rem;
-    max-width:320px;
-    line-height:1.6;
+    line-height:1.5;
+    max-width:400px;
+    margin:0 auto;
+  }
+
+  /* Today's daf hero */
+  .today-card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    max-width:400px;
+    margin:1rem auto;
+    padding:1.2rem 1.5rem;
+    background:var(--gold-bg);
+    border:2px solid var(--gold-border);
+    border-radius:var(--r);
+    text-align:center;
+    transition:transform .15s, border-color .2s;
+  }
+  .today-card:hover{
+    transform:translateY(-2px);
+    border-color:var(--gold);
+  }
+  .today-label{
+    font-size:.8rem;
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:.5px;
+    margin-bottom:.3rem;
+  }
+  .today-daf{
+    font-family:var(--font-src);
+    font-size:2rem;
+    color:var(--gold);
+    font-weight:700;
+  }
+  .today-hint{
+    font-size:.8rem;
+    color:var(--txt3);
+    margin-top:.3rem;
+  }
+
+  /* Daf grid */
+  .daf-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:6px;
+    padding:0 1rem 2rem;
+    max-width:500px;
+    margin:0 auto;
+  }
+  @media(max-width:400px){
+    .daf-grid{grid-template-columns:repeat(6,1fr);}
+  }
+  .daf-cell{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:var(--txt);
+    background:var(--card);
+    border:1px solid var(--border-light);
+    border-radius:8px;
+    padding:10px 4px;
+    font-size:.95rem;
+    font-weight:500;
+    transition:border-color .2s, transform .15s;
+    min-height:44px;
+  }
+  .daf-cell:hover,.daf-cell:focus-visible{
+    border-color:var(--gold);
+    transform:translateY(-1px);
+  }
+  .daf-cell.today{
+    background:var(--gold-bg);
+    border-color:var(--gold);
+    color:var(--gold);
+    font-weight:700;
+  }
+
+  /* Back link */
+  .back-row{
+    text-align:center;
+    padding:0 1rem 1.5rem;
   }
   .back-link{
     display:inline-flex;
@@ -39,30 +115,85 @@
     gap:.4rem;
     color:var(--sky);
     text-decoration:none;
-    font-size:1rem;
-    min-width:44px;
-    min-height:44px;
+    font-size:.9rem;
     padding:.5rem 1rem;
-    border:1px solid var(--card2);
+    border:1px solid var(--border-light);
     border-radius:var(--r);
     transition:border-color .2s, color .2s;
+    min-width:44px;
+    min-height:44px;
   }
-  .back-link:hover, .back-link:focus-visible{
+  .back-link:hover,.back-link:focus-visible{
     border-color:var(--gold);
     color:var(--gold);
   }
+
+  /* Footer */
+  .sotah-footer{
+    text-align:center;
+    padding:1rem 1rem 2rem;
+    font-size:.75rem;
+    color:var(--txt3);
+    line-height:1.8;
+    border-top:1px solid var(--border-light);
+    max-width:500px;
+    margin:0 auto;
+  }
+  .sotah-footer a{color:var(--txt3);text-decoration:underline}
 </style>
 </head>
 <body>
 
-<main class="placeholder">
-  <div class="placeholder-icon" aria-hidden="true">&#128214;&#127769;</div>
-  <h1>בקרוב...</h1>
-  <p>לימוד דף יומי במסכת סוטה יתווסף בקרוב בעזרת ה׳.</p>
+<header class="sotah-header">
+  <div class="bh">ב״ה</div>
+  <h1>מסכת סוטה</h1>
+  <div class="sub">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+</header>
+
+<a href="#" id="todayCard" class="today-card">
+  <div class="today-label">הדף היומי</div>
+  <div class="today-daf" id="todayDaf">—</div>
+  <div class="today-hint">לחץ כדי ללמוד</div>
+</a>
+
+<section class="daf-grid" id="dafGrid"></section>
+
+<div class="back-row">
   <a href="../" class="back-link">&#8592; חזרה לבית המדרש</a>
-</main>
+</div>
+
+<footer class="sotah-footer">
+  כל עזר זה נבנה בסיוע כלי AI. יתכנו שגיאות וטעויות מהותיות.<br>
+  להערות והארות: Chanoch@maor.org<br>
+  הטקסט המנוקד והביאור מבוססים על מהדורת וויליאם דוידסון באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" target="_blank">ספריא</a>,
+  תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" target="_blank">CC-BY-NC</a>.
+</footer>
 
 <script src="../shared/js/settings.js"></script>
-<script>RambamSettings.applyTheme();</script>
+<script src="sotah-daily.js"></script>
+<script>
+(function(){
+  RambamSettings.applyTheme();
+
+  var daf = SotahDaily.todaysDaf();
+  var hebDaf = SotahDaily.todaysDafHeb();
+  var url = SotahDaily.todaysDafUrl();
+
+  document.getElementById('todayDaf').textContent = 'דף ' + hebDaf;
+  document.getElementById('todayCard').href = url;
+
+  // Build grid
+  var grid = document.getElementById('dafGrid');
+  for(var d = 2; d <= 49; d++){
+    var a = document.createElement('a');
+    a.href = SotahDaily.dafUrl(d);
+    a.className = 'daf-cell' + (d === daf ? ' today' : '');
+    a.textContent = SotahDaily.HEB[d];
+    a.title = 'דף ' + SotahDaily.HEB[d];
+    grid.appendChild(a);
+  }
+})();
+</script>
+<script src="../shared/js/feedback.js"></script>
 </body>
 </html>

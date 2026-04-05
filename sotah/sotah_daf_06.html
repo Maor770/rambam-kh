@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;-webkit-font-smoothing:antialiased}
+button{font-family:'Heebo',sans-serif}
+button:active{opacity:0.85}
+</style>
+</head>
+<body>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_07.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_05.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="background:#fff;border-bottom:1px solid #e0e0e0;padding:16px 14px 14px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)">
+<div style="font-size:12px;color:#bbb;margin-bottom:3px">ב״ה</div>
+<h1 style="font-size:22px;font-weight:700;color:#1a1a1a;margin:2px 0">מסכת סוטה · דף ו</h1>
+<div style="font-size:11px;color:#1a5a8a;margin-bottom:12px">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
+<div style="display:flex;gap:5px;justify-content:center;flex-wrap:wrap;align-items:center">
+<span style="font-size:11px;color:#999">37 קטעים</span>
+<button onclick="filterAmud('all')" id="fbtn-all" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#1a5a8a;border:1px solid #1a5a8a;color:#fff;font-weight:700">הכל</button>
+<button onclick="filterAmud('ו.')" id="fbtn-a" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">ו.</button>
+<button onclick="filterAmud('ו:')" id="fbtn-b" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #ddd;color:#888;font-weight:400">ו:</button>
+<button onclick="toggleAll()" id="tbtn" style="padding:5px 14px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1px solid #d4af55;color:#b8941f;font-weight:700">▼ פתח הכל</button>
+</div>
+</div>
+<div style="padding:10px 10px 20px;max-width:640px;margin:0 auto">
+
+<div style="margin-bottom:6px" id="sec0">
+<button onclick="toggle(0)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">המשך — סוטה שמת בעלה ונפלה ליבום</span>
+<span style="font-size:11px;color:#bbb">3</span>
+<span id="arrow0" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content0" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מִי קָא רָמֵינַן לַהּ עֲלֵיהּ בְּעַל כֻּרְחֵיהּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">סיום תשובת רב יוסף: ל&quot;אחר&quot; — היא לא מוטלת עליו בעל כורחו, הוא נושא מרצונו. אבל על היבם היא מוטלת בעל כורחו, ולכן התורה פטרתו מייבום.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִיכָּא דְּאָמְרִי, אָמַר רַב יוֹסֵף: הַכָּתוּב קְרָאוֹ ״אַחֵר״, שֶׁאֵין בֶּן זוּגוֹ שֶׁל רִאשׁוֹן. שֶׁזֶּה הוֹצִיא רְשָׁעָה מִבֵּיתוֹ, וְזֶה הִכְנִיס רְשָׁעָה לְתוֹךְ בֵּיתוֹ, וְאַתְּ אָמְרַתְּ תִּתְיַבֵּם נָמֵי יַבּוֹמֵי?!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב יוסף (נוסח ג&#39;): הכתוב קרא לבעל השני &quot;אחר&quot; = אינו בן זוגו של ראשון. הראשון הוציא רשעה מביתו, והשני הכניס רשעה לביתו — ואתה אומר שגם יבם יתחייב בה?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לֵיהּ אַבָּיֵי: אֶלָּא מֵעַתָּה, נִשֵּׂאת לְאַחֵר וּמֵת בְּלֹא בָּנִים — לֹא תִּתְיַבֵּם, דְּהַכָּתוּב קְרָאוֹ ״אַחֵר״! גַּבֵּיהּ דְּהַאי מִיהָא בְּשֵׁם טוֹב הֲוָה קָיְימָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אביי מקשה: אם נישאה ל&quot;אחר&quot; בשם טוב ומת — לא תתייבם? הרי אצלו היתה בסדר! רב יוסף: נכון, אצל הבעל השני היתה בשם טוב, לכן מתייבמת לאחיו.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec1">
+<button onclick="toggle(1)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">קל וחומר של רבא — ודחייתו</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow1" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content1" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רָבָא אָמַר, קַל וָחוֹמֶר: אִם נֶאֶסְרָה בַּמּוּתָּר לָהּ — בָּאָסוּר לָהּ לֹא כׇּל שֶׁכֵּן?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רבא: למה סוטה לא מתייבמת? קל וחומר: אם נאסרה על בעלה (שהיה מותר לה) — על היבם (שהיה אסור לה כאשת אחיו) לא כל שכן!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לֵיהּ אַבָּיֵי: אֶלָּא מֵעַתָּה, כֹּהֵן גָּדוֹל שֶׁקִּידֵּשׁ אֶת הָאַלְמָנָה וָמֵת, וְיֵשׁ לוֹ אָח כֹּהֵן הֶדְיוֹט, לֹא תִּתְיַבֵּם: אִם נֶאֶסְרָה בַּמּוּתָּר לָהּ — בָּאָסוּר לָהּ לֹא כׇּל שֶׁכֵּן?!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אביי מקשה: כהן גדול שקידש אלמנה ומת, ויש לו אח כהן הדיוט — גם לא תתייבם? אם נאסרה על כה&quot;ג (מותר לה בדרך כלל) — על אחיו (אסור לה מחיי האח) ק&quot;ו!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">נֶאֶסְרָה?! הָא אֲסִירָא וְקָיְימָא! מוּתָּר לָהּ?! אָסוּר לָהּ הוּא!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דוחים: הרי האלמנה לכה&quot;ג היתה אסורה וקיימת מלכתחילה! אין כאן &quot;נאסרה&quot; חדשה. וגם: כה&quot;ג אסור בה, אז אי אפשר לומר &quot;מותר לה&quot;!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא: אֵשֶׁת כֹּהֵן שֶׁנֶּאֶנְסָה וָמֵת, וְיֵשׁ לוֹ אָח חָלָל — לֹא תִּתְיַבֵּם. אִם נֶאֶסְרָה בַּמּוּתָּר לָהּ — בָּאָסוּר לָהּ לֹא כׇּל שֶׁכֵּן?!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים מקרה אחר: אשת כהן שנאנסה — אסורה על בעלה הכהן. מת, ויש לו אח חלל (= דינו כישראל). ק&quot;ו: נאסרה על בעלה (מותר לה) — על אחיו (אסור לה) לא כל שכן!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אוֹנֶס בְּיִשְׂרָאֵל מִישְׁרֵא שְׁרֵי, וְגַבֵּי דְּהַאי מִיהָא לֵיכָּא אִיסּוּרָא.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דוחים: אונס לישראל מותר. האח החלל דינו כישראל — ואינו אסור באנוסה. לכן הק&quot;ו לא עובד כאן.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec2">
+<button onclick="toggle(2)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0faf4;color:#1a7a42;font-weight:700;border:1px solid #1a7a4230">משנה</span>
+<span style="font-size:11px;color:#999;font-weight:700">ו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">משנה: אלו אסורות מלאכול בתרומה</span>
+<span style="font-size:11px;color:#bbb">1</span>
+<span id="arrow2" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content2" style="display:none;background:#f0faf4;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#e2f3e9;border-radius:8px;border-right:4px solid #1a7a42;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְנִי׳ וְאֵלּוּ אֲסוּרוֹת מִלֶּאֱכוֹל בִּתְרוּמָה: הָאוֹמֶרֶת ״טְמֵאָה אֲנִי לָךְ״, וְשֶׁבָּאוּ עֵדִים שֶׁהִיא טְמֵאָה, וְהָאוֹמֶרֶת ״אֵינִי שׁוֹתָה״, וְשֶׁבַּעְלָהּ אֵינוֹ רוֹצֶה לְהַשְׁקוֹתָהּ, וְשֶׁבַּעְלָהּ בָּא עָלֶיהָ בַּדֶּרֶךְ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">המשנה מונה חמש נשים סוטות שאסורות בתרומה: ① האומרת &quot;טמאה אני לך&quot; (= הודתה). ② שבאו עדים שטמאה. ③ האומרת &quot;איני שותה&quot;. ④ שבעלה אינו רוצה להשקותה. ⑤ שבעלה בא עליה בדרך (לירושלים).</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec3">
+<button onclick="toggle(3)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">סוטה שיש לה עדים במדינת הים</span>
+<span style="font-size:11px;color:#bbb">4</span>
+<span id="arrow3" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content3" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">גְּמָ׳ אָמַר רַב עַמְרָם: הָא מִילְּתָא אֲמַר לַן רַב שֵׁשֶׁת, וְאַנְהַר לַן עַיְינִין מִמַּתְנִיתִין: סוֹטָה שֶׁיֵּשׁ לָהּ עֵדִים בִּמְדִינַת הַיָּם — אֵין הַמַּיִם בּוֹדְקִין אוֹתָהּ. מַאי טַעְמָא? דְּאָמַר קְרָא ״וְנִסְתְּרָה וְהִיא נִטְמָאָה וְעֵד אֵין בָּהּ״, דְּלֵיכָּא דְּיָדַע בָּהּ. לְאַפּוֹקֵי הָא, דְּהָא אִיכָּא דְּיָדַע בָּהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב ששת חידש: סוטה שיש עדים במדינת הים שנטמאה — המים לא בודקים אותה (כי אפשר לדון בעדים). מקור: &quot;ועד אין בה&quot; = רק כשאין מי שיודע — המים בודקים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאַנְהַר לַן עַיְינִין מִמַּתְנִיתִין, דְּקָתָנֵי: וְשֶׁבָּאוּ לָהּ עֵדִים שֶׁהִיא טְמֵאָה. דַּאֲתוּ עֵדִים אֵימַת? אִי נֵימָא מִקַּמֵּי דְּתִשְׁתֵּי — זוֹנָה הִיא!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ראיה מהמשנה: &quot;שבאו לה עדים שטמאה — אסורה בתרומה&quot;. מתי באו? אם לפני השתייה — ברור שאסורה, מה החידוש?</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא לְבָתַר דִּשְׁתַאי. אִי אָמְרַתְּ בִּשְׁלָמָא אֵין הַמַּיִם בּוֹדְקִין אוֹתָהּ — שַׁפִּיר. אֶלָּא אִי אָמְרַתְּ מַיִם בּוֹדְקִין אוֹתָהּ — תִּיגַּלֵּי מִילְּתָא לְמַפְרֵעַ דְּסָהֲדֵי שַׁקָּרֵי נִינְהוּ!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אלא באו אחרי ששתתה. אם המים בודקים — היתה צריכה להיבדק טהורה, ומכאן שהעדים שקרנים! אלא: המים לא בדקו אותה כי יש עדים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֲמַר לֵיהּ רַב יוֹסֵף: לְעוֹלָם אֵימָא לְךָ מַיִם בּוֹדְקִין אוֹתָהּ, וְהָא — אֵימוֹר זְכוּת תּוֹלָה לָהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב יוסף חולק: יכול שהמים כן בודקים, אבל זכות תלתה לה — לא מתה מיד אלא מתנוונת בהדרגה. לכן אין סתירה בין המים לעדים.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec4">
+<button onclick="toggle(4)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ו.</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">מחלוקת רב ששת ורב יוסף — זכות תולה</span>
+<span style="font-size:11px;color:#bbb">6</span>
+<span id="arrow4" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content4" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בְּמַאי קָמִיפַּלְגִי — בְּמִתְנַוְּונָה דְּרַבִּי. דִּתְנַן, רַבִּי אוֹמֵר: זְכוּת תּוֹלָה בַּמַּיִם הַמָּרִים, וְאֵינָהּ יוֹלֶדֶת וְאֵינָהּ מַשְׁבַּחַת, אֶלָּא מִתְנַוְּונָה וְהוֹלֶכֶת, לְסוֹף שֶׁהִיא מֵתָה בְּאוֹתָהּ מִיתָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">נקודת המחלוקת: רבי אומר שזכות תולה — הסוטה לא מתה מיד אלא מתנוונת. רב ששת סובר שלכולי עלמא (גם לרבי וגם לרבנן) מתנוונת, ולכן היה ניכר אם המים בדקו אותה. רב יוסף סובר שלפי חכמים אין ניוון כלל.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַב שֵׁשֶׁת סָבַר: בֵּין לְרַבִּי וּבֵין לְרַבָּנַן הָוְיָא מִתְנַוְּונָה. וְרַב יוֹסֵף סָבַר: לְרַבִּי הָוְיָא מִתְנַוְּונָה, לְרַבָּנַן לָא הָוְיָא מִתְנַוְּונָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב שימי מקשה מר&#39; שמעון: הוא אומר &quot;אין זכות תולה&quot; — כי אם תולה, אנשים יחשדו בנשים טהורות ששתו: &quot;שמא טמאות הן אלא שזכות תלתה להן&quot;.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מֵתִיב רַב שִׁימִי בַּר אָשֵׁי, רַבִּי שִׁמְעוֹן אוֹמֵר: אֵין זְכוּת תּוֹלָה בַּמַּיִם הַמָּרִים. וְאִם אַתָּה אוֹמֵר זְכוּת תּוֹלָה בַּמַּיִם הַמָּרִים — מְדַחֶה אַתָּה אֶת הַמַּיִם בִּפְנֵי כׇּל הַנָּשִׁים הַשּׁוֹתוֹת. וְאַתָּה מוֹצִיא שֵׁם רַע עַל הַטְּהוֹרוֹת שֶׁשָּׁתוּ, וְהֵן אוֹמְרִים: טְמֵאוֹת הָיוּ, אֶלָּא שֶׁתָּלָה לָהֶן זְכוּת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">וכן: אם מים לא בודקים מי שיש לה עדים במדינת הים — גם ייצא שם רע על טהורות: &quot;שמא יש להן עדים במדינת הים!&quot;</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְאִם אִיתָא יֵשׁ לָהּ עֵדִים בִּמְדִינַת הַיָּם נָמֵי: אַתָּה מוֹצִיא שֵׁם רַע עַל הַטְּהוֹרוֹת שֶׁשָּׁתוּ, וְהֵן אוֹמְרִים: טְמֵאוֹת הָיוּ, אֶלָּא שֶׁיֵּשׁ לָהֶן עֵדִים בִּמְדִינַת הַיָּם!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">דוחים: לפי ר&#39; שמעון (שאין זכות תולה) — גם עדים במדינת הים לא מהווים בעיה, כי אנשים לא תולים בדבר שאינו מצוי.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">לְרַבִּי שִׁמְעוֹן קָאָמְרַתְּ? לְרַבִּי שִׁמְעוֹן, מִדִּזְכוּת לָא תָּלְיָא — עֵדִים נָמֵי לָא תָּלוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב מקשה מברייתא: מנחת הסוטה נשרפת כשבאו עדים שטמאה. מתי באו? אם לפני שקדשה בכלי — תצא לחולין ותיפדה. אלא: אחרי שקדשה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מֵתִיב רַב: וְאֵלּוּ שֶׁמִּנְחוֹתֵיהֶן נִשְׂרָפוֹת,</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אם המים בודקים — המנחה קדשה כדין, ואח&quot;כ באו עדים — לכן נשרפת. אבל אם אין המים בודקים — המנחה קדשה בטעות, וצריכה לצאת לחולין!</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec5">
+<button onclick="toggle(5)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ו:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">תירוצים — זינתה בעזרה, גזירה דרבנן</span>
+<span style="font-size:11px;color:#bbb">8</span>
+<span id="arrow5" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content5" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">הָאוֹמֶרֶת ״טְמֵאָה אֲנִי״, וְשֶׁבָּאוּ לָהּ עֵדִים שֶׁהִיא טְמֵאָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">סיום הקושיה: נשנה שהאומרת &quot;טמאה אני&quot; וכן שבאו עדים — מנחתן נשרפת.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">דַּאֲתוֹ עֵדִים אֵימַת? אִילֵּימָא מִקַּמֵּי דְּתִקְדּוֹשׁ — תִּיפּוֹק לְחוּלִּין.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">מתי באו העדים? אם לפני שהמנחה קדשה בכלי שרת — תצא לחולין ותיפדה. אלא: אחרי שקדשה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא לְבָתַר דִּקְדוּשׁ. אִי אָמְרַתְּ בִּשְׁלָמָא מַיִם בּוֹדְקִין אוֹתָהּ — אַלְמָא בַּת מִקְדָּשׁ וּמִקְרָב הִיא, וְכִי קְדוּשׁ מֵעִיקָּרָא — שַׁפִּיר קְדוּשׁ, וּמִשּׁוּם הָכִי מִנְחָתָהּ נִשְׂרֶפֶת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אם המים בודקים — המנחה קדשה כדין, ולכן כשבאו עדים היא נשרפת (כי כבר קדשה). אם המים לא בודקים — קדשה בטעות, וצריכה לצאת לחולין!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אֶלָּא אִי אָמְרַתְּ אֵין הַמַּיִם בּוֹדְקִין אוֹתָהּ, תִּיגַּלֵּי מִילְּתָא לְמַפְרֵעַ דְּכִי קְדוּשׁ מֵעִיקָּרָא — בְּטָעוּת קְדוּשׁ, וְתִיפּוֹק לְחוּלִּין!</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">אם המים לא בודקים — מתברר למפרע שהמנחה קדשה בטעות. קידוש בטעות לא חל, והמנחה צריכה לצאת לחולין — לא להישרף!</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">אָמַר רַב יְהוּדָה מִדִּיסְקַרְתָּא: כְּגוֹן שֶׁזִּינְּתָה בָּעֲזָרָה, דְּכִי קְדוּשׁ מֵעִיקָּרָא — שַׁפִּיר קְדוּשׁ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב יהודה מדיסקרתא מתרץ: מדובר שזינתה בעזרה עצמה אחרי שהמנחה כבר קדשה כדין. כך הקידוש הראשון היה תקין — ולכן נשרפת.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מַתְקֵיף לַהּ רַב מְשַׁרְשְׁיָא: וַהֲלֹא פִּירְחֵי כְהוּנָּה מְלַוִּין אוֹתָהּ! שֶׁזִּינְּתָה מִפִּירְחֵי כְהוּנָּה עַצְמָן.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה: איך זינתה בעזרה? הרי פירחי כהונה (כהנים צעירים) מלווים אותה! תשובה: זינתה עם פירחי הכהונה עצמם.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַב אָשֵׁי אָמַר: כְּגוֹן שֶׁנִּצְרְכָה לִנְקָבֶיהָ, דְּאַטּוּ פִּירְחֵי כְהוּנָּה בְּכִיפָּה תָּלֵי לַהּ?</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב אשי: או שנצרכה לנקביה — ושם זינתה. הרי לא יכולים לשמור עליה כל רגע.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">רַב פָּפָּא אָמַר: לְעוֹלָם כִּדְאָמְרִינַן מֵעִיקָּרָא, וּדְקָאָמְרַתְּ תִּיפּוֹק לְחוּלִּין — מִדְּרַבָּנַן, גְּזֵירָה שֶׁמָּא יֹאמְרוּ: מוֹצִיאִין מִכְּלֵי שָׁרֵת לְחוֹל.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב פפא: אפשר לפרש כמקודם (עדים על הסתירה המקורית). ומה שלא יוצאת לחולין — גזירה דרבנן: שמא יאמרו מוציאים מכלי שרת לחולין.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec6">
+<button onclick="toggle(6)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ו:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">קושיה מהברייתא על דין מנחת הסוטה</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow6" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content6" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">מֵתִיב רַב מָרִי: נִטְמֵאת מִנְחָתָהּ עַד שֶׁלֹּא קָדְשָׁה בִּכְלִי — הֲרֵי הִיא כְּכׇל הַמְּנָחוֹת, וְתִפָּדֶה. מִשֶּׁקָּדְשָׁה בִּכְלִי — הֲרֵי הִיא כְּכׇל הַמְּנָחוֹת, וְתִשָּׂרֵף.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">רב מרי מקשה מברייתא: מנחה שנטמאה — לפני שקדשה בכלי תיפדה, אחרי שקדשה תישרף.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קָדַשׁ הַקּוֹמֶץ, וְלֹא הִסְפִּיק לְהַקְרִיבוֹ עַד שֶׁמֵּת הוּא אוֹ עַד שֶׁמֵּתָה הִיא — הֲרֵי הִיא כְּכׇל הַמְּנָחוֹת, וְתִשָּׂרֵף.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קדש הקומץ ולא הספיק להקריבו ומת הבעל או מתה היא — נשרפת כמנחה שקדשה ונפסלה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">קָרַב הַקּוֹמֶץ וְלֹא הִסְפִּיק לֶאֱכוֹל שִׁירַיִם עַד שֶׁמֵּת הוּא אוֹ עַד שֶׁמֵּתָה הִיא — הֲרֵי הִיא כְּכׇל הַמְּנָחוֹת, וְתֵאָכֵל. שֶׁעַל הַסָּפֵק בָּאת מִתְּחִילָּה, כִּיפְּרָה סְפֵיקָהּ וְהָלְכָה לָהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">הקריב הקומץ ולא הספיק לאכול שיריים ומת — נאכלת. למה? כי המנחה באה על ספק מתחילה — כיפרה ספיקה והלכה לה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">בָּאוּ לָהּ עֵדִים שֶׁהִיא טְמֵאָה — מִנְחָתָהּ נִשְׂרֶפֶת. נִמְצְאוּ עֵדֶיהָ זוֹמְמִין — מִנְחָתָהּ חוּלִּין.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">באו עדים שטמאה (לפני הקרבת הקומץ) — נשרפת. נמצאו עדיה זוממים — מנחתה חולין.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">עֵדִים זוֹמְמִין קָאָמְרַתְּ?! עֵדִים זוֹמְמִין קָלָא אִית לְהוּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">קושיה על רב פפא: אם עדים זוממים — המנחה יוצאת לחולין! אז אין גזירה ש&quot;מוציאים מכלי שרת לחולין&quot;! דוחים: עדים זוממים — יש להם קול (= הדבר מתפרסם), ואנשים יודעים שהיה הקדש בטעות.</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:6px" id="sec7">
+<button onclick="toggle(7)" style="width:100%;text-align:right;cursor:pointer;background:#fff;border:1px solid #e0e0e0;border-radius:10px;padding:12px 14px;color:#1a1a1a;font-family:inherit;font-size:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:10px;padding:2px 8px;border-radius:6px;background:#f0f6fb;color:#1a5a8a;font-weight:700;border:1px solid #1a5a8a30">גמרא</span>
+<span style="font-size:11px;color:#999;font-weight:700">ו:</span>
+<span style="font-size:14px;font-weight:700;flex:1;color:#222">ברייתא כרב ששת — דרשת &quot;וטהורה היא&quot;</span>
+<span style="font-size:11px;color:#bbb">5</span>
+<span id="arrow7" style="color:#bbb;transition:transform 0.15s;font-size:13px">▾</span>
+</div>
+</button>
+<div id="content7" style="display:none;background:#f0f6fb;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 10px 10px;padding:8px 12px 16px">
+<div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">תַּנְיָא כְּווֹתֵיהּ דְּרַב שֵׁשֶׁת, וְלָאו מִטַּעְמֵיהּ.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">ברייתא תומכת ברב ששת (שהמים לא בודקים כשיש עדים), אך מטעם אחר — דרשות מהפסוק.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״טְהוֹרָה״ — וְלֹא שֶׁיֵּשׁ לָהּ עֵדִים בִּמְדִינַת הַיָּם.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;טהורה&quot; — ולא שיש לה עדים במדינת הים. רק טהורה באמת — &quot;ונקתה ונזרעה זרע&quot;. אבל אם יש עדים — אינה נבדקת ואינה נזרעת.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״וּטְהוֹרָה״ — וְלֹא שֶׁתָּלְתָה לָהּ זְכוּת.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;וטהורה&quot; (וי&quot;ו יתירה) — ולא שזכות תולה לה. אם הזכות תלתה ולא מתה מיד — אין זה סימן לטהרה.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">״הִיא״ — וְלֹא שֶׁיִּשְׂאוּ וְיִתְּנוּ בָּהּ מוֹזְרוֹת בַּלְּבָנָה.</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">&quot;היא&quot; — ולא שמוזרות בלבנה (= נשים טוות לאור הירח) מספרות עליה שזינתה. אם הדבר ידוע ומפורסם — המים לא בודקים.</div>
+</div><div style="margin-top:14px">
+<div style="background:#deedf7;border-radius:8px;border-right:4px solid #1a5a8a;padding:12px 14px">
+<div style="font-size:16px;line-height:2.1;color:#1a1a1a">וְרַבִּי שִׁמְעוֹן, נְהִי דְּוָיו לָא דָּרֵישׁ, וְהָא אִיכָּא</div>
+</div>
+<div style="padding:9px 8px 2px;font-size:14px;line-height:2;color:#555">שואלים: ר&#39; שמעון שאינו דורש את הוי&quot;ו (= אין זכות תולה) — הרי עדיין יש את הדרשה על עדים במדינת הים, ואם כן יש חשש שיוציאו שם רע על טהורות!</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;gap:8px;padding:8px 10px;background:#fff;border-bottom:1px solid #e8e8e8"><a href="sotah_daf_07.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">הבא ←</a><a href="index.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">כל הדפים</a><a href="sotah_daf_05.html" style="color:#1a5a8a;text-decoration:none;font-size:13px;padding:6px 10px;border:1px solid #ddd;border-radius:8px">→ הקודם</a></div>
+<div style="padding:20px 16px 30px;text-align:center;border-top:1px solid #e0e0e0;margin-top:10px;background:#fff">
+<div style="font-size:11px;color:#aaa;line-height:2">
+כל עזר זה נבנה בסיוע כלי AI.<br>
+יתכנו שגיאות וטעויות מהותיות, עליך לוודא את נכונות הטקסט ואמיתיות הביאור.<br>
+להערות והארות, ועזרה בשיפור הביאור: <span style="color:#888">Chanoch@maor.org</span>
+</div>
+<div style="font-size:10px;color:#ccc;margin-top:14px;line-height:1.9;border-top:1px solid #eee;padding-top:14px">
+הטקסט המנוקד של התלמוד והביאור של הרב עדין אבן-ישראל (שטיינזלץ) נלקחו ממהדורת וויליאם דוידסון הדיגיטלית של תלמוד קורן-נוי, באדיבות <a href="https://www.sefaria.org/william-davidson-talmud" style="color:#999;text-decoration:underline" target="_blank">ספריא (Sefaria.org)</a>.<br>
+תכנים אלו זמינים לשימוש חופשי תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0" style="color:#999;text-decoration:underline" target="_blank">CC-BY-NC</a> — מותר להשתמש, לשתף ולעבד, בתנאי מתן קרדיט ושימוש שאינו מסחרי.
+</div>
+</div>
+<script>
+const amudMap=["ו.","ו.","ו.","ו.","ו.","ו:","ו:","ו:"];
+let openSecs=new Set();
+function toggle(i){const el=document.getElementById("content"+i),ar=document.getElementById("arrow"+i),btn=el.previousElementSibling;if(openSecs.has(i)){el.style.display="none";ar.style.transform="none";btn.style.borderRadius="10px";btn.style.boxShadow="0 1px 3px rgba(0,0,0,0.04)";openSecs.delete(i)}else{el.style.display="block";ar.style.transform="rotate(180deg)";btn.style.borderRadius="10px 10px 0 0";btn.style.boxShadow="none";openSecs.add(i)}updateToggleBtn()}
+function toggleAll(){const v=getVisible();if(v.length>0&&v.every(i=>openSecs.has(i)))v.forEach(i=>{if(openSecs.has(i))toggle(i)});else v.forEach(i=>{if(!openSecs.has(i))toggle(i)})}
+function getVisible(){const r=[];for(let i=0;i<8;i++)if(document.getElementById("sec"+i).style.display!=="none")r.push(i);return r}
+function filterAmud(f){for(let i=0;i<8;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="ו."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
+function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
+</script>
+</body>
+</html>
