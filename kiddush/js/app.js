@@ -142,6 +142,7 @@ function renderHalCard(ch, h, preview, isOpen) {
       <span class="hal-arrow">◀</span>
     </div>
     <div class="hal-body">
+      ${h.bio ? `<div style="font-size:.9rem;line-height:1.75;color:var(--txt);padding:10px 14px;background:var(--gold-bg);border-right:3px solid var(--gold);border-radius:0 10px 10px 0;margin-bottom:10px">${h.bio}</div>` : ''}
       ${h.he ? `<div class="txt-rambam">${h.he}</div>` : ''}
       ${h.st && h.st.length ? `<div class="txt-steinsaltz"><div class="st-label">ביאור שטיינזלץ</div>${h.st.map(s => `<div class="st-item">${fmtSt(s)}</div>`).join('')}</div>` : ''}
       ${h.viz ? renderViz(h.viz, ch, h.n) : ''}

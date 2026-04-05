@@ -1,19 +1,24 @@
 /* data-loader.js — fetch JSON data and map to short-key format */
 (async function loadData(){
   try {
-    const [rawData, vizMap] = await Promise.all([
+    const [rawData, vizMap, explanations] = await Promise.all([
       fetch('data/rambam_data.json').then(r => r.json()),
-      fetch('data/viz_map.json').then(r => r.json())
+      fetch('data/viz_map.json').then(r => r.json()),
+      fetch('data/explanations.json').then(r => r.json()).catch(() => ({}))
     ]);
     window.DATA = rawData.map(ch => ({
       ch: ch.chapter,
-      halachot: ch.halachot.map(h => ({
-        n: h.halacha_num,
-        he: h.hebrew,
-        en: h.english,
-        st: h.steinsaltz,
-        viz: vizMap[ch.chapter + ':' + h.halacha_num] || null
-      }))
+      halachot: ch.halachot.map(h => {
+        const key = ch.chapter + ':' + h.halacha_num;
+        return {
+          n: h.halacha_num,
+          he: h.hebrew,
+          en: h.english,
+          st: h.steinsaltz,
+          viz: vizMap[key] || null,
+          bio: explanations[key] || null
+        };
+      })
     }));
     if(window.onDataReady) window.onDataReady();
   } catch(e) {
