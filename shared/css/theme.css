@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700&family=Secular+One&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 
 /* Light theme = default */
@@ -20,7 +20,7 @@
   --r:14px;
   --font-body:'Heebo',sans-serif;
   --font-src:'Frank Ruhl Libre',serif;
-  --font-hal:'Alef','Heebo',sans-serif;
+  --font-hal:'Secular One','Heebo',sans-serif;
   /* Theme-aware utility colors */
   --border:rgba(0,0,0,.1);
   --border-light:rgba(0,0,0,.06);
