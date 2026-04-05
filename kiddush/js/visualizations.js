@@ -2,6 +2,10 @@ function fmtSt(s) {
   return s.replace(/【([^】]+)】/g, '<strong class="st-quote">$1</strong>');
 }
 
+function fmtRef(s) {
+  return s.replace(/\(\(([^)]+)\)\)/g, '<span style="font-family:Alef,sans-serif;font-size:.75em;font-weight:400;color:var(--txt3)">($1)</span>');
+}
+
 function renderViz(vizType, ch, hNum) {
   const vizMap = {
     moon3d: `<div class="viz-container" id="viz-moon3d">
