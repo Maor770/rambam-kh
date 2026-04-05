@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מסכת סוטה — בקרוב</title>
+<link rel="stylesheet" href="../shared/css/theme.css">
+<style>
+  .placeholder{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:2rem 1rem;
+    text-align:center;
+  }
+  .placeholder-icon{
+    font-size:4rem;
+    margin-bottom:1rem;
+    opacity:.7;
+  }
+  .placeholder h1{
+    font-family:var(--font-src);
+    font-size:1.8rem;
+    color:var(--gold);
+    margin-bottom:.5rem;
+  }
+  .placeholder p{
+    color:var(--txt2);
+    font-size:1rem;
+    margin-bottom:2rem;
+    max-width:320px;
+    line-height:1.6;
+  }
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    color:var(--sky);
+    text-decoration:none;
+    font-size:1rem;
+    min-width:44px;
+    min-height:44px;
+    padding:.5rem 1rem;
+    border:1px solid var(--card2);
+    border-radius:var(--r);
+    transition:border-color .2s, color .2s;
+  }
+  .back-link:hover, .back-link:focus-visible{
+    border-color:var(--gold);
+    color:var(--gold);
+  }
+</style>
+</head>
+<body>
+
+<main class="placeholder">
+  <div class="placeholder-icon" aria-hidden="true">&#128214;&#127769;</div>
+  <h1>בקרוב...</h1>
+  <p>לימוד דף יומי במסכת סוטה יתווסף בקרוב בעזרת ה׳.</p>
+  <a href="../" class="back-link">&#8592; חזרה לבית המדרש</a>
+</main>
+
+<script src="../shared/js/settings.js"></script>
+<script>RambamSettings.applyTheme();</script>
+</body>
+</html>

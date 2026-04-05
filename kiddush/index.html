@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>הלכות קידוש החודש — רמב"ם עם ביאור שטיינזלץ</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-row">
+    <a href="../" style="text-decoration:none"><span class="app-title">הלכות קידוש החודש</span></a>
+    <div style="display:flex;gap:4px;align-items:center">
+      <button class="font-btn" onclick="changeFontSize(-1)">א‎-</button>
+      <button class="font-btn" onclick="changeFontSize(1)">א+</button>
+      <button class="lang-btn" onclick="alert('אנגלית — בקרוב!')">עברית ▾</button>
+    </div>
+  </div>
+  <div class="mode-tabs">
+    <button class="mode-tab active" onclick="setMode('overview')">🔭 סקירה</button>
+    <button class="mode-tab" onclick="setMode('study')">📖 לימוד</button>
+    <button class="mode-tab" onclick="setMode('continuous')">📜 רציף</button>
+  </div>
+</div>
+
+<!-- CHAPTER SCROLL (study/continuous modes) -->
+<div class="ch-scroll" id="chScroll" style="display:none"></div>
+
+<!-- FLOATING PROGRESS -->
+<div class="float-progress" id="floatProg" style="opacity:0"></div>
+
+<!-- MAIN -->
+<div class="main" id="mainContent">
+  <div style="text-align:center;padding:60px 20px;color:var(--txt3)">
+    <div style="font-size:2rem;margin-bottom:12px">🌙</div>
+    <div>טוען נתונים...</div>
+  </div>
+</div>
+
+<div class="footer">
+  מקור: משנה תורה לרמב"ם, הלכות קידוש החודש · ביאור שטיינזלץ (קורן) · תרגום Touger (Moznaim)
+  <br>"דִּרְשׁוּ מֵעַל סֵפֶר ה' וְקִרְאוּ — אַחַת מֵהֵנָּה לֹא נֶעְדָּרָה" (י״ט:ט״ז)
+</div>
+
+<!-- Scripts — order matters! -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../shared/js/settings.js"></script>
+<script src="../shared/js/analytics.js"></script>
+<script src="js/constants.js"></script>
+<script src="js/calculators.js"></script>
+<script src="js/new-calculators.js"></script>
+<script src="js/visualizations.js"></script>
+<script src="js/new-visualizations.js"></script>
+<script src="js/moon3d.js"></script>
+<script src="js/app.js"></script>
+<script src="js/data-loader.js"></script><!-- Must be last — triggers init -->
+
+</body>
+</html>

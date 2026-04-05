@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>הגדרות — רמב"ם קידוש החודש</title>
+<link rel="stylesheet" href="../shared/css/theme.css">
+<style>
+/* ── Admin page styles (mobile-first, dark theme) ── */
+.admin-wrap{max-width:640px;margin:0 auto;padding:0 16px 80px}
+
+/* Top bar */
+.admin-topbar{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);padding:12px 16px;margin:0 -16px}
+.admin-topbar-inner{display:flex;align-items:center;justify-content:space-between;max-width:640px;margin:0 auto}
+.back-link{color:var(--sky);text-decoration:none;font-size:.9rem;font-weight:500;padding:8px 12px;margin:-8px -12px;min-height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:8px;transition:background .15s}
+.back-link:active{background:rgba(135,206,235,.08)}
+.admin-title{font-size:1rem;font-weight:700;color:var(--gold)}
+
+/* Section cards */
+.section{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:var(--r);margin:16px 0;overflow:hidden}
+.section-header{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;gap:10px}
+.section-icon{font-size:1.1rem}
+.section-title{font-size:.95rem;font-weight:700;color:var(--gold)}
+.section-body{padding:16px}
+
+/* Form rows */
+.setting-row{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.setting-row:last-child{border-bottom:none}
+.setting-label{font-size:.85rem;color:var(--txt2);margin-bottom:8px;font-weight:500}
+
+/* Slider */
+.slider-wrap{display:flex;align-items:center;gap:12px}
+.slider-wrap input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:6px;background:var(--card2);border-radius:3px;outline:none}
+.slider-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--gold);cursor:pointer;border:2px solid var(--bg)}
+.slider-wrap input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--gold);cursor:pointer;border:2px solid var(--bg)}
+.slider-val{min-width:40px;text-align:center;font-size:.85rem;color:var(--gold);font-weight:600}
+.preview-text{font-family:var(--font-src);color:var(--silver);padding:10px 14px;background:rgba(139,92,246,.05);border-right:3px solid var(--purple);border-radius:0 10px 10px 0;margin-top:10px;line-height:2}
+
+/* Radio group */
+.radio-group{display:flex;flex-wrap:wrap;gap:8px}
+.radio-opt{position:relative}
+.radio-opt input{position:absolute;opacity:0;width:0;height:0}
+.radio-opt label{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;min-height:44px;min-width:44px;border-radius:10px;border:1.5px solid rgba(255,255,255,.1);background:transparent;color:var(--txt2);font-family:var(--font-body);font-size:.85rem;font-weight:500;cursor:pointer;transition:.15s;user-select:none}
+.radio-opt input:checked+label{border-color:var(--gold);color:var(--gold);background:rgba(244,208,63,.06)}
+.radio-opt label:active{background:rgba(255,255,255,.04)}
+
+/* Progress bar */
+.progress-wrap{margin-top:8px}
+.progress-bar{height:8px;background:var(--card2);border-radius:4px;overflow:hidden;margin-bottom:8px}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--green));border-radius:4px;transition:width .4s ease}
+.progress-label{font-size:.8rem;color:var(--txt3)}
+
+/* Stats grid */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.stat-card{background:var(--card2);border-radius:10px;padding:12px;text-align:center}
+.stat-val{font-size:1.4rem;font-weight:700;color:var(--gold)}
+.stat-name{font-size:.75rem;color:var(--txt3);margin-top:2px}
+
+/* Bookmarks list */
+.bm-list{list-style:none}
+.bm-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.bm-item:last-child{border-bottom:none}
+.bm-info{font-size:.88rem;color:var(--txt)}
+.bm-info span{color:var(--txt3);font-size:.78rem;margin-right:8px}
+.bm-del{min-width:44px;min-height:44px;border:none;background:none;color:var(--red);font-size:1rem;cursor:pointer;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.bm-del:active{background:rgba(239,68,68,.1)}
+.empty-msg{font-size:.85rem;color:var(--txt3);text-align:center;padding:16px 0}
+
+/* Page views table */
+.views-table{width:100%;border-collapse:collapse;margin-top:8px}
+.views-table th,.views-table td{text-align:right;padding:8px 6px;font-size:.82rem}
+.views-table th{color:var(--txt3);font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
+.views-table td{color:var(--txt);border-bottom:1px solid rgba(255,255,255,.02)}
+.views-table td:last-child{color:var(--sky);font-weight:600;text-align:center}
+
+/* Reset button */
+.reset-btn{display:block;width:100%;padding:14px;min-height:48px;border-radius:var(--r);border:1.5px solid var(--red);background:transparent;color:var(--red);font-family:var(--font-body);font-size:.9rem;font-weight:600;cursor:pointer;transition:.15s;margin:24px 0}
+.reset-btn:active{background:rgba(239,68,68,.1)}
+
+/* Tablet+ */
+@media(min-width:600px){
+  .admin-wrap{padding:0 24px 80px}
+  .stats-grid{grid-template-columns:repeat(3,1fr)}
+  .radio-group{gap:10px}
+}
+</style>
+</head>
+<body>
+<div class="admin-wrap">
+
+  <!-- Top bar -->
+  <div class="admin-topbar">
+    <div class="admin-topbar-inner">
+      <a href="../" class="back-link">&rarr; &#x05D7;&#x05D6;&#x05E8;&#x05D4;</a>
+      <div class="admin-title">&#x05D4;&#x05D2;&#x05D3;&#x05E8;&#x05D5;&#x05EA;</div>
+    </div>
+  </div>
+
+  <!-- Display Settings -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">&#x05D0;</span>
+      <span class="section-title">&#x05EA;&#x05E6;&#x05D5;&#x05D2;&#x05D4;</span>
+    </div>
+    <div class="section-body">
+
+      <!-- Font size -->
+      <div class="setting-row">
+        <div class="setting-label">&#x05D2;&#x05D5;&#x05D3;&#x05DC; &#x05D2;&#x05D5;&#x05E4;&#x05DF;</div>
+        <div class="slider-wrap">
+          <span style="font-size:.75rem;color:var(--txt3)">&#x05D0;-</span>
+          <input type="range" id="fontSlider" min="0.8" max="1.6" step="0.1" value="1.1">
+          <span style="font-size:1.1rem;color:var(--txt3)">&#x05D0;+</span>
+          <span class="slider-val" id="fontVal">1.1</span>
+        </div>
+        <div class="preview-text" id="fontPreview" style="font-size:1.1rem">
+          &#x05D3;&#x05D5;&#x05D2;&#x05DE;&#x05D4; &#x05DC;&#x05EA;&#x05E6;&#x05D5;&#x05D2;&#x05EA; &#x05D4;&#x05D8;&#x05E7;&#x05E1;&#x05D8; &mdash; &#x05D4;&#x05DC;&#x05DB;&#x05D5;&#x05EA; &#x05E7;&#x05D9;&#x05D3;&#x05D5;&#x05E9; &#x05D4;&#x05D7;&#x05D5;&#x05D3;&#x05E9;
+        </div>
+      </div>
+
+      <!-- Language -->
+      <div class="setting-row">
+        <div class="setting-label">&#x05E9;&#x05E4;&#x05D4;</div>
+        <div class="radio-group" id="langGroup">
+          <div class="radio-opt">
+            <input type="radio" name="lang" id="lang-he" value="he">
+            <label for="lang-he">&#x05E2;&#x05D1;&#x05E8;&#x05D9;&#x05EA;</label>
+          </div>
+          <div class="radio-opt">
+            <input type="radio" name="lang" id="lang-en" value="en">
+            <label for="lang-en">English</label>
+          </div>
+          <div class="radio-opt">
+            <input type="radio" name="lang" id="lang-both" value="he+en">
+            <label for="lang-both">&#x05E2;&#x05D1;&#x05E8;&#x05D9;&#x05EA; + English</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Theme -->
+      <div class="setting-row">
+        <div class="setting-label">&#x05E2;&#x05E8;&#x05DB;&#x05EA; &#x05E0;&#x05D5;&#x05E9;&#x05D0;</div>
+        <div class="radio-group" id="themeGroup">
+          <div class="radio-opt">
+            <input type="radio" name="theme" id="theme-dark" value="dark">
+            <label for="theme-dark">&#x05DB;&#x05D4;&#x05D4;</label>
+          </div>
+          <div class="radio-opt">
+            <input type="radio" name="theme" id="theme-light" value="light">
+            <label for="theme-light">&#x05D1;&#x05D4;&#x05D9;&#x05E8;</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Study Settings -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">&#x05D1;</span>
+      <span class="section-title">&#x05DC;&#x05D9;&#x05DE;&#x05D5;&#x05D3;</span>
+    </div>
+    <div class="section-body">
+      <div class="setting-row">
+        <div class="setting-label">&#x05DE;&#x05E1;&#x05DC;&#x05D5;&#x05DC; &#x05DC;&#x05D9;&#x05DE;&#x05D5;&#x05D3; &#x05D9;&#x05D5;&#x05DE;&#x05D9;</div>
+        <div class="radio-group" id="studyModeGroup">
+          <div class="radio-opt">
+            <input type="radio" name="studyMode" id="mode-1ch" value="1ch">
+            <label for="mode-1ch">&#x05E4;&#x05E8;&#x05E7; &#x05D0;&#x05D7;&#x05D3; &#x05DC;&#x05D9;&#x05D5;&#x05DD;</label>
+          </div>
+          <div class="radio-opt">
+            <input type="radio" name="studyMode" id="mode-3ch" value="3ch">
+            <label for="mode-3ch">3 &#x05E4;&#x05E8;&#x05E7;&#x05D9;&#x05DD; &#x05DC;&#x05D9;&#x05D5;&#x05DD;</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Study Progress -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">&#x05D2;</span>
+      <span class="section-title">&#x05D4;&#x05EA;&#x05E7;&#x05D3;&#x05DE;&#x05D5;&#x05EA;</span>
+    </div>
+    <div class="section-body">
+      <div class="setting-row">
+        <div class="setting-label">&#x05D4;&#x05DC;&#x05DB;&#x05D5;&#x05EA; &#x05E9;&#x05E0;&#x05DC;&#x05DE;&#x05D3;&#x05D5;</div>
+        <div class="progress-wrap">
+          <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+          <div class="progress-label" id="progressLabel">0 / 235</div>
+        </div>
+      </div>
+
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card">
+          <div class="stat-val" id="statViews">0</div>
+          <div class="stat-name">&#x05E6;&#x05E4;&#x05D9;&#x05D5;&#x05EA;</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="statStudied">0</div>
+          <div class="stat-name">&#x05D4;&#x05DC;&#x05DB;&#x05D5;&#x05EA;</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="statLast">&mdash;</div>
+          <div class="stat-name">&#x05DC;&#x05DE;&#x05D3; &#x05DC;&#x05D0;&#x05D7;&#x05E8;&#x05D5;&#x05E0;&#x05D4;</div>
+        </div>
+      </div>
+
+      <div class="setting-row" id="viewsByPageRow" style="margin-top:12px">
+        <div class="setting-label">&#x05E6;&#x05E4;&#x05D9;&#x05D5;&#x05EA; &#x05DC;&#x05E4;&#x05D9; &#x05E2;&#x05DE;&#x05D5;&#x05D3;</div>
+        <table class="views-table" id="viewsTable">
+          <thead><tr><th>&#x05E2;&#x05DE;&#x05D5;&#x05D3;</th><th>&#x05E6;&#x05E4;&#x05D9;&#x05D5;&#x05EA;</th></tr></thead>
+          <tbody id="viewsBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bookmarks -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">&#x05D3;</span>
+      <span class="section-title">&#x05E1;&#x05D9;&#x05DE;&#x05E0;&#x05D9;&#x05D5;&#x05EA;</span>
+    </div>
+    <div class="section-body">
+      <ul class="bm-list" id="bmList"></ul>
+    </div>
+  </div>
+
+  <!-- Reset -->
+  <button class="reset-btn" id="resetBtn">&#x05D0;&#x05D9;&#x05E4;&#x05D5;&#x05E1; &#x05DB;&#x05DC; &#x05D4;&#x05D4;&#x05D2;&#x05D3;&#x05E8;&#x05D5;&#x05EA;</button>
+
+</div>
+
+<!-- Shared scripts -->
+<script src="../shared/js/settings.js"></script>
+<script src="../shared/js/analytics.js"></script>
+<script>
+(function(){
+  const S = window.RambamSettings;
+  const A = window.RambamAnalytics;
+
+  /* ── Initialise controls from saved settings ── */
+  function init(){
+    S.applyTheme();
+    const all = S.getAll();
+
+    // Font size
+    const slider = document.getElementById('fontSlider');
+    const fontVal = document.getElementById('fontVal');
+    const preview = document.getElementById('fontPreview');
+    slider.value = all.fontSize;
+    fontVal.textContent = all.fontSize;
+    preview.style.fontSize = all.fontSize + 'rem';
+    slider.addEventListener('input', function(){
+      const v = parseFloat(this.value);
+      fontVal.textContent = v.toFixed(1);
+      preview.style.fontSize = v + 'rem';
+      S.set('fontSize', v);
+    });
+
+    // Language
+    const langRadio = document.querySelector('input[name="lang"][value="' + all.language + '"]');
+    if(langRadio) langRadio.checked = true;
+    document.querySelectorAll('input[name="lang"]').forEach(function(r){
+      r.addEventListener('change', function(){ S.set('language', this.value); });
+    });
+
+    // Theme
+    const themeRadio = document.querySelector('input[name="theme"][value="' + all.theme + '"]');
+    if(themeRadio) themeRadio.checked = true;
+    document.querySelectorAll('input[name="theme"]').forEach(function(r){
+      r.addEventListener('change', function(){
+        S.set('theme', this.value);
+        S.applyTheme();
+      });
+    });
+
+    // Daily study mode
+    const modeRadio = document.querySelector('input[name="studyMode"][value="' + all.dailyStudyMode + '"]');
+    if(modeRadio) modeRadio.checked = true;
+    document.querySelectorAll('input[name="studyMode"]').forEach(function(r){
+      r.addEventListener('change', function(){ S.set('dailyStudyMode', this.value); });
+    });
+
+    // Study progress
+    loadProgress();
+
+    // Bookmarks
+    renderBookmarks(all.bookmarks);
+
+    // Reset
+    document.getElementById('resetBtn').addEventListener('click', function(){
+      if(confirm('\u05D4\u05D0\u05DD \u05DC\u05D0\u05E4\u05E1 \u05D0\u05EA \u05DB\u05DC \u05D4\u05D4\u05D2\u05D3\u05E8\u05D5\u05EA \u05D5\u05DC\u05D7\u05D6\u05D5\u05E8 \u05DC\u05D1\u05E8\u05D9\u05E8\u05EA \u05DE\u05D7\u05D3\u05DC?')){
+        S.reset();
+        location.reload();
+      }
+    });
+  }
+
+  /* ── Progress / Analytics ── */
+  function loadProgress(){
+    var total = 235;
+    var studied = 0;
+    var totalViews = 0;
+    var lastStudied = S.get('lastStudied');
+    var viewsByPage = {};
+
+    if(A && typeof A.getStats === 'function'){
+      var stats = A.getStats();
+      totalViews = stats.totalViews || 0;
+      lastStudied = stats.lastStudied || lastStudied;
+      viewsByPage = stats.viewsByPage || {};
+      var studiedArr = A.getStudiedHalachot();
+      studied = studiedArr ? studiedArr.length : (stats.halachotStudied || 0);
+    }
+
+    var pct = Math.round((studied / total) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = studied + ' / ' + total + ' (' + pct + '%)';
+    document.getElementById('statViews').textContent = totalViews;
+    document.getElementById('statStudied').textContent = studied;
+
+    if(lastStudied){
+      try {
+        var d = new Date(lastStudied);
+        document.getElementById('statLast').textContent = d.toLocaleDateString('he-IL');
+      } catch(e){
+        document.getElementById('statLast').textContent = lastStudied;
+      }
+    }
+
+    // Views by page table
+    var tbody = document.getElementById('viewsBody');
+    var pages = Object.keys(viewsByPage);
+    if(pages.length === 0){
+      document.getElementById('viewsByPageRow').style.display = 'none';
+    } else {
+      pages.sort(function(a,b){ return viewsByPage[b] - viewsByPage[a]; });
+      tbody.innerHTML = '';
+      pages.forEach(function(p){
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + p + '</td><td>' + viewsByPage[p] + '</td>';
+        tbody.appendChild(tr);
+      });
+    }
+  }
+
+  /* ── Bookmarks ── */
+  function renderBookmarks(bookmarks){
+    var list = document.getElementById('bmList');
+    var keys = bookmarks ? Object.keys(bookmarks) : [];
+    if(keys.length === 0){
+      list.innerHTML = '<li class="empty-msg">\u05D0\u05D9\u05DF \u05E1\u05D9\u05DE\u05E0\u05D9\u05D5\u05EA \u05E9\u05DE\u05D5\u05E8\u05D5\u05EA</li>';
+      return;
+    }
+    list.innerHTML = '';
+    keys.forEach(function(key){
+      var li = document.createElement('li');
+      li.className = 'bm-item';
+      var info = document.createElement('div');
+      info.className = 'bm-info';
+      var label = bookmarks[key] && bookmarks[key].label ? bookmarks[key].label : key;
+      info.textContent = label;
+      if(label !== key){
+        var sp = document.createElement('span');
+        sp.textContent = key;
+        info.appendChild(sp);
+      }
+      var del = document.createElement('button');
+      del.className = 'bm-del';
+      del.setAttribute('aria-label', '\u05DE\u05D7\u05E7 \u05E1\u05D9\u05DE\u05E0\u05D9\u05D4');
+      del.innerHTML = '&#x2715;';
+      del.addEventListener('click', function(){
+        var bm = S.get('bookmarks') || {};
+        delete bm[key];
+        S.set('bookmarks', bm);
+        renderBookmarks(bm);
+      });
+      li.appendChild(info);
+      li.appendChild(del);
+      list.appendChild(li);
+    });
+  }
+
+  /* ── Boot ── */
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>

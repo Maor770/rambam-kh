@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>בית המדרש — רמב״ם יומי</title>
+<link rel="stylesheet" href="shared/css/theme.css">
+<style>
+  .home-header{
+    text-align:center;
+    padding:2rem 1rem 1rem;
+  }
+  .home-header h1{
+    font-family:var(--font-src);
+    font-size:2rem;
+    color:var(--gold);
+    margin-bottom:.25rem;
+  }
+  .header-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:.75rem;
+  }
+  .gear-link{
+    color:var(--txt3);
+    text-decoration:none;
+    font-size:1.5rem;
+    min-width:44px;
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    transition:color .2s;
+  }
+  .gear-link:hover{ color:var(--gold); }
+
+  /* Date display */
+  .date-block{
+    text-align:center;
+    padding:0 1rem 1.5rem;
+  }
+  .date-hebrew{
+    font-family:var(--font-src);
+    font-size:1.5rem;
+    color:var(--gold);
+    font-weight:700;
+  }
+  .date-greg{
+    font-size:.95rem;
+    color:var(--txt2);
+    margin-top:.15rem;
+  }
+
+  /* Card grid */
+  .card-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+    padding:0 1rem 2rem;
+    max-width:700px;
+    margin:0 auto;
+  }
+  @media(min-width:600px){
+    .card-grid{ grid-template-columns:1fr 1fr; }
+  }
+  .card-link{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    background:var(--card);
+    border-radius:var(--r);
+    padding:1.5rem;
+    border:1px solid var(--card2);
+    transition:border-color .2s, transform .15s;
+    min-height:44px;
+  }
+  .card-link:hover, .card-link:focus-visible{
+    border-color:var(--gold);
+    transform:translateY(-2px);
+  }
+  .card-icon{
+    font-size:2rem;
+    margin-bottom:.5rem;
+    display:block;
+  }
+  .card-title{
+    font-family:var(--font-src);
+    font-size:1.2rem;
+    color:var(--txt);
+    font-weight:700;
+    margin-bottom:.35rem;
+  }
+  .card-desc{
+    font-size:.9rem;
+    color:var(--txt2);
+    line-height:1.5;
+  }
+  .badge{
+    display:inline-block;
+    background:var(--purple);
+    color:#fff;
+    font-size:.7rem;
+    padding:.15rem .5rem;
+    border-radius:999px;
+    margin-right:.4rem;
+    vertical-align:middle;
+  }
+
+  /* Footer */
+  .home-footer{
+    text-align:center;
+    padding:1.5rem 1rem 2rem;
+    font-size:.8rem;
+    color:var(--txt3);
+  }
+</style>
+</head>
+<body>
+
+<header class="home-header">
+  <div class="header-row">
+    <h1>בית המדרש</h1>
+    <a href="admin/index.html" class="gear-link" aria-label="הגדרות">&#x2699;</a>
+  </div>
+</header>
+
+<section class="date-block">
+  <div class="date-hebrew" id="dateHebrew">—</div>
+  <div class="date-greg" id="dateGreg">—</div>
+</section>
+
+<section class="card-grid">
+  <a href="kiddush/" class="card-link">
+    <span class="card-icon" aria-hidden="true">&#127769;</span>
+    <div class="card-title">הלכות קידוש החודש</div>
+    <div class="card-desc">לימוד יומי בהלכות קידוש החודש לרמב״ם, עם ביאורים ותרשימים אינטראקטיביים.</div>
+  </a>
+  <a href="sotah/" class="card-link">
+    <span class="card-icon" aria-hidden="true">&#128220;</span>
+    <div class="card-title">מסכת סוטה — דף יומי <span class="badge">בקרוב</span></div>
+    <div class="card-desc">לימוד דף יומי במסכת סוטה עם פירושים וכלי עזר.</div>
+  </a>
+</section>
+
+<footer class="home-footer">
+  נבנה לעילוי נשמת לומדי התורה &bull; תשפ״ו
+</footer>
+
+<script src="shared/js/settings.js"></script>
+<script src="shared/js/hebrew-date.js"></script>
+<script src="shared/js/analytics.js"></script>
+<script>
+(function(){
+  RambamSettings.applyTheme();
+  RambamAnalytics.trackPageView('home');
+  try {
+    var d = HebrewDate.today();
+    document.getElementById('dateHebrew').textContent = d.hebrew;
+    document.getElementById('dateGreg').textContent = d.gregorian;
+  } catch(e){
+    console.error('HebrewDate error:', e);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--bg:#0a0e1a;--card:#111827;--card2:#161f33;--gold:#f4d03f;--gold2:#c9a820;--sky:#87CEEB;--silver:#e0e0e0;--sun:#ff9933;--purple:#8b5cf6;--green:#34d399;--red:#ef4444;--txt:#f0f0f0;--txt2:#a0aec0;--txt3:#6b7a90;--r:14px;--font-body:'Heebo',sans-serif;--font-src:'Frank Ruhl Libre',serif}
+body{font-family:var(--font-body);background:var(--bg);color:var(--txt);min-height:100vh;font-size:16px;line-height:1.7;overflow-x:hidden}
+
+/* Light theme override */
+[data-theme="light"]{--bg:#f5f5f0;--card:#ffffff;--card2:#f0f0ea;--gold:#b8860b;--gold2:#8b6508;--sky:#2563eb;--silver:#333;--sun:#cc7700;--purple:#6d28d9;--green:#059669;--red:#dc2626;--txt:#1a1a1a;--txt2:#4a5568;--txt3:#718096}
