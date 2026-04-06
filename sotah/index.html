@@ -191,19 +191,27 @@
 </footer>
 
 <script src="../shared/js/settings.js"></script>
+<script src="../shared/js/hebrew-date.js"></script>
 <script src="sotah-daily.js"></script>
 <script>
 (function(){
   RambamSettings.applyTheme();
 
-  var daf = SotahDaily.todaysDaf();
-  var hebDaf = SotahDaily.todaysDafHeb();
-  var url = SotahDaily.todaysDafUrl();
+  var lang = RambamSettings.get('language') || 'he';
+  var tz = HebrewDate.detectTZ(lang);
+  var daf = SotahDaily.todaysDaf(tz);
+  var hebDaf = SotahDaily.todaysDafHeb(tz);
+  var url = SotahDaily.todaysDafUrl(tz);
 
-  document.getElementById('todayDaf').textContent = 'דף ' + hebDaf;
-  document.getElementById('todayCard').href = url;
+  if(daf){
+    document.getElementById('todayDaf').textContent = 'דף ' + hebDaf;
+    document.getElementById('todayCard').href = url || '#';
+    if(!url) document.getElementById('todayCard').style.pointerEvents = 'none';
+  } else {
+    document.getElementById('todayCard').style.display = 'none';
+  }
 
-  // Build grid
+  // Build grid (daf 2-49, daf 1/sha'ar has no page)
   var grid = document.getElementById('dafGrid');
   for(var d = 2; d <= 49; d++){
     var a = document.createElement('a');

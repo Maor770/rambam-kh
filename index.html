@@ -203,12 +203,15 @@
 
   // --- Sotah: today's daf ---
   try {
-    var daf = SotahDaily.todaysDaf();
-    var hebDaf = SotahDaily.todaysDafHeb();
+    var daf = SotahDaily.todaysDaf(tz);
+    var hebDaf = SotahDaily.todaysDafHeb(tz);
     var sotahEl = document.getElementById('sotahToday');
-    sotahEl.textContent = 'היום: דף ' + hebDaf;
-    sotahEl.style.display = '';
-    document.getElementById('sotahCard').href = 'sotah/' + SotahDaily.todaysDafUrl();
+    var dafUrl = SotahDaily.todaysDafUrl(tz);
+    if(daf){
+      sotahEl.textContent = 'היום: דף ' + hebDaf;
+      sotahEl.style.display = '';
+      if(dafUrl) document.getElementById('sotahCard').href = 'sotah/' + dafUrl;
+    }
   } catch(e){ console.error('SotahDaily error:', e); }
 
   // --- Rambam: today's 3 chapters from Sefaria ---
