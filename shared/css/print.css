@@ -4,7 +4,7 @@
 .print-btn {
   position: fixed;
   bottom: 16px;
-  left: 16px;
+  right: 16px;
   z-index: 999;
   background: #1a5a8a;
   color: #fff;
