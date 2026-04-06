@@ -27,6 +27,7 @@
   // Inject styles
   var style = document.createElement('style');
   style.textContent =
+    'body{overflow-x:hidden}' +
     '._tb{position:sticky;top:0;z-index:9999;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid #e0e0e0;padding:6px 12px;font-family:inherit}' +
     '._tb-row{display:flex;align-items:center;justify-content:space-between;max-width:860px;margin:0 auto}' +
     '._tb-title{font-size:1rem;font-weight:700;color:#b8941f}' +
@@ -49,7 +50,6 @@
       '<div style="display:flex;gap:4px;align-items:center">' +
         '<button class="_tb-btn" onclick="_tbFontSize(-1)">א\u200E-</button>' +
         '<button class="_tb-btn" onclick="_tbFontSize(1)">א+</button>' +
-        '<button class="_tb-lang" onclick="alert(\'אנגלית — בקרוב!\')">עברית ▾</button>' +
       '</div>' +
     '</div>';
 
