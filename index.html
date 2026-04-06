@@ -110,6 +110,16 @@
     margin-right:.4rem;
     vertical-align:middle;
   }
+  .card-today{
+    margin-top:.5rem;
+    padding:.4rem .7rem;
+    background:var(--gold-bg);
+    border:1px solid var(--gold-border);
+    border-radius:8px;
+    font-size:.85rem;
+    color:var(--gold);
+    font-weight:600;
+  }
 
   /* Footer */
   .home-footer{
@@ -136,15 +146,17 @@
 </section>
 
 <section class="card-grid">
-  <a href="kiddush/" class="card-link">
+  <a href="kiddush/" class="card-link" id="rambamCard">
     <span class="card-icon" aria-hidden="true">&#127769;</span>
     <div class="card-title">הלכות קידוש החודש</div>
     <div class="card-desc">לימוד יומי בהלכות קידוש החודש לרמב״ם, עם ביאורים ותרשימים אינטראקטיביים.</div>
+    <div class="card-today" id="rambamToday" style="display:none"></div>
   </a>
-  <a href="sotah/" class="card-link">
+  <a href="sotah/" class="card-link" id="sotahCard">
     <span class="card-icon" aria-hidden="true">&#128220;</span>
     <div class="card-title">מסכת סוטה — דף יומי</div>
     <div class="card-desc">לימוד דף יומי במסכת סוטה עם פירושים וכלי עזר.</div>
+    <div class="card-today" id="sotahToday" style="display:none"></div>
   </a>
 </section>
 
@@ -156,6 +168,7 @@
 <script src="shared/js/settings.js"></script>
 <script src="shared/js/hebrew-date.js"></script>
 <script src="shared/js/analytics.js"></script>
+<script src="sotah/sotah-daily.js"></script>
 <script>
 (function(){
   RambamSettings.applyTheme();
@@ -182,11 +195,41 @@
     setTimeout(function(){
       updateDate();
       scheduleRefresh();
-    }, ms + 1000); // +1s buffer to ensure we're past midnight
+    }, ms + 1000);
   }
 
   updateDate();
   scheduleRefresh();
+
+  // --- Sotah: today's daf ---
+  try {
+    var daf = SotahDaily.todaysDaf();
+    var hebDaf = SotahDaily.todaysDafHeb();
+    var sotahEl = document.getElementById('sotahToday');
+    sotahEl.textContent = 'היום: דף ' + hebDaf;
+    sotahEl.style.display = '';
+    document.getElementById('sotahCard').href = 'sotah/' + SotahDaily.todaysDafUrl();
+  } catch(e){ console.error('SotahDaily error:', e); }
+
+  // --- Rambam: today's 3 chapters from Sefaria ---
+  var d = HebrewDate.today(tz);
+  fetch('https://www.sefaria.org/api/calendars?year=' + d.gYear + '&month=' + d.gMonth + '&day=' + d.gDay + '&timezone=' + encodeURIComponent(tz))
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var items = data.calendar_items || [];
+      var rambam3 = null;
+      for(var i = 0; i < items.length; i++){
+        if(items[i].title && items[i].title.en === 'Daily Rambam (3 Chapters)'){
+          rambam3 = items[i]; break;
+        }
+      }
+      if(!rambam3) return;
+      var rambamEl = document.getElementById('rambamToday');
+      var heDisplay = rambam3.displayValue && rambam3.displayValue.he ? rambam3.displayValue.he : '';
+      rambamEl.textContent = 'היום: ' + heDisplay;
+      rambamEl.style.display = '';
+    })
+    .catch(function(e){ console.error('Sefaria error:', e); });
 })();
 </script>
 <script src="shared/js/feedback.js"></script>

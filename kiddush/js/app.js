@@ -2,6 +2,7 @@
 
 let currentMode = 'overview';
 let currentCh = 1;
+let dailyChapters = null; // e.g. [6,7,8] when in KH
 
 function setMode(mode) {
   currentMode = mode;
@@ -107,8 +108,14 @@ function renderStudy(el) {
 // CONTINUOUS MODE
 // ========================
 function renderContinuous(el) {
+  const chapters = dailyChapters
+    ? DATA.filter(c => dailyChapters.indexOf(c.ch) !== -1)
+    : DATA;
   let html = '<div class="continuous">';
-  DATA.forEach(chData => {
+  if(dailyChapters){
+    html += '<div style="text-align:center;padding:8px 0 4px"><span style="font-size:.85rem;color:var(--gold);font-weight:600">📖 השיעור היומי</span></div>';
+  }
+  chapters.forEach(chData => {
     html += `<div class="ch-divider" id="ch-${chData.ch}"><h2>פרק ${HEB_CH[chData.ch]} — ${CH_TITLES[chData.ch] || ''}</h2>
       <div class="ch-count">${chData.halachot.length} הלכות</div></div>`;
     chData.halachot.forEach(h => {
@@ -200,5 +207,34 @@ window.onDataReady = function() {
     RambamAnalytics.trackPageView('kiddush');
   }
   buildChScroll();
-  renderAll();
+
+  // Fetch today's daily Rambam and auto-open if in KH
+  const lang = (window.RambamSettings && RambamSettings.get('language')) || 'he';
+  const tz = window.HebrewDate ? HebrewDate.detectTZ(lang) : 'Asia/Jerusalem';
+  const d = window.HebrewDate ? HebrewDate.today(tz) : null;
+  if(d){
+    fetch('https://www.sefaria.org/api/calendars?year='+d.gYear+'&month='+d.gMonth+'&day='+d.gDay+'&timezone='+encodeURIComponent(tz))
+      .then(r => r.json())
+      .then(data => {
+        const items = data.calendar_items || [];
+        let rambam3 = items.find(it => it.title && it.title.en === 'Daily Rambam (3 Chapters)');
+        if(!rambam3) return;
+        // Parse chapter range from ref like "Mishneh Torah, Sanctification of the New Month 6-8"
+        const ref = rambam3.ref || '';
+        const isKH = /Sanctification of the New Month/i.test(ref);
+        if(!isKH){ renderAll(); return; }
+        const match = ref.match(/(\d+)(?:-(\d+))?$/);
+        if(!match){ renderAll(); return; }
+        const from = parseInt(match[1],10);
+        const to = match[2] ? parseInt(match[2],10) : from;
+        const chs = [];
+        for(let i = from; i <= to; i++) chs.push(i);
+        dailyChapters = chs;
+        currentCh = chs[0];
+        setMode('continuous');
+      })
+      .catch(() => { renderAll(); });
+  } else {
+    renderAll();
+  }
 };
