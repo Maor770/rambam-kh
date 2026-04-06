@@ -208,10 +208,16 @@ window.onDataReady = function() {
   }
   buildChScroll();
 
-  // Fetch today's daily Rambam and auto-open if in KH
+  // Fetch daily Rambam and auto-open if in KH
+  // Support ?date=YYYY-M-D from homepage date navigation
   const lang = (window.RambamSettings && RambamSettings.get('language')) || 'he';
   const tz = window.HebrewDate ? HebrewDate.detectTZ(lang) : 'Asia/Jerusalem';
-  const d = window.HebrewDate ? HebrewDate.today(tz) : null;
+  let d = window.HebrewDate ? HebrewDate.today(tz) : null;
+  const dateParam = new URLSearchParams(location.search).get('date');
+  if(dateParam && window.HebrewDate){
+    const parts = dateParam.split('-').map(Number);
+    if(parts.length === 3 && parts[0] > 0) d = HebrewDate.forDate(parts[0], parts[1], parts[2]);
+  }
   if(d){
     fetch('https://www.sefaria.org/api/calendars?year='+d.gYear+'&month='+d.gMonth+'&day='+d.gDay+'&timezone='+encodeURIComponent(tz))
       .then(r => r.json())

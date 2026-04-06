@@ -263,6 +263,10 @@
       }
     } catch(e){ sotahEl.style.display = 'none'; }
 
+    // --- Rambam link with date ---
+    var rambamCard = document.getElementById('rambamCard');
+    rambamCard.href = dayOffset === 0 ? 'kiddush/' : 'kiddush/?date=' + d.gYear + '-' + d.gMonth + '-' + d.gDay;
+
     // --- Rambam from Sefaria ---
     var rambamEl = document.getElementById('rambamToday');
     rambamEl.textContent = '...';

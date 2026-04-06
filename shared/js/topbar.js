@@ -13,6 +13,8 @@
 
   if(/sotah/.test(path)){
     title = 'מסכת סוטה';
+  } else if(/tanya/.test(path)){
+    title = 'תניא יומי';
   } else if(/kiddush/.test(path)){
     title = 'הלכות קידוש החודש';
   } else if(/admin/.test(path)){
