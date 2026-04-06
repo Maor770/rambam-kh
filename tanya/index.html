@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תניא יומי — שיעורים בספר התניא</title>
+<link rel="stylesheet" href="../shared/css/theme.css">
+<style>
+  .tanya-header{
+    text-align:center;
+    padding:1.5rem 1rem 1rem;
+  }
+  .tanya-header .bh{
+    font-size:.75rem;
+    color:var(--txt3);
+    margin-bottom:.25rem;
+  }
+  .tanya-header h1{
+    font-family:var(--font-src);
+    font-size:1.8rem;
+    color:#2d6a4f;
+    margin-bottom:.25rem;
+  }
+  .tanya-header .sub{
+    font-size:.9rem;
+    color:var(--txt2);
+    line-height:1.5;
+    max-width:400px;
+    margin:0 auto;
+  }
+
+  .week-card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    max-width:500px;
+    margin:1rem auto;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--r);
+    overflow:hidden;
+    transition:transform .15s;
+  }
+  .week-card:hover{
+    transform:translateY(-2px);
+  }
+  .week-title{
+    padding:1rem 1.2rem .5rem;
+    font-size:1.1rem;
+    font-weight:700;
+    color:#2d6a4f;
+    border-bottom:1px solid var(--border);
+    background:#f0f7f4;
+  }
+  .day-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(120px, 1fr));
+    gap:6px;
+    padding:12px;
+  }
+  .day-cell{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:10px 6px;
+    border-radius:8px;
+    background:var(--card);
+    border:1px solid var(--border);
+    text-decoration:none;
+    color:inherit;
+    transition:all .15s;
+    min-height:60px;
+  }
+  .day-cell:hover{
+    border-color:#2d6a4f;
+    background:#f0f7f4;
+  }
+  .day-cell .day-name{
+    font-size:.85rem;
+    font-weight:700;
+    color:#1a1a1a;
+  }
+  .day-cell .day-date{
+    font-size:.75rem;
+    color:var(--txt3);
+    margin-top:2px;
+  }
+  .day-cell .day-perek{
+    font-size:.7rem;
+    color:#2d6a4f;
+    margin-top:3px;
+    font-weight:500;
+  }
+  .day-cell.today{
+    border:2px solid #2d6a4f;
+    background:#d8f3dc;
+    box-shadow:0 2px 8px rgba(45,106,79,.15);
+  }
+
+  .info-box{
+    max-width:500px;
+    margin:1rem auto;
+    padding:1rem 1.2rem;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--r);
+    font-size:.85rem;
+    line-height:1.8;
+    color:var(--txt2);
+  }
+  .info-box .label{
+    font-weight:700;
+    color:#2d6a4f;
+    margin-bottom:.3rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar" style="display:flex;align-items:center;justify-content:space-between;padding:6px 12px;background:var(--card);border-bottom:1px solid var(--border)">
+  <a href="../index.html" style="color:var(--gold);font-size:1.2rem;text-decoration:none">🏠</a>
+  <div style="display:flex;gap:6px"></div>
+</div>
+
+<div class="tanya-header">
+  <div class="bh">ב״ה</div>
+  <h1>תניא יומי</h1>
+  <div class="sub">שיעורים בספר התניא — ציטוט מקורי עם ביאור זורם</div>
+</div>
+
+<div style="padding:0 1rem 2rem;max-width:540px;margin:0 auto">
+
+  <!-- Week: Shmini -->
+  <div class="week-card">
+    <div class="week-title">פרשת שמיני — י"ח – כ"ד ניסן תשפ"ו</div>
+    <div class="day-grid" id="dayGrid">
+      <a href="tanya_shmini_01.html" class="day-cell" data-day="1">
+        <div class="day-name">יום ראשון</div>
+        <div class="day-date">י"ח ניסן</div>
+        <div class="day-perek">פרק מא</div>
+      </a>
+      <a href="tanya_shmini_02.html" class="day-cell" data-day="2">
+        <div class="day-name">יום שני</div>
+        <div class="day-date">י"ט ניסן</div>
+        <div class="day-perek">פרק מא</div>
+      </a>
+      <a href="tanya_shmini_03.html" class="day-cell" data-day="3">
+        <div class="day-name">יום שלישי</div>
+        <div class="day-date">כ' ניסן</div>
+        <div class="day-perek">פרק מא</div>
+      </a>
+      <a href="tanya_shmini_04.html" class="day-cell" data-day="4">
+        <div class="day-name">יום רביעי</div>
+        <div class="day-date">כ"א ניסן</div>
+        <div class="day-perek">פרק מא</div>
+      </a>
+      <a href="tanya_shmini_05.html" class="day-cell" data-day="5">
+        <div class="day-name">יום חמישי</div>
+        <div class="day-date">כ"ב ניסן</div>
+        <div class="day-perek">פרק מא</div>
+      </a>
+      <a href="tanya_shmini_06.html" class="day-cell" data-day="6">
+        <div class="day-name">יום שישי</div>
+        <div class="day-date">כ"ג ניסן</div>
+        <div class="day-perek">פרק מא</div>
+      </a>
+      <a href="tanya_shmini_07.html" class="day-cell" data-day="7">
+        <div class="day-name">שבת קודש</div>
+        <div class="day-date">כ"ד ניסן</div>
+        <div class="day-perek">פרק מב</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="label">על השיעור</div>
+    הביאור מבוסס על הספר "שיעורים בספר התניא" מאת הרב יוסף יצחק קלמנסון. כל שיעור כולל ציטוט מהתניא עם הסבר זורם בעברית פשוטה.
+    <br><br>
+    <div class="label">מחזור הלימוד</div>
+    לוח השיעורים מחולק לפי ימות השנה, והמחזור מתחיל מחדש בכל י"ט כסלו — ראש השנה לחסידות.
+  </div>
+
+</div>
+
+<script src="../shared/js/settings.js"></script>
+<script>
+// Highlight today's day based on Hebrew date
+// For now, highlight based on day of week
+const today = new Date();
+const dayOfWeek = today.getDay(); // 0=Sun, 6=Sat
+const cells = document.querySelectorAll('.day-cell');
+// Map: Sun=1, Mon=2, ... Sat=7
+if (dayOfWeek >= 0 && dayOfWeek <= 6) {
+  const idx = dayOfWeek === 0 ? 0 : dayOfWeek === 6 ? 6 : dayOfWeek;
+  if (cells[idx]) cells[idx].classList.add('today');
+}
+</script>
+</body>
+</html>
