@@ -5,6 +5,7 @@
  * Usage: <script src="../shared/js/topbar.js"></script>  (or adjust path)
  */
 (function(){
+  function init(){
   // Detect context from URL
   var path = location.pathname;
   var title = '';
@@ -59,4 +60,8 @@
     var current = parseFloat(getComputedStyle(el).fontSize);
     el.style.fontSize = (current + delta) + 'px';
   };
+  }
+
+  if(document.body) init();
+  else document.addEventListener('DOMContentLoaded', init);
 })();
