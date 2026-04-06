@@ -190,10 +190,9 @@ window.HebrewDate = (function(){
   }
 
   /* ---- JD of Hebrew epoch (1 Tishrei year 1) ---- */
-  // The Hebrew epoch in Julian Day is approximately JD 347997
-  // More precisely: 1 Tishrei 1 AM corresponds to October 7, 3761 BCE (proleptic Gregorian)
-  // which is JD 347997.
-  var HEBREW_EPOCH_JD = 347997;
+  // 1 Tishrei 1 AM = Oct 7, 3761 BCE Julian = Sep 7, 3761 BCE proleptic Gregorian
+  // gregorianToJD(-3760, 9, 7) = 347998
+  var HEBREW_EPOCH_JD = 347998;
 
   /* ---- Convert Hebrew year's Rosh Hashana to JD ---- */
   function roshHashanaJD(hy){
@@ -317,25 +316,68 @@ window.HebrewDate = (function(){
     return hebrewNumeral(d);
   }
 
-  /* ---- Public API ---- */
-  function today(){
+  /* ---- Get date parts in a specific timezone ---- */
+  function dateInTZ(tz){
+    var s = new Date().toLocaleString('en-US', { timeZone: tz });
+    var d = new Date(s);
+    return { year: d.getFullYear(), month: d.getMonth() + 1, day: d.getDate(), dow: d.getDay() };
+  }
+
+  /* ---- Ms until next midnight in a timezone ---- */
+  function msUntilMidnight(tz){
     var now = new Date();
-    var gy = now.getFullYear();
-    var gm = now.getMonth() + 1;
-    var gd = now.getDate();
+    var parts = now.toLocaleString('en-US', { timeZone: tz, hour12: false,
+      year:'numeric', month:'2-digit', day:'2-digit',
+      hour:'2-digit', minute:'2-digit', second:'2-digit' }).split(/[/,: ]+/);
+    // parts: [MM, DD, YYYY, HH, MM, SS]
+    var h = parseInt(parts[3],10), m = parseInt(parts[4],10), sec = parseInt(parts[5],10);
+    var msTilMid = ((23 - h) * 3600 + (59 - m) * 60 + (60 - sec)) * 1000;
+    return msTilMid;
+  }
 
-    var heb = gregorianToHebrew(gy, gm, gd);
+  /* ---- Detect user timezone, with fallback ---- */
+  function detectTZ(lang){
+    try {
+      var detected = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if(detected) return detected;
+    } catch(e){}
+    return lang === 'he' ? 'Asia/Jerusalem' : 'America/New_York';
+  }
+
+  var GREG_MONTHS_EN = [
+    'January','February','March','April','May','June',
+    'July','August','September','October','November','December'
+  ];
+
+  var DOW_HE = ['יום ראשון','יום שני','יום שלישי','יום רביעי','יום חמישי','יום שישי','שבת קודש'];
+  var DOW_EN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Shabbat'];
+
+  /* ---- Public API ---- */
+  function today(tz){
+    var g = tz ? dateInTZ(tz) : (function(){ var n=new Date(); return {year:n.getFullYear(), month:n.getMonth()+1, day:n.getDate(), dow:n.getDay()}; })();
+
+    var heb = gregorianToHebrew(g.year, g.month, g.day);
     var hebrewStr = hebrewDay(heb.day) + ' ' + heb.monthName + ' ' + hebrewYear(heb.year);
-    var gregStr = gd + ' ' + GREG_MONTHS_HE[gm - 1] + ' ' + gy;
+    var gregStrHe = g.day + ' ' + GREG_MONTHS_HE[g.month - 1] + ' ' + g.year;
+    var gregStrEn = GREG_MONTHS_EN[g.month - 1] + ' ' + g.day + ', ' + g.year;
 
-    return { hebrew: hebrewStr, gregorian: gregStr };
+    return {
+      hebrew: hebrewStr,
+      gregorian: gregStrHe,
+      gregorianEn: gregStrEn,
+      dowHe: DOW_HE[g.dow],
+      dowEn: DOW_EN[g.dow],
+      gYear: g.year, gMonth: g.month, gDay: g.day
+    };
   }
 
   return {
     today: today,
     convert: gregorianToHebrew,
     formatDay: hebrewDay,
-    formatYear: hebrewYear
+    formatYear: hebrewYear,
+    msUntilMidnight: msUntilMidnight,
+    detectTZ: detectTZ
   };
 
 })();
