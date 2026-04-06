@@ -4,7 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>הלכות קידוש החודש — רמב"ם עם ביאור שטיינזלץ</title>
+<meta name="description" content="235 הלכות עם ביאורים, תרשימים אינטראקטיביים ומחשבונים אסטרונומיים">
+<meta property="og:title" content="הלכות קידוש החודש — רמב"ם עם ביאור שטיינזלץ">
+<meta property="og:description" content="235 הלכות עם ביאורים, תרשימים אינטראקטיביים ומחשבונים אסטרונומיים">
+<meta property="og:image" content="../shared/img/logo.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../shared/img/icon.png">
+<link rel="apple-touch-icon" href="../shared/img/icon.png">
 <link rel="stylesheet" href="css/style.css">
+<script>
+function shareApp(){
+  var data={title:'הלכות קידוש החודש — רמב"ם',text:'235 הלכות עם ביאורים, תרשימים אינטראקטיביים ומחשבונים אסטרונומיים',url:location.href};
+  if(navigator.share)navigator.share(data).catch(function(){});
+  else{navigator.clipboard.writeText(location.href).then(function(){alert('הקישור הועתק!')});}
+}
+</script>
 </head>
 <body>
 
@@ -19,6 +34,7 @@
       <button class="font-btn" onclick="changeFontSize(-1)">א‎-</button>
       <button class="font-btn" onclick="changeFontSize(1)">א+</button>
       <a href="en.html" class="lang-btn" style="text-decoration:none;text-align:center">EN</a>
+      <button class="font-btn" onclick="shareApp()" aria-label="שיתוף" style="font-size:1rem">🔗</button>
     </div>
   </div>
   <div class="mode-tabs">

@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>מסכת סוטה — דף יומי</title>
+<meta name="description" content="לימוד דף יומי במסכת סוטה עם פירושים וכלי עזר">
+<meta property="og:title" content="מסכת סוטה — דף יומי">
+<meta property="og:description" content="לימוד דף יומי במסכת סוטה עם פירושים וכלי עזר">
+<meta property="og:image" content="../shared/img/logo.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../shared/img/icon.png">
+<link rel="apple-touch-icon" href="../shared/img/icon.png">
 <link rel="stylesheet" href="../shared/css/theme.css">
 <style>
   .sotah-header{
@@ -166,6 +174,7 @@
       <button class="font-btn" onclick="changeFontSize(-1)">א‎-</button>
       <button class="font-btn" onclick="changeFontSize(1)">א+</button>
       <button class="lang-btn" onclick="alert('אנגלית — בקרוב!')">עברית ▾</button>
+      <button class="font-btn" onclick="if(navigator.share)navigator.share({title:'מסכת סוטה — דף יומי',url:location.href}).catch(function(){});else{navigator.clipboard.writeText(location.href).then(function(){alert('הקישור הועתק!')});}" aria-label="שיתוף" style="font-size:1rem">🔗</button>
     </div>
   </div>
 </div>
