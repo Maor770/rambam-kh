@@ -1,0 +1,300 @@
+/* ===== PRINT STYLES — Sotah & Kiddush ===== */
+
+/* ---------- PRINT BUTTON (screen only) ---------- */
+.print-btn {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 999;
+  background: #1a5a8a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+}
+.print-btn:hover { background: #145a80; transform: scale(1.05); }
+
+/* ======================================================
+   @media print — COMMON
+   ====================================================== */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm 12mm;
+  }
+
+  /* hide UI chrome */
+  .print-btn,
+  .topbar-wrap,
+  .float-progress,
+  .mode-tabs,
+  .ch-scroll,
+  .scene-ctrl,
+  .font-ctrl,
+  .footer { display: none !important; }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a { color: #000 !important; text-decoration: none !important; }
+
+  /* ======================================================
+     SOTAH DAF — fit each daf on ONE printed page
+     ====================================================== */
+
+  /* hide nav bars, filter buttons, toggle button, arrows */
+  body > div:first-child,                       /* top nav */
+  body > div:last-of-type ~ div,                /* bottom nav & footer */
+  [id^="fbtn-"], #tbtn,                         /* filter & toggle buttons */
+  [id^="arrow"],                                /* collapse arrows */
+  .count                                         /* section count badges */
+  { display: none !important; }
+
+  /* force all sections visible */
+  [id^="content"] {
+    display: block !important;
+    padding: 2px 6px 4px !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* section wrapper */
+  [id^="sec"] {
+    display: block !important;
+    margin-bottom: 2px !important;
+    page-break-inside: avoid;
+  }
+
+  /* section header buttons — make them look like plain headers */
+  [id^="sec"] > button {
+    padding: 2px 4px !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    cursor: default !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0 !important;
+  }
+  [id^="sec"] > button span {
+    font-size: 9px !important;
+  }
+  [id^="sec"] > button div {
+    gap: 4px !important;
+  }
+
+  /* main container — remove max-width */
+  body > div:nth-child(3) {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* page header — compact */
+  body > div:nth-child(2) {
+    padding: 4px 8px !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  body > div:nth-child(2) h1 {
+    font-size: 16px !important;
+    margin: 0 !important;
+  }
+  body > div:nth-child(2) > div:first-child {
+    margin-bottom: 0 !important;
+    font-size: 9px !important;
+  }
+  body > div:nth-child(2) > div:nth-child(3) {
+    font-size: 9px !important;
+    margin-bottom: 2px !important;
+  }
+  /* hide the filter row */
+  body > div:nth-child(2) > div:last-child {
+    display: none !important;
+  }
+
+  /* "מה בדף הזה" summary box */
+  body > div:nth-child(3) > div:first-child {
+    padding: 4px 6px !important;
+    margin-bottom: 3px !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #f5f5f5 !important;
+    border-radius: 4px !important;
+  }
+  body > div:nth-child(3) > div:first-child div:first-child {
+    font-size: 9px !important;
+    margin-bottom: 1px !important;
+  }
+  body > div:nth-child(3) > div:first-child div:last-child {
+    font-size: 8.5px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* source text blocks (green/blue boxes) */
+  [id^="content"] div[style*="border-right:4px"] {
+    padding: 3px 6px !important;
+    border-radius: 3px !important;
+    border-right-width: 3px !important;
+    margin: 0 !important;
+  }
+  [id^="content"] div[style*="border-right:4px"] div {
+    font-size: 10.5px !important;
+    line-height: 1.65 !important;
+  }
+
+  /* commentary/biur text */
+  [id^="content"] div[style*="padding:9px"] {
+    padding: 1px 4px !important;
+    font-size: 9px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* spacing between quote blocks */
+  [id^="content"] > div > div[style*="margin-top:14px"] {
+    margin-top: 3px !important;
+  }
+
+  /* bottom nav */
+  body > div:nth-last-child(1),
+  body > div:nth-last-child(2),
+  body > div:nth-last-child(3) {
+    display: none !important;
+  }
+  /* but keep the main content area (3rd child) */
+  body > div:nth-child(3) {
+    display: block !important;
+  }
+
+  /* footer disclaimer */
+  div[style*="padding:20px 16px 30px"] {
+    display: none !important;
+  }
+
+  /* ======================================================
+     KIDDUSH / RAMBAM — fit each chapter in TWO pages
+     ====================================================== */
+
+  /* topbar & navigation */
+  .topbar,
+  .mode-tabs,
+  .ch-scroll,
+  .float-progress,
+  .sc-btn,
+  .scene-ctrl,
+  .lang-btn,
+  .font-ctrl,
+  .nb { display: none !important; }
+
+  .main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* force all cards open */
+  .hal-body {
+    display: block !important;
+    padding: 0 8px 6px !important;
+  }
+  .hal-arrow { display: none !important; }
+  .hal-card {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 2px 0 !important;
+    page-break-inside: avoid;
+  }
+  .hal-header {
+    padding: 3px 4px !important;
+    cursor: default !important;
+    border-bottom: 1px solid #ccc;
+  }
+  .hal-num {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: .65rem !important;
+  }
+  .hal-preview {
+    font-size: .75rem !important;
+    white-space: normal !important;
+  }
+
+  /* text blocks — compact */
+  .txt-rambam {
+    font-size: 10px !important;
+    line-height: 1.6 !important;
+    padding: 4px 6px !important;
+    margin-bottom: 3px !important;
+    border-right-width: 2px !important;
+  }
+  .txt-english {
+    font-size: 8.5px !important;
+    line-height: 1.5 !important;
+    padding: 3px 6px !important;
+    margin-bottom: 3px !important;
+  }
+  .txt-steinsaltz { margin-bottom: 3px !important; }
+  .st-item {
+    font-size: 9px !important;
+    line-height: 1.45 !important;
+    padding: 2px 0 !important;
+  }
+  .st-label { font-size: .6rem !important; margin-bottom: 2px !important; }
+  .explain { font-size: 9px !important; line-height: 1.45 !important; }
+
+  /* chapter dividers */
+  .ch-divider {
+    padding: 8px 0 4px !important;
+    margin-top: 4px !important;
+    page-break-before: always;
+  }
+  .ch-divider:first-child { page-break-before: avoid; }
+  .ch-divider h2 { font-size: 14px !important; }
+  .ch-divider .ch-count { font-size: 9px !important; }
+
+  /* overview layers */
+  .layer-body { display: block !important; }
+  .layer-section { margin: 4px 0 !important; }
+  .layer-header {
+    padding: 4px 6px !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+  .layer-num {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: .75rem !important;
+  }
+  .layer-title h3 { font-size: .85rem !important; }
+  .layer-title p { font-size: .65rem !important; }
+
+  /* step nav */
+  .step-nav { display: none !important; }
+
+  /* 3D scene */
+  #scene3d { display: none !important; }
+
+  /* tables & grids — compact */
+  .data-grid { font-size: .65rem !important; gap: 1px !important; }
+  .vis-tbl { font-size: .65rem !important; }
+  .vis-tbl th, .vis-tbl td { padding: 2px 3px !important; }
+
+  /* calc tools */
+  .calc-tool { padding: 4px 6px !important; margin: 3px 0 !important; }
+
+  /* viz containers */
+  .viz-container { margin: 4px 0 !important; }
+
+  .footer { display: none !important; }
+}

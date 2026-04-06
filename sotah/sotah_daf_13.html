@@ -10,6 +10,7 @@ body{font-family:'Heebo',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:
 button{font-family:'Heebo',sans-serif}
 button:active{opacity:0.85}
 </style>
+<link rel="stylesheet" href="../shared/css/print.css">
 <script src="../shared/js/topbar.js"></script>
 </head>
 <body>
@@ -425,5 +426,6 @@ function getVisible(){const r=[];for(let i=0;i<11;i++)if(document.getElementById
 function filterAmud(f){for(let i=0;i<11;i++){const el=document.getElementById("sec"+i);if(f==="all"||amudMap[i]===f)el.style.display="";else{el.style.display="none";if(openSecs.has(i))toggle(i)}}document.querySelectorAll("#fbtn-all,#fbtn-a,#fbtn-b").forEach(b=>{b.style.background="#fff";b.style.border="1px solid #ddd";b.style.color="#888";b.style.fontWeight="400"});const id=f==="all"?"fbtn-all":f==="יג."?"fbtn-a":"fbtn-b",ab=document.getElementById(id);ab.style.background="#1a5a8a";ab.style.border="1px solid #1a5a8a";ab.style.color="#fff";ab.style.fontWeight="700";updateToggleBtn()}
 function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
 </script>
+<button class="print-btn" onclick="window.print()" title="הדפסה">🖨️</button>
 </body>
 </html>

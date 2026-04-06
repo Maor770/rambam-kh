@@ -13,6 +13,7 @@
 <link rel="icon" type="image/png" href="../shared/img/icon.png">
 <link rel="apple-touch-icon" href="../shared/img/icon.png">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../shared/css/print.css">
 <script>
 function shareApp(){
   var data={title:'הלכות קידוש החודש — רמב"ם',text:'235 הלכות עם ביאורים, תרשימים אינטראקטיביים ומחשבונים אסטרונומיים',url:location.href};
@@ -78,6 +79,14 @@ function shareApp(){
 <script src="js/app.js"></script>
 <script src="js/data-loader.js"></script><!-- Must be last — triggers init -->
 <script src="../shared/js/feedback.js"></script>
+<button class="print-btn" onclick="printChapter()" title="הדפסת פרק נוכחי">🖨️</button>
+<script>
+function printChapter(){
+  // Switch to continuous mode before printing so all content is visible
+  if(typeof setMode==='function') setMode('continuous');
+  setTimeout(()=>window.print(), 300);
+}
+</script>
 
 </body>
 </html>
