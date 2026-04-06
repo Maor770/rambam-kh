@@ -69,10 +69,18 @@ var SotahDaily = (function(){
     return dafUrl(daf);
   }
 
+  function dafForDate(gYear, gMonth, gDay){
+    if(!window.HebrewDate) return null;
+    var heb = HebrewDate.convert(gYear, gMonth, gDay);
+    var omerDay = getOmerDay(heb);
+    return omerDay;
+  }
+
   return {
     todaysDaf: todaysDaf,
     todaysDafHeb: todaysDafHeb,
     todaysDafUrl: todaysDafUrl,
+    dafForDate: dafForDate,
     dafUrl: dafUrl,
     getOmerDay: getOmerDay,
     HEB: HEB

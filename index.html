@@ -43,6 +43,28 @@
     text-align:center;
     padding:0 1rem 1.5rem;
   }
+  .date-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+  }
+  .date-arrow{
+    background:none;
+    border:1px solid var(--border);
+    color:var(--txt2);
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    font-size:1rem;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:border-color .2s, color .2s;
+    flex-shrink:0;
+  }
+  .date-arrow:hover{ border-color:var(--gold); color:var(--gold); }
   .date-hebrew{
     font-family:'Google Sans', var(--font-body);
     font-size:1.5rem;
@@ -54,6 +76,20 @@
     color:var(--txt2);
     margin-top:.15rem;
   }
+  .today-btn{
+    display:none;
+    margin:.4rem auto 0;
+    background:var(--gold-bg);
+    border:1px solid var(--gold-border);
+    color:var(--gold);
+    padding:.25rem .8rem;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:600;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .today-btn:hover{ border-color:var(--gold); }
 
   /* Card grid */
   .card-grid{
@@ -141,8 +177,13 @@
 </header>
 
 <section class="date-block">
-  <div class="date-hebrew" id="dateHebrew">—</div>
+  <div class="date-row">
+    <button class="date-arrow" id="dateNext" aria-label="יום הבא">&#x276E;</button>
+    <div class="date-hebrew" id="dateHebrew">—</div>
+    <button class="date-arrow" id="datePrev" aria-label="יום קודם">&#x276F;</button>
+  </div>
   <div class="date-greg" id="dateGreg">—</div>
+  <button class="today-btn" id="todayBtn" onclick="goToday()">חזרה להיום</button>
 </section>
 
 <section class="card-grid">
@@ -176,63 +217,84 @@
 
   var lang = RambamSettings.get('language') || 'he';
   var tz = HebrewDate.detectTZ(lang);
+  var isHe = lang === 'he';
 
-  function updateDate(){
-    try {
-      var d = HebrewDate.today(tz);
-      var isHe = lang === 'he';
-      var dow = isHe ? d.dowHe : d.dowEn;
-      var greg = isHe ? d.gregorian : d.gregorianEn;
-      document.getElementById('dateHebrew').textContent = dow + ' | ' + d.hebrew;
-      document.getElementById('dateGreg').textContent = greg;
-    } catch(e){
-      console.error('HebrewDate error:', e);
-    }
+  // Current "real" today
+  var realToday = HebrewDate.today(tz);
+  // Displayed date offset (0 = today)
+  var dayOffset = 0;
+
+  function getDisplayDate(){
+    if(dayOffset === 0) return HebrewDate.today(tz);
+    return HebrewDate.forDate(realToday.gYear, realToday.gMonth, realToday.gDay + dayOffset);
   }
 
+  function render(){
+    var d = getDisplayDate();
+    // Date display
+    var dow = isHe ? d.dowHe : d.dowEn;
+    var greg = isHe ? d.gregorian : d.gregorianEn;
+    document.getElementById('dateHebrew').textContent = dow + ' | ' + d.hebrew;
+    document.getElementById('dateGreg').textContent = greg;
+    // Today button
+    document.getElementById('todayBtn').style.display = dayOffset === 0 ? 'none' : 'block';
+
+    // --- Sotah ---
+    var sotahEl = document.getElementById('sotahToday');
+    var sotahCard = document.getElementById('sotahCard');
+    try {
+      var daf = SotahDaily.dafForDate(d.gYear, d.gMonth, d.gDay);
+      if(daf){
+        var hebDaf = SotahDaily.HEB[daf] || '';
+        sotahEl.textContent = 'דף ' + hebDaf;
+        sotahEl.style.display = '';
+        var dafUrl = SotahDaily.dafUrl(daf);
+        sotahCard.href = dafUrl ? 'sotah/' + dafUrl : 'sotah/';
+      } else {
+        sotahEl.textContent = 'אין שיעור (מחוץ לספירה)';
+        sotahEl.style.display = '';
+        sotahCard.href = 'sotah/';
+      }
+    } catch(e){ sotahEl.style.display = 'none'; }
+
+    // --- Rambam from Sefaria ---
+    var rambamEl = document.getElementById('rambamToday');
+    rambamEl.textContent = '...';
+    rambamEl.style.display = '';
+    fetch('https://www.sefaria.org/api/calendars?year=' + d.gYear + '&month=' + d.gMonth + '&day=' + d.gDay + '&timezone=' + encodeURIComponent(tz))
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        var items = data.calendar_items || [];
+        var rambam3 = null;
+        for(var i = 0; i < items.length; i++){
+          if(items[i].title && items[i].title.en === 'Daily Rambam (3 Chapters)'){
+            rambam3 = items[i]; break;
+          }
+        }
+        if(!rambam3){ rambamEl.style.display = 'none'; return; }
+        var heDisplay = rambam3.displayValue && rambam3.displayValue.he ? rambam3.displayValue.he : '';
+        rambamEl.textContent = heDisplay;
+      })
+      .catch(function(){ rambamEl.style.display = 'none'; });
+  }
+
+  // Navigation
+  document.getElementById('datePrev').onclick = function(){ dayOffset--; render(); };
+  document.getElementById('dateNext').onclick = function(){ dayOffset++; render(); };
+  window.goToday = function(){ dayOffset = 0; render(); };
+
+  // Midnight refresh
   function scheduleRefresh(){
     var ms = HebrewDate.msUntilMidnight(tz);
     setTimeout(function(){
-      updateDate();
+      realToday = HebrewDate.today(tz);
+      if(dayOffset === 0) render();
       scheduleRefresh();
     }, ms + 1000);
   }
 
-  updateDate();
+  render();
   scheduleRefresh();
-
-  // --- Sotah: today's daf ---
-  try {
-    var daf = SotahDaily.todaysDaf(tz);
-    var hebDaf = SotahDaily.todaysDafHeb(tz);
-    var sotahEl = document.getElementById('sotahToday');
-    var dafUrl = SotahDaily.todaysDafUrl(tz);
-    if(daf){
-      sotahEl.textContent = 'היום: דף ' + hebDaf;
-      sotahEl.style.display = '';
-      if(dafUrl) document.getElementById('sotahCard').href = 'sotah/' + dafUrl;
-    }
-  } catch(e){ console.error('SotahDaily error:', e); }
-
-  // --- Rambam: today's 3 chapters from Sefaria ---
-  var d = HebrewDate.today(tz);
-  fetch('https://www.sefaria.org/api/calendars?year=' + d.gYear + '&month=' + d.gMonth + '&day=' + d.gDay + '&timezone=' + encodeURIComponent(tz))
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      var items = data.calendar_items || [];
-      var rambam3 = null;
-      for(var i = 0; i < items.length; i++){
-        if(items[i].title && items[i].title.en === 'Daily Rambam (3 Chapters)'){
-          rambam3 = items[i]; break;
-        }
-      }
-      if(!rambam3) return;
-      var rambamEl = document.getElementById('rambamToday');
-      var heDisplay = rambam3.displayValue && rambam3.displayValue.he ? rambam3.displayValue.he : '';
-      rambamEl.textContent = 'היום: ' + heDisplay;
-      rambamEl.style.display = '';
-    })
-    .catch(function(e){ console.error('Sefaria error:', e); });
 })();
 </script>
 <script src="shared/js/feedback.js"></script>

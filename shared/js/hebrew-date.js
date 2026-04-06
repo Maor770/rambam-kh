@@ -371,8 +371,24 @@ window.HebrewDate = (function(){
     };
   }
 
+  /* ---- Get info for a specific Gregorian date ---- */
+  function forDate(year, month, day){
+    var d = new Date(year, month - 1, day);
+    var g = { year: d.getFullYear(), month: d.getMonth() + 1, day: d.getDate(), dow: d.getDay() };
+    var heb = gregorianToHebrew(g.year, g.month, g.day);
+    var hebrewStr = hebrewDay(heb.day) + ' ' + heb.monthName + ' ' + hebrewYear(heb.year);
+    var gregStrHe = g.day + ' ' + GREG_MONTHS_HE[g.month - 1] + ' ' + g.year;
+    var gregStrEn = GREG_MONTHS_EN[g.month - 1] + ' ' + g.day + ', ' + g.year;
+    return {
+      hebrew: hebrewStr, gregorian: gregStrHe, gregorianEn: gregStrEn,
+      dowHe: DOW_HE[g.dow], dowEn: DOW_EN[g.dow],
+      gYear: g.year, gMonth: g.month, gDay: g.day
+    };
+  }
+
   return {
     today: today,
+    forDate: forDate,
     convert: gregorianToHebrew,
     formatDay: hebrewDay,
     formatYear: hebrewYear,
