@@ -3,8 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Study Hall — Daily Rambam</title>
+<title>Chabad Beit Midrash — YeshivaAI.org</title>
+<meta name="description" content="Interactive Torah study: Daily Rambam, Hilchot Kiddush HaChodesh, Masechet Sotah and more">
+<meta property="og:title" content="Chabad Beit Midrash — YeshivaAI.org">
+<meta property="og:description" content="Interactive Torah study: Daily Rambam, Hilchot Kiddush HaChodesh, Masechet Sotah and more">
+<meta property="og:image" content="../shared/img/logo.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../shared/img/icon.png">
+<link rel="apple-touch-icon" href="../shared/img/icon.png">
 <link rel="stylesheet" href="../shared/css/theme.css">
+<script>
+function shareApp(){
+  var data={title:'Chabad Beit Midrash — YeshivaAI.org',text:'Interactive Torah study: Daily Rambam, Hilchot Kiddush HaChodesh, Masechet Sotah and more',url:location.href};
+  if(navigator.share)navigator.share(data).catch(function(){});
+  else{navigator.clipboard.writeText(location.href).then(function(){alert('Link copied!')});}
+}
+</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
 <style>
   body{ font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
@@ -187,8 +202,11 @@
   <div style="text-align:center;font-size:.65rem;color:var(--txt3);margin-bottom:2px">B"H</div>
   <div class="header-row">
     <a href="../" class="lang-link" title="Hebrew version">עב</a>
-    <h1>Chabad Study Hall</h1>
-    <a href="../admin/en.html" class="gear-link" aria-label="Settings">&#x2699;</a>
+    <img src="../shared/img/logo.png" alt="Chabad Study Hall — YeshivaAI.org" style="max-width:320px;width:70%;height:auto">
+    <div style="display:flex;gap:4px">
+      <button onclick="shareApp()" class="gear-link" aria-label="Share" style="background:none;border:none;cursor:pointer;font-size:1.3rem">🔗</button>
+      <a href="../admin/en.html" class="gear-link" aria-label="Settings">&#x2699;</a>
+    </div>
   </div>
 </header>
 
