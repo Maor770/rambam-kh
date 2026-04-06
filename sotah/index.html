@@ -140,14 +140,37 @@
     margin:0 auto;
   }
   .sotah-footer a{color:var(--txt3);text-decoration:underline}
+
+  /* Topbar */
+  .topbar{position:sticky;top:0;z-index:100;background:var(--overlay);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-light);padding:8px 12px}
+  .topbar-row{display:flex;align-items:center;justify-content:space-between;max-width:860px;margin:0 auto}
+  .app-title{font-size:1rem;font-weight:700;color:var(--gold)}
+  .font-btn{min-width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--txt2);font-family:var(--font-body);font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 4px}
+  .font-btn:active{border-color:var(--gold);color:var(--gold)}
+  .lang-btn{background:none;border:1px solid var(--border);color:var(--txt2);padding:6px 14px;border-radius:8px;font-family:var(--font-body);font-size:.78rem;cursor:pointer;white-space:nowrap}
+  @media(max-width:400px){
+    .app-title{font-size:.85rem}
+    .font-btn{min-width:32px;height:32px;font-size:.8rem}
+  }
 </style>
-<script src="../shared/js/nav.js"></script>
 </head>
 <body>
 
+<div class="topbar">
+  <div class="topbar-row">
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="../" style="text-decoration:none;font-size:1.2rem;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--txt2)" aria-label="דף הבית">🏠</a>
+      <span class="app-title">מסכת סוטה</span>
+    </div>
+    <div style="display:flex;gap:4px;align-items:center">
+      <button class="font-btn" onclick="changeFontSize(-1)">א‎-</button>
+      <button class="font-btn" onclick="changeFontSize(1)">א+</button>
+      <button class="lang-btn" onclick="alert('אנגלית — בקרוב!')">עברית ▾</button>
+    </div>
+  </div>
+</div>
+
 <header class="sotah-header">
-  <div class="bh">ב״ה</div>
-  <div id="navSlot" style="display:flex;justify-content:center;margin-bottom:.5rem"></div>
   <div class="sub">טקסט מקורי + ביאור מתומצת מבוסס על ביאור שטיינזלץ</div>
 </header>
 
@@ -191,8 +214,13 @@
     grid.appendChild(a);
   }
 })();
+
+function changeFontSize(delta){
+  var el = document.body;
+  var current = parseFloat(getComputedStyle(el).fontSize);
+  el.style.fontSize = (current + delta) + 'px';
+}
 </script>
-<script>document.getElementById('navSlot').appendChild(window._navDropdown);</script>
 <script src="../shared/js/feedback.js"></script>
 </body>
 </html>
