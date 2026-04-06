@@ -1,5 +1,10 @@
 /* app.js — Main application logic (modes, rendering, UI state) */
 
+const PAGE_LANG = document.documentElement.lang || 'he';
+const IS_EN = PAGE_LANG === 'en';
+const LANG_MODE = IS_EN ? ((window.RambamSettings && RambamSettings.get('language')) || 'en') : 'he';
+const IS_BILINGUAL = LANG_MODE === 'he+en';
+
 let currentMode = 'overview';
 let currentCh = 1;
 let dailyChapters = null; // e.g. [6,7,8] when in KH
@@ -42,14 +47,16 @@ function renderAll() {
 let layerStep = [0,0,0,0]; // current step per layer
 
 function renderOverview(el) {
-  let html = '<div style="text-align:center;padding:10px 0 6px"><span style="font-size:.85rem;color:var(--sky)">משנה תורה לרמב"ם · 19 פרקים · 235 הלכות</span></div>';
+  const subtitle = IS_EN ? 'Mishneh Torah by Rambam \u00b7 19 Chapters \u00b7 235 Halachot' : 'משנה תורה לרמב"ם · 19 פרקים · 235 הלכות';
+  const chLabel = IS_EN ? 'Chapters' : 'פרקים';
+  let html = `<div style="text-align:center;padding:10px 0 6px"><span style="font-size:.85rem;color:var(--sky)">${subtitle}</span></div>`;
   LAYER_INFO.forEach((layer, i) => {
     const isOpen = document.getElementById(`layer-${i}`)?.classList.contains('open');
     html += `<div class="layer-section${isOpen?' open':''}" id="layer-${i}">
       <div class="layer-header" onclick="toggleLayer(${i})">
         <div class="layer-num">${i+1}</div>
-        <div class="layer-title"><h3>${layer.title}</h3><p>פרקים ${HEB_CH[layer.chs[0]]}-${HEB_CH[layer.chs[layer.chs.length-1]]} · ${layer.desc}</p></div>
-        <span class="hal-arrow">◀</span>
+        <div class="layer-title"><h3>${layer.title}</h3><p>${chLabel} ${HEB_CH[layer.chs[0]]}-${HEB_CH[layer.chs[layer.chs.length-1]]} · ${layer.desc}</p></div>
+        <span class="hal-arrow">${IS_EN ? '▶' : '◀'}</span>
       </div>
       <div class="layer-body">${renderLayerSteps(i)}</div>
     </div>`;
@@ -82,9 +89,14 @@ function renderLayerSteps(li) {
     </div>
   </div>`;
   // Nav buttons
+  const prevLabel = IS_EN ? '\u2190 Previous' : '\u2192 הקודם';
+  const nextLabel = IS_EN ? 'Next \u2192' : 'הבא \u2190';
+  const finishLabel = IS_EN ? 'Finish \u2713' : 'סיום \u2713';
+  const toPartLabel = IS_EN ? ('To Part ' + (li+2) + ' \u2192') : ('לחלק ' + (li+2) + ' \u2190');
+  const fwdLabel = cur < steps.length-1 ? nextLabel : li < 3 ? toPartLabel : finishLabel;
   html += `<div style="display:flex;justify-content:space-between;margin-top:8px">
-    <button class="nb" ${cur===0?'disabled':''} onclick="layerStep[${li}]--;renderAll()">→ הקודם</button>
-    <button class="nb pr" onclick="${cur<steps.length-1?`layerStep[${li}]++;renderAll()`:`toggleLayer(${li});${li<3?`document.getElementById('layer-${li+1}').classList.add('open');document.getElementById('layer-${li+1}').scrollIntoView({behavior:'smooth'})`:''}`}">${cur<steps.length-1?'הבא ←':li<3?'לחלק '+(li+2)+' ←':'סיום ✓'}</button>
+    <button class="nb" ${cur===0?'disabled':''} onclick="layerStep[${li}]--;renderAll()">${prevLabel}</button>
+    <button class="nb pr" onclick="${cur<steps.length-1?`layerStep[${li}]++;renderAll()`:`toggleLayer(${li});${li<3?`document.getElementById('layer-${li+1}').classList.add('open');document.getElementById('layer-${li+1}').scrollIntoView({behavior:'smooth'})`:''}`}">${fwdLabel}</button>
   </div>`;
   return html;
 }
@@ -95,8 +107,10 @@ function renderLayerSteps(li) {
 function renderStudy(el) {
   const chData = DATA.find(c => c.ch === currentCh);
   if (!chData) return;
-  let html = `<div class="ch-divider"><h2>פרק ${HEB_CH[currentCh]} — ${CH_TITLES[currentCh] || ''}</h2>
-    <div class="ch-count">${chData.halachot.length} הלכות</div></div>`;
+  const chPrefix = IS_EN ? 'Chapter' : 'פרק';
+  const halLabel = IS_EN ? 'halachot' : 'הלכות';
+  let html = `<div class="ch-divider"><h2>${chPrefix} ${HEB_CH[currentCh]} — ${CH_TITLES[currentCh] || ''}</h2>
+    <div class="ch-count">${chData.halachot.length} ${halLabel}</div></div>`;
   chData.halachot.forEach(h => {
     const title = HAL_TITLES[`${currentCh}:${h.n}`] || '';
     html += renderHalCard(currentCh, h, title, false);
@@ -112,12 +126,15 @@ function renderContinuous(el) {
     ? DATA.filter(c => dailyChapters.indexOf(c.ch) !== -1)
     : DATA;
   let html = '<div class="continuous">';
+  const dailyLabel = IS_EN ? '📖 Daily Study' : '📖 השיעור היומי';
+  const chPrefix = IS_EN ? 'Chapter' : 'פרק';
+  const halLabel = IS_EN ? 'halachot' : 'הלכות';
   if(dailyChapters){
-    html += '<div style="text-align:center;padding:8px 0 4px"><span style="font-size:.85rem;color:var(--gold);font-weight:600">📖 השיעור היומי</span></div>';
+    html += `<div style="text-align:center;padding:8px 0 4px"><span style="font-size:.85rem;color:var(--gold);font-weight:600">${dailyLabel}</span></div>`;
   }
   chapters.forEach(chData => {
-    html += `<div class="ch-divider" id="ch-${chData.ch}"><h2>פרק ${HEB_CH[chData.ch]} — ${CH_TITLES[chData.ch] || ''}</h2>
-      <div class="ch-count">${chData.halachot.length} הלכות</div></div>`;
+    html += `<div class="ch-divider" id="ch-${chData.ch}"><h2>${chPrefix} ${HEB_CH[chData.ch]} — ${CH_TITLES[chData.ch] || ''}</h2>
+      <div class="ch-count">${chData.halachot.length} ${halLabel}</div></div>`;
     chData.halachot.forEach(h => {
       const title = HAL_TITLES[`${chData.ch}:${h.n}`] || '';
       html += renderHalCard(chData.ch, h, title, true);
@@ -141,17 +158,49 @@ function changeFontSize(delta) {
 function renderHalCard(ch, h, preview, isOpen) {
   const id = `${ch}-${h.n}`;
   const openCls = isOpen ? ' open' : '';
-  const vizBadge = h.viz ? '<span style="font-size:.65rem;color:var(--purple);margin-right:4px">📊</span>' : '';
+  const vizBadge = h.viz ? '<span style="font-size:.65rem;color:var(--purple);margin-' + (IS_EN ? 'right' : 'right') + ':4px">📊</span>' : '';
+  const arrowChar = IS_EN ? '▶' : '◀';
+
+  // Bio/explanation block
+  let bioHtml = '';
+  if (IS_EN) {
+    const bio = h.bio_en || h.bio || '';
+    if (bio) bioHtml = `<div class="bio-block">${bio}</div>`;
+  } else {
+    if (h.bio) bioHtml = `<div class="bio-block">${h.bio}</div>`;
+  }
+
+  // Rambam source text
+  let srcHtml = '';
+  if (IS_EN && IS_BILINGUAL) {
+    // he+en mode: Hebrew source + English translation
+    if (h.he) srcHtml += `<div class="txt-rambam" dir="rtl" style="text-align:right">${fmtRef(h.he)}</div>`;
+    if (h.en) srcHtml += `<div class="txt-english">${h.en}</div>`;
+  } else if (IS_EN) {
+    // English only: show English Rambam text
+    if (h.en) srcHtml = `<div class="txt-english">${h.en}</div>`;
+  } else {
+    // Hebrew: show Hebrew source
+    if (h.he) srcHtml = `<div class="txt-rambam">${fmtRef(h.he)}</div>`;
+  }
+
+  // Steinsaltz commentary (always Hebrew)
+  let stHtml = '';
+  if (h.st && h.st.length) {
+    const stLabel = IS_EN ? 'Steinsaltz Commentary (Hebrew)' : 'ביאור שטיינזלץ';
+    stHtml = `<div class="txt-steinsaltz"><div class="st-label">${stLabel}</div>${h.st.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div>`;
+  }
+
   return `<div class="hal-card${openCls}" id="hal-${id}">
     <div class="hal-header" onclick="toggleHal('${id}')">
       <div class="hal-num">${h.n}</div>
       <div class="hal-preview">${vizBadge}${preview}</div>
-      <span class="hal-arrow">◀</span>
+      <span class="hal-arrow">${arrowChar}</span>
     </div>
     <div class="hal-body">
-      ${h.bio ? `<div style="font-size:.9rem;line-height:1.75;color:var(--txt);padding:10px 14px;background:var(--gold-bg);border-right:3px solid var(--gold);border-radius:0 10px 10px 0;margin-bottom:10px">${h.bio}</div>` : ''}
-      ${h.he ? `<div class="txt-rambam">${fmtRef(h.he)}</div>` : ''}
-      ${h.st && h.st.length ? `<div class="txt-steinsaltz"><div class="st-label">ביאור שטיינזלץ</div>${h.st.map(s => `<div class="st-item">${fmtSt(s)}</div>`).join('')}</div>` : ''}
+      ${bioHtml}
+      ${srcHtml}
+      ${stHtml}
       ${h.viz ? renderViz(h.viz, ch, h.n) : ''}
     </div>
   </div>`;

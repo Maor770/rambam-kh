@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>בית המדרש — רמב״ם יומי</title>
-<link rel="stylesheet" href="shared/css/theme.css">
+<title>Study Hall — Daily Rambam</title>
+<link rel="stylesheet" href="../shared/css/theme.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
 <style>
-  body{ font-family: 'Google Sans', var(--font-body); }
+  body{ font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   .home-header{
     text-align:center;
     padding:2rem 1rem 1rem;
   }
   .home-header h1{
-    font-family:'Google Sans', var(--font-body);
+    font-family:'Google Sans', -apple-system, sans-serif;
     font-size:2rem;
     color:var(--gold);
     margin-bottom:.25rem;
@@ -37,6 +37,21 @@
     transition:color .2s;
   }
   .gear-link:hover{ color:var(--gold); }
+  .lang-link{
+    color:var(--sky);
+    text-decoration:none;
+    font-size:.9rem;
+    font-weight:500;
+    min-width:44px;
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border:1px solid var(--border);
+    transition:border-color .2s;
+  }
+  .lang-link:hover{ border-color:var(--gold); color:var(--gold); }
 
   /* Date display */
   .date-block{
@@ -66,7 +81,7 @@
   }
   .date-arrow:hover{ border-color:var(--gold); color:var(--gold); }
   .date-hebrew{
-    font-family:'Google Sans', var(--font-body);
+    font-family:'Google Sans', -apple-system, sans-serif;
     font-size:1.5rem;
     color:var(--gold);
     font-weight:700;
@@ -125,7 +140,7 @@
     display:block;
   }
   .card-title{
-    font-family:'Google Sans', var(--font-body);
+    font-family:'Google Sans', -apple-system, sans-serif;
     font-size:1.2rem;
     color:var(--txt);
     font-weight:700;
@@ -143,7 +158,7 @@
     font-size:.7rem;
     padding:.15rem .5rem;
     border-radius:999px;
-    margin-right:.4rem;
+    margin-left:.4rem;
     vertical-align:middle;
   }
   .card-today{
@@ -169,65 +184,54 @@
 <body>
 
 <header class="home-header">
-  <div style="text-align:center;font-size:.65rem;color:var(--txt3);margin-bottom:2px">ב״ה</div>
+  <div style="text-align:center;font-size:.65rem;color:var(--txt3);margin-bottom:2px">B"H</div>
   <div class="header-row">
-    <a href="en/" style="color:var(--sky);text-decoration:none;font-size:.85rem;font-weight:500;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--border);transition:border-color .2s" title="English version">EN</a>
-    <h1>בית המדרש החבדי</h1>
-    <a href="admin/index.html" class="gear-link" aria-label="הגדרות">&#x2699;</a>
+    <a href="../" class="lang-link" title="Hebrew version">עב</a>
+    <h1>Chabad Study Hall</h1>
+    <a href="../admin/en.html" class="gear-link" aria-label="Settings">&#x2699;</a>
   </div>
 </header>
 
 <section class="date-block">
   <div class="date-row">
-    <button class="date-arrow" id="dateNext" aria-label="יום הבא">&#x276E;</button>
-    <div class="date-hebrew" id="dateHebrew">—</div>
-    <button class="date-arrow" id="datePrev" aria-label="יום קודם">&#x276F;</button>
+    <button class="date-arrow" id="datePrev" aria-label="Previous day">&#x276E;</button>
+    <div class="date-hebrew" id="dateHebrew">&mdash;</div>
+    <button class="date-arrow" id="dateNext" aria-label="Next day">&#x276F;</button>
   </div>
-  <div class="date-greg" id="dateGreg">—</div>
-  <button class="today-btn" id="todayBtn" onclick="goToday()">חזרה להיום</button>
+  <div class="date-greg" id="dateGreg">&mdash;</div>
+  <button class="today-btn" id="todayBtn" onclick="goToday()">Back to today</button>
 </section>
 
 <section class="card-grid">
-  <a href="kiddush/" class="card-link" id="rambamCard">
+  <a href="../kiddush/en.html" class="card-link" id="rambamCard">
     <span class="card-icon" aria-hidden="true">&#127769;</span>
-    <div class="card-title">הלכות קידוש החודש</div>
-    <div class="card-desc">לימוד יומי בהלכות קידוש החודש לרמב״ם, עם ביאורים ותרשימים אינטראקטיביים.</div>
+    <div class="card-title">Laws of Sanctifying the Month</div>
+    <div class="card-desc">Daily study of Rambam's Hilchot Kiddush HaChodesh, with explanations and interactive diagrams.</div>
     <div class="card-today" id="rambamToday" style="display:none"></div>
   </a>
-  <a href="sotah/" class="card-link" id="sotahCard">
+  <a href="../sotah/" class="card-link" id="sotahCard">
     <span class="card-icon" aria-hidden="true">&#128220;</span>
-    <div class="card-title">מסכת סוטה — דף יומי</div>
-    <div class="card-desc">לימוד דף יומי במסכת סוטה עם פירושים וכלי עזר.</div>
+    <div class="card-title">Tractate Sotah — Daf Yomi</div>
+    <div class="card-desc">Daily page study of Tractate Sotah with commentaries and study aids.</div>
     <div class="card-today" id="sotahToday" style="display:none"></div>
   </a>
-  <!-- תניא יומי — מוסתר זמנית, בעבודה -->
-  <!--
-  <a href="tanya/" class="card-link" id="tanyaCard">
-    <span class="card-icon" aria-hidden="true">&#128218;</span>
-    <div class="card-title">תניא יומי</div>
-    <div class="card-desc">שיעור יומי בספר התניא עם ציטוט מקורי וביאור זורם מ&quot;שיעורים בספר התניא&quot;.</div>
-    <div class="card-today" id="tanyaToday" style="display:none"></div>
-  </a>
-  -->
 </section>
 
 <footer class="home-footer">
-  נבנה לזכות ההתגלות של הרבי מלך המשיח, נאו! &bull; תשפ״ו
-  <br><span style="color:var(--gold);font-weight:500">גירסת בטא</span> &mdash; הערות והארות יתקבלו בברכה: <a href="mailto:chanoch@maor.org" style="color:var(--sky);text-decoration:none">chanoch@maor.org</a>
+  Built in honor of the revelation of the Rebbe, King Moshiach, now! &bull; 5786
+  <br><span style="color:var(--gold);font-weight:500">Beta version</span> &mdash; Comments and feedback welcome: <a href="mailto:chanoch@maor.org" style="color:var(--sky);text-decoration:none">chanoch@maor.org</a>
 </footer>
 
-<script src="shared/js/settings.js"></script>
-<script src="shared/js/hebrew-date.js"></script>
-<script src="shared/js/analytics.js"></script>
-<script src="sotah/sotah-daily.js"></script>
+<script src="../shared/js/settings.js"></script>
+<script src="../shared/js/hebrew-date.js"></script>
+<script src="../shared/js/analytics.js"></script>
+<script src="../sotah/sotah-daily.js"></script>
 <script>
 (function(){
   RambamSettings.applyTheme();
-  RambamAnalytics.trackPageView('home');
+  RambamAnalytics.trackPageView('home-en');
 
-  var lang = RambamSettings.get('language') || 'he';
-  var tz = HebrewDate.detectTZ(lang);
-  var isHe = lang === 'he';
+  var tz = HebrewDate.detectTZ('en');
 
   // Current "real" today
   var realToday = HebrewDate.today(tz);
@@ -241,9 +245,9 @@
 
   function render(){
     var d = getDisplayDate();
-    // Date display
-    var dow = isHe ? d.dowHe : d.dowEn;
-    var greg = isHe ? d.gregorian : d.gregorianEn;
+    // Date display — English format
+    var dow = d.dowEn;
+    var greg = d.gregorianEn;
     document.getElementById('dateHebrew').textContent = dow + ' | ' + d.hebrew;
     document.getElementById('dateGreg').textContent = greg;
     // Today button
@@ -255,21 +259,20 @@
     try {
       var daf = SotahDaily.dafForDate(d.gYear, d.gMonth, d.gDay);
       if(daf){
-        var hebDaf = SotahDaily.HEB[daf] || '';
-        sotahEl.textContent = 'דף ' + hebDaf;
+        sotahEl.textContent = 'Daf ' + daf;
         sotahEl.style.display = '';
         var dafUrl = SotahDaily.dafUrl(daf);
-        sotahCard.href = dafUrl ? 'sotah/' + dafUrl : 'sotah/';
+        sotahCard.href = dafUrl ? '../sotah/' + dafUrl : '../sotah/';
       } else {
-        sotahEl.textContent = 'אין שיעור (מחוץ לספירה)';
+        sotahEl.textContent = 'No shiur (outside the cycle)';
         sotahEl.style.display = '';
-        sotahCard.href = 'sotah/';
+        sotahCard.href = '../sotah/';
       }
     } catch(e){ sotahEl.style.display = 'none'; }
 
     // --- Rambam link with date ---
     var rambamCard = document.getElementById('rambamCard');
-    rambamCard.href = dayOffset === 0 ? 'kiddush/' : 'kiddush/?date=' + d.gYear + '-' + d.gMonth + '-' + d.gDay;
+    rambamCard.href = dayOffset === 0 ? '../kiddush/en.html' : '../kiddush/en.html?date=' + d.gYear + '-' + d.gMonth + '-' + d.gDay;
 
     // --- Rambam from Sefaria ---
     var rambamEl = document.getElementById('rambamToday');
@@ -286,8 +289,8 @@
           }
         }
         if(!rambam3){ rambamEl.style.display = 'none'; return; }
-        var heDisplay = rambam3.displayValue && rambam3.displayValue.he ? rambam3.displayValue.he : '';
-        rambamEl.textContent = heDisplay;
+        var enDisplay = rambam3.displayValue && rambam3.displayValue.en ? rambam3.displayValue.en : '';
+        rambamEl.textContent = enDisplay;
       })
       .catch(function(){ rambamEl.style.display = 'none'; });
   }
@@ -311,6 +314,6 @@
   scheduleRefresh();
 })();
 </script>
-<script src="shared/js/feedback.js"></script>
+<script src="../shared/js/feedback.js"></script>
 </body>
 </html>

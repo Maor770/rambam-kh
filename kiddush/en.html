@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Laws of Sanctifying the Month — Rambam with Steinsaltz Commentary</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-row">
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="../en/" style="text-decoration:none;font-size:1.2rem;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--txt2)" aria-label="Home">🏠</a>
+      <span class="app-title">Laws of Sanctifying the Month</span>
+    </div>
+    <div style="display:flex;gap:4px;align-items:center">
+      <button class="font-btn" onclick="changeFontSize(-1)">A-</button>
+      <button class="font-btn" onclick="changeFontSize(1)">A+</button>
+      <a href="index.html" class="lang-btn" style="text-decoration:none;text-align:center">עברית</a>
+    </div>
+  </div>
+  <div class="mode-tabs">
+    <button class="mode-tab active" onclick="setMode('overview')">🔭 Overview</button>
+    <button class="mode-tab" onclick="setMode('study')">📖 Study</button>
+    <button class="mode-tab" onclick="setMode('continuous')">📜 Continuous</button>
+  </div>
+</div>
+
+<!-- CHAPTER SCROLL (study/continuous modes) -->
+<div class="ch-scroll" id="chScroll" style="display:none"></div>
+
+<!-- FLOATING PROGRESS -->
+<div class="float-progress" id="floatProg" style="opacity:0"></div>
+
+<!-- MAIN -->
+<div class="main" id="mainContent">
+  <div style="text-align:center;padding:60px 20px;color:var(--txt3)">
+    <div style="font-size:2rem;margin-bottom:12px">🌙</div>
+    <div>Loading data...</div>
+  </div>
+</div>
+
+<div class="footer">
+  Source: Mishneh Torah by Rambam, Hilchot Kiddush HaChodesh · Steinsaltz Commentary (Koren) · Touger Translation (Moznaim)
+  <br>"Seek from the book of God and read — not one of these shall be missing" (19:16)
+  <br><br><span style="font-size:.62rem;color:var(--txt3);line-height:1.5">The vocalized text of Hilchot Kiddush HaChodesh and the commentary by Rabbi Adin Even-Israel (Steinsaltz) are taken from the William Davidson Digital Edition of the Koren-Noé Talmud, courtesy of <a href="https://www.sefaria.org" target="_blank" style="color:var(--sky);text-decoration:none">Sefaria (Sefaria.org)</a>.<br>These contents are available for free use under the CC-BY-NC license — permitted to use, share and adapt, with credit attribution and non-commercial use.</span>
+</div>
+
+<!-- Scripts — order matters! -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../shared/js/settings.js"></script>
+<script src="../shared/js/hebrew-date.js"></script>
+<script src="../shared/js/analytics.js"></script>
+<script src="data/constants_en.js"></script>
+<script src="js/calculators.js"></script>
+<script src="js/new-calculators.js"></script>
+<script src="js/visualizations.js"></script>
+<script src="js/new-visualizations.js"></script>
+<script src="js/moon3d.js"></script>
+<script src="js/app.js"></script>
+<script src="js/data-loader.js"></script><!-- Must be last — triggers init -->
+<script src="../shared/js/feedback.js"></script>
+
+</body>
+</html>
