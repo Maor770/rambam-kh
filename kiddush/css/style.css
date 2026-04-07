@@ -196,6 +196,31 @@
 .worked-example .step-txt{color:var(--txt2)}
 .worked-example .step-result{color:var(--gold);font-weight:700;margin-right:auto}
 
+/* HALACHA SECTIONS */
+.hal-section{border-top:1px solid var(--border-light);margin-top:12px;padding-top:4px}
+.hal-section:first-child{border-top:none;margin-top:0;padding-top:0}
+.section-header{display:flex;align-items:center;gap:8px;padding:10px 0;cursor:pointer;transition:.15s}
+.section-header:hover{opacity:.85}
+.section-num{width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--btn-text);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;flex-shrink:0}
+.section-title{flex:1;font-size:.92rem;font-weight:600;color:var(--gold)}
+.section-arrow{color:var(--txt3);font-size:.65rem;transition:transform .2s}
+.hal-section.open .section-arrow{transform:rotate(90deg)}
+.section-body{display:none;padding:4px 0 8px}
+.hal-section.open .section-body{display:block;animation:fu .2s ease}
+.section-bio{font-size:.85rem;line-height:1.7;color:var(--txt2);background:var(--gold-bg);border-inline-start:3px solid var(--gold);padding:8px 14px;border-radius:0 8px 8px 0;margin-bottom:10px}
+
+/* CALCULATION TABLES */
+.calc-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.82rem;direction:rtl}
+.calc-table th{background:var(--purple-bg);color:var(--purple);padding:7px 10px;text-align:center;font-weight:600;border-bottom:2px solid var(--purple)}
+.calc-table td{padding:6px 10px;text-align:center;border-bottom:1px solid var(--border-light);color:var(--txt)}
+.calc-table tr:nth-child(even) td{background:var(--hover)}
+.calc-table td:first-child{font-weight:600;color:var(--gold)}
+
+/* LTR sections */
+[dir="ltr"] .section-bio{border-inline-start:none;border-left:3px solid var(--gold);border-radius:8px 0 0 8px}
+[dir="ltr"] .calc-table{direction:ltr}
+[dir="ltr"] .hal-section.open .section-arrow{transform:rotate(-90deg)}
+
 /* MOBILE */
 @media(max-width:640px){
   .topbar{padding:6px 8px}
