@@ -108,12 +108,14 @@ async function handleStats(request, env, corsHeaders) {
   const accessToken = await getGoogleAccessToken(env);
 
   // Fetch all data in parallel
-  const [summary, visitorsOverTime, devices, topPages, sources, events] = await Promise.all([
+  const [summary, visitorsOverTime, devices, topPages, sources, countries, languages, events] = await Promise.all([
     fetchSummary(env.GA_PROPERTY_ID, accessToken, days),
     fetchVisitorsOverTime(env.GA_PROPERTY_ID, accessToken, days),
     fetchDevices(env.GA_PROPERTY_ID, accessToken, days),
     fetchTopPages(env.GA_PROPERTY_ID, accessToken, days),
     fetchSources(env.GA_PROPERTY_ID, accessToken, days),
+    fetchCountries(env.GA_PROPERTY_ID, accessToken, days),
+    fetchLanguages(env.GA_PROPERTY_ID, accessToken, days),
     fetchEvents(env.GA_PROPERTY_ID, accessToken, days),
   ]);
 
@@ -123,6 +125,8 @@ async function handleStats(request, env, corsHeaders) {
     devices,
     topPages,
     sources,
+    countries,
+    languages,
     events,
   }, 200, corsHeaders);
 }
@@ -373,6 +377,40 @@ async function fetchSources(propertyId, token, days) {
     source: row.dimensionValues[0].value || '(direct)',
     users: parseInt(row.metricValues[0].value),
     views: parseInt(row.metricValues[1].value),
+  }));
+}
+
+async function fetchCountries(propertyId, token, days) {
+  const data = await gaQuery(propertyId, token, {
+    dateRanges: [getDateRange(days)],
+    dimensions: [{ name: 'country' }],
+    metrics: [
+      { name: 'activeUsers' },
+      { name: 'screenPageViews' },
+    ],
+    orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
+    limit: 15,
+  });
+
+  return (data.rows || []).map(row => ({
+    country: row.dimensionValues[0].value,
+    users: parseInt(row.metricValues[0].value),
+    views: parseInt(row.metricValues[1].value),
+  }));
+}
+
+async function fetchLanguages(propertyId, token, days) {
+  const data = await gaQuery(propertyId, token, {
+    dateRanges: [getDateRange(days)],
+    dimensions: [{ name: 'language' }],
+    metrics: [{ name: 'activeUsers' }],
+    orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
+    limit: 10,
+  });
+
+  return (data.rows || []).map(row => ({
+    language: row.dimensionValues[0].value,
+    users: parseInt(row.metricValues[0].value),
   }));
 }
 
