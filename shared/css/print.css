@@ -66,6 +66,13 @@
     margin-bottom: 6px;
     font-family: 'Heebo', sans-serif;
   }
+  .print-header .ph-bh {
+    font-size: 8px;
+    color: #999;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
   .print-header .ph-title {
     font-size: 11px;
     font-weight: 700;
@@ -77,28 +84,41 @@
     direction: ltr;
   }
 
-  /* --- PRINT FOOTER — bottom of every page via @page workaround --- */
+  /* --- PRINT FOOTER — bottom of every page --- */
   .print-footer {
-    display: block !important;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 1px solid #ccc;
-    padding: 3px 4px 0;
+    border-top: 1px solid #bbb;
+    padding: 4px 4px 2px;
     font-family: 'Heebo', sans-serif;
-    font-size: 8px;
-    color: #999;
+    font-size: 9px;
+    color: #888;
     display: flex !important;
     justify-content: space-between;
     align-items: baseline;
+    background: #fff;
   }
   .print-footer .pf-info {
     direction: rtl;
   }
+  .print-footer .pf-page {
+    font-size: 9px;
+    color: #999;
+  }
+  .print-footer .pf-page::after {
+    counter-increment: page;
+    content: counter(page);
+  }
   .print-footer .pf-site {
     direction: ltr;
-    font-size: 8px;
+    font-size: 9px;
+  }
+
+  /* Reserve space at bottom so content doesn't overlap footer */
+  body {
+    margin-bottom: 30px !important;
   }
 
   /* ======================================================
@@ -142,6 +162,7 @@
     cursor: default !important;
     border-bottom: 1px solid #ccc !important;
     border-radius: 0 !important;
+    break-after: avoid !important;
   }
   [id^="sec"] > button span {
     font-size: 9px !important;
