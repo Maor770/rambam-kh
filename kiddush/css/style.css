@@ -160,6 +160,19 @@
 [dir="ltr"] .hal-preview{text-align:left}
 [dir="ltr"] .ch-divider h2{text-align:left}
 
+/* CONCEPT DIAGRAMS */
+.concept-diagram{margin:12px 0;text-align:center}
+.concept-diagram svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.flow-diagram{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;margin:12px 0;font-size:.78rem}
+.flow-step{padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card2);color:var(--txt);text-align:center}
+.flow-arrow{color:var(--gold);font-weight:bold;font-size:1.1rem}
+.worked-example{background:var(--card2);border-radius:12px;padding:14px;margin:10px 0;border:1px solid var(--border-light);font-size:.85rem;direction:ltr;text-align:left}
+.worked-example .step{display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--border-light)}
+.worked-example .step:last-child{border:none}
+.worked-example .step-num{width:22px;height:22px;border-radius:50%;background:var(--gold-bg);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0}
+.worked-example .step-txt{color:var(--txt2)}
+.worked-example .step-result{color:var(--gold);font-weight:700;margin-right:auto}
+
 /* MOBILE */
 @media(max-width:640px){
   .topbar{padding:6px 8px}
