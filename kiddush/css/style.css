@@ -78,6 +78,12 @@
 .g{color:var(--gold);font-weight:700}
 .b{color:var(--sky);font-weight:500}
 .st-label{font-family:'Heebo',sans-serif;font-size:.72rem;color:var(--purple);font-weight:700;margin-bottom:6px}
+.st-toggle{cursor:pointer;display:flex;align-items:center;gap:4px;user-select:none}
+.st-toggle:hover{color:var(--gold)}
+.st-arrow{font-size:.55rem;transition:transform .2s;color:var(--txt3)}
+.st-body{display:none}
+.st-body.open{display:block;animation:fu .25s ease}
+.st-toggle:has(~ .st-body.open) .st-arrow{transform:rotate(-90deg)}
 .font-ctrl{display:flex;align-items:center;gap:4px}
 .font-btn{min-width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--txt2);font-family:var(--font-body);font-size:.9rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 4px}
 .font-btn:active{border-color:var(--gold);color:var(--gold)}
@@ -194,7 +200,8 @@
 @media(max-width:640px){
   .topbar{padding:6px 8px}
   .app-title{font-size:.85rem}
-  .mode-tab{font-size:.73rem;padding:7px 4px}
+  .mode-tabs{gap:3px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:6px 8px}
+  .mode-tab{font-size:.73rem;padding:7px 4px;min-width:0;white-space:nowrap}
   .ch-btn{padding:5px 10px;font-size:.72rem}
   .txt-rambam{padding:10px 12px}
   .main{padding:0 8px 80px}
