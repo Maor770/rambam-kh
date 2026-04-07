@@ -351,23 +351,25 @@ function renderSectionedHalCard(ch, h, preview, isOpen, id, openCls, vizBadge, a
     let secSrc = '';
     const heTxt = heParts[si] || '';
     const enTxt = enParts[si] || '';
+    // Get the steinsaltz slice for this section (for markStInText)
+    const secStArr = (h.st && sec.stRange && sec.stRange.length === 2)
+      ? h.st.slice(sec.stRange[0], sec.stRange[1] + 1) : [];
     if (IS_EN && IS_BILINGUAL) {
-      if (heTxt) secSrc += `<div class="txt-rambam" dir="rtl" style="text-align:right">${fmtRef(heTxt)}</div>`;
+      if (heTxt) secSrc += `<div class="txt-rambam" dir="rtl" style="text-align:right">${typeof markStInText==='function' ? markStInText(fmtRef(heTxt), secStArr) : fmtRef(heTxt)}</div>`;
       if (enTxt) secSrc += `<div class="txt-english">${enTxt}</div>`;
     } else if (IS_EN) {
       if (enTxt) secSrc = `<div class="txt-english">${enTxt}</div>`;
     } else {
-      if (heTxt) secSrc = `<div class="txt-rambam">${fmtRef(heTxt)}</div>`;
+      if (heTxt) secSrc = `<div class="txt-rambam">${typeof markStInText==='function' ? markStInText(fmtRef(heTxt), secStArr) : fmtRef(heTxt)}</div>`;
     }
 
     const secTable = sec.table ? renderSectionTable(sec.table) : '';
 
     let secSt = '';
-    if (h.st && sec.stRange && sec.stRange.length === 2) {
-      const stSlice = h.st.slice(sec.stRange[0], sec.stRange[1] + 1);
-      if (stSlice.length) {
-        secSt = `<div class="txt-steinsaltz"><div class="st-label">${stLabel}</div>${stSlice.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div>`;
-      }
+    if (secStArr.length) {
+      const secStId = `st-${ch}-${h.n}-sec-${si}`;
+      const secStLabel = IS_EN ? 'Steinsaltz Commentary' : 'ביאור שטיינזלץ';
+      secSt = `<div class="txt-steinsaltz"><div class="st-label st-toggle" onclick="document.getElementById('${secStId}').classList.toggle('open')">${secStLabel} <span class="st-arrow">◀</span></div><div class="st-body" id="${secStId}">${secStArr.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div></div>`;
     }
 
     const secOpen = isOpen ? ' open' : '';
