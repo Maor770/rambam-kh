@@ -13,11 +13,13 @@
 <link rel="icon" type="image/png" href="../shared/img/icon.png">
 <link rel="apple-touch-icon" href="../shared/img/icon.png">
 <link rel="stylesheet" href="../shared/css/theme.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0CQWP9MTK"></script>
+<script src="../shared/js/ga.js"></script>
 <script>
 function shareApp(){
   var data={title:'Chabad Beit Midrash — YeshivaAI.org',text:'Interactive Torah study: Daily Rambam, Hilchot Kiddush HaChodesh, Masechet Sotah and more',url:location.href};
-  if(navigator.share)navigator.share(data).catch(function(){});
-  else{navigator.clipboard.writeText(location.href).then(function(){alert('Link copied!')});}
+  if(navigator.share)navigator.share(data).then(function(){ RambamGA.trackShare('home_en','native'); }).catch(function(){});
+  else{navigator.clipboard.writeText(location.href).then(function(){alert('Link copied!'); RambamGA.trackShare('home_en','clipboard');});}
 }
 </script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">

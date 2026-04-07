@@ -14,11 +14,13 @@
 <link rel="apple-touch-icon" href="../shared/img/icon.png">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="../shared/css/print.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0CQWP9MTK"></script>
+<script src="../shared/js/ga.js"></script>
 <script>
 function shareApp(){
   var data={title:'הלכות קידוש החודש — רמב"ם',text:'235 הלכות עם ביאורים, תרשימים אינטראקטיביים ומחשבונים אסטרונומיים',url:location.href};
-  if(navigator.share)navigator.share(data).catch(function(){});
-  else{navigator.clipboard.writeText(location.href).then(function(){alert('הקישור הועתק!')});}
+  if(navigator.share)navigator.share(data).then(function(){ RambamGA.trackShare('kiddush','native'); }).catch(function(){});
+  else{navigator.clipboard.writeText(location.href).then(function(){alert('הקישור הועתק!'); RambamGA.trackShare('kiddush','clipboard');});}
 }
 </script>
 </head>

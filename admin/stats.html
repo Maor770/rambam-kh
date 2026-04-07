@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>סטטיסטיקה — בית המדרש החבדי</title>
+<link rel="stylesheet" href="../shared/css/theme.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0CQWP9MTK"></script>
+<script src="../shared/js/ga.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<style>
+/* ── Stats dashboard styles ── */
+.stats-wrap{max-width:900px;margin:0 auto;padding:0 16px 80px}
+
+/* Top bar */
+.stats-topbar{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);padding:12px 16px;margin:0 -16px}
+.stats-topbar-inner{display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto}
+.back-link{color:var(--sky);text-decoration:none;font-size:.9rem;font-weight:500;padding:8px 12px;margin:-8px -12px;min-height:44px;display:inline-flex;align-items:center;gap:6px;border-radius:8px;transition:background .15s}
+.back-link:active{background:rgba(135,206,235,.08)}
+.stats-title{font-size:1rem;font-weight:700;color:var(--gold)}
+
+/* Login screen */
+.login-card{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:var(--r);padding:32px 24px;max-width:400px;margin:60px auto;text-align:center}
+.login-card h2{color:var(--gold);font-size:1.2rem;margin-bottom:8px}
+.login-card p{color:var(--txt3);font-size:.85rem;margin-bottom:20px}
+.login-input{width:100%;padding:12px 14px;min-height:44px;border-radius:10px;border:1.5px solid rgba(255,255,255,.1);background:var(--card2);color:var(--txt);font-family:var(--font-body);font-size:.9rem;margin-bottom:12px;outline:none;transition:border-color .15s}
+.login-input:focus{border-color:var(--gold)}
+.login-btn{width:100%;padding:12px;min-height:44px;border-radius:10px;border:none;background:var(--gold);color:#000;font-family:var(--font-body);font-size:.9rem;font-weight:600;cursor:pointer;transition:.15s}
+.login-btn:active{opacity:.85}
+.login-error{color:var(--red);font-size:.82rem;margin-top:8px;display:none}
+
+/* Dashboard (hidden until login) */
+.dashboard{display:none}
+
+/* Period selector */
+.period-bar{display:flex;gap:6px;margin:16px 0;flex-wrap:wrap}
+.period-btn{padding:8px 16px;min-height:36px;border-radius:8px;border:1.5px solid rgba(255,255,255,.1);background:transparent;color:var(--txt2);font-family:var(--font-body);font-size:.82rem;font-weight:500;cursor:pointer;transition:.15s}
+.period-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(244,208,63,.06)}
+
+/* Summary cards */
+.summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+.summary-card{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:var(--r);padding:16px;text-align:center}
+.summary-val{font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1.2}
+.summary-label{font-size:.78rem;color:var(--txt3);margin-top:4px}
+.summary-change{font-size:.75rem;margin-top:4px}
+.summary-change.up{color:var(--green)}
+.summary-change.down{color:var(--red)}
+
+/* Chart sections */
+.chart-section{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:var(--r);margin:16px 0;overflow:hidden}
+.chart-header{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between}
+.chart-title{font-size:.92rem;font-weight:700;color:var(--gold)}
+.chart-body{padding:16px;position:relative}
+.chart-body canvas{max-height:280px}
+
+/* Data table */
+.data-table{width:100%;border-collapse:collapse;margin-top:8px}
+.data-table th,.data-table td{text-align:right;padding:10px 8px;font-size:.82rem}
+.data-table th{color:var(--txt3);font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
+.data-table td{color:var(--txt);border-bottom:1px solid rgba(255,255,255,.02)}
+.data-table td:last-child{color:var(--sky);font-weight:600;text-align:center}
+.data-table tr:hover td{background:rgba(255,255,255,.02)}
+
+/* Events table */
+.event-badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:.75rem;font-weight:500}
+.event-badge.share{background:rgba(135,206,235,.1);color:var(--sky)}
+.event-badge.view{background:rgba(46,204,113,.1);color:var(--green)}
+.event-badge.bookmark{background:rgba(244,208,63,.1);color:var(--gold)}
+
+/* Loading */
+.loading{text-align:center;padding:40px;color:var(--txt3)}
+.loading-spinner{display:inline-block;width:24px;height:24px;border:3px solid rgba(255,255,255,.1);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Responsive */
+@media(min-width:600px){
+  .summary-grid{grid-template-columns:repeat(4,1fr)}
+  .chart-body canvas{max-height:320px}
+}
+@media(min-width:800px){
+  .stats-wrap{padding:0 24px 80px}
+}
+</style>
+</head>
+<body>
+<div class="stats-wrap">
+
+  <!-- Top bar -->
+  <div class="stats-topbar">
+    <div class="stats-topbar-inner">
+      <a href="index.html" class="back-link">← הגדרות</a>
+      <div class="stats-title">סטטיסטיקה</div>
+      <div style="width:60px"></div>
+    </div>
+  </div>
+
+  <!-- Login -->
+  <div id="loginScreen" class="login-card">
+    <h2>כניסת אדמין</h2>
+    <p>הזן אימייל וקוד גישה לצפייה בסטטיסטיקה</p>
+    <input type="email" id="loginEmail" class="login-input" placeholder="אימייל" autocomplete="email">
+    <input type="password" id="loginCode" class="login-input" placeholder="קוד גישה" autocomplete="current-password">
+    <button id="loginBtn" class="login-btn">כניסה</button>
+    <div id="loginError" class="login-error">אימייל או קוד שגוי</div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="dashboard">
+
+    <!-- Period selector -->
+    <div class="period-bar">
+      <button class="period-btn active" data-period="7">7 ימים</button>
+      <button class="period-btn" data-period="14">14 ימים</button>
+      <button class="period-btn" data-period="30">30 ימים</button>
+      <button class="period-btn" data-period="90">90 ימים</button>
+    </div>
+
+    <!-- Summary cards -->
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-val" id="sumUsers">—</div>
+        <div class="summary-label">משתמשים</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val" id="sumViews">—</div>
+        <div class="summary-label">צפיות דפים</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val" id="sumDuration">—</div>
+        <div class="summary-label">זמן שהייה ממוצע</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val" id="sumReturning">—</div>
+        <div class="summary-label">אחוז חזרה</div>
+      </div>
+    </div>
+
+    <!-- Visitors over time chart -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <span class="chart-title">ביקורים לאורך זמן</span>
+      </div>
+      <div class="chart-body">
+        <canvas id="visitorsChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Device breakdown -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <span class="chart-title">מכשירים</span>
+      </div>
+      <div class="chart-body" style="max-width:300px;margin:0 auto">
+        <canvas id="devicesChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Top pages -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <span class="chart-title">דפים פופולריים</span>
+      </div>
+      <div class="chart-body">
+        <canvas id="pagesChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Pages table -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <span class="chart-title">כל הדפים</span>
+      </div>
+      <div class="chart-body">
+        <table class="data-table" id="pagesTable">
+          <thead><tr><th>עמוד</th><th>צפיות</th><th>משתמשים</th><th>זמן ממוצע</th></tr></thead>
+          <tbody id="pagesTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Traffic sources -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <span class="chart-title">מקורות תנועה</span>
+      </div>
+      <div class="chart-body">
+        <table class="data-table" id="sourcesTable">
+          <thead><tr><th>מקור</th><th>משתמשים</th><th>צפיות</th></tr></thead>
+          <tbody id="sourcesTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Custom events -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <span class="chart-title">אירועים מותאמים</span>
+      </div>
+      <div class="chart-body">
+        <table class="data-table" id="eventsTable">
+          <thead><tr><th>אירוע</th><th>סוג</th><th>כמות</th></tr></thead>
+          <tbody id="eventsTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../shared/js/settings.js"></script>
+<script>
+(function(){
+  var S = window.RambamSettings;
+  if(S) S.applyTheme();
+
+  /* ── Config ── */
+  var WORKER_URL = ''; // Set your Cloudflare Worker URL here
+
+  /* ── Elements ── */
+  var loginScreen = document.getElementById('loginScreen');
+  var dashboard = document.getElementById('dashboard');
+  var loginBtn = document.getElementById('loginBtn');
+  var loginError = document.getElementById('loginError');
+  var emailInput = document.getElementById('loginEmail');
+  var codeInput = document.getElementById('loginCode');
+
+  /* ── Chart instances ── */
+  var visitorsChartInstance = null;
+  var devicesChartInstance = null;
+  var pagesChartInstance = null;
+
+  /* ── Chart.js defaults for dark theme ── */
+  Chart.defaults.color = 'rgba(255,255,255,.5)';
+  Chart.defaults.borderColor = 'rgba(255,255,255,.06)';
+  Chart.defaults.font.family = "'Heebo','Google Sans',sans-serif";
+
+  /* ── Login ── */
+  loginBtn.addEventListener('click', doLogin);
+  codeInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') doLogin(); });
+
+  // Check saved session
+  var savedToken = sessionStorage.getItem('stats_token');
+  if(savedToken){
+    showDashboard(savedToken);
+  }
+
+  function doLogin(){
+    var email = emailInput.value.trim();
+    var code = codeInput.value.trim();
+    if(!email || !code){
+      showLoginError('נא למלא אימייל וקוד');
+      return;
+    }
+
+    loginBtn.textContent = 'מתחבר...';
+    loginBtn.disabled = true;
+
+    if(!WORKER_URL){
+      // Demo mode — no worker configured yet
+      var token = btoa(email + ':' + code);
+      sessionStorage.setItem('stats_token', token);
+      showDashboard(token);
+      return;
+    }
+
+    fetch(WORKER_URL + '/auth', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ email: email, code: code })
+    })
+    .then(function(r){
+      if(!r.ok) throw new Error('auth failed');
+      return r.json();
+    })
+    .then(function(data){
+      sessionStorage.setItem('stats_token', data.token);
+      showDashboard(data.token);
+    })
+    .catch(function(){
+      showLoginError('אימייל או קוד שגוי');
+      loginBtn.textContent = 'כניסה';
+      loginBtn.disabled = false;
+    });
+  }
+
+  function showLoginError(msg){
+    loginError.textContent = msg;
+    loginError.style.display = 'block';
+  }
+
+  /* ── Dashboard ── */
+  function showDashboard(token){
+    loginScreen.style.display = 'none';
+    dashboard.style.display = 'block';
+    loadData(7, token);
+
+    // Period buttons
+    document.querySelectorAll('.period-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.period-btn').forEach(function(b){ b.classList.remove('active'); });
+        this.classList.add('active');
+        loadData(parseInt(this.dataset.period), token);
+      });
+    });
+  }
+
+  function loadData(days, token){
+    if(!WORKER_URL){
+      loadDemoData(days);
+      return;
+    }
+
+    fetch(WORKER_URL + '/stats?days=' + days, {
+      headers: { 'Authorization': 'Bearer ' + token }
+    })
+    .then(function(r){
+      if(!r.ok) throw new Error('fetch failed');
+      return r.json();
+    })
+    .then(function(data){ renderData(data, days); })
+    .catch(function(e){
+      console.error('Failed to load stats:', e);
+    });
+  }
+
+  /* ── Demo data (used when no Worker is configured) ── */
+  function loadDemoData(days){
+    var now = new Date();
+    var labels = [];
+    var visitors = [];
+    var views = [];
+
+    for(var i = days - 1; i >= 0; i--){
+      var d = new Date(now);
+      d.setDate(d.getDate() - i);
+      labels.push(d.toLocaleDateString('he-IL', {day:'numeric', month:'short'}));
+      var v = Math.floor(Math.random() * 30) + 10;
+      visitors.push(v);
+      views.push(v + Math.floor(Math.random() * 40) + 10);
+    }
+
+    var totalUsers = visitors.reduce(function(a,b){return a+b;}, 0);
+    var totalViews = views.reduce(function(a,b){return a+b;}, 0);
+
+    var data = {
+      summary: {
+        users: totalUsers,
+        pageViews: totalViews,
+        avgDuration: Math.floor(Math.random() * 180) + 60,
+        returningPercent: Math.floor(Math.random() * 30) + 15
+      },
+      visitorsOverTime: { labels: labels, users: visitors, views: views },
+      devices: { desktop: 35, mobile: 58, tablet: 7 },
+      topPages: [
+        { page: 'דף הבית', views: Math.floor(totalViews * 0.25), users: Math.floor(totalUsers * 0.6), avgDuration: 45 },
+        { page: 'קידוש החודש', views: Math.floor(totalViews * 0.20), users: Math.floor(totalUsers * 0.45), avgDuration: 210 },
+        { page: 'סוטה — אינדקס', views: Math.floor(totalViews * 0.15), users: Math.floor(totalUsers * 0.35), avgDuration: 30 },
+        { page: 'סוטה דף ב׳', views: Math.floor(totalViews * 0.08), users: Math.floor(totalUsers * 0.2), avgDuration: 300 },
+        { page: 'סוטה דף ג׳', views: Math.floor(totalViews * 0.06), users: Math.floor(totalUsers * 0.15), avgDuration: 280 },
+        { page: 'תניא — אינדקס', views: Math.floor(totalViews * 0.07), users: Math.floor(totalUsers * 0.18), avgDuration: 25 },
+        { page: 'תניא יום א׳', views: Math.floor(totalViews * 0.05), users: Math.floor(totalUsers * 0.12), avgDuration: 240 },
+        { page: 'Home (EN)', views: Math.floor(totalViews * 0.04), users: Math.floor(totalUsers * 0.1), avgDuration: 35 }
+      ],
+      sources: [
+        { source: 'ישיר (Direct)', users: Math.floor(totalUsers * 0.45), views: Math.floor(totalViews * 0.35) },
+        { source: 'Google', users: Math.floor(totalUsers * 0.25), views: Math.floor(totalViews * 0.3) },
+        { source: 'WhatsApp', users: Math.floor(totalUsers * 0.15), views: Math.floor(totalViews * 0.2) },
+        { source: 'Telegram', users: Math.floor(totalUsers * 0.08), views: Math.floor(totalViews * 0.08) },
+        { source: 'אחר', users: Math.floor(totalUsers * 0.07), views: Math.floor(totalViews * 0.07) }
+      ],
+      events: [
+        { name: 'share_click', type: 'share', count: Math.floor(Math.random() * 20) + 5 },
+        { name: 'halacha_view', type: 'view', count: Math.floor(Math.random() * 100) + 50 },
+        { name: 'daf_view', type: 'view', count: Math.floor(Math.random() * 80) + 30 },
+        { name: 'tanya_view', type: 'view', count: Math.floor(Math.random() * 40) + 10 },
+        { name: 'bookmark_add', type: 'bookmark', count: Math.floor(Math.random() * 15) + 2 },
+        { name: 'feedback_submit', type: 'view', count: Math.floor(Math.random() * 5) + 1 }
+      ]
+    };
+
+    renderData(data, days);
+  }
+
+  /* ── Render ── */
+  function renderData(data, days){
+    var s = data.summary;
+
+    // Summary cards
+    document.getElementById('sumUsers').textContent = formatNum(s.users);
+    document.getElementById('sumViews').textContent = formatNum(s.pageViews);
+    document.getElementById('sumDuration').textContent = formatDuration(s.avgDuration);
+    document.getElementById('sumReturning').textContent = s.returningPercent + '%';
+
+    // Visitors over time
+    renderVisitorsChart(data.visitorsOverTime);
+
+    // Devices
+    renderDevicesChart(data.devices);
+
+    // Top pages bar chart
+    renderPagesChart(data.topPages);
+
+    // Pages table
+    renderPagesTable(data.topPages);
+
+    // Sources table
+    renderSourcesTable(data.sources);
+
+    // Events table
+    renderEventsTable(data.events);
+  }
+
+  function renderVisitorsChart(d){
+    var ctx = document.getElementById('visitorsChart').getContext('2d');
+    if(visitorsChartInstance) visitorsChartInstance.destroy();
+    visitorsChartInstance = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: d.labels,
+        datasets: [
+          {
+            label: 'משתמשים',
+            data: d.users,
+            borderColor: '#f4d03f',
+            backgroundColor: 'rgba(244,208,63,.08)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 3,
+            pointBackgroundColor: '#f4d03f'
+          },
+          {
+            label: 'צפיות',
+            data: d.views,
+            borderColor: '#87ceeb',
+            backgroundColor: 'rgba(135,206,235,.05)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 3,
+            pointBackgroundColor: '#87ceeb'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: { legend: { position: 'top', rtl: true } },
+        scales: {
+          x: { ticks: { maxRotation: 45, font: { size: 11 } } },
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  }
+
+  function renderDevicesChart(d){
+    var ctx = document.getElementById('devicesChart').getContext('2d');
+    if(devicesChartInstance) devicesChartInstance.destroy();
+    devicesChartInstance = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['מובייל', 'דסקטופ', 'טאבלט'],
+        datasets: [{
+          data: [d.mobile, d.desktop, d.tablet],
+          backgroundColor: ['#f4d03f', '#87ceeb', '#8b5cf6'],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom', rtl: true },
+          tooltip: {
+            callbacks: {
+              label: function(ctx){ return ctx.label + ': ' + ctx.parsed + '%'; }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  function renderPagesChart(pages){
+    var ctx = document.getElementById('pagesChart').getContext('2d');
+    if(pagesChartInstance) pagesChartInstance.destroy();
+    var top8 = pages.slice(0, 8);
+    pagesChartInstance = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: top8.map(function(p){ return p.page; }),
+        datasets: [{
+          label: 'צפיות',
+          data: top8.map(function(p){ return p.views; }),
+          backgroundColor: 'rgba(244,208,63,.6)',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        indexAxis: 'y',
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { beginAtZero: true },
+          y: { ticks: { font: { size: 12 } } }
+        }
+      }
+    });
+  }
+
+  function renderPagesTable(pages){
+    var tbody = document.getElementById('pagesTableBody');
+    tbody.innerHTML = '';
+    pages.forEach(function(p){
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + p.page + '</td><td>' + formatNum(p.views) + '</td><td>' + formatNum(p.users) + '</td><td>' + formatDuration(p.avgDuration) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function renderSourcesTable(sources){
+    var tbody = document.getElementById('sourcesTableBody');
+    tbody.innerHTML = '';
+    sources.forEach(function(s){
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + s.source + '</td><td>' + formatNum(s.users) + '</td><td>' + formatNum(s.views) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function renderEventsTable(events){
+    var tbody = document.getElementById('eventsTableBody');
+    tbody.innerHTML = '';
+    var eventNames = {
+      share_click: 'לחיצת שיתוף',
+      halacha_view: 'צפייה בהלכה',
+      daf_view: 'צפייה בדף',
+      tanya_view: 'צפייה בתניא',
+      bookmark_add: 'הוספת סימנייה',
+      feedback_submit: 'שליחת משוב'
+    };
+    events.forEach(function(e){
+      var tr = document.createElement('tr');
+      var badge = '<span class="event-badge ' + e.type + '">' + (e.type === 'share' ? 'שיתוף' : e.type === 'bookmark' ? 'סימנייה' : 'צפייה') + '</span>';
+      tr.innerHTML = '<td>' + (eventNames[e.name] || e.name) + '</td><td>' + badge + '</td><td>' + formatNum(e.count) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  /* ── Helpers ── */
+  function formatNum(n){
+    if(n >= 1000) return (n/1000).toFixed(1) + 'K';
+    return String(n);
+  }
+
+  function formatDuration(seconds){
+    if(seconds < 60) return seconds + ' שנ׳';
+    var m = Math.floor(seconds / 60);
+    var s = seconds % 60;
+    if(m < 60) return m + ':' + (s < 10 ? '0' : '') + s + ' דק׳';
+    var h = Math.floor(m / 60);
+    return h + ':' + ((m%60) < 10 ? '0' : '') + (m%60) + ' שע׳';
+  }
+
+})();
+</script>
+</body>
+</html>

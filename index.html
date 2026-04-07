@@ -13,6 +13,8 @@
 <link rel="icon" type="image/png" href="shared/img/icon.png">
 <link rel="apple-touch-icon" href="shared/img/icon.png">
 <link rel="stylesheet" href="shared/css/theme.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0CQWP9MTK"></script>
+<script src="shared/js/ga.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
 <style>
   body{ font-family: 'Google Sans', var(--font-body); }
@@ -226,8 +228,8 @@
 <script>
 function shareApp(){
   var data = {title:'בית המדרש החבדי — YeshivaAI.org', text:'לימוד תורה אינטראקטיבי: רמב״ם יומי, הלכות קידוש החודש, מסכת סוטה ועוד', url:location.href};
-  if(navigator.share) navigator.share(data).catch(function(){});
-  else{ navigator.clipboard.writeText(location.href).then(function(){alert('הקישור הועתק!')}); }
+  if(navigator.share) navigator.share(data).then(function(){ RambamGA.trackShare('home','native'); }).catch(function(){});
+  else{ navigator.clipboard.writeText(location.href).then(function(){alert('הקישור הועתק!'); RambamGA.trackShare('home','clipboard');}); }
 }
 </script>
 <script src="shared/js/settings.js"></script>

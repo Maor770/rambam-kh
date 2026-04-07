@@ -13,6 +13,8 @@
 <link rel="icon" type="image/png" href="../shared/img/icon.png">
 <link rel="apple-touch-icon" href="../shared/img/icon.png">
 <link rel="stylesheet" href="../shared/css/theme.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0CQWP9MTK"></script>
+<script src="../shared/js/ga.js"></script>
 <style>
   .sotah-header{
     text-align:center;
@@ -174,7 +176,7 @@
       <button class="font-btn" onclick="changeFontSize(-1)">א‎-</button>
       <button class="font-btn" onclick="changeFontSize(1)">א+</button>
       <button class="lang-btn" onclick="alert('אנגלית — בקרוב!')">עברית ▾</button>
-      <button class="font-btn" onclick="if(navigator.share)navigator.share({title:'מסכת סוטה — דף יומי',url:location.href}).catch(function(){});else{navigator.clipboard.writeText(location.href).then(function(){alert('הקישור הועתק!')});}" aria-label="שיתוף" style="font-size:1rem">🔗</button>
+      <button class="font-btn" onclick="if(navigator.share)navigator.share({title:'מסכת סוטה — דף יומי',url:location.href}).then(function(){RambamGA.trackShare('sotah_index','native');}).catch(function(){});else{navigator.clipboard.writeText(location.href).then(function(){alert('הקישור הועתק!');RambamGA.trackShare('sotah_index','clipboard');});}" aria-label="שיתוף" style="font-size:1rem">🔗</button>
     </div>
   </div>
 </div>
