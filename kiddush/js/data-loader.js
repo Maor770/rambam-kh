@@ -5,7 +5,8 @@
     const fetches = [
       fetch('data/rambam_data.json').then(r => r.json()),
       fetch('data/viz_map.json').then(r => r.json()),
-      fetch('data/explanations.json').then(r => r.json()).catch(() => ({}))
+      fetch('data/explanations.json').then(r => r.json()).catch(() => ({})),
+      fetch('data/sections_map.json').then(r => r.json()).catch(() => ({}))
     ];
     // Load English explanations when on English page
     if (isEn) {
@@ -18,8 +19,8 @@
       );
     }
     const results = await Promise.all(fetches);
-    const [rawData, vizMap, explanations] = results;
-    const explanationsEn = isEn ? (results[3] || {}) : {};
+    const [rawData, vizMap, explanations, sectionsMap] = results;
+    const explanationsEn = isEn ? (results[4] || {}) : {};
 
     window.DATA = rawData.map(ch => ({
       ch: ch.chapter,
@@ -32,7 +33,8 @@
           st: h.steinsaltz,
           viz: vizMap[key] || null,
           bio: explanations[key] || null,
-          bio_en: explanationsEn[key] || null
+          bio_en: explanationsEn[key] || null,
+          sections: sectionsMap[key] ? sectionsMap[key].sections : null
         };
       })
     }));

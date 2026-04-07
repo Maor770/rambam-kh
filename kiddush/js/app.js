@@ -161,6 +161,11 @@ function renderHalCard(ch, h, preview, isOpen) {
   const vizBadge = h.viz ? '<span style="font-size:.65rem;color:var(--purple);margin-' + (IS_EN ? 'right' : 'right') + ':4px">📊</span>' : '';
   const arrowChar = IS_EN ? '▶' : '◀';
 
+  // If sections exist, render sectioned view
+  if (h.sections && h.sections.length) {
+    return renderSectionedHalCard(ch, h, preview, isOpen, id, openCls, vizBadge, arrowChar);
+  }
+
   // Bio/explanation block
   let bioHtml = '';
   if (IS_EN) {
@@ -173,14 +178,11 @@ function renderHalCard(ch, h, preview, isOpen) {
   // Rambam source text
   let srcHtml = '';
   if (IS_EN && IS_BILINGUAL) {
-    // he+en mode: Hebrew source + English translation
     if (h.he) srcHtml += `<div class="txt-rambam" dir="rtl" style="text-align:right">${fmtRef(h.he)}</div>`;
     if (h.en) srcHtml += `<div class="txt-english">${h.en}</div>`;
   } else if (IS_EN) {
-    // English only: show English Rambam text
     if (h.en) srcHtml = `<div class="txt-english">${h.en}</div>`;
   } else {
-    // Hebrew: show Hebrew source
     if (h.he) srcHtml = `<div class="txt-rambam">${fmtRef(h.he)}</div>`;
   }
 
@@ -201,6 +203,164 @@ function renderHalCard(ch, h, preview, isOpen) {
       ${bioHtml}
       ${srcHtml}
       ${stHtml}
+      ${h.viz ? renderViz(h.viz, ch, h.n) : ''}
+    </div>
+  </div>`;
+}
+
+// ========================
+// SECTIONED HALACHA CARD
+// ========================
+function stripNiqqud(s) {
+  return s.replace(/[\u0591-\u05C7]/g, '');
+}
+
+function findBreakIndex(text, breakStr) {
+  // Try exact match first
+  let idx = text.indexOf(breakStr);
+  if (idx !== -1) return { idx: idx, len: breakStr.length };
+  // Fallback: match without niqqud
+  const strippedText = stripNiqqud(text);
+  const strippedBreak = stripNiqqud(breakStr);
+  const sIdx = strippedText.indexOf(strippedBreak);
+  if (sIdx === -1) return null;
+  // Map stripped index back to original text position
+  let origStart = 0, count = 0;
+  while (count < sIdx && origStart < text.length) {
+    if (!/[\u0591-\u05C7]/.test(text[origStart])) count++;
+    origStart++;
+  }
+  // Find end: advance through strippedBreak.length base chars
+  let origEnd = origStart, bcount = 0;
+  while (bcount < strippedBreak.length && origEnd < text.length) {
+    if (!/[\u0591-\u05C7]/.test(text[origEnd])) bcount++;
+    origEnd++;
+  }
+  return { idx: origStart, len: origEnd - origStart };
+}
+
+function splitTextBySections(fullText, sections, breakKey) {
+  if (!fullText) return sections.map(() => '');
+  const parts = [];
+  let remaining = fullText;
+  for (let i = 0; i < sections.length; i++) {
+    const brk = sections[i][breakKey];
+    if (!brk || i === sections.length - 1) {
+      parts.push(remaining);
+      remaining = '';
+    } else {
+      const match = findBreakIndex(remaining, brk);
+      if (!match) {
+        parts.push(remaining);
+        remaining = '';
+      } else {
+        const cutAt = match.idx + match.len;
+        parts.push(remaining.substring(0, cutAt));
+        remaining = remaining.substring(cutAt).trimStart();
+      }
+    }
+  }
+  while (parts.length < sections.length) parts.push('');
+  return parts;
+}
+
+function renderSectionTable(table) {
+  if (!table || !table.rows) return '';
+  const headers = IS_EN ? (table.headers_en || table.headers) : table.headers;
+  const rows = table.rows;
+  let html = '<table class="calc-table"><thead><tr>';
+  headers.forEach(h => { html += `<th>${h}</th>`; });
+  html += '</tr></thead><tbody>';
+  rows.forEach(r => {
+    html += '<tr>';
+    r.forEach(c => { html += `<td>${c}</td>`; });
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  return html;
+}
+
+function renderSectionedHalCard(ch, h, preview, isOpen, id, openCls, vizBadge, arrowChar) {
+  const heParts = splitTextBySections(h.he, h.sections, 'heBreak');
+  const enParts = splitTextBySections(h.en, h.sections, 'enBreak');
+  const stLabel = IS_EN ? 'Steinsaltz Commentary (Hebrew)' : 'ביאור שטיינזלץ';
+  const sectionArrow = IS_EN ? '▶' : '◀';
+
+  let sectionsHtml = '';
+  h.sections.forEach((sec, si) => {
+    const secId = `${id}-sec-${si}`;
+    const title = IS_EN ? (sec.title_en || sec.title) : sec.title;
+
+    // Section bio
+    let secBio = '';
+    if (IS_EN) {
+      const bio = sec.bio_en || sec.bio || '';
+      if (bio) secBio = `<div class="section-bio">${bio}</div>`;
+    } else {
+      if (sec.bio) secBio = `<div class="section-bio">${sec.bio}</div>`;
+    }
+
+    // Section source text
+    let secSrc = '';
+    const heTxt = heParts[si] || '';
+    const enTxt = enParts[si] || '';
+    if (IS_EN && IS_BILINGUAL) {
+      if (heTxt) secSrc += `<div class="txt-rambam" dir="rtl" style="text-align:right">${fmtRef(heTxt)}</div>`;
+      if (enTxt) secSrc += `<div class="txt-english">${enTxt}</div>`;
+    } else if (IS_EN) {
+      if (enTxt) secSrc = `<div class="txt-english">${enTxt}</div>`;
+    } else {
+      if (heTxt) secSrc = `<div class="txt-rambam">${fmtRef(heTxt)}</div>`;
+    }
+
+    // Section table
+    const secTable = sec.table ? renderSectionTable(sec.table) : '';
+
+    // Section steinsaltz
+    let secSt = '';
+    if (h.st && sec.stRange && sec.stRange.length === 2) {
+      const stSlice = h.st.slice(sec.stRange[0], sec.stRange[1] + 1);
+      if (stSlice.length) {
+        secSt = `<div class="txt-steinsaltz"><div class="st-label">${stLabel}</div>${stSlice.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div>`;
+      }
+    }
+
+    // In continuous mode, sections are open by default
+    const secOpen = isOpen ? ' open' : '';
+
+    sectionsHtml += `<div class="hal-section${secOpen}" id="sec-${secId}">
+      <div class="section-header" onclick="document.getElementById('sec-${secId}').classList.toggle('open')">
+        <div class="section-num">${si + 1}</div>
+        <div class="section-title">${title}</div>
+        <span class="section-arrow">${sectionArrow}</span>
+      </div>
+      <div class="section-body">
+        ${secBio}
+        ${secSrc}
+        ${secTable}
+        ${secSt}
+      </div>
+    </div>`;
+  });
+
+  // Overall halacha bio (the original one)
+  let bioHtml = '';
+  if (IS_EN) {
+    const bio = h.bio_en || h.bio || '';
+    if (bio) bioHtml = `<div class="bio-block">${bio}</div>`;
+  } else {
+    if (h.bio) bioHtml = `<div class="bio-block">${h.bio}</div>`;
+  }
+
+  return `<div class="hal-card${openCls}" id="hal-${id}">
+    <div class="hal-header" onclick="toggleHal('${id}')">
+      <div class="hal-num">${h.n}</div>
+      <div class="hal-preview">${vizBadge}${preview}</div>
+      <span class="hal-arrow">${arrowChar}</span>
+    </div>
+    <div class="hal-body">
+      ${bioHtml}
+      ${sectionsHtml}
       ${h.viz ? renderViz(h.viz, ch, h.n) : ''}
     </div>
   </div>`;

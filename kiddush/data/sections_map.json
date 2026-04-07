@@ -1,0 +1,324 @@
+{
+  "12:1": {
+    "sections": [
+      {
+        "id": "daily-rate",
+        "title": "השיעור היומי",
+        "title_en": "The Daily Rate",
+        "bio": "הרמב\"ם מגדיר את יחידת הבסיס — מהלך השמש ביום אחד (24 שעות שוות)",
+        "bio_en": "The Rambam defines the base unit — the sun's mean daily motion in 24 equal hours",
+        "heBreak": "סִימָנָם כ\"ד נט\"ח.",
+        "enBreak": "in symbols 59' 8\".",
+        "stRange": [0, 2],
+        "table": {
+          "headers": ["תקופה", "מעלות", "חלקים", "שניות", "סימן"],
+          "headers_en": ["Period", "Degrees", "Minutes", "Seconds", "Siman"],
+          "rows": [
+            ["יום אחד", "0", "59", "8", "נט\"ח"]
+          ]
+        }
+      },
+      {
+        "id": "multiples",
+        "title": "טבלת כפולות",
+        "title_en": "Multiplication Table",
+        "bio": "חישובים מוכנים מראש ל-10, 100, 1,000, ו-10,000 ימים. עבור 1,000 ו-10,000 ימים ניתנת השארית אחרי הורדת סיבובים שלמים (360°)",
+        "bio_en": "Pre-computed values for 10, 100, 1,000 and 10,000 days. For 1,000 and 10,000 days, only the remainder after removing full rotations (360°) is given",
+        "heBreak": "סִימָנָם קל\"ו כ\"ח כ'.",
+        "enBreak": "in symbols 136\u00b0 28' 20\".",
+        "stRange": [3, 4],
+        "table": {
+          "headers": ["תקופה", "מעלות", "חלקים", "שניות", "סימן"],
+          "headers_en": ["Period", "Degrees", "Minutes", "Seconds", "Siman"],
+          "rows": [
+            ["10 ימים", "9", "51", "23", "ט נ\"א כ\"ג"],
+            ["100 יום", "98", "33", "53", "צ\"ח ל\"ג נ\"ג"],
+            ["1,000 יום (שארית)", "265", "38", "50", "רס\"ה לח\"ן"],
+            ["10,000 יום (שארית)", "136", "28", "20", "קל\"ו כ\"ח כ'"]
+          ]
+        }
+      },
+      {
+        "id": "custom-tables",
+        "title": "הוראה — בניית טבלאות אישיות",
+        "title_en": "Instruction — Building Personal Tables",
+        "bio": "הרמב\"ם מעודד את הלומד לבנות טבלאות ביניים משלו (2-10 ימים, 20-100 ימים) על בסיס השיעור היומי",
+        "bio_en": "The Rambam encourages building personal intermediate tables (2-10 days, 20-100 days) based on the daily rate",
+        "heBreak": "מֵאַחַר שֶׁיָּדַעְתָּ מַהֲלַךְ יוֹם אֶחָד.",
+        "enBreak": "single day.",
+        "stRange": [5, 5]
+      },
+      {
+        "id": "practical-periods",
+        "title": "29 יום ושנה סדורה — התקופות המעשיות",
+        "title_en": "29 Days and a Regular Year — Practical Periods",
+        "bio": "29 יום = מרחק בין ראיית הירח לראיית החודש הבא. 354 יום = שנת לבנה סדורה (12 חודשים כסדרן). אלו שני הערכים הקריטיים לחישוב ראיית החודש",
+        "bio_en": "29 days = interval between one moon sighting and the next. 354 days = a regular lunar year (12 months in order). These are the two critical values for new-moon sighting calculations",
+        "heBreak": "וְכֵן בְּכָל שָׁנָה וְשָׁנָה.",
+        "enBreak": "plus one day.",
+        "stRange": [6, 11]
+      },
+      {
+        "id": "computed-values",
+        "title": "הערכים המחושבים",
+        "title_en": "The Computed Values",
+        "bio": "שני הערכים שצריכים להיות מוכנים בהישג יד:",
+        "bio_en": "The two values that should be readily available:",
+        "stRange": [],
+        "table": {
+          "headers": ["תקופה", "מעלות", "חלקים", "שניות", "סימן"],
+          "headers_en": ["Period", "Degrees", "Minutes", "Seconds", "Siman"],
+          "rows": [
+            ["29 יום (חודש)", "28", "35", "1", "כ\"ח ל\"ה א'"],
+            ["354 יום (שנה סדורה)", "348", "55", "15", "שמ\"ח נ\"ה ט\"ו"]
+          ]
+        }
+      }
+    ]
+  },
+  "12:2": {
+    "sections": [
+      {
+        "id": "apogee-definition",
+        "title": "הגדרת גובה השמש",
+        "title_en": "Definition of the Solar Apogee",
+        "bio": "נקודת הגובה (אפוגיאום) — המקום בגלגל שבו השמש רחוקה ביותר מהארץ. נקודה זו זזה כמעלה אחת בכל 70 שנה",
+        "bio_en": "The apogee — the point in the orbit where the sun is farthest from Earth. This point moves approximately one degree every 70 years",
+        "heBreak": "וּנְקֻדָּה זוֹ הִיא הַנִּקְרֵאת גֹּבַהּ הַשֶּׁמֶשׁ.",
+        "enBreak": "referred to as the apogee.",
+        "stRange": [0, 1]
+      },
+      {
+        "id": "apogee-rates",
+        "title": "שיעורי תנועת הגובה",
+        "title_en": "Apogee Movement Rates",
+        "bio": "תנועת הגובה איטית מאוד — בערך 1.5 שניות קשת בכל 10 ימים",
+        "bio_en": "The apogee moves very slowly — approximately 1.5 arc-seconds every 10 days",
+        "heBreak": "וּמַהֲלָכוֹ בְּשָׁנָה סְדוּרָה נ\"ג שְׁנִיּוֹת.",
+        "enBreak": "it travels 53 seconds.",
+        "stRange": [2, 2],
+        "table": {
+          "headers": ["תקופה", "מעלות", "חלקים", "שניות"],
+          "headers_en": ["Period", "Degrees", "Minutes", "Seconds"],
+          "rows": [
+            ["10 ימים", "0", "0", "1.5"],
+            ["100 יום", "0", "0", "15"],
+            ["1,000 יום", "0", "2", "30"],
+            ["10,000 יום", "0", "25", "0"],
+            ["29 יום", "0", "0", "~4"],
+            ["שנה סדורה (354)", "0", "0", "53"]
+          ]
+        }
+      },
+      {
+        "id": "epoch",
+        "title": "העיקר — נקודת המוצא",
+        "title_en": "The Epoch — Starting Point",
+        "bio": "כל החישובים מתחילים מתאריך קבוע: ליל חמישי, ג' ניסן שנת ד'תתקל\"ח (1178 לספירה). בנקודה זו ידועים מיקום השמש ומיקום הגובה",
+        "bio_en": "All calculations begin from a fixed date: eve of Thursday, 3 Nisan 4938 (1178 CE). At this point, the sun's mean position and apogee position are known",
+        "heBreak": "סִימָנָם כ\"ו מ\"ה ח'.",
+        "enBreak": "in symbols 26\u00b0 45' 8\".",
+        "stRange": [3, 6],
+        "table": {
+          "headers": ["פרמטר", "ערך", "מזל", "סימן"],
+          "headers_en": ["Parameter", "Value", "Constellation", "Siman"],
+          "rows": [
+            ["מיקום השמש", "7° 3' 32\"", "טלה (0°)", "ז\"ג ל\"ב"],
+            ["מיקום הגובה", "26° 45' 8\"", "תאומים (60°)", "כ\"ו מ\"ה ח'"]
+          ]
+        }
+      },
+      {
+        "id": "algorithm",
+        "title": "שיטת החישוב",
+        "title_en": "The Calculation Method",
+        "bio": "האלגוריתם: ספור ימים מהעיקר \u2192 חפש מהלך לאותם ימים \u2192 הוסף על העיקר \u2192 התוצאה = מיקום אמצעי",
+        "bio_en": "The algorithm: count days from epoch \u2192 look up travel for those days \u2192 add to epoch \u2192 result = mean position",
+        "heBreak": "וְהַיּוֹצֵא הוּא מְקוֹם הַשֶּׁמֶשׁ בְּמַהֲלָכָהּ הָאֶמְצָעִי לְאוֹתוֹ הַיּוֹם.",
+        "enBreak": "on that particular day.",
+        "stRange": [7, 10]
+      },
+      {
+        "id": "worked-example",
+        "title": "דוגמה מעשית — י\"ד תמוז",
+        "title_en": "Worked Example — 14 Tammuz",
+        "bio": "הרמב\"ם מדגים את החישוב עבור ליל שבת, י\"ד תמוז של שנת העיקר (100 ימים מהעיקר)",
+        "bio_en": "The Rambam demonstrates with the Sabbath eve of 14 Tammuz of the epoch year (100 days from epoch)",
+        "heBreak": "וְל\"ז חֲלָקִים מִמַּעֲלַת ט\"ז.",
+        "enBreak": "constellation of Cancer.",
+        "stRange": [11, 12],
+        "table": {
+          "headers": ["שלב", "חישוב", "תוצאה"],
+          "headers_en": ["Step", "Calculation", "Result"],
+          "rows": [
+            ["ספירת ימים", "ג' ניסן \u2192 י\"ד תמוז", "100 ימים"],
+            ["מהלך 100 יום", "(מטבלת יב:א)", "98\u00b0 33' 53\""],
+            ["+ עיקר", "7\u00b0 3' 32\"", ""],
+            ["סה\"כ", "98\u00b033'53\" + 7\u00b03'32\"", "105\u00b0 37' 25\""],
+            ["פירוש", "105\u00b0 = סרטן (90\u00b0) + 15\u00b0", "מזל סרטן, מעלה ט\"ז"]
+          ]
+        }
+      },
+      {
+        "id": "precision-note",
+        "title": "הערת דיוק והכללה",
+        "title_en": "Precision Note and Generalization",
+        "bio": "האמצעי עשוי לסטות בשעה מתחילת הלילה — אך זה מתקזז בחישוב הירח. השיטה עובדת לכל כוכב ולכל תקופה",
+        "bio_en": "The mean position may deviate by up to an hour from nightfall, but this is compensated in the moon calculation. The method works for any celestial body and any time period",
+        "heBreak": "וְיֵצֵא לְךָ מְקוֹמוֹ בְּמַהֲלָךְ אֶמְצָעִי.",
+        "enBreak": "its position according to its mean distance.",
+        "stRange": [13, 17]
+      },
+      {
+        "id": "alternative-epoch",
+        "title": "קביעת עיקר חלופי",
+        "title_en": "Establishing an Alternative Epoch",
+        "bio": "ניתן לקבוע נקודת מוצא חדשה בכל תאריך רצוי — קדימה (הוספה) או אחורה (חיסור). הרמב\"ם מסביר את ההתאמות לסוגי שנים שונים",
+        "bio_en": "You may establish a new starting point at any desired date — forward (addition) or backward (subtraction). The Rambam explains adjustments for different year types",
+        "heBreak": null,
+        "enBreak": null,
+        "stRange": [18, 21],
+        "table": {
+          "headers": ["סוג שנה", "הפרש מסדורה (354 יום)"],
+          "headers_en": ["Year Type", "Difference from Regular (354 days)"],
+          "rows": [
+            ["שלמים (רגילה)", "+1 יום"],
+            ["חסרים (רגילה)", "\u22121 יום"],
+            ["מעוברת כסדרה", "+30 יום"],
+            ["מעוברת שלמים", "+31 יום"],
+            ["מעוברת חסרים", "+29 יום"]
+          ]
+        }
+      }
+    ]
+  },
+  "9:4": {
+    "sections": [
+      {
+        "id": "cycle-method",
+        "title": "חישוב תקופה ממחזורים שלמים",
+        "title_en": "Season Calculation from Complete Cycles",
+        "bio": "השיטה הראשונה: ספור מחזורי 19 שנה שלמים מבריאת העולם, חשב את העודף המצטבר, גרע קבוע, והוסף על מולד ניסן",
+        "bio_en": "First method: count complete 19-year cycles from Creation, compute accumulated excess, subtract a constant, and add to the Nisan conjunction",
+        "heBreak": "לְכָל תְּקוּפָה וּתְקוּפָה.",
+        "enBreak": "for every season.",
+        "stRange": [0, 8],
+        "table": {
+          "headers": ["קבוע", "ערך"],
+          "headers_en": ["Constant", "Value"],
+          "rows": [
+            ["עודף למחזור", "1 שעה, 485 חלקים"],
+            ["גריעה", "7 ימים, 9 שעות, 642 חלקים"],
+            ["מרווח בין תקופות", "91 יום, 7.5 שעות"]
+          ]
+        }
+      },
+      {
+        "id": "year-method",
+        "title": "חישוב לשנה ספציפית במחזור",
+        "title_en": "Calculation for a Specific Year in a Cycle",
+        "bio": "שיטה ישירה יותר: מחזורים שלמים + שנים שלמות שעברו במחזור הנוכחי, עם גריעת אותו קבוע והשלכת חודשי לבנה",
+        "bio_en": "A more direct method: complete cycles + completed years within the current cycle, subtracting the same constant and casting out lunar months",
+        "heBreak": "וּבְכַמָּה שָׁעָה.",
+        "enBreak": "of the year desired.",
+        "stRange": [9, 14],
+        "table": {
+          "headers": ["קבוע", "ערך"],
+          "headers_en": ["Constant", "Value"],
+          "rows": [
+            ["עודף למחזור", "1 שעה, 485 חלקים"],
+            ["עודף לשנה", "10 ימים, 21 שעות, 204 חלקים"],
+            ["גריעה", "7 ימים, 9 שעות, 642 חלקים"],
+            ["חודש לבנה", "29 ימים, 12 שעות, 793 חלקים"]
+          ]
+        }
+      },
+      {
+        "id": "fixed-times",
+        "title": "זמנים קבועים לכל תקופה",
+        "title_en": "Fixed Possible Times for Each Season",
+        "bio": "מכיוון שהשנה = 365 ימים 6 שעות בדיוק, כל תקופה יכולה ליפול רק בשעות מסוימות",
+        "bio_en": "Since the year = exactly 365 days 6 hours, each season can only fall at specific times",
+        "heBreak": "בֵּין בַּיּוֹם בֵּין בַּלַּיְלָה.",
+        "enBreak": "either in the day or the night.",
+        "stRange": [15, 16],
+        "table": {
+          "headers": ["תקופה", "שעות אפשריות"],
+          "headers_en": ["Season", "Possible Times"],
+          "rows": [
+            ["ניסן", "תחילת לילה / חצי לילה / תחילת יום / חצי יום"],
+            ["תמוז", "7.5 / 1.5 שעות (יום או לילה)"],
+            ["תשרי", "9 / 3 שעות (יום או לילה)"],
+            ["טבת", "10.5 / 4.5 שעות (יום או לילה)"]
+          ]
+        }
+      },
+      {
+        "id": "weekday-calc",
+        "title": "חישוב יום בשבוע — מחזור 28 שנה",
+        "title_en": "Day of Week — The 28-Year Solar Cycle",
+        "bio": "למציאת יום בשבוע: חלק שנים ב-28, קח יום אחד ו-6 שעות לכל שנה שנותרה, הוסף 3 (כי התקופה הראשונה היתה ליל רביעי), והשלך שבעות",
+        "bio_en": "To find the weekday: divide years by 28, take 1 day 6 hours per remaining year, add 3 (first equinox was Wednesday night), and cast out weeks",
+        "heBreak": null,
+        "enBreak": null,
+        "stRange": [17, 23],
+        "table": {
+          "headers": ["קבוע", "ערך"],
+          "headers_en": ["Constant", "Value"],
+          "rows": [
+            ["מחזור שמש", "28 שנה"],
+            ["עודף שנתי", "1 יום, 6 שעות"],
+            ["תוספת התחלתית", "3 ימים"],
+            ["השלכה", "כל 7 ימים"],
+            ["סיבה ל+3", "תקופה ראשונה = ליל רביעי"]
+          ]
+        }
+      }
+    ]
+  },
+  "17:10": {
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "הקדמה — נליזת מעגל הירח",
+        "title_en": "Introduction — Moon's Orbital Deviation",
+        "bio": "הירח סוטה מעט ממסלולו, ולכן צריך לקחת חלק מה\"רוחב השני\" כתיקון. השבר תלוי במיקום הירח במזלות",
+        "bio_en": "The moon deviates slightly from its orbit, requiring a fraction of the 'second latitude' as correction. The fraction depends on the moon's zodiacal position",
+        "heBreak": "וְכַמָּה הוּא הַמִּקְצָת שֶׁתִּקַּח מִמֶּנּוּ.",
+        "enBreak": "the portion you must separate?",
+        "stRange": [0, 1]
+      },
+      {
+        "id": "fraction-table",
+        "title": "טבלת השברים לפי מיקום הירח",
+        "title_en": "Fraction Table by Moon Position",
+        "bio": "הטבלה סימטרית: כל טווח ב-0\u00b0\u2013180\u00b0 (טלה\u2013בתולה) מקביל לטווח ב-180\u00b0\u2013360\u00b0 (מאזניים\u2013דגים). השברים יורדים מ-2/5 בקצוות אל 0 במרכז (85\u00b0\u201395\u00b0), ואז עולים חזרה",
+        "bio_en": "The table is symmetric: every range in 0\u00b0\u2013180\u00b0 (Aries\u2013Virgo) mirrors 180\u00b0\u2013360\u00b0 (Libra\u2013Pisces). Fractions decrease from 2/5 at the edges to 0 at center (85\u00b0\u201395\u00b0), then rise back",
+        "heBreak": null,
+        "enBreak": null,
+        "stRange": [2, 2],
+        "table": {
+          "headers": ["טווח ראשון", "טווח מקביל", "מעלות", "שבר"],
+          "headers_en": ["Primary Range", "Mirror Range", "Degrees", "Fraction"],
+          "rows": [
+            ["טלה 0\u00b0\u201320\u00b0", "מאזניים 0\u00b0\u201320\u00b0", "0\u201320 / 180\u2013200", "2/5"],
+            ["טלה 20\u00b0\u2013שור 10\u00b0", "מאזניים 20\u00b0\u2013עקרב 10\u00b0", "20\u201340 / 200\u2013220", "1/3"],
+            ["שור 10\u00b0\u201320\u00b0", "עקרב 10\u00b0\u201320\u00b0", "40\u201350 / 220\u2013230", "1/4"],
+            ["שור 20\u00b0\u201330\u00b0", "עקרב 20\u00b0\u201330\u00b0", "50\u201360 / 230\u2013240", "1/5"],
+            ["תאומים 0\u00b0\u201310\u00b0", "קשת 0\u00b0\u201310\u00b0", "60\u201370 / 240\u2013250", "1/6"],
+            ["תאומים 10\u00b0\u201320\u00b0", "קשת 10\u00b0\u201320\u00b0", "70\u201380 / 250\u2013260", "1/12"],
+            ["תאומים 20\u00b0\u201325\u00b0", "קשת 20\u00b0\u201325\u00b0", "80\u201385 / 260\u2013265", "1/24"],
+            ["תאומים 25\u00b0\u2013סרטן 5\u00b0", "קשת 25\u00b0\u2013גדי 5\u00b0", "85\u201395 / 265\u2013275", "0"],
+            ["סרטן 5\u00b0\u201310\u00b0", "גדי 5\u00b0\u201310\u00b0", "95\u2013100 / 275\u2013280", "1/24"],
+            ["סרטן 10\u00b0\u201320\u00b0", "גדי 10\u00b0\u201320\u00b0", "100\u2013110 / 280\u2013290", "1/12"],
+            ["סרטן 20\u00b0\u201330\u00b0", "גדי 20\u00b0\u201330\u00b0", "110\u2013120 / 290\u2013300", "1/6"],
+            ["אריה 0\u00b0\u201310\u00b0", "דלי 0\u00b0\u201310\u00b0", "120\u2013130 / 300\u2013310", "1/5"],
+            ["אריה 10\u00b0\u201320\u00b0", "דלי 10\u00b0\u201320\u00b0", "130\u2013140 / 310\u2013320", "1/4"],
+            ["אריה 20\u00b0\u2013בתולה 10\u00b0", "דלי 20\u00b0\u2013דגים 10\u00b0", "140\u2013160 / 320\u2013340", "1/3"],
+            ["בתולה 10\u00b0\u201330\u00b0", "דגים 10\u00b0\u201330\u00b0", "160\u2013180 / 340\u2013360", "2/5"]
+          ]
+        }
+      }
+    ]
+  }
+}
