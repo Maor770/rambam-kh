@@ -7,7 +7,9 @@ window.RambamSettings = (function(){
     theme: 'light',
     dailyStudyMode: '1ch',
     lastStudied: null,
-    bookmarks: {}
+    bookmarks: {},
+    sotahPosition: null,
+    rambamPosition: null
   };
 
   function get(key){

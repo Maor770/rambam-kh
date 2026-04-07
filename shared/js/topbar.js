@@ -64,6 +64,91 @@
   };
   }
 
+  // --- Sotah position tracking ---
+  // Uses localStorage directly (settings.js may not be loaded on daf pages)
+  var POS_KEY = 'rambam_sotahPosition';
+  var VISITED_KEY = 'rambam_sotahVisited';
+
+  function initSotahTracking(){
+    var match = location.pathname.match(/sotah_daf_(\d+)/);
+    if(!match) return;
+    var dafNum = parseInt(match[1], 10);
+
+    // Track visited daf
+    try {
+      var visited = JSON.parse(localStorage.getItem(VISITED_KEY) || '[]');
+      if(visited.indexOf(dafNum) === -1){ visited.push(dafNum); localStorage.setItem(VISITED_KEY, JSON.stringify(visited)); }
+    } catch(e){}
+
+    // Scroll-based tracking of last visible section
+    var saveTimer = null;
+    function savePosition(secIdx){
+      if(saveTimer) clearTimeout(saveTimer);
+      saveTimer = setTimeout(function(){
+        try {
+          localStorage.setItem(POS_KEY, JSON.stringify({ daf: dafNum, sec: secIdx, ts: Date.now() }));
+        } catch(e){}
+      }, 1500);
+    }
+
+    function setupScrollTracker(){
+      var sections = document.querySelectorAll('[id^="sec"]');
+      if(!sections.length) return;
+      var ticking = false;
+      window.addEventListener('scroll', function(){
+        if(ticking) return;
+        ticking = true;
+        requestAnimationFrame(function(){
+          var best = -1;
+          for(var i = 0; i < sections.length; i++){
+            var rect = sections[i].getBoundingClientRect();
+            if(rect.top < window.innerHeight * 0.5) best = i;
+          }
+          if(best >= 0){
+            var idx = parseInt(sections[best].id.replace('sec',''), 10);
+            if(!isNaN(idx)) savePosition(idx);
+          }
+          ticking = false;
+        });
+      }, { passive: true });
+    }
+
+    // Restore position on load
+    function restorePosition(){
+      var pos;
+      try { pos = JSON.parse(localStorage.getItem(POS_KEY)); } catch(e){ return; }
+      if(!pos || pos.daf !== dafNum) return;
+      var target = document.getElementById('sec' + pos.sec);
+      if(!target) return;
+      // Open the section if it's collapsed
+      var content = document.getElementById('content' + pos.sec);
+      if(content && content.style.display === 'none' && typeof window.toggle === 'function'){
+        window.toggle(pos.sec);
+      }
+      setTimeout(function(){
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+
+    // Run after DOM is fully loaded
+    if(document.readyState === 'complete'){
+      restorePosition();
+      setupScrollTracker();
+    } else {
+      window.addEventListener('load', function(){
+        restorePosition();
+        setupScrollTracker();
+      });
+    }
+  }
+
   if(document.body) init();
   else document.addEventListener('DOMContentLoaded', init);
+
+  // Start Sotah tracking after settings.js is available
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initSotahTracking);
+  } else {
+    initSotahTracking();
+  }
 })();

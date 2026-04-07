@@ -166,6 +166,16 @@
     color:var(--gold);
     font-weight:600;
   }
+  .card-resume{
+    margin-top:.4rem;
+    padding:.35rem .7rem;
+    background:var(--sky-bg, #f0f6fb);
+    border:1px solid var(--sky-border, #c8ddf0);
+    border-radius:8px;
+    font-size:.8rem;
+    color:var(--sky, #1a5a8a);
+    font-weight:500;
+  }
 
   /* Footer */
   .home-footer{
@@ -202,12 +212,14 @@
     <div class="card-title">הלכות קידוש החודש</div>
     <div class="card-desc">לימוד יומי בהלכות קידוש החודש לרמב״ם, עם ביאורים ותרשימים אינטראקטיביים.</div>
     <div class="card-today" id="rambamToday" style="display:none"></div>
+    <div class="card-resume" id="rambamResume" style="display:none"></div>
   </a>
   <a href="sotah/" class="card-link" id="sotahCard">
     <span class="card-icon" aria-hidden="true">&#128220;</span>
     <div class="card-title">מסכת סוטה — דף יומי</div>
     <div class="card-desc">לימוד דף יומי במסכת סוטה עם פירושים וכלי עזר.</div>
     <div class="card-today" id="sotahToday" style="display:none"></div>
+    <div class="card-resume" id="sotahResume" style="display:none"></div>
   </a>
   <!-- תניא יומי — מוסתר זמנית, בעבודה -->
   <!--
@@ -323,7 +335,38 @@ function shareApp(){
     }, ms + 1000);
   }
 
+  // --- Resume links ---
+  var HEB_CH = {1:'א',2:'ב',3:'ג',4:'ד',5:'ה',6:'ו',7:'ז',8:'ח',9:'ט',10:'י',
+    11:'יא',12:'יב',13:'יג',14:'יד',15:'טו',16:'טז',17:'יז',18:'יח',19:'יט'};
+
+  function showResume(){
+    // Sotah
+    try {
+      var sotahPos = JSON.parse(localStorage.getItem('rambam_sotahPosition'));
+      var sotahResumeEl = document.getElementById('sotahResume');
+      if(sotahPos && sotahPos.daf >= 2){
+        var hebDaf = SotahDaily.HEB[sotahPos.daf] || sotahPos.daf;
+        sotahResumeEl.textContent = 'עצרת בדף ' + hebDaf + ', קטע ' + (sotahPos.sec + 1);
+        sotahResumeEl.style.display = '';
+      }
+    } catch(e){}
+
+    // Rambam
+    try {
+      var rambamPos = RambamSettings.get('rambamPosition');
+      var rambamResumeEl = document.getElementById('rambamResume');
+      if(rambamPos && rambamPos.ch){
+        var chHeb = HEB_CH[rambamPos.ch] || rambamPos.ch;
+        var txt = 'עצרת בפרק ' + chHeb + '׳';
+        if(rambamPos.hal) txt += ' הלכה ' + rambamPos.hal;
+        rambamResumeEl.textContent = txt;
+        rambamResumeEl.style.display = '';
+      }
+    } catch(e){}
+  }
+
   render();
+  showResume();
   scheduleRefresh();
 })();
 </script>
