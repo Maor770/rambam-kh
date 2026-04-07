@@ -280,6 +280,16 @@ function setupRambamPositionTracking() {
   }, { passive: true });
 }
 
+function scrollToSavedHalacha() {
+  if (!window.RambamSettings) return;
+  const pos = RambamSettings.get('rambamPosition');
+  if (!pos || !pos.ch || !pos.hal) return;
+  setTimeout(() => {
+    const el = document.getElementById('hal-' + pos.ch + '-' + pos.hal);
+    if (el) { el.classList.add('open'); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  }, 300);
+}
+
 function restoreRambamPosition() {
   if (!window.RambamSettings) return;
   // Check URL params first (?ch=6&hal=4)
@@ -302,8 +312,8 @@ function restoreRambamPosition() {
       return true;
     }
   }
-  // Fall back to saved position (only if no daily chapters override and no date param)
-  if (dailyChapters || params.get('date')) return false;
+  // Fall back to saved position (only if no date param)
+  if (params.get('date')) return false;
   const pos = RambamSettings.get('rambamPosition');
   if (!pos || !pos.ch) return false;
   currentCh = pos.ch;
@@ -364,6 +374,7 @@ window.onDataReady = function() {
         dailyChapters = chs;
         currentCh = chs[0];
         setMode('continuous');
+        scrollToSavedHalacha();
       })
       .catch(() => { if (!restoreRambamPosition()) renderAll(); });
   } else {
