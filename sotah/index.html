@@ -111,6 +111,13 @@
     color:var(--gold);
     font-weight:700;
   }
+  .daf-cell.visited{
+    background:var(--sky-bg, #f0f6fb);
+    border-color:var(--sky-border, #c8ddf0);
+  }
+  .daf-cell.last-studied{
+    box-shadow:0 0 0 2px var(--sky, #1a5a8a);
+  }
 
   /* Back link */
   .back-row{
@@ -221,11 +228,20 @@
   }
 
   // Build grid (daf 2-49, daf 1/sha'ar has no page)
+  var visited = [];
+  var lastPos = null;
+  try { visited = JSON.parse(localStorage.getItem('rambam_sotahVisited') || '[]'); } catch(e){}
+  try { lastPos = JSON.parse(localStorage.getItem('rambam_sotahPosition')); } catch(e){}
+
   var grid = document.getElementById('dafGrid');
   for(var d = 2; d <= 49; d++){
     var a = document.createElement('a');
     a.href = SotahDaily.dafUrl(d);
-    a.className = 'daf-cell' + (d === daf ? ' today' : '');
+    var cls = 'daf-cell';
+    if(d === daf) cls += ' today';
+    if(visited.indexOf(d) !== -1) cls += ' visited';
+    if(lastPos && lastPos.daf === d) cls += ' last-studied';
+    a.className = cls;
     a.textContent = SotahDaily.HEB[d];
     a.title = 'דף ' + SotahDaily.HEB[d];
     grid.appendChild(a);

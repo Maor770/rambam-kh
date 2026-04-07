@@ -42,6 +42,8 @@ function renderAll() {
   if (currentMode === 'overview') renderOverview(main);
   else if (currentMode === 'study') renderStudy(main);
   else renderContinuous(main);
+  // Re-attach position tracking after render
+  setTimeout(setupRambamPositionTracking, 100);
 }
 
 let layerStep = [0,0,0,0]; // current step per layer
@@ -242,6 +244,81 @@ function setupScrollSpy() {
 }
 
 // ========================
+// RAMBAM POSITION TRACKING
+// ========================
+let _rambamPosTimer = null;
+let _rambamScrollBound = false;
+
+function setupRambamPositionTracking() {
+  if (_rambamScrollBound) return;
+  _rambamScrollBound = true;
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const cards = document.querySelectorAll('.hal-card');
+      let best = null;
+      cards.forEach(c => {
+        const rect = c.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.5) best = c;
+      });
+      if (best) {
+        const m = best.id.match(/^hal-(\d+)-(\d+)$/);
+        if (m) {
+          const ch = parseInt(m[1], 10), hal = parseInt(m[2], 10);
+          if (_rambamPosTimer) clearTimeout(_rambamPosTimer);
+          _rambamPosTimer = setTimeout(() => {
+            if (window.RambamSettings) {
+              RambamSettings.set('rambamPosition', { ch, hal, ts: Date.now() });
+            }
+          }, 1500);
+        }
+      }
+      ticking = false;
+    });
+  }, { passive: true });
+}
+
+function restoreRambamPosition() {
+  if (!window.RambamSettings) return;
+  // Check URL params first (?ch=6&hal=4)
+  const params = new URLSearchParams(location.search);
+  const paramCh = params.get('ch');
+  const paramHal = params.get('hal');
+  if (paramCh) {
+    const ch = parseInt(paramCh, 10);
+    const hal = paramHal ? parseInt(paramHal, 10) : null;
+    if (ch >= 1 && ch <= 19) {
+      currentCh = ch;
+      if (currentMode === 'overview') setMode('study');
+      else renderAll();
+      if (hal) {
+        setTimeout(() => {
+          const el = document.getElementById('hal-' + ch + '-' + hal);
+          if (el) { el.classList.add('open'); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        }, 300);
+      }
+      return true;
+    }
+  }
+  // Fall back to saved position (only if no daily chapters override and no date param)
+  if (dailyChapters || params.get('date')) return false;
+  const pos = RambamSettings.get('rambamPosition');
+  if (!pos || !pos.ch) return false;
+  currentCh = pos.ch;
+  if (currentMode === 'overview') setMode('study');
+  else renderAll();
+  if (pos.hal) {
+    setTimeout(() => {
+      const el = document.getElementById('hal-' + pos.ch + '-' + pos.hal);
+      if (el) { el.classList.add('open'); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    }, 300);
+  }
+  return true;
+}
+
+// ========================
 // INITIALIZATION — called when data is ready
 // ========================
 window.onDataReady = function() {
@@ -288,8 +365,8 @@ window.onDataReady = function() {
         currentCh = chs[0];
         setMode('continuous');
       })
-      .catch(() => { renderAll(); });
+      .catch(() => { if (!restoreRambamPosition()) renderAll(); });
   } else {
-    renderAll();
+    if (!restoreRambamPosition()) renderAll();
   }
 };
