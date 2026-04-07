@@ -140,15 +140,13 @@
 
 /* Left column: concepts button + controls */
 .obs-3d-left {
-  width: 130px;
+  width: 110px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding: 6px;
   border-left: 1px solid var(--border-light);
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .obs-3d-panel-btn {
@@ -190,7 +188,8 @@
 .obs-ctrl-btn:hover { background: var(--hover); }
 
 .obs-ctrl-slider {
-  width: 100%;
+  flex: 1;
+  min-width: 40px;
   -webkit-appearance: none;
   appearance: none;
   height: 3px;
@@ -235,12 +234,26 @@
 }
 .obs-ctrl-presets button:hover { background: var(--hover); }
 
-/* Center column: story card */
+/* Center column: story card + player */
 .obs-3d-center {
   flex: 1;
   min-width: 0;
   padding: 8px 12px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Player bar below story card */
+.obs-3d-player {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Story card — inline mode (not overlay) */

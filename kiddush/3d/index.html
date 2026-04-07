@@ -78,26 +78,26 @@ function toggleLang(){
       <div id="obs-layer-toggles" class="obs-3d-layers"></div>
     </div>
 
-    <!-- CENTER: story card -->
+    <!-- CENTER: story card + player below -->
     <div class="obs-3d-center">
       <div id="obs-story-overlay" class="obs-story-inline"></div>
-    </div>
-
-    <!-- LEFT (last in RTL): info + concepts + controls -->
-    <div class="obs-3d-left">
-      <div id="obs-day-info" class="obs-day-info-inline"></div>
-      <button class="obs-3d-panel-btn" onclick="document.getElementById('obsSidebar').classList.toggle('obs-sidebar-collapsed')" title="רשימת מושגים">📚 מושגים</button>
-      <div class="obs-3d-controls">
+      <div class="obs-3d-player">
         <button id="obs-play-btn" class="obs-ctrl-btn" title="הפעל">▶</button>
         <input type="range" id="obs-time-slider" min="0" max="6939" step="0.5" value="0" class="obs-ctrl-slider">
-        <input type="range" id="obs-speed-slider" min="0.2" max="20" step="0.2" value="1" class="obs-ctrl-slider obs-ctrl-speed">
-        <span id="obs-speed-label" class="obs-ctrl-label">×1</span>
         <div class="obs-ctrl-presets">
           <button data-time-preset="0">0</button>
           <button data-time-preset="29.53">29</button>
           <button data-time-preset="354">354</button>
         </div>
+        <input type="range" id="obs-speed-slider" min="0.2" max="20" step="0.2" value="1" class="obs-ctrl-slider obs-ctrl-speed">
+        <span id="obs-speed-label" class="obs-ctrl-label">×1</span>
       </div>
+    </div>
+
+    <!-- LEFT (last in RTL): info + concepts -->
+    <div class="obs-3d-left">
+      <div id="obs-day-info" class="obs-day-info-inline"></div>
+      <button class="obs-3d-panel-btn" onclick="document.getElementById('obsSidebar').classList.toggle('obs-sidebar-collapsed')" title="רשימת מושגים">📚 מושגים</button>
     </div>
   </div>
 </div>
