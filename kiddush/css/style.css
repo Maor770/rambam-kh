@@ -63,7 +63,7 @@
 .st-quote{color:var(--txt);font-family:var(--font-hal);font-weight:700}
 
 /* INTERACTIVE STEINSALTZ MARKERS IN HALACHA TEXT */
-.st-marked{border-bottom:1.5px dotted var(--gold-border);cursor:pointer;transition:background .15s;border-radius:2px;padding:0 1px}
+.st-marked{border-bottom:1.5px dotted var(--gold2);cursor:pointer;transition:background .15s;border-radius:2px;padding:0 1px}
 .st-marked:hover,.st-marked:active{background:var(--gold-bg)}
 
 /* STEINSALTZ POPUP */

@@ -57,6 +57,20 @@ function renderAll() {
   setTimeout(setupRambamPositionTracking, 100);
 }
 
+// Convert number to Hebrew letters (gematria) — e.g. 1→א׳, 15→ט״ו, 23→כ״ג
+function toHebNum(n) {
+  if (!n || n < 1) return String(n);
+  const ones = ['','א','ב','ג','ד','ה','ו','ז','ח','ט'];
+  const tens = ['','י','כ','ל'];
+  // Special cases: 15=ט״ו, 16=ט״ז
+  let t = Math.floor(n / 10), u = n % 10;
+  if (n === 15) return 'ט״ו';
+  if (n === 16) return 'ט״ז';
+  const letters = (tens[t] || '') + (ones[u] || '');
+  if (letters.length > 1) return letters.slice(0,-1) + '״' + letters.slice(-1);
+  return letters + '׳';
+}
+
 let layerStep = [0,0,0,0]; // current step per layer
 
 function renderOverview(el) {
@@ -206,7 +220,7 @@ function renderHalCard(ch, h, preview, isOpen) {
 
   return `<div class="hal-card${openCls}" id="hal-${id}">
     <div class="hal-header" onclick="toggleHal('${id}')">
-      <div class="hal-num">${h.n}</div>
+      <div class="hal-num">${IS_EN ? h.n : toHebNum(h.n)}</div>
       <div class="hal-preview">${vizBadge}${preview}</div>
       <span class="hal-arrow">${arrowChar}</span>
     </div>
