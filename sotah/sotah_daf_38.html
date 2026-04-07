@@ -401,7 +401,8 @@ function filterAmud(f){for(let i=0;i<12;i++){const el=document.getElementById("s
 function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSecs.has(i)),b=document.getElementById("tbtn");b.textContent=a?"▲ סגור":"▼ פתח הכל";b.style.borderColor=a?"#2ecc71":"#d4af55";b.style.color=a?"#1a7a42":"#b8941f"}
 </script>
 <div class="print-header"><span class="ph-title"></span><span class="ph-site">YeshivaAI.org</span></div>
+<div class="print-footer"><span class="pf-info"></span><span class="pf-site">YeshivaAI.org</span></div>
 <button class="print-btn" onclick="doPrint()" title="הדפסה">🖨️</button>
-<script>function doPrint(){var h=document.querySelector(".ph-title"),t=document.querySelector("h1");if(h&&t)h.textContent=t.textContent;window.print();}</script>
+<script>function doPrint(){var h=document.querySelector(".ph-title"),f=document.querySelector(".pf-info"),t=document.querySelector("h1");if(h&&t){h.textContent=t.textContent;if(f)f.textContent=t.textContent;}window.print();}</script>
 </body>
 </html>

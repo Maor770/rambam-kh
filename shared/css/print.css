@@ -22,8 +22,9 @@
 }
 .print-btn:hover { background: #145a80; transform: scale(1.05); }
 
-/* ---------- PRINT HEADER (hidden on screen) ---------- */
-.print-header {
+/* ---------- PRINT HEADER & FOOTER (hidden on screen) ---------- */
+.print-header,
+.print-footer {
   display: none;
 }
 
@@ -33,7 +34,7 @@
 @media print {
   @page {
     size: A4;
-    margin: 6mm 8mm;
+    margin: 6mm 8mm 10mm;
   }
 
   /* hide UI chrome */
@@ -55,7 +56,7 @@
 
   a { color: #000 !important; text-decoration: none !important; }
 
-  /* --- PRINT HEADER — shown on every page --- */
+  /* --- PRINT HEADER — top of first page --- */
   .print-header {
     display: flex !important;
     justify-content: space-between;
@@ -76,17 +77,49 @@
     direction: ltr;
   }
 
+  /* --- PRINT FOOTER — bottom of every page via @page workaround --- */
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ccc;
+    padding: 3px 4px 0;
+    font-family: 'Heebo', sans-serif;
+    font-size: 8px;
+    color: #999;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .print-footer .pf-info {
+    direction: rtl;
+  }
+  .print-footer .pf-site {
+    direction: ltr;
+    font-size: 8px;
+  }
+
   /* ======================================================
-     SOTAH DAF — fit each daf on ONE printed page
+     SOTAH DAF — content flows across pages
      ====================================================== */
 
-  /* hide ALL original chrome: nav bars, page header, filter, footer */
+  /* hide ALL original chrome: nav bars, page header, ב״ה, filter, footer, menus */
   body > div:first-child,                       /* top nav */
-  body > div:nth-child(2),                      /* original header with h1/filters */
+  body > div:nth-child(2),                      /* original header with h1/ב״ה/filters */
   [id^="fbtn-"], #tbtn,                         /* filter & toggle buttons */
   [id^="arrow"],                                /* collapse arrows */
-  .count                                         /* section count badges */
+  .count,                                        /* section count badges */
+  div[style*="display:flex;justify-content:center;gap:8px;padding:8px"], /* nav bar rows */
+  div[style*="padding:20px 16px 30px"],          /* footer disclaimer */
+  div[style*="font-size:12px;color:#bbb"]        /* ב״ה line */
   { display: none !important; }
+
+  /* hide section count number in header buttons */
+  [id^="sec"] > button span[style*="color:#bbb"] {
+    display: none !important;
+  }
 
   /* force all sections visible */
   [id^="content"] {
@@ -96,11 +129,10 @@
     background: transparent !important;
   }
 
-  /* section wrapper */
+  /* section wrapper — ALLOW page breaks inside */
   [id^="sec"] {
     display: block !important;
     margin-bottom: 0 !important;
-    page-break-inside: avoid;
   }
 
   /* section header buttons — make them look like plain headers */
@@ -178,9 +210,13 @@
   body > div:nth-last-child(3) {
     display: none !important;
   }
-  /* but keep the main content area (3rd child) */
+  /* but keep the main content area (3rd child) and print elements */
   body > div:nth-child(3) {
     display: block !important;
+  }
+  .print-header,
+  .print-footer {
+    display: flex !important;
   }
 
   /* footer disclaimer */
@@ -219,7 +255,6 @@
     border: none !important;
     box-shadow: none !important;
     margin: 2px 0 !important;
-    page-break-inside: avoid;
   }
   .hal-header {
     padding: 3px 4px !important;
