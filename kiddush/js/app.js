@@ -233,8 +233,9 @@ function renderHalCard(ch, h, preview, isOpen) {
   // Steinsaltz commentary (always Hebrew)
   let stHtml = '';
   if (h.st && h.st.length) {
-    const stLabel = IS_EN ? 'Steinsaltz Commentary (Hebrew)' : 'ביאור שטיינזלץ';
-    stHtml = `<div class="txt-steinsaltz"><div class="st-label">${stLabel}</div>${h.st.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div>`;
+    const stLabel = IS_EN ? 'Steinsaltz Commentary — integrated in halacha text' : 'ביאור שטיינזלץ — משולב בטקסט ההלכה';
+    const stId = `st-${ch}-${h.n}`;
+    stHtml = `<div class="txt-steinsaltz"><div class="st-label st-toggle" onclick="document.getElementById('${stId}').classList.toggle('open')">${stLabel} <span class="st-arrow">◀</span></div><div class="st-body" id="${stId}">${h.st.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div></div>`;
   }
 
   // Observatory mini-preview link
