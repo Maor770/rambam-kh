@@ -12,6 +12,16 @@
 .mode-tab:hover{border-color:var(--sky)}
 .mode-tab.active{border-color:var(--gold);color:var(--gold);background:var(--gold-bg)}
 
+/* CHAPTER DROPDOWN */
+.ch-dropdown-wrap{position:relative;flex:1;max-width:160px}
+.ch-dropdown-wrap .mode-tab{width:100%;max-width:none}
+.ch-dropdown{display:none;position:absolute;top:calc(100% + 4px);right:0;left:0;background:var(--card);border:1.5px solid var(--border);border-radius:12px;box-shadow:0 8px 24px var(--shadow);z-index:200;max-height:60vh;overflow-y:auto;padding:6px 0;scrollbar-width:thin}
+.ch-dropdown.open{display:block}
+.ch-dropdown-item{display:block;width:100%;padding:10px 14px;border:none;background:transparent;color:var(--txt2);font-family:var(--font-body);font-size:.82rem;font-weight:500;cursor:pointer;text-align:right;transition:background .15s,color .15s;line-height:1.4}
+.ch-dropdown-item:hover{background:var(--gold-bg);color:var(--gold)}
+.ch-dropdown-item.active{color:var(--gold);font-weight:700}
+.ch-dropdown-item .ch-drop-num{color:var(--sky);font-weight:700;margin-left:6px;font-size:.78rem}
+
 /* CHAPTER SCROLL */
 .ch-scroll{display:flex;gap:4px;padding:8px 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:860px;margin:0 auto}
 .ch-scroll::-webkit-scrollbar{display:none}

@@ -26,38 +26,59 @@ const OBS_HAL_MAP = {
 function setMode(mode) {
   if (mode === 'study') mode = 'continuous'; // legacy fallback
   currentMode = mode;
-  document.querySelectorAll('.mode-tab').forEach((t,i) => {
-    const modes = ['overview','continuous'];
-    t.classList.toggle('active', modes[i] === mode);
-  });
-  document.getElementById('chScroll').style.display = mode === 'overview' ? 'none' : 'flex';
+  // Update tab active states: overview tab, halTab, observatory link
+  const overviewTab = document.querySelector('.mode-tabs > .mode-tab');
+  const halTab = document.getElementById('halTab');
+  if (overviewTab) overviewTab.classList.toggle('active', mode === 'overview');
+  if (halTab) halTab.classList.toggle('active', mode === 'continuous');
+  const chScroll = document.getElementById('chScroll');
+  if (chScroll) chScroll.style.display = 'none'; // deprecated, hidden always
+  // Close dropdown when switching modes
+  const dd = document.getElementById('chDropdown');
+  if (dd) dd.classList.remove('open');
   renderAll();
 }
 
 function buildChScroll() {
+  // Legacy ch-scroll — keep hidden
   const el = document.getElementById('chScroll');
-  el.innerHTML = '';
+  if (el) el.innerHTML = '';
+  // Build dropdown menu
+  buildChDropdown();
+}
+
+function buildChDropdown() {
+  const dd = document.getElementById('chDropdown');
+  if (!dd) return;
+  dd.innerHTML = '';
   for (let i = 1; i <= 19; i++) {
     const b = document.createElement('button');
-    b.className = 'ch-btn' + (i === currentCh ? ' active' : '');
-    b.textContent = `${HEB_CH[i]} ${CH_TITLES[i] || ''}`;
+    b.className = 'ch-dropdown-item' + (currentMode === 'continuous' && currentCh === i ? ' active' : '');
+    b.innerHTML = `<span class="ch-drop-num">פרק ${HEB_CH[i]}</span> ${CH_TITLES[i] || ''}`;
     b.onclick = () => {
       currentCh = i;
-      if (currentMode === 'continuous' && dailyChapters) {
-        // Clear daily filter to allow free navigation across all chapters
-        dailyChapters = null;
-        renderAll();
-        scrollToChapter(i);
-      } else if (currentMode === 'continuous') {
-        renderAll();
-        scrollToChapter(i);
-      } else {
-        renderAll();
-      }
+      if (dailyChapters) dailyChapters = null;
+      dd.classList.remove('open');
+      if (currentMode !== 'continuous') setMode('continuous');
+      else { renderAll(); scrollToChapter(i); }
     };
-    el.appendChild(b);
+    dd.appendChild(b);
   }
 }
+
+function toggleChDropdown() {
+  const dd = document.getElementById('chDropdown');
+  if (!dd) return;
+  const isOpen = dd.classList.toggle('open');
+  if (isOpen) buildChDropdown(); // refresh active state
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  const wrap = document.querySelector('.ch-dropdown-wrap');
+  const dd = document.getElementById('chDropdown');
+  if (dd && wrap && !wrap.contains(e.target)) dd.classList.remove('open');
+});
 
 function scrollToChapter(ch) {
   const el = document.getElementById(`ch-${ch}`);
@@ -235,7 +256,7 @@ function renderHalCard(ch, h, preview, isOpen) {
   // Steinsaltz commentary (always Hebrew)
   let stHtml = '';
   if (h.st && h.st.length) {
-    const stLabel = IS_EN ? 'Steinsaltz Commentary — integrated in halacha text' : 'ביאור שטיינזלץ — משולב בטקסט ההלכה';
+    const stLabel = IS_EN ? 'Steinsaltz Commentary — integrated in halacha text' : 'ביאור שטיינזלץ - משולב בטקסט ההלכה <span style="font-weight:400">(מסומן בקו תחתון דק)</span>';
     const stId = `st-${ch}-${h.n}`;
     stHtml = `<div class="txt-steinsaltz"><div class="st-label st-toggle" onclick="document.getElementById('${stId}').classList.toggle('open')">${stLabel} <span class="st-arrow">◀</span></div><div class="st-body" id="${stId}">${h.st.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div></div>`;
   }
@@ -334,7 +355,7 @@ function renderSectionTable(table) {
 function renderSectionedHalCard(ch, h, preview, isOpen, id, openCls, vizBadge, arrowChar) {
   const heParts = splitTextBySections(h.he, h.sections, 'heBreak');
   const enParts = splitTextBySections(h.en, h.sections, 'enBreak');
-  const stLabel = IS_EN ? 'Steinsaltz Commentary (Hebrew)' : 'ביאור שטיינזלץ';
+  const stLabel = IS_EN ? 'Steinsaltz Commentary (Hebrew)' : 'ביאור שטיינזלץ - משולב בטקסט ההלכה <span style="font-weight:400">(מסומן בקו תחתון דק)</span>';
   const sectionArrow = IS_EN ? '▶' : '◀';
 
   let sectionsHtml = '';
@@ -370,7 +391,7 @@ function renderSectionedHalCard(ch, h, preview, isOpen, id, openCls, vizBadge, a
     let secSt = '';
     if (secStArr.length) {
       const secStId = `st-${ch}-${h.n}-sec-${si}`;
-      const secStLabel = IS_EN ? 'Steinsaltz Commentary' : 'ביאור שטיינזלץ';
+      const secStLabel = IS_EN ? 'Steinsaltz Commentary' : 'ביאור שטיינזלץ - משולב בטקסט ההלכה <span style="font-weight:400">(מסומן בקו תחתון דק)</span>';
       secSt = `<div class="txt-steinsaltz"><div class="st-label st-toggle" onclick="document.getElementById('${secStId}').classList.toggle('open')">${secStLabel} <span class="st-arrow">◀</span></div><div class="st-body" id="${secStId}">${secStArr.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div></div>`;
     }
 
