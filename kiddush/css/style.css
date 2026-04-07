@@ -148,6 +148,10 @@
 /* BIO BLOCK */
 .bio-block{font-size:.9rem;line-height:1.75;color:var(--txt);padding:10px 14px;background:var(--gold-bg);border-right:3px solid var(--gold);border-radius:0 10px 10px 0;margin-bottom:10px}
 
+/* Observatory mini-preview link */
+.obs-mini-link{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;margin-bottom:10px;border-radius:16px;background:var(--sky-bg);border:1px solid var(--sky-border);color:var(--sky);font-size:.75rem;text-decoration:none;transition:background .2s}
+.obs-mini-link:hover{background:color-mix(in srgb,var(--sky) 12%,transparent)}
+
 /* LTR SUPPORT (English pages) */
 [dir="ltr"] .bio-block{border-right:none;border-left:3px solid var(--gold);border-radius:10px 0 0 10px}
 [dir="ltr"] .txt-rambam{border-right:none;border-left:3px solid var(--purple);border-radius:10px 0 0 10px;direction:rtl;text-align:right;font-family:var(--font-hal)}
