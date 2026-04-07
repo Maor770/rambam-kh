@@ -58,6 +58,11 @@ export default {
         return handleStats(request, env, corsHeaders);
       }
 
+      // Route: GET /realtime
+      if (url.pathname === '/realtime') {
+        return handleRealtime(request, env, corsHeaders);
+      }
+
       return jsonResponse({ error: 'Not found' }, 404, corsHeaders);
     } catch (e) {
       return jsonResponse({ error: e.message }, 500, corsHeaders);
@@ -120,6 +125,39 @@ async function handleStats(request, env, corsHeaders) {
     sources,
     events,
   }, 200, corsHeaders);
+}
+
+/* ── Realtime ── */
+async function handleRealtime(request, env, corsHeaders) {
+  // Verify auth
+  const authHeader = request.headers.get('Authorization') || '';
+  if (!authHeader.startsWith('Bearer ')) {
+    return jsonResponse({ error: 'Unauthorized' }, 401, corsHeaders);
+  }
+  const token = authHeader.slice(7);
+  try {
+    const decoded = atob(token);
+    if (!decoded.startsWith(env.ADMIN_EMAIL + ':')) throw new Error('invalid');
+  } catch {
+    return jsonResponse({ error: 'Invalid token' }, 401, corsHeaders);
+  }
+
+  const accessToken = await getGoogleAccessToken(env);
+
+  const resp = await fetch(`${GA_API}/properties/${env.GA_PROPERTY_ID}:runRealtimeReport`, {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer ' + accessToken,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      metrics: [{ name: 'activeUsers' }],
+    }),
+  });
+  const data = await resp.json();
+  const activeUsers = parseInt(data.rows?.[0]?.metricValues?.[0]?.value || '0');
+
+  return jsonResponse({ activeUsers }, 200, corsHeaders);
 }
 
 /* ── Google OAuth (Service Account JWT) ── */
@@ -196,6 +234,12 @@ function dateStr(daysAgo) {
   return d.toISOString().slice(0, 10);
 }
 
+function getDateRange(days) {
+  if (days === 0) return { startDate: 'today', endDate: 'today' };
+  if (days === 1) return { startDate: 'yesterday', endDate: 'yesterday' };
+  return { startDate: dateStr(days), endDate: 'today' };
+}
+
 async function gaQuery(propertyId, token, body) {
   const resp = await fetch(`${GA_API}/properties/${propertyId}:runReport`, {
     method: 'POST',
@@ -210,7 +254,7 @@ async function gaQuery(propertyId, token, body) {
 
 async function fetchSummary(propertyId, token, days) {
   const data = await gaQuery(propertyId, token, {
-    dateRanges: [{ startDate: dateStr(days), endDate: 'today' }],
+    dateRanges: [getDateRange(days)],
     metrics: [
       { name: 'activeUsers' },
       { name: 'screenPageViews' },
@@ -236,7 +280,7 @@ async function fetchSummary(propertyId, token, days) {
 
 async function fetchVisitorsOverTime(propertyId, token, days) {
   const data = await gaQuery(propertyId, token, {
-    dateRanges: [{ startDate: dateStr(days), endDate: 'today' }],
+    dateRanges: [getDateRange(days)],
     dimensions: [{ name: 'date' }],
     metrics: [
       { name: 'activeUsers' },
@@ -265,7 +309,7 @@ async function fetchVisitorsOverTime(propertyId, token, days) {
 
 async function fetchDevices(propertyId, token, days) {
   const data = await gaQuery(propertyId, token, {
-    dateRanges: [{ startDate: dateStr(days), endDate: 'today' }],
+    dateRanges: [getDateRange(days)],
     dimensions: [{ name: 'deviceCategory' }],
     metrics: [{ name: 'activeUsers' }],
   });
@@ -292,7 +336,7 @@ async function fetchDevices(propertyId, token, days) {
 
 async function fetchTopPages(propertyId, token, days) {
   const data = await gaQuery(propertyId, token, {
-    dateRanges: [{ startDate: dateStr(days), endDate: 'today' }],
+    dateRanges: [getDateRange(days)],
     dimensions: [{ name: 'pageTitle' }],
     metrics: [
       { name: 'screenPageViews' },
@@ -315,7 +359,7 @@ async function fetchTopPages(propertyId, token, days) {
 
 async function fetchSources(propertyId, token, days) {
   const data = await gaQuery(propertyId, token, {
-    dateRanges: [{ startDate: dateStr(days), endDate: 'today' }],
+    dateRanges: [getDateRange(days)],
     dimensions: [{ name: 'sessionSource' }],
     metrics: [
       { name: 'activeUsers' },
@@ -336,7 +380,7 @@ async function fetchEvents(propertyId, token, days) {
   const customEvents = ['share_click', 'halacha_view', 'daf_view', 'tanya_view', 'bookmark_add', 'feedback_submit'];
 
   const data = await gaQuery(propertyId, token, {
-    dateRanges: [{ startDate: dateStr(days), endDate: 'today' }],
+    dateRanges: [getDateRange(days)],
     dimensions: [{ name: 'eventName' }],
     metrics: [{ name: 'eventCount' }],
     dimensionFilter: {

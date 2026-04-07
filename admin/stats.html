@@ -72,6 +72,13 @@
 .loading-spinner{display:inline-block;width:24px;height:24px;border:3px solid rgba(255,255,255,.1);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* Realtime card */
+.realtime-card{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid rgba(46,204,113,.15);border-radius:var(--r);padding:14px 18px;margin:16px 0 8px}
+.realtime-dot{width:10px;height:10px;border-radius:50%;background:#2ecc71;box-shadow:0 0 8px rgba(46,204,113,.5);animation:pulse-dot 2s ease-in-out infinite}
+.realtime-val{font-size:1.4rem;font-weight:700;color:#2ecc71}
+.realtime-label{font-size:.85rem;color:var(--txt3)}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+
 /* Responsive */
 @media(min-width:600px){
   .summary-grid{grid-template-columns:repeat(4,1fr)}
@@ -107,8 +114,17 @@
   <!-- Dashboard -->
   <div id="dashboard" class="dashboard">
 
+    <!-- Realtime card -->
+    <div class="realtime-card" id="realtimeCard">
+      <div class="realtime-dot"></div>
+      <span class="realtime-val" id="realtimeCount">—</span>
+      <span class="realtime-label">משתמשים באתר כרגע</span>
+    </div>
+
     <!-- Period selector -->
     <div class="period-bar">
+      <button class="period-btn" data-period="0">היום</button>
+      <button class="period-btn" data-period="1">אתמול</button>
       <button class="period-btn active" data-period="7">7 ימים</button>
       <button class="period-btn" data-period="14">14 ימים</button>
       <button class="period-btn" data-period="30">30 ימים</button>
@@ -294,6 +310,10 @@
     loginScreen.style.display = 'none';
     dashboard.style.display = 'block';
     loadData(7, token);
+    loadRealtime(token);
+
+    // Refresh realtime every 60 seconds
+    setInterval(function(){ loadRealtime(token); }, 60000);
 
     // Period buttons
     document.querySelectorAll('.period-btn').forEach(function(btn){
@@ -303,6 +323,22 @@
         loadData(parseInt(this.dataset.period), token);
       });
     });
+  }
+
+  /* ── Realtime ── */
+  function loadRealtime(token){
+    if(!WORKER_URL){
+      document.getElementById('realtimeCount').textContent = Math.floor(Math.random() * 5);
+      return;
+    }
+    fetch(WORKER_URL + '/realtime', {
+      headers: { 'Authorization': 'Bearer ' + token }
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      document.getElementById('realtimeCount').textContent = data.activeUsers || 0;
+    })
+    .catch(function(){ document.getElementById('realtimeCount').textContent = '?'; });
   }
 
   function loadData(days, token){
@@ -330,10 +366,12 @@
     var labels = [];
     var visitors = [];
     var views = [];
+    var numDays = days === 0 ? 1 : days === 1 ? 1 : days;
 
-    for(var i = days - 1; i >= 0; i--){
+    for(var i = numDays - 1; i >= 0; i--){
       var d = new Date(now);
-      d.setDate(d.getDate() - i);
+      if(days === 1) d.setDate(d.getDate() - 1); // yesterday
+      else d.setDate(d.getDate() - i);
       labels.push(d.toLocaleDateString('he-IL', {day:'numeric', month:'short'}));
       var v = Math.floor(Math.random() * 30) + 10;
       visitors.push(v);
