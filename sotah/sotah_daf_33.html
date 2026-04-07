@@ -307,6 +307,6 @@ function updateToggleBtn(){const v=getVisible(),a=v.length>0&&v.every(i=>openSec
 <div class="print-header"><span class="ph-bh">ב״ה</span><span class="ph-title"></span><span class="ph-site">YeshivaAI.org</span></div>
 <div class="print-footer"><span class="pf-info"></span><span class="pf-page"></span><span class="pf-site">YeshivaAI.org</span></div>
 <button class="print-btn" onclick="doPrint()" title="הדפסה">🖨️</button>
-<script>function doPrint(){var h=document.querySelector(".ph-title"),f=document.querySelector(".pf-info"),t=document.querySelector("h1");if(h&&t){h.textContent=t.textContent;if(f)f.textContent=t.textContent;}window.print();}</script>
+<script src="../shared/js/print.js"></script>
 </body>
 </html>
