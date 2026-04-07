@@ -149,7 +149,7 @@ const STORY_STEPS = [
    textEn:'The moon doesn\'t produce its own light — it reflects sunlight. The side facing the sun is lit, the other side is dark. What we see from Earth depends on the angle between the three: Sun, Moon, Earth.\n\nAll the following laws teach how to calculate this angle precisely — to know: will we see the crescent tonight?'},
 
   /* ── Part 1: What is a Month? (Ch 1-5) ── */
-  {id:'s1', ref:'א:א', concept:'moonMonth', camera:'moonClose', day:0, speed:1,
+  {id:'s1', ref:'א:א', concept:'moonMonth', camera:'moonClose', day:0, speed:1, playing:true,
    title:'חודש לבנה',
    titleEn:'Lunar Month',
    text:'חודשי השנה העברית נקבעים לפי הירח. הירח סובב סביב הארץ כל 29.5 ימים — וזה חודש אחד.',
@@ -167,7 +167,7 @@ const STORY_STEPS = [
    text:'יום-יומיים אחרי המולד, נראה פס אור דק בצד הירח — הסהר. זו "לידת הלבנה" — סימן שהחודש החדש התחיל.',
    textEn:'A day or two after the Molad, a thin sliver of light appears on the moon\'s edge — the crescent. This is the "birth of the moon" — the sign that the new month has begun.'},
 
-  {id:'s4', ref:'א:ג-ד', concept:'moonPhases', camera:'moonClose', speed:8,
+  {id:'s4', ref:'א:ג-ד', concept:'moonPhases', camera:'moonClose', speed:8, playing:true, vizMode:'showPhases',
    title:'פאזות הירח',
    titleEn:'Moon Phases',
    text:'הירח עובר 8 שלבים בכל חודש:\nמולד → סהר → רבע ראשון → מתמלאת → מלא → חסרה → רבע אחרון → סהר אחרון → חזרה למולד.',
@@ -404,6 +404,8 @@ window.nextStoryStep = function(){
   if(step.day !== undefined) window.obsTime.day = step.day;
   if(step.speed !== undefined) window.obsTime.speed = step.speed;
   else window.obsTime.speed = 1;
+  if(step.playing !== undefined) window.obsTime.playing = step.playing;
+  else window.obsTime.playing = false; // default: paused
 
   // Visualization mode
   if(step.vizMode && window.obsSetVizMode) obsSetVizMode(step.vizMode);
