@@ -60,7 +60,20 @@
 .txt-steinsaltz{margin-bottom:10px}
 .st-item{font-size:calc(var(--hal-size,1.1rem) * 0.85);line-height:1.85;color:var(--txt);padding:8px 0;border-bottom:1px solid var(--border-light)}
 .st-item:last-child{border:none}
-.st-quote{color:var(--gold);font-family:var(--font-hal);font-weight:700}
+.st-quote{color:var(--txt);font-family:var(--font-hal);font-weight:700}
+
+/* INTERACTIVE STEINSALTZ MARKERS IN HALACHA TEXT */
+.st-marked{border-bottom:1.5px dotted var(--gold-border);cursor:pointer;transition:background .15s;border-radius:2px;padding:0 1px}
+.st-marked:hover,.st-marked:active{background:var(--gold-bg)}
+
+/* STEINSALTZ POPUP */
+.st-popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:999;background:rgba(0,0,0,.25);opacity:0;transition:opacity .2s;pointer-events:none}
+.st-popup-overlay.show{opacity:1;pointer-events:auto}
+.st-popup{position:fixed;z-index:1000;background:var(--card);border:1px solid var(--gold-border);border-radius:14px;padding:14px 16px;max-width:min(360px,90vw);box-shadow:0 8px 32px var(--shadow);font-size:calc(var(--hal-size,1.1rem) * 0.85);line-height:1.85;color:var(--txt);direction:rtl;text-align:right;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none}
+.st-popup.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.st-popup .st-popup-quote{font-family:var(--font-hal);font-weight:700;color:var(--txt);margin-bottom:6px}
+.st-popup .st-popup-body{color:var(--txt2)}
+.st-popup .st-popup-close{position:absolute;top:6px;left:8px;background:none;border:none;color:var(--txt3);font-size:1.1rem;cursor:pointer;padding:4px 8px;line-height:1}
 .explain{font-size:.95rem;line-height:1.85}
 .g{color:var(--gold);font-weight:700}
 .b{color:var(--sky);font-weight:500}

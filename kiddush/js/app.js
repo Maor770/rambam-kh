@@ -26,7 +26,18 @@ function buildChScroll() {
     const b = document.createElement('button');
     b.className = 'ch-btn' + (i === currentCh ? ' active' : '');
     b.textContent = `${HEB_CH[i]} ${CH_TITLES[i] || ''}`;
-    b.onclick = () => { currentCh = i; renderAll(); scrollToChapter(i); };
+    b.onclick = () => {
+      currentCh = i;
+      // If in continuous mode with daily chapters, switch to study mode to allow free navigation
+      if (currentMode === 'continuous' && dailyChapters) {
+        setMode('study');
+      } else if (currentMode === 'continuous') {
+        renderAll();
+        scrollToChapter(i);
+      } else {
+        renderAll();
+      }
+    };
     el.appendChild(b);
   }
 }
@@ -176,14 +187,14 @@ function renderHalCard(ch, h, preview, isOpen) {
   let srcHtml = '';
   if (IS_EN && IS_BILINGUAL) {
     // he+en mode: Hebrew source + English translation
-    if (h.he) srcHtml += `<div class="txt-rambam" dir="rtl" style="text-align:right">${fmtRef(h.he)}</div>`;
+    if (h.he) srcHtml += `<div class="txt-rambam" dir="rtl" style="text-align:right">${markStInText(fmtRef(h.he), h.st)}</div>`;
     if (h.en) srcHtml += `<div class="txt-english">${h.en}</div>`;
   } else if (IS_EN) {
     // English only: show English Rambam text
     if (h.en) srcHtml = `<div class="txt-english">${h.en}</div>`;
   } else {
     // Hebrew: show Hebrew source
-    if (h.he) srcHtml = `<div class="txt-rambam">${fmtRef(h.he)}</div>`;
+    if (h.he) srcHtml = `<div class="txt-rambam">${markStInText(fmtRef(h.he), h.st)}</div>`;
   }
 
   // Steinsaltz commentary (always Hebrew)
@@ -344,29 +355,35 @@ window.onDataReady = function() {
     const parts = dateParam.split('-').map(Number);
     if(parts.length === 3 && parts[0] > 0) d = HebrewDate.forDate(parts[0], parts[1], parts[2]);
   }
+  // Support ?mode=overview to force overview mode (used by home page intro button)
+  const modeParam = new URLSearchParams(location.search).get('mode');
+
   if(d){
     fetch('https://www.sefaria.org/api/calendars?year='+d.gYear+'&month='+d.gMonth+'&day='+d.gDay+'&timezone='+encodeURIComponent(tz))
       .then(r => r.json())
       .then(data => {
         const items = data.calendar_items || [];
         let rambam3 = items.find(it => it.title && it.title.en === 'Daily Rambam (3 Chapters)');
-        if(!rambam3) return;
+        if(!rambam3) { if(modeParam === 'overview') setMode('overview'); else renderAll(); return; }
         // Parse chapter range from ref like "Mishneh Torah, Sanctification of the New Month 6-8"
         const ref = rambam3.ref || '';
         const isKH = /Sanctification of the New Month/i.test(ref);
-        if(!isKH){ renderAll(); return; }
+        if(!isKH){ if(modeParam === 'overview') setMode('overview'); else renderAll(); return; }
         const match = ref.match(/(\d+)(?:-(\d+))?$/);
-        if(!match){ renderAll(); return; }
+        if(!match){ if(modeParam === 'overview') setMode('overview'); else renderAll(); return; }
         const from = parseInt(match[1],10);
         const to = match[2] ? parseInt(match[2],10) : from;
         const chs = [];
         for(let i = from; i <= to; i++) chs.push(i);
         dailyChapters = chs;
         currentCh = chs[0];
-        setMode('continuous');
+        // If ?mode=overview, respect that instead of auto-switching to continuous
+        if(modeParam === 'overview') setMode('overview');
+        else setMode('continuous');
       })
       .catch(() => { if (!restoreRambamPosition()) renderAll(); });
   } else {
-    if (!restoreRambamPosition()) renderAll();
+    if(modeParam === 'overview') setMode('overview');
+    else if (!restoreRambamPosition()) renderAll();
   }
 };

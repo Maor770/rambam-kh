@@ -176,6 +176,25 @@
     color:var(--sky, #1a5a8a);
     font-weight:500;
   }
+  .card-extra-btn{
+    display:inline-block;
+    margin-top:.5rem;
+    padding:.4rem .8rem;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:8px;
+    font-size:.8rem;
+    color:var(--txt2);
+    font-weight:600;
+    text-decoration:none;
+    transition:border-color .2s, color .2s;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .card-extra-btn:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+  }
 
   /* Footer */
   .home-footer{
@@ -213,6 +232,7 @@
     <div class="card-desc">לימוד יומי בהלכות קידוש החודש לרמב״ם, עם ביאורים ותרשימים אינטראקטיביים.</div>
     <div class="card-today" id="rambamToday" style="display:none"></div>
     <div class="card-resume" id="rambamResume" style="display:none"></div>
+    <div><span class="card-extra-btn" onclick="event.preventDefault();event.stopPropagation();location.href='kiddush/?mode=overview'">הקדמה - סקירה כללית (מומלץ!)</span></div>
   </a>
   <a href="sotah/" class="card-link" id="sotahCard">
     <span class="card-icon" aria-hidden="true">&#128220;</span>
@@ -220,6 +240,7 @@
     <div class="card-desc">לימוד דף יומי במסכת סוטה עם פירושים וכלי עזר.</div>
     <div class="card-today" id="sotahToday" style="display:none"></div>
     <div class="card-resume" id="sotahResume" style="display:none"></div>
+    <div><span class="card-extra-btn" onclick="event.preventDefault();event.stopPropagation();location.href='sotah/'">כל הדפים</span></div>
   </a>
   <!-- תניא יומי — מוסתר זמנית, בעבודה -->
   <!--
