@@ -232,7 +232,10 @@
     <div class="card-desc">לימוד יומי בהלכות קידוש החודש לרמב״ם, עם ביאורים ותרשימים אינטראקטיביים.</div>
     <div class="card-today" id="rambamToday" style="display:none"></div>
     <div class="card-resume" id="rambamResume" style="display:none"></div>
-    <div><span class="card-extra-btn" onclick="event.preventDefault();event.stopPropagation();location.href='kiddush/?mode=overview'">הקדמה - סקירה כללית (מומלץ!)</span></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <span class="card-extra-btn" onclick="event.preventDefault();event.stopPropagation();location.href='kiddush/?mode=overview'">הקדמה - סקירה כללית (מומלץ!)</span>
+      <span class="card-extra-btn" style="background:var(--gold-bg);border-color:var(--gold-border);color:var(--gold);font-weight:700" onclick="event.preventDefault();event.stopPropagation();location.href='kiddush/observatory.html'">🌍 דגם תלת מימד</span>
+    </div>
   </a>
   <a href="sotah/" class="card-link" id="sotahCard">
     <span class="card-icon" aria-hidden="true">&#128220;</span>

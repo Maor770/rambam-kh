@@ -24,9 +24,10 @@ const OBS_HAL_MAP = {
 };
 
 function setMode(mode) {
+  if (mode === 'study') mode = 'continuous'; // legacy fallback
   currentMode = mode;
   document.querySelectorAll('.mode-tab').forEach((t,i) => {
-    const modes = ['overview','study','continuous'];
+    const modes = ['overview','continuous'];
     t.classList.toggle('active', modes[i] === mode);
   });
   document.getElementById('chScroll').style.display = mode === 'overview' ? 'none' : 'flex';
@@ -42,9 +43,11 @@ function buildChScroll() {
     b.textContent = `${HEB_CH[i]} ${CH_TITLES[i] || ''}`;
     b.onclick = () => {
       currentCh = i;
-      // If in continuous mode with daily chapters, switch to study mode to allow free navigation
       if (currentMode === 'continuous' && dailyChapters) {
-        setMode('study');
+        // Clear daily filter to allow free navigation across all chapters
+        dailyChapters = null;
+        renderAll();
+        scrollToChapter(i);
       } else if (currentMode === 'continuous') {
         renderAll();
         scrollToChapter(i);
@@ -65,7 +68,6 @@ function renderAll() {
   buildChScroll();
   const main = document.getElementById('mainContent');
   if (currentMode === 'overview') renderOverview(main);
-  else if (currentMode === 'study') renderStudy(main);
   else renderContinuous(main);
   // Re-attach position tracking after render
   setTimeout(setupRambamPositionTracking, 100);
@@ -220,14 +222,14 @@ function renderHalCard(ch, h, preview, isOpen) {
   let srcHtml = '';
   if (IS_EN && IS_BILINGUAL) {
     // he+en mode: Hebrew source + English translation
-    if (h.he) srcHtml += `<div class="txt-rambam" dir="rtl" style="text-align:right">${markStInText(fmtRef(h.he), h.st)}</div>`;
+    if (h.he) srcHtml += `<div class="txt-rambam" dir="rtl" style="text-align:right">${fmtRef(markStInText(h.he, h.st))}</div>`;
     if (h.en) srcHtml += `<div class="txt-english">${h.en}</div>`;
   } else if (IS_EN) {
     // English only: show English Rambam text
     if (h.en) srcHtml = `<div class="txt-english">${h.en}</div>`;
   } else {
     // Hebrew: show Hebrew source
-    if (h.he) srcHtml = `<div class="txt-rambam">${markStInText(fmtRef(h.he), h.st)}</div>`;
+    if (h.he) srcHtml = `<div class="txt-rambam">${fmtRef(markStInText(h.he, h.st))}</div>`;
   }
 
   // Steinsaltz commentary (always Hebrew)
@@ -242,7 +244,7 @@ function renderHalCard(ch, h, preview, isOpen) {
   const obsKey = `${ch}:${h.n}`;
   const obsConcept = OBS_HAL_MAP[obsKey];
   const obsLink = obsConcept
-    ? `<a href="observatory.html?concept=${obsConcept}" class="obs-mini-link" title="${IS_EN ? 'View in 3D Observatory' : 'ראה במצפה התלת-ממדי'}">🌍 ${IS_EN ? 'View in 3D' : 'ראה במצפה'}</a>`
+    ? `<a href="observatory.html?concept=${obsConcept}" class="obs-mini-link" title="${IS_EN ? 'View 3D Model' : 'ראה בדגם התלת-ממדי'}">🌍 ${IS_EN ? 'View in 3D' : 'דגם תלת מימד'}</a>`
     : '';
 
   return `<div class="hal-card${openCls}" id="hal-${id}">
@@ -504,7 +506,7 @@ function restoreRambamPosition() {
     const hal = paramHal ? parseInt(paramHal, 10) : null;
     if (ch >= 1 && ch <= 19) {
       currentCh = ch;
-      if (currentMode === 'overview') setMode('study');
+      if (currentMode === 'overview') setMode('continuous');
       else renderAll();
       if (hal) {
         setTimeout(() => {
@@ -520,7 +522,7 @@ function restoreRambamPosition() {
   const pos = RambamSettings.get('rambamPosition');
   if (!pos || !pos.ch) return false;
   currentCh = pos.ch;
-  if (currentMode === 'overview') setMode('study');
+  if (currentMode === 'overview') setMode('continuous');
   else renderAll();
   if (pos.hal) {
     setTimeout(() => {

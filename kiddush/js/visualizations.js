@@ -26,61 +26,164 @@ function extractStQuotes(stArr) {
   }).filter(Boolean);
 }
 
-// Mark quoted words in halacha text with interactive spans
-function markStInText(hebrewHtml, stArr) {
-  if (!stArr || !stArr.length) return hebrewHtml;
-  const quotes = extractStQuotes(stArr);
-  if (!quotes.length) return hebrewHtml;
+// Normalize text for matching: strip niqqud, ((references)), quotes, extra whitespace
+function normalizeForMatch(s) {
+  return stripNiqqud(s)
+    .replace(/\(\([^)]*\)\)/g, '')   // remove ((references))
+    .replace(/["״""]/g, '')           // remove quotation marks
+    .replace(/\s+/g, ' ')            // collapse whitespace
+    .trim();
+}
 
-  // Work on stripped-of-html text for matching, but apply to original
-  // First, strip fmtRef output to get clean text for searching
-  let result = hebrewHtml;
+// Loose normalize: also strip yod/vav (matres lectionis) for fuzzy spelling match
+function looseNormalize(s) {
+  return normalizeForMatch(s).replace(/[יו]/g, '');
+}
+
+// Build a position map from normalized string back to original string
+// skipChars: regex of additional chars to skip (for loose mode)
+function buildPosMap(orig, skipChars) {
+  const map = [];
+  const normalized = [];
+  let i = 0;
+  while (i < orig.length) {
+    // Skip (( ... )) references entirely
+    if (orig[i] === '(' && orig[i+1] === '(') {
+      const end = orig.indexOf('))', i);
+      if (end !== -1) { i = end + 2; continue; }
+    }
+    // Skip quotation marks
+    if (/["״""]/.test(orig[i])) { i++; continue; }
+    // Skip niqqud/cantillation
+    if (/[\u0591-\u05C7]/.test(orig[i])) { i++; continue; }
+    // Skip additional chars (yod/vav in loose mode)
+    if (skipChars && skipChars.test(orig[i])) { i++; continue; }
+    // Collapse whitespace
+    if (/\s/.test(orig[i])) {
+      if (normalized.length > 0 && normalized[normalized.length-1] !== ' ') {
+        map.push(i);
+        normalized.push(' ');
+      }
+      i++; continue;
+    }
+    map.push(i);
+    normalized.push(orig[i]);
+    i++;
+  }
+  return { text: normalized.join(''), map };
+}
+
+// Mark quoted words in halacha text with interactive spans
+// MUST be called on raw Hebrew text BEFORE fmtRef
+function markStInText(rawHebrew, stArr) {
+  if (!stArr || !stArr.length || !rawHebrew) return rawHebrew;
+  const quotes = extractStQuotes(stArr);
+  if (!quotes.length) return rawHebrew;
+
+  // Build both normal and loose position maps
+  const exact = buildPosMap(rawHebrew);
+  const loose = buildPosMap(rawHebrew, /[יו]/);
+
+  const matches = [];
 
   quotes.forEach((q, idx) => {
-    // Clean the quote for searching: remove וכו' / וגו' at end
-    let searchQuote = q.quote.replace(/\s*וכו['׳]?\s*$/,'').replace(/\s*וגו['׳]?\s*$/,'').trim();
-    if (!searchQuote) return;
+    // Clean the quote: remove trailing וכו' / וגו'
+    let cleanQuote = q.quote
+      .replace(/\s*וכו['׳]?\s*$/, '').replace(/\s*וגו['׳]?\s*$/, '')
+      .replace(/\s*וכו['׳]?\s*$/, '')
+      .trim();
+    if (!cleanQuote || cleanQuote.length < 2) return;
 
-    // Try exact match first (with niqqud as-is)
-    let pos = result.indexOf(searchQuote);
+    let normQuote, searchText, searchMap, foundPos;
 
-    // If not found, try matching without niqqud
-    if (pos === -1) {
-      const strippedResult = stripNiqqud(result);
-      const strippedQuote = stripNiqqud(searchQuote);
-      const strippedPos = strippedResult.indexOf(strippedQuote);
-      if (strippedPos === -1) return; // Can't find it
+    // Strategy 1: exact normalized match
+    normQuote = normalizeForMatch(cleanQuote);
+    foundPos = exact.text.indexOf(normQuote);
 
-      // Map stripped position back to original string position
-      let origIdx = 0, strIdx = 0;
-      while (strIdx < strippedPos && origIdx < result.length) {
-        if (stripNiqqud(result[origIdx]) === '') { origIdx++; continue; }
-        origIdx++; strIdx++;
-      }
-      pos = origIdx;
-
-      // Find end position
-      let endOrigIdx = origIdx, endStrIdx = strIdx;
-      while (endStrIdx < strippedPos + strippedQuote.length && endOrigIdx < result.length) {
-        if (stripNiqqud(result[endOrigIdx]) === '') { endOrigIdx++; continue; }
-        endOrigIdx++; endStrIdx++;
-      }
-      // Include trailing niqqud
-      while (endOrigIdx < result.length && /[\u0591-\u05C7]/.test(result[endOrigIdx])) endOrigIdx++;
-
-      searchQuote = result.substring(pos, endOrigIdx);
+    // Strategy 2: loose match (strip yod/vav for spelling variants)
+    if (foundPos === -1) {
+      normQuote = looseNormalize(cleanQuote);
+      foundPos = loose.text.indexOf(normQuote);
+      if (foundPos !== -1) { searchText = loose.text; searchMap = loose.map; }
     }
 
-    // Don't wrap if already inside an HTML tag or already wrapped
-    const before = result.substring(0, pos);
-    if (before.lastIndexOf('<') > before.lastIndexOf('>')) return;
+    // Strategy 3: ellipsis - match first significant words only
+    if (foundPos === -1 && /\.{2,}/.test(cleanQuote)) {
+      const firstPart = cleanQuote.split(/\.{2,}/)[0].trim();
+      if (firstPart.length >= 4) {
+        normQuote = normalizeForMatch(firstPart);
+        foundPos = exact.text.indexOf(normQuote);
+        if (foundPos === -1) {
+          normQuote = looseNormalize(firstPart);
+          foundPos = loose.text.indexOf(normQuote);
+          if (foundPos !== -1) { searchText = loose.text; searchMap = loose.map; }
+        }
+      }
+    }
 
-    // Escape the explanation for data attribute
-    const escapedExp = q.explanation.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    const escapedQuote = q.quote.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    // Strategy 4: very short single-word quotes - try loose match on word boundaries
+    if (foundPos === -1 && !cleanQuote.includes(' ') && cleanQuote.length >= 3) {
+      normQuote = looseNormalize(cleanQuote);
+      const re = new RegExp('(?:^| )' + normQuote.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:$| )');
+      const m = re.exec(loose.text);
+      if (m) {
+        foundPos = m.index + (m[0].startsWith(' ') ? 1 : 0);
+        searchText = loose.text; searchMap = loose.map;
+      }
+    }
 
-    const wrapped = `<span class="st-marked" data-st-idx="${idx}" data-st-quote="${escapedQuote}" data-st-exp="${escapedExp}">${searchQuote}</span>`;
-    result = result.substring(0, pos) + wrapped + result.substring(pos + searchQuote.length);
+    // Strategy 5: match first 2-3 significant words for multi-word quotes
+    if (foundPos === -1) {
+      const words = normalizeForMatch(cleanQuote).split(' ').filter(w => w.length > 2);
+      if (words.length >= 2) {
+        // Try first 3, then first 2 words
+        for (let n = Math.min(3, words.length); n >= 2 && foundPos === -1; n--) {
+          const prefix = words.slice(0, n).join(' ');
+          foundPos = exact.text.indexOf(prefix);
+          if (foundPos !== -1) {
+            normQuote = prefix;
+            searchText = exact.text; searchMap = exact.map;
+          } else {
+            const loosePrefix = words.slice(0, n).map(w => w.replace(/[יו]/g, '')).join(' ');
+            foundPos = loose.text.indexOf(loosePrefix);
+            if (foundPos !== -1) {
+              normQuote = loosePrefix;
+              searchText = loose.text; searchMap = loose.map;
+            }
+          }
+        }
+      }
+    }
+
+    if (foundPos === -1) return;
+
+    // Use whichever map found the match
+    if (!searchText) { searchText = exact.text; searchMap = exact.map; }
+
+    // Map back to original positions
+    const origStart = searchMap[foundPos];
+    const origEndNorm = foundPos + normQuote.length - 1;
+    let origEnd = searchMap[Math.min(origEndNorm, searchMap.length - 1)] + 1;
+    // Extend to include trailing niqqud
+    while (origEnd < rawHebrew.length && /[\u0591-\u05C7]/.test(rawHebrew[origEnd])) origEnd++;
+
+    // Check not overlapping with a previous match
+    const overlaps = matches.some(m => !(origEnd <= m.start || origStart >= m.end));
+    if (overlaps) return;
+
+    matches.push({ start: origStart, end: origEnd, idx, quote: q.quote, explanation: q.explanation });
+  });
+
+  // Sort by position descending so we can replace from end to start
+  matches.sort((a, b) => b.start - a.start);
+
+  let result = rawHebrew;
+  matches.forEach(m => {
+    const original = result.substring(m.start, m.end);
+    const escapedExp = m.explanation.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const escapedQuote = m.quote.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const wrapped = `<span class="st-marked" data-st-idx="${m.idx}" data-st-quote="${escapedQuote}" data-st-exp="${escapedExp}">${original}</span>`;
+    result = result.substring(0, m.start) + wrapped + result.substring(m.end);
   });
 
   return result;
