@@ -222,7 +222,7 @@ function changeFontSize(delta) {
 function renderHalCard(ch, h, preview, isOpen) {
   const id = `${ch}-${h.n}`;
   const openCls = isOpen ? ' open' : '';
-  const vizBadge = h.viz ? '<span style="font-size:.65rem;color:var(--purple);margin-' + (IS_EN ? 'right' : 'right') + ':4px">📊</span>' : '';
+  const vizBadge = '';
   const arrowChar = IS_EN ? '▶' : '◀';
 
   // If sections exist, render sectioned view

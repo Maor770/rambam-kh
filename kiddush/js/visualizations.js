@@ -249,13 +249,46 @@ function closeStPopup() {
   if (_stOverlay) _stOverlay.classList.remove('show');
 }
 
-// Event delegation for st-marked clicks
+// Detect touch device
+const _isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+// Desktop: hover to show, mouse leave to hide
+if (!_isTouchDevice) {
+  let _hoverTimeout = null;
+  document.addEventListener('mouseover', function(e) {
+    const marked = e.target.closest('.st-marked');
+    if (marked) {
+      clearTimeout(_hoverTimeout);
+      showStPopup(marked);
+    }
+  });
+  document.addEventListener('mouseout', function(e) {
+    const marked = e.target.closest('.st-marked');
+    if (marked) {
+      _hoverTimeout = setTimeout(function() {
+        // Only close if not hovering the popup itself
+        if (_stPopup && !_stPopup.matches(':hover')) closeStPopup();
+      }, 200);
+    }
+  });
+  // Keep popup open while hovering over it
+  document.addEventListener('mouseover', function(e) {
+    if (_stPopup && _stPopup.contains(e.target)) clearTimeout(_hoverTimeout);
+  });
+  document.addEventListener('mouseout', function(e) {
+    if (_stPopup && _stPopup.contains(e.target)) {
+      _hoverTimeout = setTimeout(closeStPopup, 200);
+    }
+  });
+}
+
+// Mobile: tap to show
 document.addEventListener('click', function(e) {
   const marked = e.target.closest('.st-marked');
   if (marked) {
     e.preventDefault();
     e.stopPropagation();
-    showStPopup(marked);
+    if (_isTouchDevice) showStPopup(marked);
   }
 });
 
