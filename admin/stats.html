@@ -208,6 +208,32 @@
       </div>
     </div>
 
+    <!-- Countries -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <span class="chart-title">מדינות</span>
+      </div>
+      <div class="chart-body">
+        <table class="data-table" id="countriesTable">
+          <thead><tr><th>מדינה</th><th>משתמשים</th><th>צפיות</th></tr></thead>
+          <tbody id="countriesTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="chart-section">
+      <div class="chart-header">
+        <span class="chart-title">שפות</span>
+      </div>
+      <div class="chart-body">
+        <table class="data-table" id="languagesTable">
+          <thead><tr><th>שפה</th><th>משתמשים</th></tr></thead>
+          <tbody id="languagesTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
     <!-- Custom events -->
     <div class="chart-section">
       <div class="chart-header">
@@ -408,6 +434,22 @@
         { source: 'Telegram', users: Math.floor(totalUsers * 0.08), views: Math.floor(totalViews * 0.08) },
         { source: 'אחר', users: Math.floor(totalUsers * 0.07), views: Math.floor(totalViews * 0.07) }
       ],
+      countries: [
+        { country: 'ישראל', users: Math.floor(totalUsers * 0.55), views: Math.floor(totalViews * 0.50) },
+        { country: 'ארצות הברית', users: Math.floor(totalUsers * 0.20), views: Math.floor(totalViews * 0.22) },
+        { country: 'צרפת', users: Math.floor(totalUsers * 0.08), views: Math.floor(totalViews * 0.09) },
+        { country: 'קנדה', users: Math.floor(totalUsers * 0.05), views: Math.floor(totalViews * 0.06) },
+        { country: 'בריטניה', users: Math.floor(totalUsers * 0.04), views: Math.floor(totalViews * 0.04) },
+        { country: 'אוסטרליה', users: Math.floor(totalUsers * 0.03), views: Math.floor(totalViews * 0.03) },
+        { country: 'אחר', users: Math.floor(totalUsers * 0.05), views: Math.floor(totalViews * 0.06) }
+      ],
+      languages: [
+        { language: 'עברית', users: Math.floor(totalUsers * 0.60) },
+        { language: 'אנגלית', users: Math.floor(totalUsers * 0.25) },
+        { language: 'צרפתית', users: Math.floor(totalUsers * 0.08) },
+        { language: 'רוסית', users: Math.floor(totalUsers * 0.04) },
+        { language: 'אחר', users: Math.floor(totalUsers * 0.03) }
+      ],
       events: [
         { name: 'share_click', type: 'share', count: Math.floor(Math.random() * 20) + 5 },
         { name: 'halacha_view', type: 'view', count: Math.floor(Math.random() * 100) + 50 },
@@ -445,6 +487,12 @@
 
     // Sources table
     renderSourcesTable(data.sources);
+
+    // Countries table
+    renderCountriesTable(data.countries);
+
+    // Languages table
+    renderLanguagesTable(data.languages);
 
     // Events table
     renderEventsTable(data.events);
@@ -588,6 +636,26 @@
     sources.forEach(function(s){
       var tr = document.createElement('tr');
       tr.innerHTML = '<td>' + s.source + '</td><td>' + formatNum(s.users) + '</td><td>' + formatNum(s.views) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function renderCountriesTable(countries){
+    var tbody = document.getElementById('countriesTableBody');
+    tbody.innerHTML = '';
+    (countries || []).forEach(function(c){
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + c.country + '</td><td>' + formatNum(c.users) + '</td><td>' + formatNum(c.views) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function renderLanguagesTable(languages){
+    var tbody = document.getElementById('languagesTableBody');
+    tbody.innerHTML = '';
+    (languages || []).forEach(function(l){
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + l.language + '</td><td>' + formatNum(l.users) + '</td>';
       tbody.appendChild(tr);
     });
   }
