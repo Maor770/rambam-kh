@@ -687,14 +687,14 @@ function onResize(){
 
 /* ── Camera presets for "story mode" ── */
 window.obsCameraPreset = function(preset){
-  // Animate camera to preset positions
   const presets = {
     overview:  {x:0, y:20, z:25},
     moonClose: {x:0, y:5, z:8},
     sunOrbit:  {x:0, y:12, z:20},
     zodiacWide:{x:0, y:30, z:35},
     horizon:   {x:8, y:2, z:8},
-    top:       {x:0, y:40, z:0.1}
+    top:       {x:0, y:40, z:0.1},
+    sideView:  {x:25, y:2, z:0}
   };
   const p = presets[preset] || presets.overview;
   // Simple lerp animation
@@ -716,4 +716,270 @@ window.obsCameraPreset = function(preset){
   lerpCam();
 };
 
+/* ── Visualization modes for story steps ── */
+let vizOverlayEl = null;
+let activeVizMode = null;
+
+function getVizOverlay(){
+  if(!vizOverlayEl){
+    vizOverlayEl = document.createElement('div');
+    vizOverlayEl.id = 'viz-overlay';
+    vizOverlayEl.style.cssText = 'position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:4;';
+    const wrap = document.querySelector('.obs-canvas-wrap');
+    if(wrap) wrap.appendChild(vizOverlayEl);
+  }
+  return vizOverlayEl;
+}
+
+window.obsSetVizMode = function(mode){
+  activeVizMode = mode;
+  const ov = getVizOverlay();
+  ov.innerHTML = '';
+
+  if(!mode) return;
+
+  // SVG overlay for 2D annotations
+  const svg = `<svg viewBox="0 0 800 600" style="width:100%;height:100%;position:absolute;top:0;left:0" xmlns="http://www.w3.org/2000/svg">`;
+  const end = `</svg>`;
+
+  switch(mode){
+    case 'sideView':
+      ov.innerHTML = `<div style="position:absolute;bottom:120px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:40px;direction:ltr">
+        <div style="text-align:center">
+          <div style="width:60px;height:60px;border-radius:50%;background:radial-gradient(circle,#ffcc44,#ff8800);margin:0 auto 6px"></div>
+          <div style="color:#ffcc44;font-size:0.75rem;font-family:var(--font-body)">שמש</div>
+        </div>
+        <div style="color:#555;font-size:1.5rem">→ אור →</div>
+        <div style="text-align:center;position:relative">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(90deg, #e0ddd0 50%, #222 50%);margin:0 auto 6px"></div>
+          <div style="color:#87CEEB;font-size:0.75rem;font-family:var(--font-body)">ירח</div>
+          <div style="position:absolute;top:-18px;right:-30px;font-size:0.55rem;color:#888;white-space:nowrap">← מואר | חשוך →</div>
+        </div>
+        <div style="color:#555;font-size:1.5rem">←</div>
+        <div style="text-align:center">
+          <div style="width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#4488cc,#1a3366);margin:0 auto 6px"></div>
+          <div style="color:#4488cc;font-size:0.75rem;font-family:var(--font-body)">ארץ (אנחנו)</div>
+        </div>
+      </div>`;
+      break;
+
+    case 'conjunction':
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none">
+        <div style="border-top:2px dashed rgba(255,200,50,0.4);width:300px;position:absolute;top:0;left:-150px"></div>
+      </div>
+      <div style="position:absolute;top:42%;left:50%;transform:translateX(-50%);color:#f4d03f;font-size:0.7rem;font-family:var(--font-body);text-align:center;opacity:0.8">
+        שמש ← ירח ← ארץ<br>הירח חשוך לגמרי
+      </div>`;
+      break;
+
+    case 'crescentHighlight':
+      ov.innerHTML = `<div style="position:absolute;top:38%;right:42%;color:#f4d03f;font-size:0.85rem;font-family:var(--font-body);animation:pulse 1.5s ease-in-out infinite">
+        ← הסהר!
+      </div>
+      <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}</style>`;
+      break;
+
+    case 'gapMarker':
+      ov.innerHTML = `<div style="position:absolute;bottom:140px;left:50%;transform:translateX(-50%);display:flex;gap:20px;align-items:center;direction:rtl">
+        <div style="padding:6px 14px;border-radius:20px;background:rgba(255,150,50,0.15);border:1px solid rgba(255,150,50,0.3);color:#ff9933;font-size:0.8rem;font-family:var(--font-body)">
+          ☀ שנת חמה: 365 ימים
+        </div>
+        <div style="padding:6px 14px;border-radius:20px;background:rgba(135,206,235,0.12);border:1px solid rgba(135,206,235,0.3);color:#87CEEB;font-size:0.8rem;font-family:var(--font-body)">
+          🌙 שנת לבנה: 354 ימים
+        </div>
+        <div style="padding:6px 14px;border-radius:20px;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);color:#ef4444;font-size:0.85rem;font-weight:700;font-family:var(--font-body)">
+          11 ימים חסרים!
+        </div>
+      </div>`;
+      break;
+
+    case 'cycle19':
+      // 19-year cycle ring overlay
+      let dots = '';
+      const leapYears = [3,6,8,11,14,17,19];
+      for(let i=1; i<=19; i++){
+        const a = ((i-1)/19) * Math.PI * 2 - Math.PI/2;
+        const r = 80;
+        const x = 400 + Math.cos(a)*r;
+        const y = 300 + Math.sin(a)*r;
+        const isLeap = leapYears.includes(i);
+        dots += `<circle cx="${x}" cy="${y}" r="${isLeap?10:6}" fill="${isLeap?'#f4d03f':'#555'}" stroke="${isLeap?'#f4d03f':'#777'}" stroke-width="1"/>`;
+        dots += `<text x="${x}" y="${y+4}" text-anchor="middle" fill="${isLeap?'#000':'#ccc'}" font-size="${isLeap?11:9}" font-weight="${isLeap?'bold':'normal'}">${i}</text>`;
+      }
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;height:300px;pointer-events:none">
+        ${svg}<circle cx="400" cy="300" r="80" fill="none" stroke="#333" stroke-width="1" stroke-dasharray="4,4"/>
+        ${dots}
+        <text x="400" y="300" text-anchor="middle" fill="#f4d03f" font-size="12" font-family="var(--font-body)">מחזור 19 שנה</text>
+        ${end}
+      </div>`;
+      break;
+
+    case 'clock1080':
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#f4d03f;font-family:var(--font-body)">
+        <div style="font-size:3rem;font-weight:700;margin-bottom:8px">1,080</div>
+        <div style="font-size:0.9rem;color:#ccc">חלקים בשעה</div>
+        <div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+          ${[2,3,4,5,6,8,9,10].map(n => `<span style="padding:3px 8px;border-radius:8px;background:rgba(244,208,63,0.1);border:1px solid rgba(244,208,63,0.2);font-size:0.7rem;color:#f4d03f">÷${n} = ${1080/n}</span>`).join('')}
+        </div>
+      </div>`;
+      break;
+
+    case 'timeline':
+      ov.innerHTML = `<div style="position:absolute;bottom:130px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:4px;direction:rtl">
+        <div style="padding:5px 10px;border-radius:8px;background:rgba(244,208,63,0.15);color:#f4d03f;font-size:0.7rem;font-family:var(--font-body);white-space:nowrap">בה"ד<br><span style="font-size:0.55rem;color:#999">מולד ראשון</span></div>
+        ${[1,2,3].map(() => `<div style="color:#555">→</div><div style="padding:3px 6px;border-radius:6px;background:rgba(135,206,235,0.1);color:#87CEEB;font-size:0.55rem;font-family:var(--font-body);white-space:nowrap">+29d 12h 793p</div><div style="width:6px;height:6px;border-radius:50%;background:#87CEEB"></div>`).join('')}
+        <div style="color:#555">→ ...</div>
+      </div>`;
+      break;
+
+    case 'weekDays':
+      const days = ['א׳','ב׳','ג׳','ד׳','ה׳','ו׳','ש׳'];
+      const forbidden = [0,3,5]; // ADU = Sun(0), Wed(3), Fri(5)
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;gap:6px;direction:rtl">
+        ${days.map((d,i) => `<div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;font-weight:700;font-family:var(--font-body);
+          ${forbidden.includes(i) ? 'background:rgba(239,68,68,0.2);border:2px solid #ef4444;color:#ef4444' : 'background:rgba(52,211,153,0.15);border:2px solid #34d399;color:#34d399'}">
+          ${d}
+        </div>`).join('')}
+      </div>`;
+      break;
+
+    case 'monthBars':
+      const months = ['תשרי','חשוון','כסלו','טבת','שבט','אדר','ניסן','אייר','סיוון','תמוז','אב','אלול'];
+      const full =   [true,  null,   null,  false, true, false, true,  false, true,  false, true, false];
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;gap:3px;align-items:flex-end;direction:rtl">
+        ${months.map((m,i) => {
+          const isFull = full[i];
+          const h = isFull === null ? 34 : (isFull ? 38 : 30);
+          const color = isFull === null ? '#888' : (isFull ? '#34d399' : '#87CEEB');
+          const label = isFull === null ? '?' : (isFull ? '30' : '29');
+          return `<div style="text-align:center">
+            <div style="width:28px;height:${h}px;background:${color}22;border:1px solid ${color};border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:${color}">${label}</div>
+            <div style="font-size:0.45rem;color:#888;margin-top:2px;font-family:var(--font-body);white-space:nowrap">${m}</div>
+          </div>`;
+        }).join('')}
+      </div>`;
+      break;
+
+    case 'zodiacLabels':
+      // Labels shown via 3D scene highlighting - no extra overlay needed
+      break;
+
+    case 'epicycleExplain':
+      ov.innerHTML = `<div style="position:absolute;top:30%;right:10%;color:#ccc;font-size:0.7rem;font-family:var(--font-body);max-width:180px;line-height:1.5;text-align:right;background:rgba(0,0,0,0.5);padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.1)">
+        <div style="color:#ff9933;font-weight:700;margin-bottom:4px">גלגל גדול (נושא)</div>
+        <div style="font-size:0.6rem;color:#999">מרכזו מוזז מהארץ</div>
+        <div style="color:#ffcc44;font-weight:700;margin-top:6px;margin-bottom:4px">גלגל קטן</div>
+        <div style="font-size:0.6rem;color:#999">עליו נעה השמש בפועל</div>
+      </div>`;
+      break;
+
+    case 'equationArrow':
+    case 'equationArrowMoon':
+      const isMoon = mode === 'equationArrowMoon';
+      const bodyName = isMoon ? 'ירח' : 'שמש';
+      const maxCorr = isMoon ? '5° 8\'' : '~2°';
+      ov.innerHTML = `<div style="position:absolute;bottom:130px;left:50%;transform:translateX(-50%);display:flex;gap:16px;align-items:center;direction:rtl">
+        <div style="padding:5px 12px;border-radius:12px;background:rgba(255,150,50,0.15);border:1px solid rgba(255,150,50,0.3);color:#ff9933;font-size:0.75rem;font-family:var(--font-body)">
+          ${bodyName} אמצעי
+        </div>
+        <div style="color:#f4d03f;font-size:0.8rem">→ תיקון (עד ${maxCorr}) →</div>
+        <div style="padding:5px 12px;border-radius:12px;background:rgba(244,208,63,0.15);border:1px solid rgba(244,208,63,0.3);color:#f4d03f;font-size:0.75rem;font-weight:700;font-family:var(--font-body)">
+          ${bodyName} אמיתי
+        </div>
+      </div>`;
+      break;
+
+    case 'dualSpeed':
+      ov.innerHTML = `<div style="position:absolute;top:20%;right:8%;display:flex;flex-direction:column;gap:8px;direction:rtl">
+        <div style="padding:5px 12px;border-radius:12px;background:rgba(135,206,235,0.12);border:1px solid rgba(135,206,235,0.3);color:#87CEEB;font-size:0.8rem;font-family:var(--font-body)">
+          🌙 ירח: <b>13° ביום</b>
+        </div>
+        <div style="padding:5px 12px;border-radius:12px;background:rgba(255,200,50,0.1);border:1px solid rgba(255,200,50,0.3);color:#ffcc44;font-size:0.8rem;font-family:var(--font-body)">
+          ☀ שמש: <b>1° ביום</b>
+        </div>
+      </div>`;
+      break;
+
+    case 'moonEpicycle':
+      ov.innerHTML = `<div style="position:absolute;top:28%;left:10%;color:#ccc;font-size:0.7rem;font-family:var(--font-body);max-width:180px;line-height:1.5;background:rgba(0,0,0,0.5);padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.1)">
+        <div style="color:#87CEEB;font-weight:700;margin-bottom:4px">גלגל קטן של הירח</div>
+        <div style="font-size:0.6rem;color:#999">הירח נע על גלגל קטן → לפעמים קרוב (מהיר), לפעמים רחוק (איטי)</div>
+        <div style="color:#f4d03f;font-weight:700;margin-top:6px">מנת חריגה</div>
+        <div style="font-size:0.6rem;color:#999">= המרחק מנקודת השיא</div>
+      </div>`;
+      break;
+
+    case 'nodesExplain':
+      ov.innerHTML = `<div style="position:absolute;top:18%;right:8%;display:flex;flex-direction:column;gap:6px;direction:rtl">
+        <div style="padding:4px 10px;border-radius:10px;background:rgba(52,211,153,0.15);border:1px solid rgba(52,211,153,0.3);color:#34d399;font-size:0.75rem;font-family:var(--font-body)">
+          ◆ ראש — נקודת החיתוך העולה
+        </div>
+        <div style="padding:4px 10px;border-radius:10px;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);color:#ef4444;font-size:0.75rem;font-family:var(--font-body)">
+          ◆ זנב — נקודת החיתוך היורדת
+        </div>
+        <div style="color:#888;font-size:0.6rem;font-family:var(--font-body)">← זזות לאחור</div>
+      </div>`;
+      break;
+
+    case 'elongationExplain':
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;font-family:var(--font-body)">
+        <div style="display:flex;gap:30px;align-items:center;justify-content:center;direction:ltr">
+          <div style="color:#ffcc44;font-size:0.8rem">☀ שמש</div>
+          <div style="width:80px;height:2px;background:linear-gradient(90deg,#ffcc44,#87CEEB);position:relative">
+            <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);color:#f4d03f;font-size:0.7rem;white-space:nowrap">הזווית</div>
+          </div>
+          <div style="color:#87CEEB;font-size:0.8rem">🌙 ירח</div>
+        </div>
+        <div style="color:#4488cc;font-size:2rem;margin-top:4px">🌍</div>
+        <div style="color:#999;font-size:0.6rem;margin-top:2px">ארץ (מרכז)</div>
+      </div>`;
+      break;
+
+    case 'parallaxLines':
+      ov.innerHTML = `<div style="position:absolute;bottom:130px;left:50%;transform:translateX(-50%);display:flex;gap:20px;align-items:center;direction:rtl;font-family:var(--font-body)">
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:30px;height:2px;border-top:2px dashed #888"></div>
+          <span style="color:#888;font-size:0.7rem">ממרכז הארץ</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:30px;height:2px;background:#f4d03f"></div>
+          <span style="color:#f4d03f;font-size:0.7rem">מירושלים</span>
+        </div>
+        <div style="color:#ef4444;font-size:0.7rem">← הפרש ראייה →</div>
+      </div>`;
+      break;
+
+    case 'arcZones':
+      ov.innerHTML = `<div style="position:absolute;bottom:100px;left:50%;transform:translateX(-50%);width:300px;height:80px;border-radius:150px 150px 0 0;overflow:hidden;border:1px solid rgba(255,255,255,0.1);direction:ltr">
+        <div style="position:absolute;bottom:0;left:0;right:0;height:30%;background:rgba(239,68,68,0.2);display:flex;align-items:center;justify-content:center;color:#ef4444;font-size:0.6rem;font-family:var(--font-body)">
+          &lt;9° בלתי נראה
+        </div>
+        <div style="position:absolute;bottom:30%;left:0;right:0;height:30%;background:rgba(255,150,50,0.15);display:flex;align-items:center;justify-content:center;color:#ff9933;font-size:0.6rem;font-family:var(--font-body)">
+          9°-14° תלוי בתנאים
+        </div>
+        <div style="position:absolute;bottom:60%;left:0;right:0;height:40%;background:rgba(52,211,153,0.1);display:flex;align-items:center;justify-content:center;color:#34d399;font-size:0.6rem;font-family:var(--font-body)">
+          &gt;14° נראה בוודאות
+        </div>
+      </div>
+      <div style="position:absolute;bottom:94px;left:50%;transform:translateX(-50%);width:310px;height:2px;background:linear-gradient(90deg,#1a3a5c,#334155,#1a3a5c)"></div>
+      <div style="position:absolute;bottom:78px;left:50%;transform:translateX(-50%);color:#888;font-size:0.6rem;font-family:var(--font-body)">— אופק —</div>`;
+      break;
+
+    case 'allLayers':
+      // Turn on all layers
+      for(let i=1; i<=4; i++){
+        if(!window.obsGetLayerVisibility()[i]) window.obsToggleLayer(i);
+      }
+      break;
+
+    case 'summary':
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;font-family:var(--font-hal)">
+        <div style="font-size:2.5rem;color:#f4d03f;text-shadow:0 0 30px rgba(244,208,63,0.5);animation:glow 2s ease-in-out infinite">מקודש!</div>
+      </div>
+      <style>@keyframes glow{0%,100%{text-shadow:0 0 30px rgba(244,208,63,0.5)}50%{text-shadow:0 0 60px rgba(244,208,63,0.8)}}</style>`;
+      break;
+  }
+};
+
 })();
+

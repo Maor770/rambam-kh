@@ -1,11 +1,48 @@
 /* observatory.css – Layout and styling for the 3D astronomical observatory */
 
+/* ── Topbar on dark background ── */
+.topbar-3d {
+  background: rgba(5,8,16,0.95) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+}
+.topbar-3d .app-title { color: #ccc !important; }
+.topbar-3d .mode-tab { color: #888 !important; border-color: rgba(255,255,255,0.1) !important; }
+.topbar-3d .mode-tab:hover { border-color: rgba(135,206,235,0.4) !important; }
+.topbar-3d .mode-tab.active { border-color: var(--gold) !important; color: var(--gold) !important; background: rgba(244,208,63,0.08) !important; }
+.topbar-3d .font-btn { color: #999 !important; border-color: rgba(255,255,255,0.1) !important; }
+
+/* Language toggle button */
+.lang-toggle {
+  padding: 4px 12px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(135,206,235,0.4);
+  background: rgba(135,206,235,0.1);
+  color: #87CEEB;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 32px;
+}
+.lang-toggle:hover {
+  background: rgba(135,206,235,0.2);
+  border-color: #87CEEB;
+}
+
 /* ── Page layout ── */
 .obs-page {
   display: flex;
   height: 100vh;
   overflow: hidden;
   direction: rtl;
+}
+
+/* Auto-start page — topbar space */
+.obs-page-auto {
+  height: calc(100vh - 88px);
+  margin-top: 0;
 }
 
 /* ── 3D Canvas area ── */
@@ -435,6 +472,13 @@
   font-family: monospace;
 }
 
+.story-title {
+  font-family: var(--font-hal);
+  font-size: 1rem;
+  color: #f4d03f;
+  margin-bottom: 4px;
+}
+
 .story-concept-name {
   font-family: var(--font-hal);
   font-size: 0.9rem;
@@ -442,10 +486,51 @@
   margin-bottom: 6px;
 }
 
+.story-ref {
+  font-size: 0.6rem;
+  color: #666;
+  margin-bottom: 6px;
+  font-family: monospace;
+}
+
 .story-text {
   font-size: 0.82rem;
   line-height: 1.7;
   margin-bottom: 12px;
+}
+
+/* Collapsed sidebar */
+.obs-sidebar-collapsed .obs-sidebar-inner {
+  display: none;
+}
+.obs-sidebar-collapsed {
+  width: auto !important;
+  min-width: 0 !important;
+}
+.sidebar-toggle {
+  padding: 8px 12px;
+  background: var(--card);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--txt3);
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.obs-sidebar-collapsed .sidebar-toggle {
+  writing-mode: vertical-rl;
+  padding: 12px 6px;
+  width: auto;
+  border-bottom: none;
+  border-right: 1px solid var(--border);
+}
+.obs-sidebar-collapsed .sidebar-toggle-label {
+  display: none;
 }
 
 .story-btns {

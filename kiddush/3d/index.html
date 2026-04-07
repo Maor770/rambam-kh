@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>קידוש החודש ב-5 דקות | Kiddush HaChodesh in 5 Minutes</title>
+<meta name="description" content="מודל תלת מימד אינטראקטיבי | 3D Model — כל הלכות קידוש החודש בסיפור ויזואלי אחד">
+<meta property="og:title" content="קידוש החודש ב-5 דקות | Kiddush HaChodesh in 5 Minutes">
+<meta property="og:description" content="מודל תלת מימד אינטראקטיבי | 3D Model">
+<meta property="og:image" content="../../shared/img/3d-og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../../shared/img/icon.png">
+<link rel="apple-touch-icon" href="../../shared/img/icon.png">
+<link rel="stylesheet" href="../css/style.css?v=8">
+<link rel="stylesheet" href="../css/observatory.css?v=2">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0CQWP9MTK"></script>
+<script src="../../shared/js/ga.js"></script>
+<script>
+function shareApp(){
+  var data = {
+    title: 'קידוש החודש ב-5 דקות | Kiddush HaChodesh in 5 Minutes',
+    text: 'מודל תלת מימד אינטראקטיבי | 3D Model',
+    url: location.href
+  };
+  if(navigator.share) navigator.share(data).catch(function(){});
+  else { navigator.clipboard.writeText(location.href).then(function(){ alert('הקישור הועתק!'); }); }
+}
+var obsLang = 'he';
+function toggleLang(){
+  obsLang = obsLang === 'he' ? 'en' : 'he';
+  document.getElementById('langBtn').textContent = obsLang === 'he' ? 'EN' : 'עב';
+  document.documentElement.lang = obsLang === 'he' ? 'he' : 'en';
+  document.documentElement.dir = obsLang === 'he' ? 'rtl' : 'ltr';
+  if(window.updateStoryLang) updateStoryLang();
+}
+</script>
+</head>
+<body data-theme="dark">
+
+<!-- TOP BAR -->
+<div class="topbar topbar-3d">
+  <div class="topbar-row">
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="../../" style="text-decoration:none;font-size:1.2rem;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--txt2)" aria-label="דף הבית">🏠</a>
+      <span class="app-title">הלכות קידוש החודש</span>
+    </div>
+    <div style="display:flex;gap:4px;align-items:center">
+      <button class="lang-toggle" id="langBtn" onclick="toggleLang()">EN</button>
+      <button class="font-btn" onclick="shareApp()" aria-label="שיתוף" style="font-size:1rem">🔗</button>
+    </div>
+  </div>
+  <div class="mode-tabs">
+    <a href="../" class="mode-tab" style="text-decoration:none;color:var(--txt3);display:flex;align-items:center;justify-content:center">🔭 סקירה</a>
+    <a href="../#study" class="mode-tab" style="text-decoration:none;color:var(--txt3);display:flex;align-items:center;justify-content:center">📜 הלכות</a>
+    <button class="mode-tab active">🌍 דגם תלת מימד</button>
+  </div>
+</div>
+
+<!-- MAIN 3D AREA -->
+<div class="obs-page obs-page-auto">
+
+  <div class="obs-main">
+    <div class="obs-canvas-wrap">
+      <div id="obs-canvas"></div>
+      <div id="obs-day-info"></div>
+
+      <!-- Camera preset buttons -->
+      <div class="obs-camera-btns">
+        <button class="cam-btn" onclick="obsCameraPreset('overview')" title="מבט כללי">🌐</button>
+        <button class="cam-btn" onclick="obsCameraPreset('moonClose')" title="ירח">🌙</button>
+        <button class="cam-btn" onclick="obsCameraPreset('sunOrbit')" title="שמש">☀️</button>
+        <button class="cam-btn" onclick="obsCameraPreset('zodiacWide')" title="מזלות">♈</button>
+        <button class="cam-btn" onclick="obsCameraPreset('top')" title="מלמעלה">⬆</button>
+      </div>
+
+      <!-- Story overlay — always visible in auto mode -->
+      <div id="obs-story-overlay"></div>
+    </div>
+
+    <!-- Layer toggles -->
+    <div id="obs-layer-toggles"></div>
+
+    <!-- Timeline controls -->
+    <div class="obs-timeline">
+      <button id="obs-play-btn" title="השהה">⏸</button>
+      <input type="range" id="obs-time-slider" min="0" max="6939" step="0.5" value="0">
+      <div class="time-presets">
+        <button data-time-preset="0" title="יום 0">0</button>
+        <button data-time-preset="29.53" title="חודש">29</button>
+        <button data-time-preset="354" title="שנה">354</button>
+      </div>
+      <input type="range" id="obs-speed-slider" min="0.2" max="20" step="0.2" value="1">
+      <span id="obs-speed-label">×1</span>
+    </div>
+  </div>
+
+  <!-- Side Panel: Concepts (collapsed by default) -->
+  <div class="obs-sidebar obs-sidebar-collapsed" id="obsSidebar">
+    <button class="sidebar-toggle" onclick="document.getElementById('obsSidebar').classList.toggle('obs-sidebar-collapsed')" title="רשימת מושגים">
+      📚 <span class="sidebar-toggle-label">מושגים</span>
+    </button>
+    <div class="obs-sidebar-inner">
+      <div class="obs-sidebar-header">
+        <h2>מושגים אסטרונומיים</h2>
+        <input type="search" class="obs-search" placeholder="חיפוש מושג..." oninput="filterConcepts(this.value)">
+      </div>
+      <div class="obs-concepts-scroll" id="obs-concepts-list"></div>
+      <div id="obs-detail"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../../shared/js/settings.js"></script>
+<script src="../js/observatory-concepts.js"></script>
+<script src="../js/observatory-scene.js"></script>
+<script src="../js/observatory-timeline.js"></script>
+
+</body>
+</html>
