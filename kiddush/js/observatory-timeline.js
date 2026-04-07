@@ -465,8 +465,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const conceptParam = params.get('concept');
 
-  // Auto-start story if on the 3d page (has obs-page-auto class)
-  const isAutoPage = document.querySelector('.obs-page-auto');
+  // Auto-start story if on the 3d page
+  const isAutoPage = document.querySelector('.obs-3d-page') || document.querySelector('.obs-page-auto');
 
   if(conceptParam){
     setTimeout(() => {

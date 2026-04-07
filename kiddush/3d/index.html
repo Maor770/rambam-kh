@@ -12,8 +12,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../../shared/img/icon.png">
 <link rel="apple-touch-icon" href="../../shared/img/icon.png">
-<link rel="stylesheet" href="../css/style.css?v=8">
-<link rel="stylesheet" href="../css/observatory.css?v=2">
+<link rel="stylesheet" href="../css/style.css?v=9">
+<link rel="stylesheet" href="../css/observatory.css?v=3">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0CQWP9MTK"></script>
 <script src="../../shared/js/ga.js"></script>
 <script>
@@ -29,85 +29,91 @@ function shareApp(){
 var obsLang = 'he';
 function toggleLang(){
   obsLang = obsLang === 'he' ? 'en' : 'he';
-  document.getElementById('langBtn').textContent = obsLang === 'he' ? 'EN' : 'עב';
+  document.getElementById('langBtn').textContent = obsLang === 'he' ? 'English' : 'עברית';
   document.documentElement.lang = obsLang === 'he' ? 'he' : 'en';
   document.documentElement.dir = obsLang === 'he' ? 'rtl' : 'ltr';
   if(window.updateStoryLang) updateStoryLang();
 }
 </script>
 </head>
-<body data-theme="dark">
+<body>
 
-<!-- TOP BAR -->
-<div class="topbar topbar-3d">
+<!-- TOP BAR (white, same as main page) -->
+<div class="topbar">
   <div class="topbar-row">
     <div style="display:flex;align-items:center;gap:8px">
       <a href="../../" style="text-decoration:none;font-size:1.2rem;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--txt2)" aria-label="דף הבית">🏠</a>
       <span class="app-title">הלכות קידוש החודש</span>
     </div>
     <div style="display:flex;gap:4px;align-items:center">
-      <button class="lang-toggle" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="font-btn" onclick="shareApp()" aria-label="שיתוף" style="font-size:1rem">🔗</button>
     </div>
   </div>
   <div class="mode-tabs">
     <a href="../" class="mode-tab" style="text-decoration:none;color:var(--txt3);display:flex;align-items:center;justify-content:center">🔭 סקירה</a>
-    <a href="../#study" class="mode-tab" style="text-decoration:none;color:var(--txt3);display:flex;align-items:center;justify-content:center">📜 הלכות</a>
+    <a href="../" class="mode-tab" style="text-decoration:none;color:var(--txt3);display:flex;align-items:center;justify-content:center">📜 הלכות</a>
     <button class="mode-tab active">🌍 דגם תלת מימד</button>
   </div>
 </div>
 
-<!-- MAIN 3D AREA -->
-<div class="obs-page obs-page-auto">
-
-  <div class="obs-main">
-    <div class="obs-canvas-wrap">
-      <div id="obs-canvas"></div>
-      <div id="obs-day-info"></div>
-
-      <!-- Camera preset buttons -->
-      <div class="obs-camera-btns">
-        <button class="cam-btn" onclick="obsCameraPreset('overview')" title="מבט כללי">🌐</button>
-        <button class="cam-btn" onclick="obsCameraPreset('moonClose')" title="ירח">🌙</button>
-        <button class="cam-btn" onclick="obsCameraPreset('sunOrbit')" title="שמש">☀️</button>
-        <button class="cam-btn" onclick="obsCameraPreset('zodiacWide')" title="מזלות">♈</button>
-        <button class="cam-btn" onclick="obsCameraPreset('top')" title="מלמעלה">⬆</button>
-      </div>
-
-      <!-- Story overlay — always visible in auto mode -->
-      <div id="obs-story-overlay"></div>
-    </div>
-
-    <!-- Layer toggles -->
-    <div id="obs-layer-toggles"></div>
-
-    <!-- Timeline controls -->
-    <div class="obs-timeline">
-      <button id="obs-play-btn" title="השהה">⏸</button>
-      <input type="range" id="obs-time-slider" min="0" max="6939" step="0.5" value="0">
-      <div class="time-presets">
-        <button data-time-preset="0" title="יום 0">0</button>
-        <button data-time-preset="29.53" title="חודש">29</button>
-        <button data-time-preset="354" title="שנה">354</button>
-      </div>
-      <input type="range" id="obs-speed-slider" min="0.2" max="20" step="0.2" value="1">
-      <span id="obs-speed-label">×1</span>
+<!-- 3D MODEL (top) -->
+<div class="obs-3d-page">
+  <div class="obs-3d-model">
+    <div id="obs-canvas"></div>
+    <div class="obs-camera-btns">
+      <button class="cam-btn" onclick="obsCameraPreset('overview')" title="מבט כללי">🌐</button>
+      <button class="cam-btn" onclick="obsCameraPreset('moonClose')" title="ירח">🌙</button>
+      <button class="cam-btn" onclick="obsCameraPreset('sunOrbit')" title="שמש">☀️</button>
+      <button class="cam-btn" onclick="obsCameraPreset('zodiacWide')" title="מזלות">♈</button>
+      <button class="cam-btn" onclick="obsCameraPreset('top')" title="מלמעלה">⬆</button>
     </div>
   </div>
 
-  <!-- Side Panel: Concepts (collapsed by default) -->
-  <div class="obs-sidebar obs-sidebar-collapsed" id="obsSidebar">
-    <button class="sidebar-toggle" onclick="document.getElementById('obsSidebar').classList.toggle('obs-sidebar-collapsed')" title="רשימת מושגים">
-      📚 <span class="sidebar-toggle-label">מושגים</span>
-    </button>
-    <div class="obs-sidebar-inner">
-      <div class="obs-sidebar-header">
-        <h2>מושגים אסטרונומיים</h2>
-        <input type="search" class="obs-search" placeholder="חיפוש מושג..." oninput="filterConcepts(this.value)">
-      </div>
-      <div class="obs-concepts-scroll" id="obs-concepts-list"></div>
-      <div id="obs-detail"></div>
+  <!-- BOTTOM PANEL (white background) -->
+  <div class="obs-3d-bottom">
+
+    <!-- RIGHT (first in RTL): language + layers -->
+    <div class="obs-3d-right">
+      <button class="lang-toggle" id="langBtn" onclick="toggleLang()">English</button>
+      <div id="obs-layer-toggles" class="obs-3d-layers"></div>
     </div>
+
+    <!-- CENTER: story card -->
+    <div class="obs-3d-center">
+      <div id="obs-story-overlay" class="obs-story-inline"></div>
+    </div>
+
+    <!-- LEFT (last in RTL): info + concepts + controls -->
+    <div class="obs-3d-left">
+      <div id="obs-day-info" class="obs-day-info-inline"></div>
+      <button class="obs-3d-panel-btn" onclick="document.getElementById('obsSidebar').classList.toggle('obs-sidebar-collapsed')" title="רשימת מושגים">📚 מושגים</button>
+      <div class="obs-3d-controls">
+        <button id="obs-play-btn" class="obs-ctrl-btn" title="הפעל">▶</button>
+        <input type="range" id="obs-time-slider" min="0" max="6939" step="0.5" value="0" class="obs-ctrl-slider">
+        <input type="range" id="obs-speed-slider" min="0.2" max="20" step="0.2" value="1" class="obs-ctrl-slider obs-ctrl-speed">
+        <span id="obs-speed-label" class="obs-ctrl-label">×1</span>
+        <div class="obs-ctrl-presets">
+          <button data-time-preset="0">0</button>
+          <button data-time-preset="29.53">29</button>
+          <button data-time-preset="354">354</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Concepts sidebar (hidden by default) -->
+<div class="obs-sidebar obs-sidebar-collapsed obs-sidebar-float" id="obsSidebar">
+  <div class="obs-sidebar-inner">
+    <div class="obs-sidebar-header">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h2>מושגים</h2>
+        <button onclick="document.getElementById('obsSidebar').classList.add('obs-sidebar-collapsed')" style="border:none;background:none;color:var(--txt3);font-size:1.1rem;cursor:pointer">✕</button>
+      </div>
+      <input type="search" class="obs-search" placeholder="חיפוש..." oninput="filterConcepts(this.value)">
+    </div>
+    <div class="obs-concepts-scroll" id="obs-concepts-list"></div>
+    <div id="obs-detail"></div>
   </div>
 </div>
 

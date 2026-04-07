@@ -49,7 +49,7 @@ let animating = true;
 window.obsTime = {
   day: 0,         // days elapsed
   speed: 1,       // days per frame (at 60fps)
-  playing: true
+  playing: false  // paused by default
 };
 
 /* ── Initialization ── */
@@ -217,15 +217,7 @@ function createSun(){
   sunMesh.userData = {conceptId:'sun', layer:3};
   sunOrbitGroup.add(sunMesh);
 
-  // Sun glow sprite
-  const spriteMat = new THREE.SpriteMaterial({
-    color: 0xffaa22,
-    transparent: true,
-    opacity: 0.3
-  });
-  const sprite = new THREE.Sprite(spriteMat);
-  sprite.scale.set(5, 5, 1);
-  sunMesh.add(sprite);
+  // (no glow sprite — clean sun sphere)
 }
 
 /* ── Zodiac Ring ── */
