@@ -9,6 +9,20 @@ let currentMode = 'overview';
 let currentCh = 1;
 let dailyChapters = null; // e.g. [6,7,8] when in KH
 
+/* Map halachot to observatory concepts for mini-preview links */
+const OBS_HAL_MAP = {
+  '1:1':'moonMonth','1:3':'crescent','1:7':'sanctification',
+  '2:1':'witnesses','4:1':'leapYear',
+  '6:2':'chelek','6:3':'monthLength','6:8':'moladTishrei','6:10':'metonicCycle',
+  '7:1':'dechiyot','8:5':'fullMonth',
+  '11:6':'degree','11:7':'zodiac','11:13':'epicycle',
+  '12:1':'meanSun','13:4':'sunEquation','13:8':'interpolation','13:9':'trueSun',
+  '14:1':'meanMoon','15:1':'elongation','15:3':'trueMoon','15:6':'moonEquation',
+  '16:1':'ascendingNode','16:7':'moonLatitude','16:12':'moonLatitude',
+  '17:1':'parallax','17:15':'arcOfVision',
+  '19:2':'eclipticTilt','19:12':'crescentHorns'
+};
+
 function setMode(mode) {
   currentMode = mode;
   document.querySelectorAll('.mode-tab').forEach((t,i) => {
@@ -218,6 +232,13 @@ function renderHalCard(ch, h, preview, isOpen) {
     stHtml = `<div class="txt-steinsaltz"><div class="st-label">${stLabel}</div>${h.st.map(s => `<div class="st-item" ${IS_EN ? 'dir="rtl" style="text-align:right"' : ''}>${fmtSt(s)}</div>`).join('')}</div>`;
   }
 
+  // Observatory mini-preview link
+  const obsKey = `${ch}:${h.n}`;
+  const obsConcept = OBS_HAL_MAP[obsKey];
+  const obsLink = obsConcept
+    ? `<a href="observatory.html?concept=${obsConcept}" class="obs-mini-link" title="${IS_EN ? 'View in 3D Observatory' : 'ראה במצפה התלת-ממדי'}">🌍 ${IS_EN ? 'View in 3D' : 'ראה במצפה'}</a>`
+    : '';
+
   return `<div class="hal-card${openCls}" id="hal-${id}">
     <div class="hal-header" onclick="toggleHal('${id}')">
       <div class="hal-num">${IS_EN ? h.n : toHebNum(h.n)}</div>
@@ -226,6 +247,7 @@ function renderHalCard(ch, h, preview, isOpen) {
     </div>
     <div class="hal-body">
       ${bioHtml}
+      ${obsLink}
       ${srcHtml}
       ${stHtml}
       ${h.viz ? renderViz(h.viz, ch, h.n) : ''}
