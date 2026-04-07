@@ -240,7 +240,7 @@
   codeInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') doLogin(); });
 
   // Check saved session
-  var savedToken = sessionStorage.getItem('stats_token');
+  var savedToken = localStorage.getItem('stats_token');
   if(savedToken){
     showDashboard(savedToken);
   }
@@ -259,7 +259,7 @@
     if(!WORKER_URL){
       // Demo mode — no worker configured yet
       var token = btoa(email + ':' + code);
-      sessionStorage.setItem('stats_token', token);
+      localStorage.setItem('stats_token', token);
       showDashboard(token);
       return;
     }
@@ -274,7 +274,7 @@
       return r.json();
     })
     .then(function(data){
-      sessionStorage.setItem('stats_token', data.token);
+      localStorage.setItem('stats_token', data.token);
       showDashboard(data.token);
     })
     .catch(function(){
