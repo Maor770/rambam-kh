@@ -2,18 +2,19 @@
 (async function loadData(){
   const isEn = document.documentElement.lang === 'en';
   try {
+    const v = '?v=2';
     const fetches = [
-      fetch('data/rambam_data.json').then(r => r.json()),
-      fetch('data/viz_map.json').then(r => r.json()),
-      fetch('data/explanations.json').then(r => r.json()).catch(() => ({}))
+      fetch('data/rambam_data.json' + v).then(r => r.json()),
+      fetch('data/viz_map.json' + v).then(r => r.json()),
+      fetch('data/explanations.json' + v).then(r => r.json()).catch(() => ({}))
     ];
     // Load English explanations when on English page
     if (isEn) {
       fetches.push(
         Promise.all([
-          fetch('data/explanations_en.json').then(r => r.json()).catch(() => ({})),
-          fetch('data/explanations_en_11_15.json').then(r => r.json()).catch(() => ({})),
-          fetch('data/explanations_en_16_19.json').then(r => r.json()).catch(() => ({}))
+          fetch('data/explanations_en.json' + v).then(r => r.json()).catch(() => ({})),
+          fetch('data/explanations_en_11_15.json' + v).then(r => r.json()).catch(() => ({})),
+          fetch('data/explanations_en_16_19.json' + v).then(r => r.json()).catch(() => ({}))
         ]).then(parts => Object.assign({}, ...parts))
       );
     }
