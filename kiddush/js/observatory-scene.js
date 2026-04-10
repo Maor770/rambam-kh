@@ -66,7 +66,7 @@ window.initObservatoryScene = function(){
 
   // Scene
   scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x050810, 0.008);
+  scene.fog = new THREE.FogExp2(0x050810, 0.004); // reduced fog for better label visibility
 
   // Camera
   camera = new THREE.PerspectiveCamera(50, W/H, 0.1, 500);
@@ -785,7 +785,7 @@ function showDegreeMarks(){
     const a = d * DEG;
     const x = Math.cos(a) * (ZODIAC_R + 1.5);
     const z = -Math.sin(a) * (ZODIAC_R + 1.5);
-    add3DText(`${d}°`, x, 0.5, z, {fontSize:18, color:'#f4d03f', scale:1.5});
+    add3DText(`${d}°`, x, 2, z, {fontSize:24, color:'#f4d03f', scale:2.5});
   }
 }
 
@@ -793,9 +793,9 @@ function showDegreeMarks(){
 function showZodiacNames(){
   for(let i=0; i<12; i++){
     const a = (i * 30 + 15) * DEG;
-    const x = Math.cos(a) * (ZODIAC_R - 2);
-    const z = -Math.sin(a) * (ZODIAC_R - 2);
-    add3DText(ZODIAC_HE[i], x, 0.5, z, {fontSize:20, color:'#ccc', scale:2});
+    const x = Math.cos(a) * (ZODIAC_R - 1.5);
+    const z = -Math.sin(a) * (ZODIAC_R - 1.5);
+    add3DText(ZODIAC_HE[i], x, 2, z, {fontSize:22, color:'#e0e0e0', scale:2.5});
   }
 }
 

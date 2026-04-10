@@ -351,9 +351,13 @@ function applyStep(){
       const wrap=document.querySelector('.obs-3d-model'); if(wrap)wrap.appendChild(d); return d; })();
   if(vizOv) vizOv.innerHTML = '';
 
+  // Always clear previous 3D viz objects
+  if(window.clearVizGroup) clearVizGroup();
+
   if(h.vizMode && window.halachaVizModes && window.halachaVizModes[h.vizMode]){
-    // Use rich halacha-specific visualization
-    if(vizOv) vizOv.innerHTML = window.halachaVizModes[h.vizMode]();
+    // Use rich halacha-specific visualization (3D objects + optional HTML)
+    const html = window.halachaVizModes[h.vizMode]();
+    if(html && vizOv) vizOv.innerHTML = html;
   } else if(h.vizMode && window.obsSetVizMode){
     // Fallback to scene.js vizMode
     obsSetVizMode(h.vizMode);
