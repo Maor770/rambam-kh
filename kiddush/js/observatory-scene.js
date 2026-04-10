@@ -686,7 +686,7 @@ window.obsCameraPreset = function(preset){
     zodiacWide:{x:0, y:30, z:35},
     horizon:   {x:8, y:2, z:8},
     top:       {x:0, y:40, z:0.1},
-    sideView:  {x:25, y:2, z:0}
+    sideView:  {x:22, y:4, z:0}
   };
   const p = presets[preset] || presets.overview;
   // Simple lerp animation
@@ -905,6 +905,138 @@ window.obsSetVizMode = function(mode){
         <div style="position:absolute;bottom:30%;left:0;right:0;height:30%;background:rgba(255,150,50,0.2);display:flex;align-items:center;justify-content:center;color:#ff9933;font-size:0.55rem;font-family:var(--font-body)">9°-14° תלוי</div>
         <div style="position:absolute;bottom:60%;left:0;right:0;height:40%;background:rgba(52,211,153,0.12);display:flex;align-items:center;justify-content:center;color:#34d399;font-size:0.55rem;font-family:var(--font-body)">&gt;14° נראה</div>
       </div>`;
+      break;
+
+    /* ── New vizModes for missing steps ── */
+
+    case 'showPhases':
+      // Fast animation + phase name display on canvas
+      t.day = 0; t.playing = true; t.speed = 8;
+      // Phase name updates via updateInfoPanel already, but also show large on canvas
+      ov.innerHTML = `<div id="phase-label" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);
+        font-size:1.1rem;font-weight:700;color:#87CEEB;font-family:var(--font-hal);text-shadow:0 0 15px rgba(135,206,235,0.4);
+        background:rgba(0,0,0,0.5);padding:4px 16px;border-radius:20px"></div>`;
+      // Update phase label in animation
+      const phNames = ['מולד','סהר עולה','רבע ראשון','מתמלאת','לבנה מלאה','חסרה','רבע אחרון','סהר אחרון'];
+      setInterval(() => {
+        const el = document.getElementById('phase-label');
+        if(!el) return;
+        const lunarDay = ((t.day % 29.53) + 29.53) % 29.53;
+        el.textContent = phNames[Math.floor((lunarDay / 29.53) * 8) % 8];
+      }, 200);
+      break;
+
+    case 'seasons':
+      // Sun orbiting fast to show seasons
+      t.playing = true; t.speed = 5;
+      ov.innerHTML = annotation(
+        '4 תקופות בשנה:<br>' +
+        '<span style="color:#34d399">ניסן</span> (אביב) · <span style="color:#ffcc44">תמוז</span> (קיץ)<br>' +
+        '<span style="color:#ff9933">תשרי</span> (סתיו) · <span style="color:#87CEEB">טבת</span> (חורף)',
+        'topRight');
+      break;
+
+    case 'witnessScene':
+      // Horizon view with crescent visible (day 2)
+      t.day = 2; t.playing = false;
+      ov.innerHTML = annotation(
+        '👤👤 שני עדים רואים את הסהר<br>' +
+        '<span style="color:#999;font-size:0.6rem">בית הדין בירושלים מכריז: "מקודש!"</span>',
+        'bottomCenter');
+      break;
+
+    case 'monthCounter':
+      // Moon orbiting with counter visible
+      t.playing = true; t.speed = 2;
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;
+        background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);padding:12px 20px;border-radius:12px;border:1px solid rgba(255,255,255,0.1)">
+        <div style="font-size:1.8rem;font-weight:700;color:#87CEEB;font-family:var(--font-hal)">29 · 12 · 793</div>
+        <div style="font-size:0.75rem;color:#ccc;margin-top:4px;font-family:var(--font-body)">ימים · שעות · חלקים</div>
+        <div style="font-size:0.6rem;color:#888;margin-top:2px">= חודש לבנה מדויק</div>
+      </div>`;
+      break;
+
+    case 'degreeLabels':
+      // Zodiac view with degree markings emphasized
+      t.playing = true; t.speed = 1;
+      ov.innerHTML = annotation(
+        '360° = עיגול שלם<br>' +
+        '1° = 60 דקות<br>' +
+        '1 דקה = 60 שניות',
+        'topRight');
+      break;
+
+    case 'sunDailyMotion':
+      // Sun moving with daily counter
+      t.playing = true; t.speed = 2;
+      ov.innerHTML = annotation(
+        '☀ מהלך יומי: <b>0° 59\' 8"</b><br>' +
+        '<span style="color:#999;font-size:0.6rem">≈ מעלה אחת ביום</span>',
+        'topRight', '#ffcc44');
+      break;
+
+    case 'meanSunMarker':
+      // Sun moving at constant speed
+      t.playing = true; t.speed = 2;
+      ov.innerHTML = annotation(
+        '🟠 שמש אמצעית<br>' +
+        '<span style="color:#999;font-size:0.6rem">מיקום תיאורטי — מהירות קבועה</span><br>' +
+        '<span style="color:#999;font-size:0.6rem">זה רק השלב הראשון בחישוב!</span>',
+        'topRight', '#ff9933');
+      break;
+
+    case 'crescentFormation':
+      // Side view showing how crescent forms — different from intro
+      t.playing = true; t.speed = 1; t.day = 0;
+      ov.innerHTML = annotation(
+        'כדי לדעת אם הסהר ייראה:<br>' +
+        '① איפה השמש?<br>' +
+        '② איפה הירח?<br>' +
+        '③ מה הזווית ביניהם?',
+        'bottomCenter');
+      break;
+
+    case 'latitudeShow':
+      // Moon orbit tilted, showing latitude
+      t.playing = true; t.speed = 2;
+      ov.innerHTML = annotation(
+        'רוחב הירח: עד <b>5°</b> צפון/דרום<br>' +
+        '<span style="color:#999;font-size:0.6rem">רוחב = 0° → ליקוי אפשרי!</span>',
+        'topRight', '#87CEEB');
+      break;
+
+    case 'tiltShow':
+      // Zodiac tilt visible
+      ov.innerHTML = annotation(
+        'נטיית גלגל המזלות: <b>23.5°</b><br>' +
+        '<span style="color:#999;font-size:0.6rem">משפיע על גובה הסהר לפי עונה</span>',
+        'topRight', '#8b5cf6');
+      break;
+
+    case 'hornsShow':
+      // Crescent with horns visible
+      t.day = 3; t.playing = false;
+      ov.innerHTML = annotation(
+        '🌙 הקרניים מצביעות הרחק מהשמש<br>' +
+        '<span style="color:#999;font-size:0.6rem">הכיוון משתנה לפי מיקום שמש וירח</span>',
+        'topRight');
+      break;
+
+    case 'cycle19':
+      // Restore visual ring
+      ov.innerHTML = `<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="75" fill="none" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+          ${[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19].map(i => {
+            const a = ((i-1)/19) * Math.PI * 2 - Math.PI/2;
+            const x = 100 + Math.cos(a)*75;
+            const y = 100 + Math.sin(a)*75;
+            const leap = [3,6,8,11,14,17,19].includes(i);
+            return `<circle cx="${x}" cy="${y}" r="${leap?8:4}" fill="${leap?'#f4d03f':'#555'}"/>
+              <text x="${x}" y="${y+3.5}" text-anchor="middle" fill="${leap?'#000':'#bbb'}" font-size="${leap?9:7}" font-weight="${leap?'bold':'normal'}">${i}</text>`;
+          }).join('')}
+          <text x="100" y="105" text-anchor="middle" fill="#f4d03f" font-size="9" font-family="var(--font-body)">מחזור 19</text>
+        </svg></div>`;
       break;
 
     case 'allLayers':

@@ -142,7 +142,7 @@ let storyStep = -1;
 
 const STORY_STEPS = [
   /* ── Step 0: Introduction ── */
-  {id:'intro', concept:'moonMonth', camera:'sideView', vizMode:'sideView',
+  {id:'intro', concept:'moonMonth', camera:'sideView', vizMode:'sideView', playing:true, speed:0.5,
    title:'למה הירח משנה צורה?',
    titleEn:'Why Does the Moon Change Shape?',
    text:'הירח לא מאיר מעצמו — הוא מחזיר אור מהשמש. הצד שפונה לשמש מואר, הצד השני חשוך. מה שאנחנו רואים מהארץ תלוי בזווית בין שלושתם: שמש, ירח, ארץ.\n\nכל ההלכות הבאות מלמדות לחשב את הזווית הזו במדויק — כדי לדעת: האם נראה את הסהר הערב?',
@@ -185,13 +185,13 @@ const STORY_STEPS = [
    text:'הפתרון: כל כמה שנים מוסיפים חודש שלם (אדר שני).\n7 שנים מעוברות בכל מחזור של 19 שנים: שנים 3, 6, 8, 11, 14, 17, 19.',
    textEn:'The solution: every few years we add a full month (Adar II).\n7 leap years in every 19-year cycle: years 3, 6, 8, 11, 14, 17, 19.'},
 
-  {id:'s6b', ref:'ט:א-ג · י:א', concept:'solarYear', camera:'sunOrbit',
+  {id:'s6b', ref:'ט:א-ג · י:א', concept:'solarYear', camera:'sunOrbit', vizMode:'seasons', playing:true, speed:5,
    title:'תקופות — מתי העונות?',
    titleEn:'Seasons — When Do They Change?',
    text:'תקופה = תחילת עונה חדשה. יש 4 תקופות בשנה:\nתקופת ניסן (אביב), תמוז (קיץ), תשרי (סתיו), טבת (חורף).\n\nלמה זה חשוב? כי התורה אומרת "שמור את חודש האביב" — פסח חייב ליפול אחרי תחילת האביב (תקופת ניסן). זו הסיבה העיקרית שמעברים שנים!',
    textEn:'Tekufah = the start of a new season. There are 4 per year:\nTekufat Nisan (spring), Tammuz (summer), Tishrei (fall), Tevet (winter).\n\nWhy does this matter? The Torah says "guard the month of spring" — Passover must fall after the start of spring. This is the main reason we add leap years!'},
 
-  {id:'s7', ref:'ב:א · ה:א-ב', concept:'witnesses', camera:'horizon',
+  {id:'s7', ref:'ב:א · ה:א-ב', concept:'witnesses', camera:'horizon', vizMode:'witnessScene', day:2,
    title:'עדים ובית דין',
    titleEn:'Witnesses and the Court',
    text:'בזמן בית המקדש: שני עדים שראו את הסהר באו לירושלים. בית הדין חקר אותם — ואם העדות נכונה, הכריז "מקודש! מקודש!"',
@@ -204,7 +204,7 @@ const STORY_STEPS = [
    text:'הרמב"ם מחלק כל שעה ל-1,080 חלקים (לא דקות!).\nלמה? כי 1,080 מתחלק ב-2, 3, 4, 5, 6, 8, 9, 10 — אפס שברים!',
    textEn:'The Rambam divides each hour into 1,080 parts (not minutes!).\nWhy? Because 1,080 is divisible by 2, 3, 4, 5, 6, 8, 9, 10 — zero fractions!'},
 
-  {id:'s9', ref:'ו:ג', concept:'monthLength', camera:'moonClose',
+  {id:'s9', ref:'ו:ג', concept:'monthLength', camera:'moonClose', vizMode:'monthCounter', playing:true, speed:2,
    title:'אורך חודש מדויק',
    titleEn:'Exact Month Length',
    text:'חודש לבנה מדויק =\n29 ימים · 12 שעות · 793 חלקים\n\nמספר זה קבוע לנצח — תמיד אותו דבר.\n(כל שעה = 1,080 חלקים)',
@@ -229,7 +229,7 @@ const STORY_STEPS = [
    textEn:'Full month = 30 days. Deficient month = 29 days.\nAlternating: Tishrei full, Cheshvan?, Kislev?, Tevet deficient...\nCheshvan and Kislev vary between years.'},
 
   /* ── Part 3: Solar Orbit (Ch 11-13) ── */
-  {id:'s13', ref:'יא:ו-ט', concept:'degree', camera:'zodiacWide',
+  {id:'s13', ref:'יא:ו-ט', concept:'degree', camera:'zodiacWide', vizMode:'degreeLabels', playing:true, speed:1,
    title:'מערכת המעלות',
    titleEn:'The Degree System',
    text:'העיגול מחולק ל-360 מעלות.\nכל מעלה = 60 דקות (לא דקות של זמן!).\nכל דקה = 60 שניות.\nככה מודדים מיקום בשמיים.',
@@ -241,13 +241,13 @@ const STORY_STEPS = [
    text:'12 מזלות על טבעת בשמיים, כל אחד 30°.\nהשמש עוברת מזל אחד בחודש:\nטלה ≈ מרץ, שור ≈ אפריל, תאומים ≈ מאי, סרטן ≈ יוני, אריה ≈ יולי, בתולה ≈ אוגוסט, מאזניים ≈ ספטמבר, עקרב ≈ אוקטובר, קשת ≈ נובמבר, גדי ≈ דצמבר, דלי ≈ ינואר, דגים ≈ פברואר.',
    textEn:'12 zodiac signs on a belt in the sky, each 30°.\nThe sun passes one sign per month:\nAries ≈ Mar, Taurus ≈ Apr, Gemini ≈ May, Cancer ≈ Jun, Leo ≈ Jul, Virgo ≈ Aug, Libra ≈ Sep, Scorpio ≈ Oct, Sagittarius ≈ Nov, Capricorn ≈ Dec, Aquarius ≈ Jan, Pisces ≈ Feb.'},
 
-  {id:'s15', ref:'יב:א', concept:'dailyMotion', camera:'sunOrbit', speed:2,
+  {id:'s15', ref:'יב:א', concept:'dailyMotion', camera:'sunOrbit', speed:2, playing:true, vizMode:'sunDailyMotion',
    title:'מהלך השמש — כמעלה אחת ביום',
    titleEn:'The Sun\'s Daily Motion — About 1° Per Day',
    text:'השמש זזה כמעלה אחת ביום (בדיוק: 0° 59\' 8").\nתוך שנה — סיבוב שלם של 360°.',
    textEn:'The sun moves about one degree per day (exactly: 0° 59\' 8").\nIn one year — a full 360° rotation.'},
 
-  {id:'s16', ref:'יב:א-ב', concept:'meanSun', camera:'sunOrbit',
+  {id:'s16', ref:'יב:א-ב', concept:'meanSun', camera:'sunOrbit', playing:true, speed:2, vizMode:'meanSunMarker',
    title:'שמש אמצעית',
    titleEn:'Mean Sun',
    text:'שמש אמצעית = איפה השמש היא היתה אם היתה זזה במהירות קבועה.\n\nזה רק חישוב ראשוני — עוד לא המיקום האמיתי!',
@@ -285,7 +285,7 @@ const STORY_STEPS = [
    textEn:'Like the sun — the moon also has a correction.\nMaximum: 5° 8\' — 2.5× bigger than the sun\'s!\n\nSame logic: when the moon is in the near half of the small wheel — it appears faster than average. In the far half — slower. The correction compensates.\n\nTrue moon = Mean moon ± correction.'},
 
   /* ── Part 5: Moon Visibility (Ch 16-19) ── */
-  {id:'s22', ref:'יז:א', concept:'crescent', camera:'sideView', vizMode:'sideView',
+  {id:'s22', ref:'יז:א', concept:'crescent', camera:'sideView', vizMode:'crescentFormation', playing:true, speed:1,
    title:'איך נוצרת צורת הסהר',
    titleEn:'How the Crescent Shape is Formed',
    text:'הירח לא מאיר מעצמו — השמש מאירה אותו.\nהחלק שפונה לשמש מואר, החלק שפונה מהשמש חשוך.\nמה שאנחנו רואים תלוי בזווית בין שלושתם: שמש, ירח, ארץ.\n\nכדי לדעת אם הסהר ייראה — צריך לדעת בדיוק איפה השמש, איפה הירח, ומה הזווית ביניהם.',
@@ -297,13 +297,13 @@ const STORY_STEPS = [
    text:'מסלול הירח נוטה 5° ביחס למסלול השמש.\nהם נפגשים בשתי נקודות:\n\nנקודת החיתוך העולה (הרמב"ם קורא "ראש") — שם הירח עולה צפונה.\nנקודת החיתוך היורדת ("זנב") — שם הירח יורד דרומה.\n\nהנקודות האלה זזות לאחור!',
    textEn:'The moon\'s orbit tilts 5° from the sun\'s path.\nThey meet at two points:\n\nThe ascending intersection (Rambam calls it "Head") — where the moon rises northward.\nThe descending intersection ("Tail") — where the moon descends southward.\n\nThese points move backward!'},
 
-  {id:'s24', ref:'טז:ז-יא', concept:'moonLatitude', camera:'moonClose',
+  {id:'s24', ref:'טז:ז-יא', concept:'moonLatitude', camera:'moonClose', vizMode:'latitudeShow', playing:true, speed:2,
    title:'רוחב הירח',
    titleEn:'Moon\'s Latitude',
    text:'הירח נע מעל ומתחת למסלול השמש — עד 5° צפון או דרום.\n\nכשהרוחב = 0° (הירח בדיוק על מסלול השמש) — ליקוי אפשרי!',
    textEn:'The moon moves above and below the sun\'s path — up to 5° north or south.\n\nWhen latitude = 0° (moon exactly on sun\'s path) — an eclipse is possible!'},
 
-  {id:'s25', ref:'טו:א', concept:'elongation', camera:'overview', vizMode:'elongationExplain',
+  {id:'s25', ref:'טו:א', concept:'elongation', camera:'overview', vizMode:'elongationExplain', playing:true, speed:2,
    title:'הזווית בין שמש לירח',
    titleEn:'The Angle Between Sun and Moon',
    text:'הזווית בין השמש לירח כפי שנראית מהארץ:\n0° = מולד (ירח חשוך)\nככל שהזווית גדלה — רואים יותר מהירח מואר\n180° = ירח מלא',
@@ -321,20 +321,20 @@ const STORY_STEPS = [
    text:'הגובה של הירח מעל האופק בזמן שקיעה:\n\nפחות מ-9° = בלתי נראה\n9°-14° = תלוי בתנאים\nמעל 14° = נראה בוודאות',
    textEn:'The moon\'s height above the horizon at sunset:\n\nLess than 9° = invisible\n9°-14° = depends on conditions\nAbove 14° = definitely visible'},
 
-  {id:'s28', ref:'יט:ב', concept:'eclipticTilt', camera:'zodiacWide',
+  {id:'s28', ref:'יט:ב', concept:'eclipticTilt', camera:'zodiacWide', vizMode:'tiltShow',
    title:'נטיית מסלול השמש',
    titleEn:'Tilt of the Sun\'s Path',
    text:'מסלול השמש (גלגל המזלות) נוטה 23.5° ביחס לקו המשווה.\nזה משפיע על הגובה שבו הסהר נראה — תלוי בעונה ובמזל.',
    textEn:'The sun\'s path (zodiac belt) tilts 23.5° relative to the equator.\nThis affects the height at which the crescent is seen — depending on season and zodiac sign.'},
 
-  {id:'s29', ref:'יט:יב', concept:'crescentHorns', camera:'moonClose',
+  {id:'s29', ref:'יט:יב', concept:'crescentHorns', camera:'moonClose', day:3, vizMode:'hornsShow',
    title:'כיוון קרני הסהר',
    titleEn:'Direction of the Crescent Horns',
    text:'הקרניים של הסהר תמיד מצביעות הרחק מהשמש.\nלפי מיקום השמש והירח — הכיוון משתנה.',
    textEn:'The horns of the crescent always point away from the sun.\nDepending on the positions of the sun and moon — the direction changes.'},
 
   /* ── Ending ── */
-  {id:'s30', concept:'moonMonth', camera:'overview', speed:5, vizMode:'allLayers',
+  {id:'s30', concept:'moonMonth', camera:'overview', speed:5, playing:true, vizMode:'allLayers',
    title:'כל התהליך ביחד',
    titleEn:'The Complete System',
    text:'עכשיו נראה את כל המערכת עובדת ביחד:\nירח סובב, שמש זזה, מזלות, נקודות חיתוך — הכל בסנכרון.\n\nזה מה שהרמב"ם מתאר ב-19 פרקים.',
