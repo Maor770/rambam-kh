@@ -355,6 +355,21 @@
   border-right: 1px solid var(--border-light);
 }
 
+/* Chapter selector dropdown */
+.obs-ch-select {
+  width: 100%;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card2);
+  color: var(--txt);
+  font-size: 0.68rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  direction: rtl;
+}
+.obs-ch-select:focus { border-color: var(--sky); outline: none; }
+
 .obs-3d-layers {
   display: flex;
   flex-direction: column;
