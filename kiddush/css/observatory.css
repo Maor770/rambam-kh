@@ -344,6 +344,58 @@
 }
 .obs-story-inline .story-close:hover { background: var(--hover); }
 
+/* Compact halacha card */
+.hal-card-compact {
+  padding: 8px 14px !important;
+  max-width: 700px !important;
+}
+.hal-card-compact .story-text {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  margin-bottom: 6px;
+  max-height: 4.8em; /* ~4 lines */
+  overflow-y: auto;
+}
+.hal-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.hal-ref-badge {
+  font-size: 0.8rem;
+  color: var(--sky);
+  font-weight: 700;
+  padding: 2px 8px;
+  background: var(--sky-bg);
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.hal-title-text {
+  font-family: var(--font-hal);
+  font-size: 0.95rem;
+  color: var(--gold);
+}
+.hal-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.hal-nav-row .story-btn {
+  min-width: 70px;
+}
+.hal-nav-row .story-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.hal-counter {
+  font-size: 0.65rem;
+  color: var(--txt3);
+  font-family: monospace;
+}
+
 /* Right column: language + layers */
 .obs-3d-right {
   width: 140px;

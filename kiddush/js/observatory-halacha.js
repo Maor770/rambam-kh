@@ -313,17 +313,16 @@ function renderHalachaCard(){
   const chLabel = isHe ? 'פרק' : 'Ch.';
 
   card.innerHTML = `
-    <div class="story-card">
-      <div class="story-progress" style="display:flex;justify-content:space-between;align-items:center">
-        <span>${currentStep + 1} / ${HALACHA_STEPS.length}</span>
-        <span style="font-size:0.65rem;color:var(--txt3)">${isHe ? 'פרקים יא-טו' : 'Chapters 11-15'}</span>
+    <div class="story-card hal-card-compact">
+      <div class="hal-title-row">
+        <span class="hal-ref-badge">${chLabel} ${HEB_CH[h.ch]}:${h.hal}</span>
+        <span class="hal-title-text">${title}</span>
       </div>
-      <div class="story-ref" style="font-size:0.9rem">${chLabel} ${HEB_CH[h.ch]}:${h.hal}</div>
-      <div class="story-title">${title}</div>
       <div class="story-text">${summary.replace(/\n/g, '<br>')}</div>
-      <div class="story-btns">
-        ${currentStep > 0 ? `<button class="story-btn" onclick="prevHalacha()">${prevLabel}</button>` : ''}
-        ${currentStep < HALACHA_STEPS.length - 1 ? `<button class="story-btn primary" onclick="nextHalacha()">${nextLabel}</button>` : ''}
+      <div class="hal-nav-row">
+        <button class="story-btn" onclick="prevHalacha()" ${currentStep===0?'disabled':''}>${prevLabel}</button>
+        <span class="hal-counter">${currentStep + 1} / ${HALACHA_STEPS.length}</span>
+        <button class="story-btn primary" onclick="nextHalacha()" ${currentStep>=HALACHA_STEPS.length-1?'disabled':''}>${nextLabel}</button>
       </div>
     </div>`;
 

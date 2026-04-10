@@ -44,6 +44,7 @@ let layerVisibility = {1:true, 2:true, 3:true, 4:true};
 let highlightedObject = null;
 let highlightOrigColor = null;
 let animating = true;
+let vizGroup = null; // dynamic 3D objects for current vizMode
 
 /* Time state – exposed to timeline.js */
 window.obsTime = {
@@ -98,6 +99,11 @@ window.initObservatoryScene = function(){
   createHorizon();
   createElongationArc();
   createMoonOrbitPlane();
+
+  // Dynamic viz group (cleared on each vizMode change)
+  vizGroup = new THREE.Group();
+  vizGroup.name = 'vizGroup';
+  scene.add(vizGroup);
 
   // Lighting
   const sunLight = new THREE.DirectionalLight(0xfff5e0, 1.5);
@@ -708,6 +714,160 @@ window.obsCameraPreset = function(preset){
   lerpCam();
 };
 
+/* ══════════════════════════════════════════════════════════
+   3D Visualization Helpers — dynamic objects added to scene
+   ══════════════════════════════════════════════════════════ */
+
+const ZODIAC_HE = ['טלה','שור','תאומים','סרטן','אריה','בתולה','מאזניים','עקרב','קשת','גדי','דלי','דגים'];
+
+/* Clear all temporary viz objects from the scene */
+function clearVizGroup(){
+  if(!vizGroup) return;
+  while(vizGroup.children.length){
+    const c = vizGroup.children[0];
+    vizGroup.remove(c);
+    if(c.geometry) c.geometry.dispose();
+    if(c.material){
+      if(c.material.map) c.material.map.dispose();
+      c.material.dispose();
+    }
+  }
+  // Reset all zodiac dots to default
+  if(zodiacGroup){
+    zodiacGroup.children.forEach(c => {
+      if(c.isMesh && c.userData.signIndex !== undefined){
+        c.material.color.setHex(0x8b5cf6);
+        c.scale.set(1,1,1);
+      }
+    });
+  }
+  // Reset deferent/epicycle opacity
+  if(deferentLine) deferentLine.material.opacity = 0.08;
+  if(epicycleLine) epicycleLine.material.opacity = 0.25;
+}
+
+/* Add a 3D text label sprite to vizGroup */
+function add3DText(text, x, y, z, opts){
+  opts = opts || {};
+  const fontSize = opts.fontSize || 24;
+  const color = opts.color || '#ffffff';
+  const bgColor = opts.bg || null;
+  const w = opts.width || 256;
+  const h = opts.height || 48;
+
+  const canvas = document.createElement('canvas');
+  canvas.width = w; canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  if(bgColor){
+    ctx.fillStyle = bgColor;
+    ctx.roundRect(0, 0, w, h, 8);
+    ctx.fill();
+  }
+  ctx.font = `bold ${fontSize}px Heebo, sans-serif`;
+  ctx.fillStyle = color;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(text, w/2, h/2);
+
+  const tex = new THREE.CanvasTexture(canvas);
+  const mat = new THREE.SpriteMaterial({map:tex, transparent:true, opacity:opts.opacity||0.9});
+  const sprite = new THREE.Sprite(mat);
+  sprite.position.set(x, y, z);
+  const scale = opts.scale || 2.5;
+  sprite.scale.set(scale, scale*(h/w), 1);
+  vizGroup.add(sprite);
+  return sprite;
+}
+
+/* Add degree marks (0°, 30°, 60°...) around zodiac ring */
+function showDegreeMarks(){
+  for(let d=0; d<360; d+=30){
+    const a = d * DEG;
+    const x = Math.cos(a) * (ZODIAC_R + 1.5);
+    const z = -Math.sin(a) * (ZODIAC_R + 1.5);
+    add3DText(`${d}°`, x, 0.5, z, {fontSize:18, color:'#f4d03f', scale:1.5});
+  }
+}
+
+/* Add zodiac sign names in 3D */
+function showZodiacNames(){
+  for(let i=0; i<12; i++){
+    const a = (i * 30 + 15) * DEG;
+    const x = Math.cos(a) * (ZODIAC_R - 2);
+    const z = -Math.sin(a) * (ZODIAC_R - 2);
+    add3DText(ZODIAC_HE[i], x, 0.5, z, {fontSize:20, color:'#ccc', scale:2});
+  }
+}
+
+/* Highlight a specific zodiac sign (make it bright, dim others) */
+function highlightSign(signIndex){
+  if(!zodiacGroup) return;
+  zodiacGroup.children.forEach(c => {
+    if(c.isMesh && c.userData.signIndex !== undefined){
+      if(c.userData.signIndex === signIndex){
+        c.material.color.setHex(0xf4d03f);
+        c.scale.set(2.5, 2.5, 2.5);
+      } else {
+        c.material.color.setHex(0x333333);
+        c.scale.set(0.7, 0.7, 0.7);
+      }
+    }
+  });
+  // Add name of highlighted sign
+  const a = (signIndex * 30 + 15) * DEG;
+  const x = Math.cos(a) * (ZODIAC_R - 3);
+  const z = -Math.sin(a) * (ZODIAC_R - 3);
+  add3DText(ZODIAC_HE[signIndex], x, 1.5, z, {fontSize:28, color:'#f4d03f', scale:3});
+}
+
+/* Make deferent + epicycle very visible */
+function brightenEpicycle(){
+  if(deferentLine) deferentLine.material.opacity = 0.4;
+  if(epicycleLine) epicycleLine.material.opacity = 0.8;
+  // Add labels
+  if(epicycleCenter){
+    add3DText('גלגל קטן', epicycleCenter.position.x, 2, epicycleCenter.position.z, {fontSize:18, color:'#ffcc44', scale:2});
+  }
+  add3DText('גלגל גדול (נושא)', 0, 2, -DEFERENT_R - 2, {fontSize:16, color:'#ff9933', scale:2.5});
+}
+
+/* Add a "mean position" marker (orange dot on orbit) */
+function addMeanMarker(orbitR, angle, label){
+  const geo = new THREE.SphereGeometry(0.3, 16, 16);
+  const mat = new THREE.MeshBasicMaterial({color:0xff9933});
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.position.set(Math.cos(angle)*orbitR, 0, -Math.sin(angle)*orbitR);
+  vizGroup.add(mesh);
+  if(label){
+    add3DText(label, mesh.position.x, 1.5, mesh.position.z, {fontSize:16, color:'#ff9933', scale:2});
+  }
+  return mesh;
+}
+
+/* Add a "true position" marker (gold dot on orbit) */
+function addTrueMarker(orbitR, angle, label){
+  const geo = new THREE.SphereGeometry(0.3, 16, 16);
+  const mat = new THREE.MeshBasicMaterial({color:0xf4d03f});
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.position.set(Math.cos(angle)*orbitR, 0, -Math.sin(angle)*orbitR);
+  vizGroup.add(mesh);
+  if(label){
+    add3DText(label, mesh.position.x, 1.5, mesh.position.z, {fontSize:16, color:'#f4d03f', scale:2});
+  }
+  return mesh;
+}
+
+/* Add arrow line between two points */
+function addArrow3D(from, to, color){
+  color = color || 0xf4d03f;
+  const pts = [new THREE.Vector3(from.x, from.y, from.z), new THREE.Vector3(to.x, to.y, to.z)];
+  const geo = new THREE.BufferGeometry().setFromPoints(pts);
+  const mat = new THREE.LineBasicMaterial({color:color, linewidth:2});
+  const line = new THREE.Line(geo, mat);
+  vizGroup.add(line);
+  return line;
+}
+
 /* ── Visualization modes for story steps ── */
 let vizOverlayEl = null;
 let activeVizMode = null;
@@ -745,6 +905,7 @@ window.obsSetVizMode = function(mode){
   activeVizMode = mode;
   const ov = getVizOverlay();
   ov.innerHTML = '';
+  clearVizGroup(); // Remove previous 3D temp objects
 
   if(!mode) return;
 
@@ -1053,6 +1214,17 @@ window.obsSetVizMode = function(mode){
       break;
   }
 };
+
+/* Expose 3D helpers to global scope for viz-halacha.js */
+window.clearVizGroup = clearVizGroup;
+window.add3DText = add3DText;
+window.showDegreeMarks = showDegreeMarks;
+window.showZodiacNames = showZodiacNames;
+window.highlightSign = highlightSign;
+window.brightenEpicycle = brightenEpicycle;
+window.addMeanMarker = addMeanMarker;
+window.addTrueMarker = addTrueMarker;
+window.addArrow3D = addArrow3D;
 
 })();
 
